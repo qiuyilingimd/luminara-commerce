@@ -94,6 +94,8 @@ const staticTypes = new Map([
   [".webp", "image/webp"],
   [".svg", "image/svg+xml"],
   [".mp4", "video/mp4"],
+  [".m4a", "audio/mp4"],
+  [".mp3", "audio/mpeg"],
   [".woff2", "font/woff2"]
 ]);
 

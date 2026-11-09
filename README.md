@@ -10,6 +10,12 @@ are adapted natively in `assets/editorial-motion.js`; no React runtime is
 required. Reduced-motion preferences disable smooth scrolling, autoplay and
 pointer-led effects. See `THIRD_PARTY_NOTICES.md` for sources and licences.
 
+The hero and moving plates loop without playback controls. An original ambient
+score in `assets/luminara-ambient.m4a` fades in after the visitor's first
+interaction, as required by browser autoplay policies. The small Sound control
+in the masthead provides a persistent mute preference; key storefront actions
+also use quiet, procedurally generated interface sounds.
+
 ## Run
 
 ```powershell

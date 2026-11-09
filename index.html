@@ -84,6 +84,20 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 }
 .nav-links a:hover{opacity:1;border-bottom-color:var(--ink)}
 .nav-right{display:flex;align-items:center;gap:10px}
+.sound-btn{
+  min-width:40px;min-height:44px;padding:0 4px;display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  font-family:var(--f-label);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  transition:color .3s;
+}
+.sound-btn:hover{color:var(--ink)}
+.sound-btn .sound-wave{display:flex;align-items:center;justify-content:center;gap:2px;width:17px;height:17px}
+.sound-btn .sound-wave i{display:block;width:1px;height:5px;background:currentColor;transition:height .25s var(--ease)}
+.sound-btn.is-on{color:var(--ink)}
+.sound-btn.is-on .sound-wave i{animation:sound-wave 1.35s ease-in-out infinite}
+.sound-btn.is-on .sound-wave i:nth-child(2){animation-delay:.15s}
+.sound-btn.is-on .sound-wave i:nth-child(3){animation-delay:.3s}
+@keyframes sound-wave{0%,100%{height:4px}50%{height:13px}}
+@media (max-width:719px){.sound-btn .sound-word{display:none}.sound-btn{padding:0;min-width:38px}}
 .casket-btn{
   display:inline-flex;align-items:center;gap:8px;
   font-family:var(--f-label);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
@@ -146,7 +160,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
   color:rgba(248,243,232,.66);line-height:1.6;
 }
 .bb-cap b{font-weight:400;color:var(--ivory)}
-.bb-ctrl{display:flex;align-items:center;gap:14px;flex:0 0 auto}
+.bb-audio-note{font-family:var(--f-label);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,243,232,.48);white-space:nowrap}
 .bb-dots{display:flex;gap:6px}
 .bb-dot{width:22px;height:44px;display:grid;place-items:center}
 .bb-dot i{display:block;width:22px;height:1px;background:rgba(248,243,232,.3);transition:background-color .3s}
@@ -666,14 +680,6 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
   font-family:var(--f-label);font-size:9px;letter-spacing:.22em;color:rgba(248,243,232,.66);
   margin-left:auto;padding-right:14px;white-space:nowrap;
 }
-.bb-pause{
-  position:static;
-  display:inline-flex;align-items:center;gap:6px;
-  font-family:var(--f-label);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--ivory);background:rgba(18,16,14,.4);border:1px solid rgba(248,243,232,.4);
-  padding:7px 11px;cursor:pointer;transition:background .18s,border-color .18s;
-}
-.bb-pause:hover{background:rgba(18,16,14,.72);border-color:var(--ivory)}
 @media (prefers-reduced-motion:reduce){.bb-grain{animation:none}}
 
 /* ===== [新增] 后端表单字段样式（复用现有设计令牌，不改变视觉风格）===== */
@@ -721,6 +727,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     </ul>
   </nav>
   <div class="nav-right">
+    <button class="sound-btn" id="soundToggle" type="button" aria-pressed="false" aria-label="Enable ambient sound" title="Sound off — tap to enable"><span class="sound-word">Sound</span><span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <button class="casket-btn" id="casketBtn" aria-haspopup="dialog">Bag <span class="dot" id="casketCount">0</span></button>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i></i></button>
   </div>
@@ -756,9 +763,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
   <div class="bb-bar">
     <p class="bb-cap" id="bbCap">Cover 01 — A study in dim light</p>
     <span class="bb-count" id="bbCount">00:12 · LOOP</span>
-    <div class="bb-ctrl">
-      <button class="bb-pause" id="bbPause" type="button" aria-label="Pause the cover film">Pause</button>
-    </div>
+    <span class="bb-audio-note">Ambient score</span>
   </div>
 </section>
 
@@ -858,8 +863,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
       <h2>The pieces, in motion</h2>
     </div>
     <div class="film-ctrl">
-      <span class="film-tc">Loop · 00:05 · no sound</span>
-      <button type="button" id="filmToggle" aria-label="Pause the three films">Pause film</button>
+      <span class="film-tc">Loop · 00:05 · silent plate</span>
     </div>
   </div>
   <figure class="film-band">
@@ -871,7 +875,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
         <span class="kicker">Cover film</span>
         <h3>Held at the eye</h3>
       </div>
-      <span class="stamp">MMXXVI · Los Angeles · No sound</span>
+      <span class="stamp">MMXXVI · Los Angeles · Ambient score</span>
     </div>
   </figure>
   <div class="film-duo">
@@ -1362,6 +1366,7 @@ function setMenu(open){
   menuBtn.setAttribute("aria-expanded", open?"true":"false");
   document.body.style.overflow = open?"hidden":"";
   if(window.LuminaraScroll){ open?window.LuminaraScroll.stop():window.LuminaraScroll.start(); }
+  if(window.LuminaraSound){ window.LuminaraSound.play(open?"paper":"close"); }
   if(open){menuClose.focus();}else{menuBtn.focus();}
 }
 menuBtn.addEventListener("click",function(){setMenu(true)});
@@ -1376,32 +1381,28 @@ qa("#mobileMenu a").forEach(function(a){
 });
 
 /* ---------- billboard film ---------- */
-var bbVideo=q("#bbVideo"), bbPause=q("#bbPause");
-if(bbVideo && bbPause){
+var bbVideo=q("#bbVideo");
+if(bbVideo){
   if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-portrait-poster.jpg"; }
-  var heroUserPaused=false;
   var heroReduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var syncHeroButton=function(){
-    var isPaused=bbVideo.paused;
-    bbPause.textContent=isPaused?"Play":"Pause";
-    bbPause.setAttribute("aria-label",(isPaused?"Play":"Pause")+" the cover film");
-  };
-  bbPause.addEventListener("click",function(){
-    if(bbVideo.paused){ heroUserPaused=false; bbVideo.play().catch(function(){}); }
-    else { heroUserPaused=true; bbVideo.pause(); }
+  var heroVisible=true;
+  function playHero(){
+    if(heroVisible && !heroReduce && document.visibilityState!=="hidden"){
+      bbVideo.play().catch(function(){});
+    }
+  }
+  bbVideo.addEventListener("canplay",playHero);
+  document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState==="hidden"){ bbVideo.pause(); }
+    else { playHero(); }
   });
-  bbVideo.addEventListener("play",syncHeroButton);
-  bbVideo.addEventListener("pause",syncHeroButton);
   if("IntersectionObserver" in window){
     new IntersectionObserver(function(entries){
-      if(entries[0].isIntersecting){
-        if(!heroUserPaused && !heroReduce){ bbVideo.play().catch(function(){}); }
-      } else if(!bbVideo.paused){
-        bbVideo.pause();
-      }
+      heroVisible=entries[0].isIntersecting;
+      if(heroVisible){ playHero(); }
+      else if(!bbVideo.paused){ bbVideo.pause(); }
     },{threshold:.08}).observe(bbVideo);
   }
-  syncHeroButton();
 }
 
 /* ---------- collection tabs ---------- */
@@ -1413,6 +1414,7 @@ function selectTab(t){
     var panel=q("#"+o.getAttribute("aria-controls"));
     if(panel){panel.classList.toggle("is-active",on);}
   });
+  if(window.LuminaraSound){ window.LuminaraSound.play("tick"); }
 }
 tabs.forEach(function(t,i){
   t.addEventListener("click",function(){selectTab(t);});
@@ -1434,6 +1436,7 @@ function filterProducts(value){
     item.hidden=value!=="all" && item.getAttribute("data-category")!==value;
   });
   if(vitrineGrid){ vitrineGrid.classList.toggle("is-filtered",value!=="all"); }
+  if(window.LuminaraSound){ window.LuminaraSound.play("tick"); }
   if(window.LuminaraScroll){ window.LuminaraScroll.refresh(); }
   else if(window.ScrollTrigger){ window.ScrollTrigger.refresh(); }
 }
@@ -1472,6 +1475,7 @@ function openDrawer(){
   drawer.setAttribute("aria-hidden","false");
   document.body.style.overflow="hidden";
   if(window.LuminaraScroll){window.LuminaraScroll.stop();}
+  if(window.LuminaraSound){ window.LuminaraSound.play(mode==="piece"?"chime":"paper"); }
   q("#drawerClose").focus();
 }
 function closeDrawer(){
@@ -1480,6 +1484,7 @@ function closeDrawer(){
   drawer.setAttribute("aria-hidden","true");
   document.body.style.overflow="";
   if(window.LuminaraScroll){window.LuminaraScroll.start();}
+  if(window.LuminaraSound){ window.LuminaraSound.play("close"); }
   if(lastFocus && lastFocus.focus){lastFocus.focus();}
 }
 
@@ -1528,6 +1533,7 @@ function addToCasket(){
   saveBag();
   updateCount();
   closeDrawer();
+  if(window.LuminaraSound){ window.LuminaraSound.play("confirm"); }
   toast("Added to bag");
 }
 
@@ -2212,19 +2218,22 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
     }, true);
   });
 
-  /* one control for the three film plates */
-  var toggle = document.querySelector("#filmToggle");
-  if (toggle && films.length){
-    var running = true;
-    toggle.addEventListener("click", function(){
-      running = !running;
-      films.forEach(function(v){ if (running){ v.play().catch(function(){}); } else { v.pause(); } });
-      toggle.textContent = running ? "Pause film" : "Play film";
-      toggle.setAttribute("aria-label", (running ? "Pause" : "Play") + " the three films");
+  /* moving plates start themselves whenever they enter the viewport */
+  if (!reduce && "IntersectionObserver" in window){
+    films.forEach(function(video){
+      new IntersectionObserver(function(entries){
+        if (entries[0].isIntersecting && document.visibilityState !== "hidden"){
+          video.play().catch(function(){});
+        } else if (!video.paused){
+          video.pause();
+        }
+      }, {threshold:.12}).observe(video);
+      video.addEventListener("canplay", function(){ video.play().catch(function(){}); });
     });
   }
 })();
 </script>
+<script src="assets/audio-atmosphere.js"></script>
 <script src="assets/editorial-motion.js"></script>
 </body>
 </html>
