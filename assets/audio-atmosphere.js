@@ -2,6 +2,7 @@
   "use strict";
 
   var PREF_KEY = "luminara-sound-v1";
+  var AMBIENT_LEVEL = .4;
   var audioButton = document.getElementById("soundToggle");
   var enabled = true;
   try {
@@ -72,7 +73,7 @@
     var now = context.currentTime;
     ambientGain.gain.cancelScheduledValues(now);
     ambientGain.gain.setValueAtTime(ambientGain.gain.value, now);
-    ambientGain.gain.linearRampToValueAtTime(.34, now + 2.4);
+    ambientGain.gain.linearRampToValueAtTime(AMBIENT_LEVEL, now + 2.4);
     unlocked = true;
     paintButton();
   }
@@ -205,7 +206,7 @@
     if (!pageVisible){
       ambientGain.gain.linearRampToValueAtTime(0, now + .55);
     } else if (enabled && unlocked && context.state === "running"){
-      ambientGain.gain.linearRampToValueAtTime(.34, now + .8);
+      ambientGain.gain.linearRampToValueAtTime(AMBIENT_LEVEL, now + .8);
     }
   });
 
