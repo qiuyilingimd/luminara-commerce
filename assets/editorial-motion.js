@@ -70,39 +70,6 @@
       });
     });
 
-    /*
-     * React Bits TiltedCard-inspired restraint: a shallow response on the
-     * photograph only, with transform-only updates through GSAP quickTo().
-     */
-    if (hasGsap){
-      document.querySelectorAll(".vitem .v-plate,.cs figure,.story-media,.card .plate").forEach(function(plate){
-        plate.classList.add("bits-tilt");
-        var rotX = gsap.quickTo(plate, "rotationX", {duration:.55, ease:"power3.out"});
-        var rotY = gsap.quickTo(plate, "rotationY", {duration:.55, ease:"power3.out"});
-        var lift = gsap.quickTo(plate, "scale", {duration:.55, ease:"power3.out"});
-
-        plate.addEventListener("pointermove", function(event){
-          if (document.body.classList.contains("loupe-on")){
-            rotX(0); rotY(0); lift(1);
-            return;
-          }
-          var rect = plate.getBoundingClientRect();
-          var px = ((event.clientX - rect.left) / Math.max(1, rect.width)) - .5;
-          var py = ((event.clientY - rect.top) / Math.max(1, rect.height)) - .5;
-          rotY(px * 4.8);
-          rotX(py * -4.2);
-          lift(1.008);
-        }, {passive:true});
-
-        plate.addEventListener("pointerleave", function(){
-          rotX(0); rotY(0); lift(1);
-        }, {passive:true});
-
-        plate.addEventListener("blur", function(){
-          rotX(0); rotY(0); lift(1);
-        }, true);
-      });
-    }
   }
 
   if (hasGsap && hasScrollTrigger && !reduce){
@@ -112,7 +79,7 @@
      */
     var spread = document.querySelector(".spread");
     var spreadMedia = spread && spread.querySelector(".spread-media");
-    if (spread && spreadMedia){
+    if (spread && !spread.hidden && spreadMedia){
       spread.dataset.motion = "scroll-expand";
       var spreadTimeline = gsap.timeline({
         scrollTrigger: {
@@ -129,24 +96,6 @@
         {clipPath: "inset(0% 0% 0% 0% round 0px)", ease: "none"}
       );
     }
-
-    /* Product plates rise quietly in page order, once per visit. */
-    window.ScrollTrigger.batch(".vitem", {
-      start: "top 92%",
-      once: true,
-      interval: .1,
-      batchMax: 4,
-      onEnter: function(batch){
-        gsap.fromTo(batch, {y:26, autoAlpha:0}, {
-          y:0,
-          autoAlpha:1,
-          duration:.85,
-          stagger:.08,
-          ease:"power3.out",
-          overwrite:"auto"
-        });
-      }
-    });
 
     /* A small camera move keeps the film connected to the following page. */
     var billboard = document.querySelector(".billboard");

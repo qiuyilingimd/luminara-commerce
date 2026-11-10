@@ -2,18 +2,18 @@ services:
   - type: web
     name: luminara
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm install
     startCommand: node server.mjs
     healthCheckPath: /api/health
-    autoDeploy: true
+    autoDeployTrigger: off
     envVars:
       - key: NODE_VERSION
         value: 24.22.1
       - key: HOST
         value: 0.0.0.0
       - key: DATA_DIR
-        value: /var/data
+        value: /tmp/luminara-data
       - key: BASE_URL
         sync: false
       - key: STRIPE_SECRET_KEY
@@ -26,7 +26,3 @@ services:
         sync: false
       - key: ORDER_FROM_EMAIL
         sync: false
-    disk:
-      name: luminara-data
-      mountPath: /var/data
-      sizeGB: 1

@@ -32,11 +32,10 @@ The site reads products from `data/catalog.json`. The server revalidates product
 
 ## Render
 
-This project includes `render.yaml` for a Node web service with `/api/health`
-as its health check. Production orders are written to `/var/data/luminara.db`
-on a persistent disk. Set the public `BASE_URL` automatically through Render's
-`RENDER_EXTERNAL_HOSTNAME`, or provide it explicitly together with the Stripe
-and Resend secrets.
+`render.yaml` describes the currently deployed free Render web service with
+`/api/health` as its health check. `render.production.yaml` is the paid upgrade
+with a persistent disk and durable SQLite storage at `/var/data/luminara.db`.
+The public `BASE_URL` is read automatically from Render's external hostname.
 
 ## Payments
 

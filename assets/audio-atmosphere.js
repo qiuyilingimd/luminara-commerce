@@ -2,7 +2,7 @@
   "use strict";
 
   var PREF_KEY = "luminara-sound-v1";
-  var AMBIENT_LEVEL = .4;
+  var AMBIENT_LEVEL = .5;
   var audioButton = document.getElementById("soundToggle");
   var enabled = true;
   try {

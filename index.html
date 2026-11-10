@@ -1,44 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="product" data-radius="sharp" data-buttons="arrow">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luminara｜琉弥诺 — Wearable Antiques</title>
-<meta name="description" content="Luminara. Wearable antiques in kiln-fired enamel, recycled brass and hand-set glass. Small-batch jewellery kept in the dim light of an old gallery.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luminara｜琉弥诺 — Handmade Art Jewellery</title>
+<meta name="description" content="Luminara is handmade art jewellery in recycled brass, fired enamel, glass and zircon. Seven numbered pieces, made in small runs and shipped internationally.">
+<meta name="page-type" content="product">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#F5F1E8">
+<meta property="og:title" content="Luminara — Handmade Art Jewellery">
+<meta property="og:description" content="Fired enamel, recycled brass, glass and hand-set zircon. Seven numbered pieces made in small runs.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
+<link rel="preload" as="image" href="assets/hero-editorial-poster.jpg" media="(min-width:720px)">
+<link rel="preload" as="image" href="assets/hero-editorial-portrait-poster.jpg" media="(max-width:719px)">
 <style>
 /* ---------- tokens ---------- */
 :root{
-  --ink:#12100E;
-  --ink-2:#1C1815;
-  --ink-3:#2A241F;
-  --paper:#FFFFFF;
-  --paper-2:#F2EFE9;
+  --ink:#16110F;
+  --ink-2:#211A17;
+  --ink-3:#342A24;
+  --paper:#F5F1E8;
+  --paper-2:#E8E1D5;
   --oxblood-2:#8E4A46;
-  --ivory:#F8F3E8;
-  --gold:#A8863F;
+  --ivory:#FFF9EE;
+  --gold:#A98243;
   --gold-2:#C9A96A;
-  --oxblood:#5A2725;
-  --turq:#6F948E;
-  --muted:#6E665B;
-  --line:rgba(18,16,14,.16);
-  --line-soft:rgba(18,16,14,.10);
+  --oxblood:#5B2025;
+  --turq:#5F948B;
+  --muted:#655D52;
+  --line:rgba(22,17,15,.17);
+  --line-soft:rgba(22,17,15,.10);
   --line-ivory:rgba(248,243,232,.24);
   --f-display:"Playfair Display",Georgia,"Times New Roman",serif;
-  --f-body:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --f-body:"Jost","Helvetica Neue",Arial,sans-serif;
   --f-label:"Jost","Helvetica Neue",Arial,sans-serif;
   --ease:cubic-bezier(.22,1,.36,1);
   --gut:20px;
-  --mast-h:50px;
+  --mast-h:75px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:auto;scroll-padding-top:calc(var(--mast-h) + 18px)}
 body{
   margin:0;background:var(--paper);color:var(--ink);
   overflow-x:hidden;
-  font-family:var(--f-body);font-size:17px;line-height:1.62;
+  font-family:var(--f-body);font-size:16.5px;line-height:1.68;letter-spacing:.004em;
   -webkit-font-smoothing:antialiased;
 }
 img{display:block;max-width:100%}
@@ -48,6 +58,9 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:400;line-height:1.
 p{margin:0}
 ::selection{background:var(--gold);color:var(--ivory)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skip-link{position:fixed;left:12px;top:-80px;z-index:220;background:var(--paper);color:var(--ink);padding:12px 18px;font-family:var(--f-label);font-size:12px;letter-spacing:.08em}
+.skip-link:focus{top:10px}
 
 .kicker{
   font-family:var(--f-label);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
@@ -60,6 +73,31 @@ p{margin:0}
   position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+/* Brand-first boot veil: prevents raw type and poster swapping from flashing. */
+.site-intro{
+  position:fixed;inset:0;z-index:210;display:grid;place-items:center;
+  background:
+    radial-gradient(circle at 50% 44%,rgba(91,32,37,.32),rgba(22,17,15,0) 36%),
+    var(--ink);
+  color:var(--ivory);pointer-events:none;
+  opacity:1;visibility:visible;
+  transition:opacity .7s var(--ease),visibility .7s step-end;
+}
+.site-intro.is-ready{opacity:0;visibility:hidden}
+.site-intro-inner{display:grid;justify-items:center;gap:14px;text-align:center}
+.site-intro-mark{
+  font-family:var(--f-display);font-size:clamp(3.2rem,9vw,6rem);font-style:italic;
+  line-height:.8;letter-spacing:-.04em;color:var(--ivory);
+}
+.site-intro-word{font-family:var(--f-label);font-size:9px;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,249,238,.65)}
+.site-intro-line{position:relative;width:92px;height:1px;overflow:hidden;background:rgba(255,249,238,.16)}
+.site-intro-line::after{content:"";position:absolute;inset:0;background:var(--gold-2);transform-origin:0 50%;animation:intro-line 1.45s var(--ease) both}
+@keyframes intro-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes intro-fallback{0%,78%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+.site-intro{animation:intro-fallback 3.4s var(--ease) forwards}
+.site-intro.is-ready{animation:none}
+@media (prefers-reduced-motion:reduce){.site-intro{animation-duration:.5s}.site-intro-line::after{animation:none;transform:scaleX(1)}}
 
 /* ---------- masthead ---------- */
 .mast{
@@ -129,26 +167,51 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .bb-slide{position:absolute;inset:0;opacity:0;transition:opacity .9s var(--ease);margin:0}
 .bb-slide.is-on{opacity:1}
 .bb-slide img{width:100%;height:100%;object-fit:cover}
-.bb-slide video{display:block;width:100%;height:100%;object-fit:cover;object-position:52% 42%;background:#3B0E17}
+.bb-fallback{position:absolute;inset:-2%;overflow:hidden;background:var(--ink);transition:opacity .18s linear}
+.bb-slide.video-live .bb-fallback{opacity:0}
+.bb-fallback img{width:100%;height:100%;object-fit:cover;object-position:52% 42%;transform:scale(1.025);animation:fallback-drift 16s ease-in-out infinite alternate}
+.bb-slide video{display:block;width:100%;height:100%;object-fit:cover;object-position:52% 42%;background:var(--ink);opacity:0}
+.bb-slide.video-live video{opacity:1}
+@keyframes fallback-drift{from{transform:scale(1.025) translate3d(-.6%,.4%,0)}to{transform:scale(1.075) translate3d(.8%,-.7%,0)}}
 .bb-overlay{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(20px,4vh,48px);z-index:3;pointer-events:none;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.bb-title{display:grid;gap:12px;min-width:0}
 .bb-overlay h1{margin:0;font-family:var(--f-display);font-style:italic;font-size:clamp(3rem,11vw,7.6rem);line-height:.86;letter-spacing:-.03em;color:var(--ivory);text-shadow:0 2px 40px rgba(20,14,16,.45)}
-.coverstrip{background:var(--paper);padding:30px var(--gut) 46px}
+.bb-lead{font-size:14px;line-height:1.55;letter-spacing:.015em;color:rgba(255,249,238,.84);max-width:34ch;text-shadow:0 1px 18px rgba(20,14,16,.55)}
+.bb-shop{pointer-events:auto;display:inline-flex;align-items:center;gap:14px;width:max-content;min-height:44px;padding-bottom:4px;border-bottom:1px solid rgba(255,249,238,.64);font-family:var(--f-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory)}
+.bb-shop svg{width:17px;height:17px;transition:transform .35s var(--ease)}
+.bb-shop:hover svg{transform:translateX(4px)}
+.coverstrip{background:var(--paper);padding:46px var(--gut) 64px}
 .coverstrip .head{max-width:1400px;margin:0 auto 22px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:10px}
 .coverstrip .head h2{font-size:clamp(1.1rem,2.4vw,1.5rem);font-style:italic}
+.coverstrip .head-copy{display:grid;gap:6px}
+.coverstrip .head-copy p{max-width:54ch;color:var(--muted);font-size:14px;line-height:1.6}
+.edit-all{font-family:var(--f-label);font-size:9.5px;letter-spacing:.19em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:flex-end}
 .cs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px;max-width:1400px;margin:0 auto}
 @media(min-width:720px){.cs-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}}
-.cs{text-align:left;width:100%}
-.cs figure{margin:0;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+.cs{text-align:left;width:100%;cursor:pointer}
+.cs figure{margin:0;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2);position:relative}
 .cs img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
 .cs:hover img{transform:scale(1.035)}
-.cs-cap{margin-top:10px;font-family:var(--f-label);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);line-height:1.7}
-.cs-cap b{display:block;font-weight:400;color:var(--ink);letter-spacing:.1em;margin-bottom:2px}
+.cs-cap{margin-top:12px;font-family:var(--f-label);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.6;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px}
+.cs-cap .cs-cat,.cs-cap .cs-material,.cs-cap .cs-action{grid-column:1/-1}
+.cs-cap .cs-cat{color:var(--oxblood);font-size:8.5px;letter-spacing:.2em}
+.cs-cap b{grid-column:1;display:block;font-family:var(--f-display);font-size:18px;font-weight:400;color:var(--ink);letter-spacing:.01em;text-transform:none;line-height:1.2;margin-top:4px}
+.cs-cap .cs-price{grid-column:2;align-self:end;color:var(--ink);font-size:10px;letter-spacing:.08em;padding-bottom:2px}
+.cs-cap .cs-material{text-transform:none;letter-spacing:.03em;font-family:var(--f-body);font-size:13px;line-height:1.45;color:var(--muted);margin-top:3px}
+.cs-cap .cs-action{font-size:8.5px;letter-spacing:.19em;color:var(--ink);border-bottom:1px solid var(--line);padding:8px 0 3px;width:max-content;margin-top:5px}
+.cs:hover .cs-action{border-bottom-color:var(--ink)}
 .bb-overlay .side{font-family:var(--f-label);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(248,243,232,.8);text-align:right;line-height:1.9;padding-bottom:8px;flex:0 0 auto}
 @media (max-width:719px){
   :root{--mast-h:71px}
   .bb-overlay{gap:10px}
-  .bb-overlay h1{max-width:64%;font-size:clamp(2.7rem,12.2vw,3.3rem)}
+  .bb-title{flex:1 1 auto;min-width:0}
+  .bb-overlay h1{max-width:100%;font-size:clamp(2.65rem,11.2vw,3.15rem);white-space:nowrap}
+  .bb-lead{display:none}
+  .bb-shop{font-size:8px;letter-spacing:.16em;gap:8px}
   .bb-overlay .side{max-width:105px;padding-bottom:4px;font-size:7.6px;letter-spacing:.18em;line-height:1.7}
+  .scrollhint{display:none}
+  .coverstrip .head{align-items:flex-start;flex-direction:column}
+  .coverstrip .head-copy p{font-size:13.5px}
 }
 .bb-bar{
   display:flex;align-items:center;justify-content:space-between;gap:14px;
@@ -290,6 +353,9 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .v-head h2{font-size:clamp(1.6rem,4.8vw,2.7rem);font-style:italic}
 .v-head .kicker{color:rgba(248,243,232,.5)}
 .vitrine .head p{font-size:14.5px;line-height:1.7;color:rgba(248,243,232,.62);max-width:46ch}
+.shop-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:22px 0 0;background:rgba(248,243,232,.14);border:1px solid rgba(248,243,232,.14);list-style:none;padding:0}
+.shop-facts li{padding:12px 14px;background:var(--ink);font-family:var(--f-label);font-size:9px;line-height:1.5;letter-spacing:.13em;text-transform:uppercase;color:rgba(248,243,232,.67)}
+@media(max-width:719px){.shop-facts{grid-template-columns:1fr}.shop-facts li{padding:10px 12px}}
 .vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
 .vgrid.is-filtered{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
 .vgrid.is-filtered .vitem{grid-column:auto}
@@ -366,7 +432,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .fcol h4{font-family:var(--f-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;color:rgba(248,243,232,.42);margin-bottom:10px}
 .fcol ul{list-style:none;margin:0;padding:0}
 .fcol li{margin-bottom:8px}
-.fcol a{font-size:13.5px;color:rgba(248,243,232,.78);border-bottom:1px solid transparent;transition:color .3s,border-color .3s;padding-bottom:2px}
+.fcol a{font-size:13.5px;color:rgba(248,243,232,.78);border-bottom:1px solid transparent;transition:color .3s,border-color .3s;padding-bottom:2px;overflow-wrap:anywhere}
 .fcol a:hover{color:var(--ivory);border-bottom-color:rgba(248,243,232,.4)}
 .pay{margin-top:32px;padding-top:16px;border-top:1px solid var(--line-ivory);display:flex;flex-wrap:wrap;gap:7px;align-items:center}
 .pay i{display:inline-block;padding:5px 8px;border:1px solid rgba(248,243,232,.2);font-family:var(--f-label);font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:rgba(248,243,232,.64)}
@@ -494,6 +560,17 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
   .d-media{max-height:none;aspect-ratio:1/1}
   .drawer-bar{padding:14px 22px}
 }
+@media (min-width:720px) and (max-width:1023px){
+  .nav-links{display:none}
+  .menu-btn{display:grid}
+  .sound-btn .sound-word{display:none}
+  .footer-cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:380px){
+  .mast{padding-left:14px;padding-right:14px}
+  .mast .brand small{display:none}
+  .nav-right{gap:3px}
+}
 @media (min-width:1100px){
   :root{--gut:52px}
   .cover h1{font-size:clamp(3.4rem,7.4vw,7.4rem)}
@@ -506,10 +583,11 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .card:focus-visible,.vitem:focus-visible,.story:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
 
 /* ---------- motion / interaction layer ---------- */
-#progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:90;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;pointer-events:none;mix-blend-mode:difference}
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:95;pointer-events:none;border-radius:50%;will-change:transform}
+#progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:90;background:var(--gold-2);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:95;pointer-events:none;border-radius:50%;will-change:transform;opacity:0}
+.cursor-dot.is-visible,.cursor-ring.is-visible{opacity:1}
 .cursor-dot{width:6px;height:6px;background:var(--ivory);mix-blend-mode:difference}
-.cursor-ring{width:34px;height:34px;border:1px solid rgba(248,243,232,.8);mix-blend-mode:difference;transition:width .3s var(--ease),height .3s var(--ease),border-color .3s}
+.cursor-ring{width:34px;height:34px;border:1px solid rgba(248,243,232,.8);mix-blend-mode:difference;transition:width .3s var(--ease),height .3s var(--ease),border-color .3s,opacity .2s}
 .cursor-ring.is-hot{width:64px;height:64px;border-color:var(--ivory)}
 .cursor-ring .lbl{font-family:var(--f-label);font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ivory);display:flex;align-items:center;justify-content:center;height:100%;opacity:0;transition:opacity .25s}
 .cursor-ring.is-hot .lbl{opacity:1}
@@ -557,6 +635,9 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .act-rail i.on{background:var(--ivory);height:34px}
 @media (max-width:719px){.acts{height:260vh}}
 
+/* Product edit first; archive material is surfaced in the shop and atelier. */
+.acts,.plates,.index,.stories,.spread,.archive{display:none!important}
+
 /* ---------- drag rail ---------- */
 .plates{background:var(--paper);padding:44px 0 56px}
 .plates-head{max-width:1400px;margin:0 auto 20px;padding:0 var(--gut);display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
@@ -580,17 +661,20 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .films-head button{font-family:var(--f-label);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;background:none;border:1px solid rgba(18,16,14,.22);color:var(--ink);padding:7px 12px;cursor:pointer;transition:background .35s,color .35s,border-color .35s}
 .films-head button:hover{border-color:var(--ink);background:var(--ink);color:var(--ivory)}
 .film-band{position:relative;margin:0;background:#3B0E17;overflow:hidden}
-.film-band video{display:block;width:100%;aspect-ratio:16/9;max-height:88svh;object-fit:cover}
-.film-band::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,16,14,.64),rgba(18,16,14,.04) 44%,rgba(18,16,14,.2));pointer-events:none}
+.film-band::before,.film-duo figure::before{content:"";position:absolute;inset:-3%;z-index:0;background-image:var(--poster);background-position:center;background-size:cover;animation:fallback-drift 18s ease-in-out infinite alternate;transition:opacity .18s linear}
+.film-band.video-live::before,.film-duo figure.video-live::before{opacity:0}
+.film-band video{position:relative;z-index:1;display:block;width:100%;aspect-ratio:16/9;max-height:88svh;object-fit:cover;opacity:0;transition:opacity .5s ease}
+.film-band.video-live video,.film-duo figure.video-live video{opacity:1}
+.film-band::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(18,16,14,.64),rgba(18,16,14,.04) 44%,rgba(18,16,14,.2));pointer-events:none}
 .film-ov{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(24px,6vh,56px);z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;color:var(--ivory);pointer-events:none}
 .film-ov .kicker{color:rgba(248,243,232,.66)}
 .film-ov h3{margin-top:8px;font-family:var(--f-display);font-style:italic;font-weight:400;font-size:clamp(2.2rem,8vw,5.4rem);line-height:.9;letter-spacing:-.02em}
 .film-ov .stamp{font-family:var(--f-label);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(248,243,232,.7);writing-mode:vertical-rl;white-space:nowrap}
 .film-duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(18,16,14,.18);margin-top:1px}
 .film-duo figure{position:relative;margin:0;background:#12100E;overflow:hidden}
-.film-duo video{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--ease)}
+.film-duo video{position:relative;z-index:1;display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--ease),opacity .5s ease;opacity:0}
 .film-duo figure:hover video{transform:scale(1.02)}
-.film-duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px var(--gut) 14px;display:flex;justify-content:space-between;gap:12px;font-family:var(--f-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,243,232,.84);background:linear-gradient(to top,rgba(18,16,14,.74),rgba(18,16,14,0));pointer-events:none}
+.film-duo figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:12px var(--gut) 14px;display:flex;justify-content:space-between;gap:12px;font-family:var(--f-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,243,232,.84);background:linear-gradient(to top,rgba(18,16,14,.74),rgba(18,16,14,0));pointer-events:none}
 @media (max-width:719px){.films{padding-top:38px}.film-duo{grid-template-columns:1fr}.film-band video{aspect-ratio:4/5}.film-ov .stamp{display:none}}
 
 /* ---------- second face / heads ---------- */
@@ -693,6 +777,8 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 .f-form{margin-top:34px;border-top:1px solid var(--line-ivory);padding-top:22px}
 .f-form h4{font-family:var(--f-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;color:rgba(248,243,232,.42);margin-bottom:12px}
 .f-fields{display:grid;gap:10px}
+.f-field{display:grid;gap:6px}
+.f-field label{font-family:var(--f-label);font-size:10px;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,243,232,.58)}
 .f-form textarea{resize:vertical;min-height:96px;font-family:var(--f-label)}
 .f-submit{
   margin-top:12px;display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;min-height:48px;
@@ -711,23 +797,32 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </style>
 </head>
 <body>
+<div class="site-intro" id="siteIntro" aria-hidden="true">
+  <div class="site-intro-inner">
+    <span class="site-intro-mark">L</span>
+    <span class="site-intro-word">Luminara · 琉弥诺</span>
+    <span class="site-intro-line"></span>
+  </div>
+</div>
+<noscript><style>#siteIntro{display:none!important}</style></noscript>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ===== 报头 ===== -->
 <header class="mast" id="nav">
+  <a class="skip-link" href="#top">Skip to content</a>
   <a class="brand" href="#top">Luminara<small>琉弥诺</small></a>
   <nav aria-label="Primary">
     <ul class="nav-links">
-      <li><a href="#collections">Collections</a></li>
+      <li><a href="#collections">Shop</a></li>
       <li><a href="#film">Film</a></li>
-      <li><a href="#muse">Heads</a></li>
-      <li><a href="#vitrine">Vitrine</a></li>
+      <li><a href="#muse">Portrait</a></li>
+      <li><a href="#vitrine">All Pieces</a></li>
       <li><a href="#atelier">Atelier</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   <div class="nav-right">
-    <button class="sound-btn" id="soundToggle" type="button" aria-pressed="false" aria-label="Enable ambient sound" title="Sound off — tap to enable"><span class="sound-word">Sound</span><span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    <button class="sound-btn" id="soundToggle" type="button" aria-pressed="false" aria-label="Enable ambient sound" title="Sound off · tap to enable"><span class="sound-word">Sound</span><span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <button class="casket-btn" id="casketBtn" aria-haspopup="dialog">Bag <span class="dot" id="casketCount">0</span></button>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i></i></button>
   </div>
@@ -736,10 +831,10 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <button class="close" id="menuClose">Close</button>
   <ul>
-    <li><a href="#collections">Collections</a></li>
+        <li><a href="#collections">Shop</a></li>
     <li><a href="#film">Film</a></li>
-    <li><a href="#muse">Heads</a></li>
-    <li><a href="#vitrine">Vitrine</a></li>
+    <li><a href="#muse">Portrait</a></li>
+    <li><a href="#vitrine">All Pieces</a></li>
     <li><a href="#atelier">Atelier</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -747,21 +842,32 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </div>
 
 <!-- ===== 全宽头条 ===== -->
-<section class="billboard" id="top">
+<main id="top">
+<section class="billboard">
   <div class="bb-track" id="bbTrack">
-    <figure class="bb-slide is-on" data-cap="Cover 01 — A study in dim light">
+    <figure class="bb-slide is-on" data-cap="Cover 01 · A study in dim light">
+      <picture class="bb-fallback" aria-hidden="true">
+        <source media="(max-width:719px)" srcset="assets/hero-editorial-portrait-poster.jpg">
+        <img src="assets/hero-editorial-poster.jpg" alt="" fetchpriority="high" decoding="async">
+      </picture>
       <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-poster.jpg" aria-label="Editorial fashion film moving through a hawthorn-red thread from the Two Doves necklace to the Morpho earring and finally the Opaline Arch cuff">
-        <source src="assets/hero-editorial-12s-portrait.mp4" type="video/mp4" media="(max-width: 719px)">
-        <source src="assets/hero-editorial-12s.mp4" type="video/mp4">
+        <source src="assets/hero-editorial-12s-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
+        <source src="assets/hero-editorial-12s-lite.mp4" type="video/mp4">
       </video>
     </figure>
     <div class="bb-overlay">
-      <h1>Luminara</h1>
-      <p class="side">Issue 01 — Los Angeles<br>Small-batch art jewellery<br>for creative wardrobes</p>
+      <div class="bb-title">
+        <h1><span class="sr-only">Luminara, handmade art jewellery</span><span aria-hidden="true">Luminara</span></h1>
+        <p class="bb-lead">Handmade art jewellery in fired enamel, recycled brass and hand-set glass. Seven numbered pieces, made in small runs in Los Angeles.</p>
+        <a class="bb-shop" href="#collections">Shop the first edit
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </a>
+      </div>
+      <p class="side">Issue 01 · Los Angeles<br>7 numbered pieces<br>Worldwide delivery</p>
     </div>
   </div>
   <div class="bb-bar">
-    <p class="bb-cap" id="bbCap">Cover 01 — A study in dim light</p>
+    <p class="bb-cap" id="bbCap">Cover 01 · A study in dim light</p>
     <span class="bb-count" id="bbCount">00:12 · LOOP</span>
     <span class="bb-audio-note">Ambient score</span>
   </div>
@@ -771,41 +877,45 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <!-- ===== 封面语 ===== -->
 <section class="cover">
   <div class="cover-inner">
-    <p class="kicker">Issue 01 · Los Angeles · MMXXVI</p>
-    <h2>Wearable antiques,<br>kept in <em>dim light</em>.</h2>
-    <p class="dek">Small-batch art jewellery for people who dress with intention: recycled brass, kiln-fired enamel, glass and hand-set zircon. Designed to layer, collect and wear hard.</p>
-    <p class="cn">琉弥诺 · 可佩戴的日常艺术首饰</p>
+    <p class="kicker">Independent art jewellery · Los Angeles · Issue 01</p>
+    <h2>Seven pieces, made by hand.</h2>
+    <p class="dek">Cast in recycled brass, fired enamel, hand-set glass and zircon. Each piece is finished in a numbered run and made to be worn often.</p>
+    <p class="cn">琉弥诺 · 可佩戴的日常艺术首饰 · $35–$58 USD</p>
   </div>
 </section>
 
 <!-- ===== 特写条 ===== -->
-<section class="coverstrip">
+<section class="coverstrip" id="collections" aria-labelledby="firstEditTitle">
   <div class="head">
-    <span class="kicker">On the hand — macro plates</span>
-    <h2>Held, not worn</h2>
+    <div class="head-copy">
+      <span class="kicker">The first edit</span>
+      <h2 id="firstEditTitle">Four pieces to begin with</h2>
+      <p>Enamel, brass, resin and glass, photographed close enough to see the finish. Open a piece for materials, dimensions and delivery.</p>
+    </div>
+    <a class="edit-all" href="#vitrine">Shop all seven</a>
   </div>
   <div class="cs-grid">
-    <article class="cs" role="button" tabindex="0" data-open="morpho">
-      <figure><img src="assets/plate-hand-earring.jpg" alt="Fingers pinching the Morpho Nocturne earring against cobalt" loading="lazy"></figure>
-      <p class="cs-cap"><b>Pl. 08 — Morpho Nocturne</b>Iridescent resin wing, blue glass and zircon</p>
-    </article>
-    <article class="cs" role="button" tabindex="0" data-open="cuff">
-      <figure><img src="assets/plate-hand-cuff.jpg" alt="Palm holding the Opaline Arch Cuff against cobalt" loading="lazy"></figure>
-      <p class="cs-cap"><b>Pl. 09 — Opaline Arch</b>Articulated brass with hand-set opal-tone inlays</p>
-    </article>
-    <article class="cs" role="button" tabindex="0" data-open="cuff">
-      <figure><img src="assets/hero-close-cuff.jpg" alt="Wrist wearing the Opaline Arch Cuff on lacquer red" loading="lazy" style="object-position:58% 52%"></figure>
-      <p class="cs-cap"><b>Pl. 04 — Opaline Arch</b>Gold-plated brass, resin inlay and zircon edge</p>
+    <article class="cs" role="button" tabindex="0" data-open="snake">
+      <figure><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
+      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 02</span><b>Serpentine Psalm</b><span class="cs-price">$49</span><span class="cs-material">Vitreous enamel · gold-plated brass</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="morpho">
-      <figure><img src="assets/hero-close-ear.jpg" alt="Model's jaw and ear, butterfly earring, lacquer red" loading="lazy" style="object-position:42% 44%"></figure>
-      <p class="cs-cap"><b>Pl. 01 — Morpho Nocturne</b>Lightweight resin wing with blue glass heart</p>
+      <figure><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on a plaster bust" loading="lazy" style="object-position:50% 32%"></figure>
+      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 01</span><b>Morpho Nocturne</b><span class="cs-price">$39</span><span class="cs-material">Iridescent resin · blue glass · zircon</span><span class="cs-action">View piece</span></p>
+    </article>
+    <article class="cs" role="button" tabindex="0" data-open="cuff">
+      <figure><img src="assets/opaline-cuff.jpg" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy" style="object-position:50% 52%"></figure>
+      <p class="cs-cap"><span class="cs-cat">Mineral Glow · Pl. 04</span><b>Opaline Arch Cuff</b><span class="cs-price">$52</span><span class="cs-material">Gold-plated brass · hand-set zircon</span><span class="cs-action">View piece</span></p>
+    </article>
+    <article class="cs" role="button" tabindex="0" data-open="doves">
+      <figure><img src="assets/hero-close-neck.jpg" alt="Two Doves necklace worn at the throat" loading="lazy" style="object-position:42% 38%"></figure>
+      <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 07</span><b>Two Doves</b><span class="cs-price">$58</span><span class="cs-material">Silver-finish brass · pavé zircon</span><span class="cs-action">View piece</span></p>
     </article>
   </div>
 </section>
 
 <!-- ===== 三幕 ===== -->
-<section class="acts" id="acts">
+<section class="acts" id="acts" hidden>
   <div class="act-stage">
     <article class="act">
       <img src="assets/cover-hand-necklace.jpg" alt="A hand holding the Two Doves necklace against the face" style="object-position:52% 42%">
@@ -836,10 +946,10 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </section>
 
 <!-- ===== 图版条 ===== -->
-<section class="plates" id="plates">
+<section class="plates" id="plates" hidden>
   <div class="plates-head">
     <div>
-      <span class="kicker">The plates — drag to travel</span>
+      <span class="kicker">The plates · drag to travel</span>
       <h2>Seven pieces, one bench</h2>
     </div>
     <span class="drag-hint">Drag &rarr;</span>
@@ -859,14 +969,14 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <section class="films" id="film">
   <div class="films-head">
     <div>
-      <span class="kicker">On film — three moving plates</span>
+      <span class="kicker">On film · three moving plates</span>
       <h2>The pieces, in motion</h2>
     </div>
     <div class="film-ctrl">
       <span class="film-tc">Loop · 00:05 · silent plate</span>
     </div>
   </div>
-  <figure class="film-band">
+  <figure class="film-band" style="--poster:url('assets/cover-hand-necklace.jpg')">
     <video id="filmHero" autoplay muted loop playsinline preload="auto" poster="assets/cover-hand-necklace.jpg">
       <source src="assets/hero-cover.mp4" type="video/mp4">
     </video>
@@ -879,17 +989,17 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     </div>
   </figure>
   <div class="film-duo">
-    <figure>
+    <figure style="--poster:url('assets/plate-hand-earring.jpg')">
       <video id="filmWing" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-earring.jpg">
         <source src="assets/film-wing.mp4" type="video/mp4">
       </video>
-      <figcaption><span>Pl. 01 — Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
+      <figcaption><span>Pl. 01 · Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
     </figure>
-    <figure>
+    <figure style="--poster:url('assets/plate-hand-cuff.jpg')">
       <video id="filmCuff" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-cuff.jpg">
         <source src="assets/film-cuff.mp4" type="video/mp4">
       </video>
-      <figcaption><span>Pl. 04 — Opaline Arch · gold-tone brass, resin, zircon</span><span>00:05</span></figcaption>
+      <figcaption><span>Pl. 04 · Opaline Arch · gold-tone brass, resin, zircon</span><span>00:05</span></figcaption>
     </figure>
   </div>
 </section>
@@ -897,30 +1007,30 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <!-- ===== 另一张脸 ===== -->
 <section class="muse" id="muse">
   <div class="muse-head">
-    <span class="kicker">Another face — plate 10</span>
+    <span class="kicker">Another face · plate 10</span>
     <h2>A second head,<br>the same <em>dim light</em>.</h2>
     <p class="muse-side">Object as ornament<br>one hard flash · black &amp; white</p>
   </div>
   <figure class="muse-feature">
     <img src="assets/muse-brow-bw.jpg" alt="Black-and-white close portrait with the Two Doves necklace worn across the brow" loading="lazy" data-zoom="2.4">
-    <figcaption><span>Pl. 10 — Two Doves, across the brow</span><span>Silver finish · zircon · yellow glass</span></figcaption>
+    <figcaption><span>Pl. 10 · Two Doves, across the brow</span><span>Silver finish · zircon · yellow glass</span></figcaption>
   </figure>
 </section>
 
 <!-- ===== 字体横带 ===== -->
 <section class="typemarquee" aria-label="Luminara house line">
   <div class="tm-track" id="tmTrack">
-    <span>Wearable antiques <i>since MMXXVI</i> Kept in dim light <i>Los Angeles</i></span>
-        <span>Enamel · Glass · Recycled brass <i>Seven pieces</i> One bench <i>Issue 01</i></span>
+    <span>Hand-fired enamel <i>recycled brass</i> Glass &amp; zircon <i>Los Angeles</i></span>
+    <span>Seven numbered pieces <i>one atelier</i> Worldwide delivery <i>Issue 01</i></span>
   </div>
 </section>
 
 <!-- ===== 宣言 ===== -->
 <section class="statement">
   <div class="inner">
-    <div class="chap"><span class="kicker">Chapter I</span><em>On light</em></div>
-    <h2>We cannot cast light, so we keep it in <em>enamel</em>, brass and glass.</h2>
-    <p class="lede">Every piece begins as a small drawing in a notebook and ends as an object that behaves like a found antique — hand-carved, fired, oxidised, then left slightly imperfect on purpose.</p>
+    <div class="chap"><span class="kicker">The materials</span><em>Made by hand</em></div>
+    <h2>Cut, cast, fired and set by hand.</h2>
+    <p class="lede">Every piece begins as a wax model at the bench. Recycled brass is cast, enamel is fired at 780°C, and glass and zircon are set last. Slight differences in colour and surface are part of each numbered piece.</p>
     <div class="meta">
       <span>Recycled brass</span>
       <span>Vitreous enamel, 780°C</span>
@@ -930,7 +1040,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </section>
 
 <!-- ===== 系列索引 ===== -->
-<section class="index">
+<section class="index" hidden>
   <div class="inner">
     <a href="#collections"><span class="num">I</span><span class="nm">Enamel Reverie</span><span class="cn">珐琅幻梦</span></a>
     <a href="#collections"><span class="num">II</span><span class="nm">Ocean Whisper</span><span class="cn">海屿私语</span></a>
@@ -940,7 +1050,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </section>
 
 <!-- ===== 故事网格 ===== -->
-<section class="stories">
+<section class="stories" hidden>
   <div class="head">
     <span class="kicker">From the vitrine</span>
     <h2>Three pieces, three temperatures</h2>
@@ -983,7 +1093,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </section>
 
 <!-- ===== 全宽跨页 ===== -->
-<section class="spread">
+<section class="spread" hidden>
   <figure class="spread-media">
     <img src="assets/jellyfish.jpg" alt="Four silver-finish jellyfish brooches with glass pearls, laid on dark velvet" loading="lazy" style="object-position:50% 42%">
   </figure>
@@ -998,7 +1108,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 </section>
 
 <!-- ===== 藏品谱系 ===== -->
-<section class="archive" id="collections">
+<section class="archive" id="archive-explore" hidden>
   <div class="inner">
     <div class="cat-bar" role="tablist" aria-label="Collections">
       <button class="cat" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1">I — Enamel Reverie</button>
@@ -1118,6 +1228,11 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
         <span class="kicker">Seven pieces · four categories</span>
       </div>
       <p>Small-batch art jewellery for creative wardrobes. Browse by category, then open a piece for materials, dimensions, care and cross-border delivery details.</p>
+      <ul class="shop-facts" aria-label="Purchase information">
+        <li>Made in numbered runs</li>
+        <li>Tracked international delivery</li>
+        <li>Duties confirmed before payment</li>
+      </ul>
     </div>
     <div class="shop-filter" role="group" aria-label="Filter pieces by category">
       <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All 07</button>
@@ -1166,7 +1281,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
       <img src="assets/hero-close-neck.jpg" alt="The Two Doves necklace worn at the throat, photographed after final polish" loading="lazy" style="object-position:42% 38%">
     </figure>
     <div class="copy">
-      <span class="kicker">Chapter III — The atelier</span>
+      <span class="kicker">Chapter III · The atelier</span>
       <h2>Made by hand,<br>in one room.</h2>
       <p>Nothing here is assembled from a catalogue. Wax is carved, recycled brass is cast, enamel is fired until the colour sinks, and the final polish is done with a cloth over the knee.</p>
       <ul class="process">
@@ -1181,13 +1296,14 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <!-- ===== 收束 ===== -->
 <section class="closing">
   <div class="inner">
-    <h2>Wear the light.</h2>
-    <p>Pieces are made in small runs and rarely repeated. If one speaks to you, it is probably the only one.</p>
-    <a class="cta" href="#vitrine">Enter the vitrine</a>
-    <p class="by">By appointment — 琉弥诺</p>
+    <h2>Made to be worn for years.</h2>
+    <p>Seven numbered pieces from $35 to $58 USD. Orders ship tracked from Los Angeles, and duties are confirmed before payment.</p>
+    <a class="cta" href="#vitrine">Shop all seven</a>
+    <p class="by">By appointment · 琉弥诺</p>
   </div>
 </section>
 
+</main>
 <!-- ===== 页脚 ===== -->
 <footer class="footer" id="contact">
   <div class="inner">
@@ -1212,29 +1328,28 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
           <h4>Information</h4>
           <ul>
             <li><a href="#atelier">The atelier</a></li>
-            <li><a href="#atelier">Materials &amp; care</a></li>
-            <li><a href="#atelier">Delivery &amp; returns</a></li>
-            <li><a href="#contact">International shipping &amp; duties</a></li>
-            <li><a href="#atelier">Terms &amp; conditions</a></li>
-            <li><a href="#atelier">Privacy policy</a></li>
+            <li><a href="#contact" data-info="materials">Materials &amp; care</a></li>
+            <li><a href="#contact" data-info="delivery">Delivery &amp; returns</a></li>
+            <li><a href="#contact" data-info="delivery">International shipping &amp; duties</a></li>
+            <li><a href="#contact" data-info="terms">Terms &amp; conditions</a></li>
+            <li><a href="#contact" data-info="privacy">Privacy policy</a></li>
           </ul>
         </div>
         <div class="fcol">
           <h4>House</h4>
           <ul>
             <li><a href="#contact">Appointments</a></li>
-            <li><a href="#contact">Commissions</a></li>
-            <li><a href="#contact">Stockists</a></li>
-            <li><a href="#contact">Archive</a></li>
+            <li><a href="#contact" data-info="commissions">Commissions</a></li>
+            <li><a href="#contact" data-info="stockists">Stockists</a></li>
+            <li><a href="#contact" data-info="archive">Archive</a></li>
           </ul>
         </div>
         <div class="fcol">
           <h4>Contact</h4>
           <ul>
-            <li><a href="#contact">atelier@luminara.studio</a></li>
-            <li><a href="#contact">Instagram</a></li>
-            <li><a href="#contact">Pinterest</a></li>
-            <li><a href="#contact">Journal</a></li>
+            <li><a href="mailto:atelier@luminara.studio">atelier@luminara.studio</a></li>
+            <li><a href="#film">Film</a></li>
+            <li><a href="#atelier">The making</a></li>
           </ul>
         </div>
       </div>
@@ -1244,10 +1359,10 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     <form class="f-form" id="contactForm" novalidate>
       <h4>Write to the atelier</h4>
       <div class="f-fields">
-        <input id="contactName" name="name" type="text" placeholder="Full name" autocomplete="name">
-        <input id="contactEmail" name="email" type="email" placeholder="Email address" autocomplete="email">
+        <label class="f-field" for="contactName"><span>Full name</span><input id="contactName" name="name" type="text" placeholder="Your name" autocomplete="name"></label>
+        <label class="f-field" for="contactEmail"><span>Email address</span><input id="contactEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email"></label>
       </div>
-      <textarea id="contactMessage" name="message" rows="3" placeholder="A piece, a commission, or a fitting…"></textarea>
+      <label class="f-field" for="contactMessage"><span>Message</span><textarea id="contactMessage" name="message" rows="3" placeholder="A piece, a commission, or a fitting…"></textarea></label>
       <button type="submit" class="f-submit">Send message</button>
       <p class="f-status" id="contactStatus" role="status" aria-live="polite"></p>
     </form>
@@ -1386,11 +1501,16 @@ if(bbVideo){
   if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-portrait-poster.jpg"; }
   var heroReduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var heroVisible=true;
+  var heroFrame=bbVideo.closest(".bb-slide");
   function playHero(){
     if(heroVisible && !heroReduce && document.visibilityState!=="hidden"){
       bbVideo.play().catch(function(){});
     }
   }
+  bbVideo.addEventListener("playing",function(){ if(heroFrame){heroFrame.classList.add("video-live");} });
+  ["pause","waiting","stalled","emptied","error"].forEach(function(type){
+    bbVideo.addEventListener(type,function(){ if(heroFrame){heroFrame.classList.remove("video-live");} });
+  });
   bbVideo.addEventListener("canplay",playHero);
   document.addEventListener("visibilitychange",function(){
     if(document.visibilityState==="hidden"){ bbVideo.pause(); }
@@ -1490,6 +1610,59 @@ function closeDrawer(){
 
 function specHTML(spec){
   return spec.map(function(s){return "<li><span>"+s[0]+"</span><b>"+s[1]+"</b></li>";}).join("");
+}
+
+var houseInfo={
+  materials:{
+    title:"Materials & care",
+    intro:"Recycled brass, vitreous enamel, glass, resin and cubic zirconia are finished by hand. Small differences in surface and colour are part of the material.",
+    rows:[["Wear","Put jewellery on after perfume, cosmetics and hair products."],["Store","Keep pieces separate in a dry pouch or the box supplied."],["Clean","Wipe with a soft dry cloth. Do not use polishing dips or abrasives."],["Repair","Contact the atelier with a photograph if a stone or fitting needs attention."]]
+  },
+  delivery:{
+    title:"Delivery & returns",
+    intro:"Available pieces are packed in Los Angeles and shipped with tracking. Shipping is calculated by destination before payment; duties and local taxes are confirmed separately.",
+    rows:[["Dispatch","Small-batch orders are usually prepared within 2–4 business days."],["Tracking","A tracking reference is sent when the parcel leaves the atelier."],["Returns","Unworn pieces can be returned within 14 days of delivery in the original packaging."],["Exceptions","Commissions and made-to-order pieces are final sale."]]
+  },
+  terms:{
+    title:"Terms",
+    intro:"Prices are shown in US dollars. Product availability, shipping and applicable import charges are confirmed before a secure payment link is sent.",
+    rows:[["Stock","A bag request reserves nothing until stock and delivery are confirmed."],["Variation","Hand-finished pieces may differ slightly from the photographs."],["Contact","Use the form in the footer for order, commission or fitting questions."]]
+  },
+  privacy:{
+    title:"Privacy",
+    intro:"Contact and delivery details are used only to answer enquiries, confirm orders and arrange shipping.",
+    rows:[["Data","We do not sell customer information."],["Payment","Card details are handled by the payment provider and are not stored by Luminara."],["Access","Write to the atelier to request, correct or remove your contact information."]]
+  },
+  commissions:{
+    title:"Commissions",
+    intro:"Commissions begin with a short brief covering the piece, materials, approximate size and date needed. A quote and production window follow.",
+    rows:[["Process","Sketch or reference, material selection, wax model, casting and finishing."],["Timing","The production window depends on the design and kiln schedule."],["Request","Use the contact form and include any relevant images or measurements."]]
+  },
+  stockists:{
+    title:"Stockists",
+    intro:"Luminara currently sells directly through this site and by private appointment in Los Angeles.",
+    rows:[["Wholesale","Buyer enquiries can be sent through the contact form."],["Fittings","Appointments are arranged by email."]]
+  },
+  archive:{
+    title:"Issue 01 archive",
+    intro:"Issue 01 contains seven numbered pieces across earrings, necklaces, bracelets and brooches. Available pieces remain in the vitrine while each small run lasts.",
+    rows:[["Edition","Most pieces are produced in runs of 20 to 30."],["Availability","When a size or colour is sold out, it is removed from the bag options."],["Questions","Contact the atelier if you are looking for a previous piece."]]
+  }
+};
+
+function renderInfoPage(key){
+  var info=houseInfo[key];
+  if(!info){return;}
+  mode="info";
+  drawerTitle.textContent=info.title;
+  body.innerHTML=
+    '<p class="d-no"><span>Luminara</span><span>Atelier information</span></p>'+
+    '<h2 class="d-name">'+info.title+'</h2>'+
+    '<p class="d-desc">'+info.intro+'</p>'+
+    '<ul class="d-spec">'+specHTML(info.rows)+'</ul>'+
+    '<button class="d-add" id="infoDone" type="button">Continue browsing</button>';
+  q("#infoDone").addEventListener("click",closeDrawer);
+  openDrawer();
 }
 
 function renderPiece(id){
@@ -1673,6 +1846,8 @@ function showCheckoutForm(){
 updateCount();
 
 document.addEventListener("click",function(e){
+  var info=e.target.closest ? e.target.closest("[data-info]") : null;
+  if(info){e.preventDefault();renderInfoPage(info.getAttribute("data-info"));return;}
   var t=e.target.closest ? e.target.closest("[data-open]") : null;
   if(t){renderPiece(t.getAttribute("data-open"));}
 });
@@ -1703,7 +1878,7 @@ function toast(msg){
 /* ---------- footer placeholders ---------- */
 qa(".fcol a").forEach(function(a){
   var h=a.getAttribute("href");
-  if(h==="#collections"||h==="#vitrine"||h==="#atelier"||h==="#contact"){return;}
+  if(h==="#collections"||h==="#vitrine"||h==="#atelier"||h==="#contact"||h==="#film"||a.hasAttribute("data-info")||h==="mailto:atelier@luminara.studio"){return;}
   a.addEventListener("click",function(e){
     e.preventDefault();
     toast("That page opens with the full site");
@@ -1731,7 +1906,7 @@ if(contactForm){
     submitBtn.disabled=true; submitBtn.textContent="Sending…";
     if(location.protocol!=="file:"){
       apiJSON("/api/contact",data).then(function(){
-        statusEl.textContent="Message received — we will reply within one working day.";
+        statusEl.textContent="Message received. We will reply within one working day.";
         statusEl.className="f-status ok";
         contactForm.reset();
       }).catch(function(error){
@@ -1742,7 +1917,7 @@ if(contactForm){
       });
       return;
     }
-    openMail("Luminara enquiry — "+data.name,[data.name,data.email,"",data.message]);
+    openMail("Luminara enquiry · "+data.name,[data.name,data.email,"",data.message]);
     statusEl.textContent="Your email app is opening with the enquiry.";
     statusEl.className="f-status ok";
     setTimeout(function(){submitBtn.disabled=false;submitBtn.textContent="Send message";},800);
@@ -1861,12 +2036,18 @@ if(!reduce && "IntersectionObserver" in window){
     ring.innerHTML = '<span class="lbl">View</span>';
     document.body.appendChild(dot); document.body.appendChild(ring);
     document.body.classList.add("has-cursor");
-    gsap.set([dot,ring], {xPercent:-50, yPercent:-50});
+    gsap.set([dot,ring], {x:window.innerWidth/2, y:window.innerHeight/2, xPercent:-50, yPercent:-50});
     var dotX = gsap.quickTo(dot, "x", {duration:.16, ease:"power2.out"});
     var dotY = gsap.quickTo(dot, "y", {duration:.16, ease:"power2.out"});
     var ringX = gsap.quickTo(ring, "x", {duration:.45, ease:"power3.out"});
     var ringY = gsap.quickTo(ring, "y", {duration:.45, ease:"power3.out"});
+    var cursorShown=false;
     window.addEventListener("pointermove", function(e){
+      if(!cursorShown){
+        cursorShown=true;
+        dot.classList.add("is-visible");
+        ring.classList.add("is-visible");
+      }
       dotX(e.clientX); dotY(e.clientY);
       ringX(e.clientX); ringY(e.clientY);
     }, {passive:true});
@@ -1898,7 +2079,7 @@ if(!reduce && "IntersectionObserver" in window){
 
   function clamp(v, a, b){ return Math.min(b, Math.max(a, v)); }
 
-  if (acts && stages.length && !window.gsap){
+  if (acts && acts.offsetParent !== null && stages.length && !window.gsap){
     var raf = false;
     function draw(){
       raf = false;
@@ -2040,7 +2221,7 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
 
   /* --- three acts: pinned stage, scrubbed crossfade --- */
   var acts = document.querySelector(".acts");
-  if (acts){
+  if (acts && acts.offsetParent !== null){
     var stage = acts.querySelector(".act-stage");
     var layers = gsap.utils.toArray(acts.querySelectorAll(".act"));
     var dots = gsap.utils.toArray(acts.querySelectorAll(".act-rail i"));
@@ -2074,13 +2255,15 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
   }
 
   /* --- series index rises line by line --- */
-  ScrollTrigger.batch(".index a", {
-    start: "top 92%",
-    once: true,
-    onEnter: function(batch){
-      gsap.fromTo(batch, {y: 26, autoAlpha: 0}, {y: 0, autoAlpha: 1, duration: .9, stagger: .07, ease: "power3.out"});
-    }
-  });
+  if (document.querySelector(".index:not([hidden])")){
+    ScrollTrigger.batch(".index a", {
+      start: "top 92%",
+      once: true,
+      onEnter: function(batch){
+        gsap.fromTo(batch, {y: 26, autoAlpha: 0}, {y: 0, autoAlpha: 1, duration: .9, stagger: .07, ease: "power3.out"});
+      }
+    });
+  }
 
   /* --- atelier / spread copy slides in with the image --- */
   ScrollTrigger.batch(".atelier .copy, .spread-cap", {
@@ -2221,6 +2404,7 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
   /* moving plates start themselves whenever they enter the viewport */
   if (!reduce && "IntersectionObserver" in window){
     films.forEach(function(video){
+      var frame = video.closest("figure");
       new IntersectionObserver(function(entries){
         if (entries[0].isIntersecting && document.visibilityState !== "hidden"){
           video.play().catch(function(){});
@@ -2229,8 +2413,38 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
         }
       }, {threshold:.12}).observe(video);
       video.addEventListener("canplay", function(){ video.play().catch(function(){}); });
+      video.addEventListener("playing", function(){ if(frame){frame.classList.add("video-live");} });
+      ["pause","waiting","stalled","emptied","error"].forEach(function(type){
+        video.addEventListener(type, function(){ if(frame){frame.classList.remove("video-live");} });
+      });
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var intro=document.getElementById("siteIntro");
+  if(!intro){ return; }
+  var started=performance.now();
+  function reveal(){
+    intro.classList.add("is-ready");
+    window.setTimeout(function(){ if(intro.parentNode){intro.parentNode.removeChild(intro);} }, 900);
+  }
+  var fontsReady=(document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  var poster=document.querySelector(".bb-fallback img");
+  var posterReady=Promise.resolve();
+  if(poster && !poster.complete){
+    posterReady=new Promise(function(resolve){
+      poster.addEventListener("load",resolve,{once:true});
+      poster.addEventListener("error",resolve,{once:true});
+    });
+  }
+  var timeout=new Promise(function(resolve){ window.setTimeout(resolve,2600); });
+  Promise.race([Promise.all([fontsReady,posterReady]),timeout]).then(function(){
+    var remaining=Math.max(0,650-(performance.now()-started));
+    window.setTimeout(reveal,remaining);
+  }).catch(reveal);
+  window.setTimeout(reveal,3400);
 })();
 </script>
 <script src="assets/audio-atmosphere.js"></script>

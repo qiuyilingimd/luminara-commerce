@@ -30,3 +30,20 @@
 - The hero film source and rendered landscape/portrait outputs remain in the
   project as editorial media. No HyperFrames runtime is exposed by the public
   storefront.
+
+## Taste Skill
+
+- Source: https://github.com/Leonxlnx/taste-skill
+- License: MIT.
+- Used during design and review as an authoring and browser-checking reference.
+  No Taste Skill runtime files are shipped in the public storefront.
+
+## YuE2
+
+- Source: https://github.com/multimodal-art-projection/YuE
+- Code and skill documentation: Apache 2.0.
+- Model weights: CC BY-NC 4.0 with additional creator permission; the weights
+  are not included or distributed by this project.
+- `assets/luminara-music-prompt.md` records the intended instrumental brief for
+  a future YuE2 generation run. The shipped ambient score is an original
+  procedural composition made for this site.
