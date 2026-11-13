@@ -11,13 +11,13 @@
 <meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
 <meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. A seven-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-v3-poster.jpg">
+<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-v4-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
-<link rel="preload" as="image" href="assets/hero-editorial-v3-poster.jpg" media="(min-width:720px)">
-<link rel="preload" as="image" href="assets/hero-editorial-v3-portrait-poster.jpg" media="(max-width:719px)">
+<link rel="preload" as="image" href="assets/hero-editorial-v4-poster.jpg" media="(min-width:720px)">
+<link rel="preload" as="image" href="assets/hero-editorial-v4-portrait-poster.jpg" media="(max-width:719px)">
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -174,9 +174,17 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .bb-slide.video-live video{opacity:1}
 @keyframes fallback-drift{from{transform:scale(1.025) translate3d(-.6%,.4%,0)}to{transform:scale(1.075) translate3d(.8%,-.7%,0)}}
 .bb-overlay{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(20px,4vh,48px);z-index:3;pointer-events:none;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.bb-overlay::before{
+  content:"";position:absolute;left:-7%;right:-7%;bottom:-52px;height:112%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 7% 82%,rgba(8,7,6,.72),rgba(8,7,6,0) 57%),
+    linear-gradient(to top,rgba(8,7,6,.48),rgba(8,7,6,0) 82%);
+}
+.bb-title,.bb-overlay>.side{position:relative;z-index:1}
 .bb-title{display:grid;gap:12px;min-width:0}
-.bb-overlay h1{margin:0;font-family:var(--f-display);font-style:italic;font-size:clamp(3rem,11vw,7.6rem);line-height:.86;letter-spacing:-.03em;color:var(--ivory);text-shadow:0 2px 40px rgba(20,14,16,.45)}
-.bb-lead{font-size:14px;line-height:1.55;letter-spacing:.015em;color:rgba(255,249,238,.84);max-width:34ch;text-shadow:0 1px 18px rgba(20,14,16,.55)}
+.bb-overlay h1{margin:0;font-family:var(--f-display);font-style:italic;font-size:clamp(3rem,11vw,7.6rem);line-height:.86;letter-spacing:-.03em;color:var(--ivory);text-shadow:0 2px 40px rgba(20,14,16,.45);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.bb-lead{font-size:14px;line-height:1.55;letter-spacing:.015em;color:rgba(255,249,238,.84);max-width:34ch;text-shadow:0 1px 18px rgba(20,14,16,.55);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.bb-overlay.is-assembly h1,.bb-overlay.is-assembly .bb-lead{opacity:0;transform:translateY(14px)}
 .bb-shop{pointer-events:auto;display:inline-flex;align-items:center;gap:14px;width:max-content;min-height:44px;padding-bottom:4px;border-bottom:1px solid rgba(255,249,238,.64);font-family:var(--f-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory)}
 .bb-shop svg{width:17px;height:17px;transition:transform .35s var(--ease)}
 .bb-shop:hover svg{transform:translateX(4px)}
@@ -210,6 +218,10 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
   .bb-shop{font-size:8px;letter-spacing:.16em;gap:8px}
   .bb-overlay .side{max-width:105px;padding-bottom:4px;font-size:7.6px;letter-spacing:.18em;line-height:1.7}
   .scrollhint{display:none}
+  .bb-audio-note{display:none}
+  .bb-bar{gap:12px;align-items:flex-start}
+  .bb-cap{max-width:58%;font-size:8.5px}
+  .bb-count{font-size:10px;letter-spacing:.12em;white-space:nowrap}
   .coverstrip .head{align-items:flex-start;flex-direction:column}
   .coverstrip .head-copy p{font-size:13.5px}
 }
@@ -863,31 +875,31 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <main id="top">
 <section class="billboard">
   <div class="bb-track" id="bbTrack">
-    <figure class="bb-slide is-on" data-cap="The Assembly · A film in five movements">
+    <figure class="bb-slide is-on" data-cap="Surface, scale, assembly · A Luminara film">
       <picture class="bb-fallback" aria-hidden="true">
-        <source media="(max-width:719px)" srcset="assets/hero-editorial-v3-portrait-poster.jpg">
-        <img src="assets/hero-editorial-v3-poster.jpg" alt="" fetchpriority="high" decoding="async">
+        <source media="(max-width:719px)" srcset="assets/hero-editorial-v4-portrait-poster.jpg">
+        <img src="assets/hero-editorial-v4-poster.jpg" alt="" fetchpriority="high" decoding="async">
       </picture>
-      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-v3-poster.jpg" aria-label="Editorial jewellery film showing the Two Doves necklace, Morpho earring, Opaline Arch cuff and the line Taste is assembled">
-        <source src="assets/hero-editorial-12s-v3-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
-        <source src="assets/hero-editorial-12s-v3-lite.mp4" type="video/mp4">
+      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-v4-poster.jpg" aria-label="Editorial jewellery film moving from surface detail to wearing scale and the line Taste is assembled">
+        <source src="assets/hero-editorial-14s-v4-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
+        <source src="assets/hero-editorial-14s-v4-lite.mp4" type="video/mp4">
       </video>
     </figure>
     <div class="bb-overlay">
       <div class="bb-title">
         <h1><span class="sr-only">Luminara, vintage-inspired statement jewellery</span><span aria-hidden="true">Luminara</span></h1>
-        <p class="bb-lead">Vintage-inspired statement jewellery, collected for silhouette, surface and character. Seven pieces to assemble into a wardrobe that feels like yours.</p>
+        <p class="bb-lead">Seven vintage-inspired statement pieces, chosen for silhouette and surface. Wear one, then build the combination until it feels like yours.</p>
     <a class="bb-shop" href="#collections">Shop the first edit
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
         </a>
       </div>
-      <p class="side">The Assembly<br>5 movements · 7 pieces<br>Worldwide delivery</p>
+      <p class="side">The first edit<br>7 pieces · US$35–58<br>Worldwide delivery</p>
     </div>
   </div>
   <div class="bb-bar">
-    <p class="bb-cap" id="bbCap">The Assembly · A film in five movements</p>
-    <span class="bb-count" id="bbCount">00:12 · LOOP</span>
-    <span class="bb-audio-note">Ambient score</span>
+    <p class="bb-cap" id="bbCap">The first edit · Film 01</p>
+    <span class="bb-count" id="bbCount">00:14 · LOOP</span>
+    <span class="bb-audio-note">Original ambient score</span>
   </div>
 </section>
 
@@ -1228,31 +1240,31 @@ function apiJSON(path, data){
 
 var P = {
   lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/lilac-earrings.jpg",pos:"50% 62%",
-    desc:"Four clouded-glass blossoms cluster around a single pavé centre, with small zircon accents catching light between the petals. The pale lilac tone shifts against the background.",
+    desc:"Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
     spec:[["Material","Clouded glass, cubic zirconia"],["Setting","Gold-tone metal"],["Drop","38 mm"]],
     sizes:["One size"]},
   snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/snake-earrings.jpg",pos:"50% 40%",
-    desc:"A serpent silhouette in pale turquoise and oxblood enamel, balanced by two small ruby-tone glass drops. The long curve frames the jaw and catches light as you move.",
+    desc:"A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
     spec:[["Body","Gold-tone metal"],["Finish","Turquoise and oxblood enamel"],["Drop","72 mm"]],
     sizes:["One size"]},
   morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/butterfly-bust.jpg",pos:"50% 30%",
-    desc:"An iridescent wing in layered resin, set into gold-tone filigree with a faceted black centre stone. The colour shifts from cobalt to green as the angle changes.",
+    desc:"A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
     spec:[["Material","Iridescent resin, gold-tone filigree"],["Stones","Black glass, zircon"],["Drop","54 mm"]],
     sizes:["One size"]},
   deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/jellyfish.jpg",pos:"50% 34%",
-    desc:"Four small sea-creature pins in silver-tone metal: a shell, a pearl-tone bead, a coral branch and a long filament form. Worn together, they read as a found set.",
+    desc:"Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
     spec:[["Body","Silver-tone metal"],["Stones","Glass pearl, zircon"],["Sizes","38–62 mm"]],
     sizes:["Set of four"]},
   coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/coral-earrings.jpg",pos:"60% 50%",
-    desc:"Teardrops of coral-tone glass wrapped in gold-tone filigree, with a small blue-green resin cabochon at the crown and a pair of zircon drops.",
+    desc:"Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
     spec:[["Material","Coral-tone glass, gold-tone metal"],["Stone","Resin cabochon, zircon"],["Drop","42 mm"]],
     sizes:["One size"]},
   cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/opaline-cuff.jpg",pos:"50% 46%",
-    desc:"An open arch in gold-tone metal, set with four opal-tone resin panels and a border of zircon. The articulated sections flex around the wrist.",
+    desc:"An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
     spec:[["Body","Gold-tone metal"],["Inlay","Opal-tone resin, cubic zirconia"],["Fit","48 / 52 / 56 mm"]],
     sizes:["48 mm","52 mm","56 mm"]},
   doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/doves-necklace.jpg",pos:"50% 46%",
-    desc:"Two doves in silver-tone metal turn toward one another around a faceted yellow-glass briolette. Zircon traces the wings, and the clasp hides within the tail of the left bird.",
+    desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
     spec:[["Body","Silver-tone metal"],["Stones","Cubic zirconia, yellow glass"],["Length","41 cm adjustable"]],
     sizes:["One size"]}
 };
@@ -1299,7 +1311,7 @@ qa("#mobileMenu a").forEach(function(a){
 /* ---------- billboard film ---------- */
 var bbVideo=q("#bbVideo");
 if(bbVideo){
-  if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-v3-portrait-poster.jpg"; }
+  if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-v4-portrait-poster.jpg"; }
   var heroReduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var heroVisible=true;
   var heroFrame=bbVideo.closest(".bb-slide");
@@ -1309,6 +1321,10 @@ if(bbVideo){
     }
   }
   bbVideo.addEventListener("playing",function(){ if(heroFrame){heroFrame.classList.add("video-live");} });
+  var heroOverlay=bbVideo.closest(".billboard") ? bbVideo.closest(".billboard").querySelector(".bb-overlay") : null;
+  bbVideo.addEventListener("timeupdate",function(){
+    if(heroOverlay){ heroOverlay.classList.toggle("is-assembly",bbVideo.currentTime>10.58&&bbVideo.currentTime<13.18); }
+  });
   ["pause","waiting","stalled","emptied","error"].forEach(function(type){
     bbVideo.addEventListener(type,function(){ if(heroFrame){heroFrame.classList.remove("video-live");} });
   });

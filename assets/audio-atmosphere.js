@@ -2,7 +2,7 @@
   "use strict";
 
   var PREF_KEY = "luminara-sound-v1";
-  var AMBIENT_LEVEL = .5;
+  var AMBIENT_LEVEL = .42;
   var audioButton = document.getElementById("soundToggle");
   var enabled = true;
   try {
@@ -47,7 +47,7 @@
 
   function loadAmbient(){
     if (ambientPromise || !context){ return ambientPromise; }
-    ambientPromise = fetch("assets/luminara-ambient.m4a")
+    ambientPromise = fetch("assets/luminara-ambient-v4.m4a")
       .then(function(response){
         if (!response.ok){ throw new Error("Ambient audio unavailable"); }
         return response.arrayBuffer();

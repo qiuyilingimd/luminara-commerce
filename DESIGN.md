@@ -45,18 +45,21 @@ matters and move to macro crops where material is the subject.
 
 ## Motion
 
-Film loops without playback controls. The hero film uses a paper-wipe transition,
-red-thread continuity and product-focused close crops. A still-image fallback
-keeps movement when browser or device policy refuses autoplay. GSAP is limited to
-the title entrance, image reveals and scroll handoff. Lenis provides smooth
-scrolling. Reduced-motion users see still posters and no decorative drift.
+The hero film loops without playback controls. It moves through material close
+range, wearing scale and the assembled wardrobe, with a short material montage
+between the slower wearable shots. Landscape and portrait are composed
+separately and return to the opening ear close-up for the loop. A still-image
+fallback keeps movement when browser or device policy refuses autoplay. GSAP is
+limited to the title entrance, image reveals and scroll handoff. Lenis provides
+smooth scrolling. Reduced-motion users see still posters and no decorative drift.
 
 ## Sound
 
-The original ambient score uses felt-piano-like bell tones, low sustained strings
-and glass harmonics. It begins only after the first browser interaction and loops
-at low volume. Product, menu and bag actions use restrained procedural chimes.
-A small persistent sound switch controls the experience.
+The original ambient score uses a low harmonic bed, restrained glass tones and
+slow harmonic changes rather than a song-like drum loop. It begins only after the
+first browser interaction and loops at low volume. Product, menu and bag actions
+use restrained procedural chimes. A small persistent sound switch controls the
+experience.
 
 ## Avoid
 
