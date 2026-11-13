@@ -16,6 +16,13 @@ interaction, as required by browser autoplay policies. The small Sound control
 in the masthead provides a persistent mute preference; key storefront actions
 also use quiet, procedurally generated interface sounds.
 
+The hero film is built as five movements: the find, the hold, the detail, the
+pairing, and the assembly. Landscape and portrait renders use a shared visual
+system and a paper-wipe transition. Website copies are encoded at a smaller
+resolution in `assets/hero-editorial-12s-v3-lite.mp4` and
+`assets/hero-editorial-12s-v3-portrait-lite.mp4` so the mobile hero starts
+quickly.
+
 ## Run
 
 ```powershell

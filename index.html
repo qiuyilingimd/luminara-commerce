@@ -11,13 +11,13 @@
 <meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
 <meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. A seven-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-poster.jpg">
+<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-v3-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
-<link rel="preload" as="image" href="assets/hero-editorial-poster.jpg" media="(min-width:720px)">
-<link rel="preload" as="image" href="assets/hero-editorial-portrait-poster.jpg" media="(max-width:719px)">
+<link rel="preload" as="image" href="assets/hero-editorial-v3-poster.jpg" media="(min-width:720px)">
+<link rel="preload" as="image" href="assets/hero-editorial-v3-portrait-poster.jpg" media="(max-width:719px)">
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -257,6 +257,23 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .statement h2{font-size:clamp(1.7rem,5.6vw,4.2rem);line-height:1.08;max-width:22ch}
 .statement h2 em{font-style:italic;color:var(--oxblood)}
 .statement .lede{font-size:16px;line-height:1.78;color:var(--muted);max-width:46ch}
+.assembly-lead{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:36px;align-items:end}
+.assembly-lead .lede{max-width:52ch}
+.assembly-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:12px}
+.assembly-note{margin:0;background:var(--paper-2);border:1px solid var(--line-soft);display:grid;grid-template-rows:auto 1fr}
+.assembly-note img{width:100%;aspect-ratio:5/4;object-fit:cover;display:block}
+.assembly-note div{padding:16px 16px 18px;display:grid;gap:7px}
+.assembly-note b{font-family:var(--f-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--oxblood)}
+.assembly-note p{font-size:14px;line-height:1.58;color:var(--muted)}
+.statement .cta-row{margin-top:8px}
+.statement .cta{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--ink);color:var(--ivory);font-family:var(--f-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s}
+.statement .cta:hover{background:var(--oxblood)}
+@media(max-width:719px){
+  .assembly-lead{grid-template-columns:1fr;gap:14px}
+  .assembly-notes{grid-template-columns:1fr;gap:10px}
+  .assembly-note{grid-template-columns:120px 1fr;grid-template-rows:1fr}
+  .assembly-note img{aspect-ratio:1;height:100%}
+}
 .statement .meta{margin-top:12px;display:grid;border-top:1px solid var(--line-soft)}
 .statement .meta span{
   padding:11px 0;border-bottom:1px solid var(--line-soft);
@@ -517,11 +534,11 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
   .cover h1{grid-column:1;grid-row:2/4}
   .cover .dek{grid-column:2;grid-row:2}
   .cover .cn{grid-column:2;grid-row:3}
-  .statement .inner{grid-template-columns:.66fr 1.34fr;gap:20px 56px}
-  .statement .chap{grid-column:1;flex-direction:column;align-items:flex-start;gap:8px}
-  .statement h2{grid-column:2}
-  .statement .lede{grid-column:2}
-  .statement .meta{grid-column:2;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-soft)}
+  .statement .inner{grid-template-columns:1fr;gap:20px}
+  .statement .chap{grid-column:1;flex-direction:row;align-items:baseline;gap:16px}
+  .statement h2{grid-column:1}
+  .statement .lede{grid-column:1}
+  .statement .meta{grid-column:1;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-soft)}
   .statement .meta span{border-bottom:0;padding:12px 0 0}
   .stories{padding-bottom:80px}
   .sgrid{grid-template-columns:repeat(12,minmax(0,1fr));gap:44px 26px}
@@ -619,6 +636,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .scrollhint i{display:block;width:1px;height:46px;background:linear-gradient(rgba(248,243,232,.75),rgba(248,243,232,0));animation:drop 2.4s var(--ease) infinite}
 @keyframes drop{0%{transform:scaleY(0);transform-origin:0 0}45%{transform:scaleY(1);transform-origin:0 0}55%{transform:scaleY(1);transform-origin:0 100%}100%{transform:scaleY(0);transform-origin:0 100%}}
 @media (prefers-reduced-motion:reduce){.scrollhint i{animation:none}}
+@media(max-width:719px){.billboard .scrollhint{display:none!important}}
 
 /* ---------- acts ---------- */
 .acts{position:relative;height:320vh;background:var(--ink)}
@@ -845,14 +863,14 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <main id="top">
 <section class="billboard">
   <div class="bb-track" id="bbTrack">
-    <figure class="bb-slide is-on" data-cap="Cover 01 · A study in dim light">
+    <figure class="bb-slide is-on" data-cap="The Assembly · A film in five movements">
       <picture class="bb-fallback" aria-hidden="true">
-        <source media="(max-width:719px)" srcset="assets/hero-editorial-portrait-poster.jpg">
-        <img src="assets/hero-editorial-poster.jpg" alt="" fetchpriority="high" decoding="async">
+        <source media="(max-width:719px)" srcset="assets/hero-editorial-v3-portrait-poster.jpg">
+        <img src="assets/hero-editorial-v3-poster.jpg" alt="" fetchpriority="high" decoding="async">
       </picture>
-      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-poster.jpg" aria-label="Editorial fashion film moving through a hawthorn-red thread from the Two Doves necklace to the Morpho earring and finally the Opaline Arch cuff">
-        <source src="assets/hero-editorial-12s-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
-        <source src="assets/hero-editorial-12s-lite.mp4" type="video/mp4">
+      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-v3-poster.jpg" aria-label="Editorial jewellery film showing the Two Doves necklace, Morpho earring, Opaline Arch cuff and the line Taste is assembled">
+        <source src="assets/hero-editorial-12s-v3-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
+        <source src="assets/hero-editorial-12s-v3-lite.mp4" type="video/mp4">
       </video>
     </figure>
     <div class="bb-overlay">
@@ -863,11 +881,11 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
         </a>
       </div>
-      <p class="side">The first edit<br>7 available pieces<br>Worldwide delivery</p>
+      <p class="side">The Assembly<br>5 movements · 7 pieces<br>Worldwide delivery</p>
     </div>
   </div>
   <div class="bb-bar">
-    <p class="bb-cap" id="bbCap">Cover 01 · A study in dim light</p>
+    <p class="bb-cap" id="bbCap">The Assembly · A film in five movements</p>
     <span class="bb-count" id="bbCount">00:12 · LOOP</span>
     <span class="bb-audio-note">Ambient score</span>
   </div>
@@ -918,7 +936,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <section class="films" id="film">
   <div class="films-head">
     <div>
-      <span class="kicker">On film · three moving plates</span>
+      <span class="kicker">The Assembly · three studies</span>
       <h2>The pieces, in motion</h2>
     </div>
     <div class="film-ctrl">
@@ -931,10 +949,10 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     </video>
     <div class="film-ov">
       <div>
-        <span class="kicker">Cover film</span>
+        <span class="kicker">01 / The first find</span>
         <h3>Held at the eye</h3>
       </div>
-      <span class="stamp">MMXXVI · The first edit · Ambient score</span>
+      <span class="stamp">The first edit · find / hold / assemble</span>
     </div>
   </figure>
   <div class="film-duo">
@@ -942,13 +960,13 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
       <video id="filmWing" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-earring.jpg">
         <source src="assets/film-wing.mp4" type="video/mp4">
       </video>
-      <figcaption><span>Pl. 01 · Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
+      <figcaption><span>02 / Surface · Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
     </figure>
     <figure style="--poster:url('assets/plate-hand-cuff.jpg')">
       <video id="filmCuff" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-cuff.jpg">
         <source src="assets/film-cuff.mp4" type="video/mp4">
       </video>
-      <figcaption><span>Pl. 04 · Opaline Arch · gold-tone brass, resin, zircon</span><span>00:05</span></figcaption>
+      <figcaption><span>03 / Weight · Opaline Arch · gold-tone metal, resin, zircon</span><span>00:05</span></figcaption>
     </figure>
   </div>
 </section>
@@ -956,13 +974,13 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <!-- ===== 另一张脸 ===== -->
 <section class="muse" id="muse">
   <div class="muse-head">
-    <span class="kicker">Another face · plate 10</span>
-    <h2>A second head,<br>the same <em>dim light</em>.</h2>
-    <p class="muse-side">Object as ornament<br>one hard flash · black &amp; white</p>
+    <span class="kicker">Point of view · plate 10</span>
+    <h2>One piece,<br>another <em>point of view</em>.</h2>
+    <p class="muse-side">Two Doves, restyled<br>one hard flash · black &amp; white</p>
   </div>
   <figure class="muse-feature">
     <img src="assets/muse-brow-bw.jpg" alt="Black-and-white close portrait with the Two Doves necklace worn across the brow" loading="lazy" data-zoom="2.4">
-    <figcaption><span>Pl. 10 · Two Doves, across the brow</span><span>Silver finish · zircon · yellow glass</span></figcaption>
+    <figcaption><span>Pl. 10 · Two Doves, an unexpected placement</span><span>Silver-tone metal · zircon · yellow glass</span></figcaption>
   </figure>
 </section>
 
@@ -978,12 +996,26 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <section class="statement">
   <div class="inner">
     <div class="chap"><span class="kicker">The point of view</span><em>Taste is assembled</em></div>
-    <h2>A signature is built one choice at a time.</h2>
-    <p class="lede">Luminara brings together old-soul silhouettes, tactile surfaces and decorative detail for wardrobes built over time. Start with what you already wear, then add the piece that changes the line, colour or mood.</p>
-    <div class="meta">
-      <span>Shape</span>
-      <span>Surface</span>
-      <span>Repetition</span>
+    <div class="assembly-lead">
+      <h2>A signature is built one choice at a time.</h2>
+      <p class="lede">Luminara brings together old-soul silhouettes, tactile surfaces and decorative detail for wardrobes built over time. Start with what you already wear, then add the piece that changes the line, colour or mood.</p>
+    </div>
+    <div class="assembly-notes">
+      <article class="assembly-note">
+        <img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings" loading="lazy">
+        <div><b>01 / Shape</b><p>Choose a silhouette that changes the line of a familiar outfit.</p></div>
+      </article>
+      <article class="assembly-note">
+        <img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff" loading="lazy">
+        <div><b>02 / Surface</b><p>Let enamel, glass or resin bring colour and movement.</p></div>
+      </article>
+      <article class="assembly-note">
+        <img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy">
+        <div><b>03 / Repeat</b><p>Return to the pieces that make the outfit feel like yours.</p></div>
+      </article>
+    </div>
+    <div class="cta-row">
+      <a class="cta" href="#vitrine">Find your next piece</a>
     </div>
   </div>
 </section>
@@ -1050,13 +1082,13 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
       <img src="assets/hero-close-neck.jpg" alt="The Two Doves necklace worn at the throat" loading="lazy" style="object-position:42% 38%">
     </figure>
     <div class="copy">
-      <span class="kicker">How to assemble a signature</span>
-      <h2>Start with one piece that changes the look.</h2>
-      <p>A wardrobe becomes personal through repetition and combination. Choose a shape that shifts the silhouette, a surface that adds colour, then return to the piece often enough that it starts to feel like yours.</p>
+      <span class="kicker">How the edit is chosen</span>
+      <h2>The pieces that stay.</h2>
+      <p>A Luminara piece should change a familiar outfit and still make sense a year from now. We look for a silhouette worth noticing, material contrast worth seeing up close, and a reason to reach for it again.</p>
       <ul class="process">
-        <li><b>Shape</b><span>Let the silhouette change the line of a familiar outfit.</span></li>
-        <li><b>Surface</b><span>Add enamel, glass or resin for colour and movement.</span></li>
-        <li><b>Repeat</b><span>Build a collection around the pieces you reach for.</span></li>
+        <li><b>Silhouette</b><span>A clear shape that changes the line of the outfit.</span></li>
+        <li><b>Contrast</b><span>Enamel, glass, resin or metal that rewards a closer look.</span></li>
+        <li><b>Return</b><span>A piece that keeps earning its place in the wardrobe.</span></li>
       </ul>
     </div>
   </div>
@@ -1267,7 +1299,7 @@ qa("#mobileMenu a").forEach(function(a){
 /* ---------- billboard film ---------- */
 var bbVideo=q("#bbVideo");
 if(bbVideo){
-  if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-portrait-poster.jpg"; }
+  if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-v3-portrait-poster.jpg"; }
   var heroReduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var heroVisible=true;
   var heroFrame=bbVideo.closest(".bb-slide");

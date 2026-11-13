@@ -33,21 +33,23 @@ matters and move to macro crops where material is the subject.
 
 ## Page Rhythm
 
-1. Autoplaying editorial film with direct shop action.
-2. Plain product proposition and material facts.
+1. Autoplaying editorial film with direct shop action: find, hold, detail,
+   pairing, assembly.
+2. Plain product proposition built around “Taste is assembled.”
 3. First product edit with four clear names and prices.
 4. Product film and macro detail.
 5. One black-and-white portrait.
-6. Material and atelier story.
-7. Complete, filterable vitrine.
+6. The Assembly: shape, surface and repetition explained with product imagery.
+7. Complete, filterable Cabinet.
 8. Final purchase action and service information.
 
 ## Motion
 
-Film loops without playback controls. A still-image fallback keeps movement when
-browser or device policy refuses autoplay. GSAP is limited to the title entrance,
-image reveals and scroll handoff. Lenis provides smooth scrolling. Reduced-motion
-users see still posters and no decorative drift.
+Film loops without playback controls. The hero film uses a paper-wipe transition,
+red-thread continuity and product-focused close crops. A still-image fallback
+keeps movement when browser or device policy refuses autoplay. GSAP is limited to
+the title entrance, image reveals and scroll handoff. Lenis provides smooth
+scrolling. Reduced-motion users see still posters and no decorative drift.
 
 ## Sound
 
