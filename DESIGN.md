@@ -19,11 +19,11 @@ must not be published without evidence.
 
 ## Visual System
 
-- Neutral paper: `#F3F3EF`
-- Surface: `#E7E6E1`
-- Ink: `#11110F`
-- Oxblood: `#621821`
-- Taupe rule/accent: `#7E7467`
+- Gallery paper: `#F6F5F2`
+- Surface: `#E9E7E2`
+- Ink: `#10100F`
+- Oxblood: `#671923`
+- Graphite rule/accent: `#877F74`
 - Display: Cormorant Garamond
 - Text and labels: Jost
 
@@ -37,6 +37,12 @@ black image galleries and a single oxblood accent. Gold is not used as a UI
 colour. Large Cormorant display type and sparse uppercase Jost labels create the
 hierarchy. Images remain uncropped where the jewellery silhouette matters and
 move to macro crops where material is the subject.
+
+Product photography is graded consistently at approximately 82% saturation
+with slightly increased contrast. This quiets unrelated blue, red and warm-brown
+backgrounds while preserving the colour differences between enamel, glass,
+resin and metal. The black-and-white portrait remains the only fully
+desaturated image.
 
 Layouts favour wide margins, thin rules, generous vertical space and a small
 number of strong alignments. Product images use one portrait ratio in the
