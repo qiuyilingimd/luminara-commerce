@@ -27,6 +27,11 @@ must not be published without evidence.
 - Display: Cormorant Garamond
 - Text and labels: Jost
 
+Typography uses three reliable levels: editorial display from 48–134px,
+reading copy from 14–16px, and functional metadata from 9.4–10.5px. Decorative
+labels may track widely, but prices, filters, product categories, navigation and
+purchase actions never fall back into unreadable microtype.
+
 Photography leads. The interface is a neutral, lightly cool paper field with
 black image galleries and a single oxblood accent. Gold is not used as a UI
 colour. Large Cormorant display type and sparse uppercase Jost labels create the
