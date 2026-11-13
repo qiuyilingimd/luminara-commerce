@@ -19,22 +19,29 @@ must not be published without evidence.
 
 ## Visual System
 
-- Warm paper: `#F5F1E8`
-- Ink: `#16110F`
-- Oxblood: `#5B2025`
-- Antique gold: `#A98243`
-- Mineral turquoise: `#5F948B`
-- Display: Playfair Display italic and roman
+- Neutral paper: `#F3F3EF`
+- Surface: `#E7E6E1`
+- Ink: `#11110F`
+- Oxblood: `#621821`
+- Taupe rule/accent: `#7E7467`
+- Display: Cormorant Garamond
 - Text and labels: Jost
 
-Photography leads. The page alternates gallery-black fields with warm paper and
-one oxblood close. Images remain uncropped where the jewellery silhouette
-matters and move to macro crops where material is the subject.
+Photography leads. The interface is a neutral, lightly cool paper field with
+black image galleries and a single oxblood accent. Gold is not used as a UI
+colour. Large Cormorant display type and sparse uppercase Jost labels create the
+hierarchy. Images remain uncropped where the jewellery silhouette matters and
+move to macro crops where material is the subject.
+
+Layouts favour wide margins, thin rules, generous vertical space and a small
+number of strong alignments. Product images use one portrait ratio in the
+Cabinet. Boxed controls, custom cursors and decorative horizontal type bands are
+removed so the photography and merchandise remain the visual event.
 
 ## Page Rhythm
 
-1. Autoplaying editorial film with direct shop action: find, hold, detail,
-   pairing, assembly.
+1. Autoplaying editorial film with direct shop action: surface, wearing scale,
+   material montage and assembly.
 2. Plain product proposition built around “Taste is assembled.”
 3. First product edit with four clear names and prices.
 4. Product film and macro detail.
@@ -52,14 +59,17 @@ separately and return to the opening ear close-up for the loop. A still-image
 fallback keeps movement when browser or device policy refuses autoplay. GSAP is
 limited to the title entrance, image reveals and scroll handoff. Lenis provides
 smooth scrolling. Reduced-motion users see still posters and no decorative drift.
+Corner captions are omitted from the film; the only on-film copy is the final
+“Taste is assembled” lockup.
 
 ## Sound
 
-The original ambient score uses a low harmonic bed, restrained glass tones and
-slow harmonic changes rather than a song-like drum loop. It begins only after the
-first browser interaction and loops at low volume. Product, menu and bag actions
-use restrained procedural chimes. A small persistent sound switch controls the
-experience.
+The original ambient score is a warm 48-second chamber loop at roughly 80 BPM.
+It uses major ninths, soft plucked figures, a restrained harmonic bed and glass
+tones. Sub-bass is limited so it feels immersive without a physical rumble.
+Music begins only after the first browser interaction and sits well below the
+content. Product, menu and bag actions use quiet procedural chimes. A small
+persistent sound switch controls the experience.
 
 ## Avoid
 
