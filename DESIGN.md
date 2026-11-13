@@ -2,11 +2,20 @@
 
 ## Position
 
-Luminara is a small-batch art-jewellery house in Los Angeles. The work combines
-recycled brass, fired enamel, glass, resin and hand-set zircon. The primary
-customer is a design-conscious shopper who buys a distinctive piece for personal
-wear, not a conventional fine-jewellery investment. The primary action is to add
-a piece to the bag.
+Luminara is a curated house for vintage-inspired statement jewellery. The first
+edit combines decorative silhouettes with enamel, glass, resin, zircon and
+metal-tone finishes at approximately US$35 to US$58. The primary customer is a
+style-led shopper who mixes vintage or second-hand pieces with contemporary
+clothes and uses jewellery to make a familiar outfit personal. The primary
+action is to add a specific piece to the bag.
+
+The core belief is **Taste is assembled**. A personal signature is built from
+repeated choices, combinations and pieces worn often enough to become part of
+the wearer.
+
+Use "vintage-inspired" until the provenance of an item is confirmed. Production
+location, handmade status, recycled content, edition sizes and firing processes
+must not be published without evidence.
 
 ## Visual System
 

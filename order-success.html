@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Order received — Luminara</title>
+  <title>Order received · Luminara</title>
   <link rel="stylesheet" href="vendor/fonts.css">
   <style>
-    :root{--ink:#12100e;--paper:#fff;--ivory:#f8f3e8;--gold:#a8863f;--muted:#6e665b}
+    :root{--ink:#16110f;--paper:#f5f1e8;--ivory:#fff9ee;--gold:#a98243;--muted:#655d52}
     *{box-sizing:border-box}
-    body{margin:0;min-height:100svh;background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif}
+    body{margin:0;min-height:100svh;background:var(--paper);color:var(--ink);font-family:"Jost","Helvetica Neue",Arial,sans-serif}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid rgba(18,16,14,.14)}
     header a{color:inherit;text-decoration:none}
     .brand{font-family:"Playfair Display",Georgia,serif;font-size:19px;letter-spacing:.2em;text-transform:uppercase}
@@ -57,14 +57,14 @@
         document.querySelector("#total").textContent="$"+Number(order.total).toFixed(0)+" USD";
         if(order.status==="paid"){
           document.querySelector("#title").textContent="Payment confirmed.";
-          document.querySelector("#message").textContent="Thank you. We will email tracking details once your piece leaves the studio.";
+          document.querySelector("#message").textContent="Thank you. We will email tracking details once your order ships.";
           document.querySelector("#statusNote").textContent="A receipt and dispatch notice will follow by email.";
         }else{
           document.querySelector("#message").textContent="Your order has been received. We will confirm stock, shipping and import duties before sending a secure payment link.";
           document.querySelector("#statusNote").textContent="No payment has been taken yet.";
         }
       }catch{
-        document.querySelector("#message").textContent="We could not load the order in this browser. Please contact the studio if you need an update.";
+        document.querySelector("#message").textContent="We could not load the order in this browser. Please contact Luminara if you need an update.";
       }
     })();
   </script>

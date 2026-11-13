@@ -19,12 +19,11 @@
       "price": 45,
       "img": "assets/lilac-earrings.jpg",
       "pos": "50% 62%",
-      "desc": "Four lilac blossoms in clouded glass, ringed with zircon details and a single pavé centre. Each petal is finished by hand, so the colour catches light unevenly.",
+      "desc": "Four clouded-glass blossoms cluster around a single pavé centre, with small zircon accents catching light between the petals. The pale lilac tone shifts against the background.",
       "spec": [
         ["Material", "Glass petals, cubic zirconia"],
-        ["Setting", "Gold-plated brass, hand-set"],
-        ["Drop", "38 mm"],
-        ["Edition", "Small batch of 20"]
+        ["Setting", "Gold-tone metal"],
+        ["Drop", "38 mm"]
       ],
       "sizes": ["One size"]
     },
@@ -38,12 +37,11 @@
       "price": 49,
       "img": "assets/snake-earrings.jpg",
       "pos": "50% 40%",
-      "desc": "A snake drawn in cloisonné wire, filled with pale turquoise and oxblood enamel, then fired three times at 780°C. Ruby glass drops hang from the coil and ring against the ear.",
+      "desc": "A serpent silhouette in pale turquoise and oxblood enamel, balanced by two small ruby-tone glass drops. The long curve frames the jaw and catches light as you move.",
       "spec": [
-        ["Body", "Gold-plated brass, cloisonné"],
-        ["Colour", "Vitreous enamel"],
-        ["Drop", "72 mm"],
-        ["Edition", "Small batch of 20"]
+        ["Body", "Gold-tone metal"],
+        ["Finish", "Turquoise and oxblood enamel"],
+        ["Drop", "72 mm"]
       ],
       "sizes": ["One size"]
     },
@@ -61,8 +59,7 @@
       "spec": [
         ["Material", "Iridescent resin, gold-tone filigree"],
         ["Stones", "Black glass, zircon"],
-        ["Drop", "54 mm"],
-        ["Edition", "Small batch of 30"]
+        ["Drop", "54 mm"]
       ],
       "sizes": ["One size"]
     },
@@ -76,12 +73,11 @@
       "price": 55,
       "img": "assets/jellyfish.jpg",
       "pos": "50% 34%",
-      "desc": "Four small sea-creature pins in recycled brass with a silver finish: a shell, a pearl-tone bead, a coral branch and a long filament form. Worn together as a nocturnal set.",
+      "desc": "Four small sea-creature pins in silver-tone metal: a shell, a pearl-tone bead, a coral branch and a long filament form. Worn together, they read as a found set.",
       "spec": [
-        ["Body", "Recycled brass, silver finish"],
+        ["Body", "Silver-tone metal"],
         ["Stones", "Glass pearl, zircon"],
-        ["Sizes", "38 — 62 mm"],
-        ["Edition", "Set of four"]
+        ["Sizes", "38–62 mm"]
       ],
       "sizes": ["Set of four"]
     },
@@ -97,10 +93,9 @@
       "pos": "60% 50%",
       "desc": "Teardrops of coral-tone glass wrapped in gold-tone filigree, with a small blue-green resin cabochon at the crown and a pair of zircon drops.",
       "spec": [
-        ["Material", "Coral-tone glass, gold-plated brass"],
+        ["Material", "Coral-tone glass, gold-tone metal"],
         ["Stone", "Resin cabochon, zircon"],
-        ["Drop", "42 mm"],
-        ["Edition", "Small batch of 30"]
+        ["Drop", "42 mm"]
       ],
       "sizes": ["One size"]
     },
@@ -114,12 +109,11 @@
       "price": 52,
       "img": "assets/opaline-cuff.jpg",
       "pos": "50% 46%",
-      "desc": "An open arch in gold-plated recycled brass, set with four opal-tone resin panels and a border of hand-set zircon. The articulated pins flex comfortably around the wrist.",
+      "desc": "An open arch in gold-tone metal, set with four opal-tone resin panels and a border of zircon. The articulated sections flex around the wrist.",
       "spec": [
-        ["Body", "Gold-plated recycled brass"],
+        ["Body", "Gold-tone metal"],
         ["Inlay", "Opal-tone resin, cubic zirconia"],
-        ["Fit", "48 / 52 / 56 mm"],
-        ["Edition", "Small batch of 20"]
+        ["Fit", "48 / 52 / 56 mm"]
       ],
       "sizes": ["48 mm", "52 mm", "56 mm"]
     },
@@ -133,12 +127,11 @@
       "price": 58,
       "img": "assets/doves-necklace.jpg",
       "pos": "50% 46%",
-      "desc": "Two doves in silver-finish brass, turned toward one another around a faceted yellow-glass briolette. Pavé zircon traces the wings; the clasp hides in the tail of the left bird.",
+      "desc": "Two doves in silver-tone metal turn toward one another around a faceted yellow-glass briolette. Zircon traces the wings, and the clasp hides within the tail of the left bird.",
       "spec": [
-        ["Body", "Silver-finish recycled brass"],
+        ["Body", "Silver-tone metal"],
         ["Stones", "Cubic zirconia, yellow glass"],
-        ["Length", "41 cm adjustable"],
-        ["Edition", "Limited run of 20"]
+        ["Length", "41 cm adjustable"]
       ],
       "sizes": ["One size"]
     }
