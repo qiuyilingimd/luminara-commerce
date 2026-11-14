@@ -56,8 +56,10 @@ range, wearing scale and the assembled wardrobe, with a short material montage
 between the slower wearable shots. Landscape and portrait are composed
 separately and return to the opening ear close-up for the loop. A still-image
 fallback keeps movement when browser or device policy refuses autoplay. GSAP is
-limited to the title entrance, image reveals and scroll handoff. Lenis provides
-smooth scrolling. Reduced-motion users see still posters and no decorative drift.
+limited to the title entrance, image reveals and scroll handoff. Motion supplies
+spring-based product hover, filter arrivals, press feedback and drawer content
+entrances. Lenis provides smooth scrolling. Reduced-motion users see still
+posters and no decorative drift.
 
 ## Sound
 

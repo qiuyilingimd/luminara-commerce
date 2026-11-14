@@ -10,6 +10,11 @@ are adapted natively in `assets/editorial-motion.js`; no React runtime is
 required. Reduced-motion preferences disable smooth scrolling, autoplay and
 pointer-led effects. See `THIRD_PARTY_NOTICES.md` for sources and licences.
 
+Motion 14 is vendored as a local ESM module for spring-based product hover,
+filter arrivals, press feedback and drawer entrances. GSAP remains responsible
+for scroll-linked sequencing so the two engines do not animate the same
+properties on the same elements.
+
 The hero and moving plates loop without playback controls. An original ambient
 score in `assets/luminara-ambient-v4.m4a` fades in after the visitor's first
 interaction, as required by browser autoplay policies. The small Sound control

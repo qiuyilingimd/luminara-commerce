@@ -14,6 +14,14 @@
 - Usage guidance: https://github.com/greensock/gsap-skills
 - The locally vendored GSAP files retain their upstream licence notices.
 
+## Motion
+
+- Package: `motion@14.14.0`
+- Source: https://github.com/motiondivision/motion
+- Local files: `vendor/motion.esm.js`, `vendor/motion-dom.esm.js`,
+  `vendor/motion-utils.esm.js`
+- License: MIT. The complete licence is included at `vendor/motion.LICENSE`.
+
 ## React Bits
 
 - Source: https://github.com/DavidHDev/react-bits
