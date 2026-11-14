@@ -74,31 +74,6 @@ p{margin:0}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Brand-first boot veil: prevents raw type and poster swapping from flashing. */
-.site-intro{
-  position:fixed;inset:0;z-index:210;display:grid;place-items:center;
-  background:
-    radial-gradient(circle at 50% 44%,rgba(91,32,37,.32),rgba(22,17,15,0) 36%),
-    var(--ink);
-  color:var(--ivory);pointer-events:none;
-  opacity:1;visibility:visible;
-  transition:opacity .7s var(--ease),visibility .7s step-end;
-}
-.site-intro.is-ready{opacity:0;visibility:hidden}
-.site-intro-inner{display:grid;justify-items:center;gap:14px;text-align:center}
-.site-intro-mark{
-  font-family:var(--f-display);font-size:clamp(3.2rem,9vw,6rem);font-style:italic;
-  line-height:.8;letter-spacing:-.04em;color:var(--ivory);
-}
-.site-intro-word{font-family:var(--f-label);font-size:9px;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,249,238,.65)}
-.site-intro-line{position:relative;width:92px;height:1px;overflow:hidden;background:rgba(255,249,238,.16)}
-.site-intro-line::after{content:"";position:absolute;inset:0;background:var(--gold-2);transform-origin:0 50%;animation:intro-line 1.45s var(--ease) both}
-@keyframes intro-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes intro-fallback{0%,78%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
-.site-intro{animation:intro-fallback 3.4s var(--ease) forwards}
-.site-intro.is-ready{animation:none}
-@media (prefers-reduced-motion:reduce){.site-intro{animation-duration:.5s}.site-intro-line::after{animation:none;transform:scaleX(1)}}
-
 /* ---------- masthead ---------- */
 .mast{
 position:sticky;top:0;z-index:70;min-height:var(--mast-h);
@@ -851,16 +826,6 @@ h1,h2,h3,h4{font-style:normal;font-weight:400;line-height:.98;letter-spacing:-.0
 .kicker{font-size:8.8px;font-weight:400;letter-spacing:.205em;color:var(--muted)}
 ::selection{background:var(--oxblood);color:var(--ivory)}
 .grain{opacity:.025}
-.site-intro{
-  background:
-    radial-gradient(circle at 50% 44%,rgba(98,24,33,.18),rgba(17,17,15,0) 34%),
-    var(--ink);
-}
-.site-intro-mark{font-size:clamp(2.75rem,7vw,4.6rem);font-style:normal}
-.site-intro-word{font-size:8.5px;letter-spacing:.48em;color:rgba(248,247,243,.56)}
-.site-intro-line{width:76px;background:rgba(248,247,243,.12)}
-.site-intro-line::after{background:var(--gold-2)}
-
 .mast{background:var(--paper);padding-top:17px;padding-bottom:15px;border-bottom-color:var(--line)}
 .mast .brand{font-size:17px;font-weight:500;letter-spacing:.24em;color:var(--ink)}
 .mast .brand small{font-size:8.5px;letter-spacing:.3em;color:var(--muted)}
@@ -1311,7 +1276,6 @@ body{font-size:16.5px;line-height:1.76}
 }
 html,body{background:var(--paper)}
 .mast{background:#F9F8F5;border-bottom-color:var(--line)}
-.site-intro{background:radial-gradient(circle at 50% 44%,rgba(103,25,35,.16),rgba(16,16,15,0) 34%),#10100F}
 .billboard{background:#0C0C0B}
 .films,.vitrine,.footer{background:#0D0D0C}
 .closing{
@@ -1334,14 +1298,6 @@ html,body{background:var(--paper)}
 </style>
 </head>
 <body>
-<div class="site-intro" id="siteIntro" aria-hidden="true">
-  <div class="site-intro-inner">
-    <span class="site-intro-mark">L</span>
-    <span class="site-intro-word">Luminara · 琉弥诺</span>
-    <span class="site-intro-line"></span>
-  </div>
-</div>
-<noscript><style>#siteIntro{display:none!important}</style></noscript>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ===== 报头 ===== -->
@@ -2743,32 +2699,6 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
       });
     });
   }
-})();
-</script>
-<script>
-(function(){
-  var intro=document.getElementById("siteIntro");
-  if(!intro){ return; }
-  var started=performance.now();
-  function reveal(){
-    intro.classList.add("is-ready");
-    window.setTimeout(function(){ if(intro.parentNode){intro.parentNode.removeChild(intro);} }, 900);
-  }
-  var fontsReady=(document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-  var poster=document.querySelector(".bb-fallback img");
-  var posterReady=Promise.resolve();
-  if(poster && !poster.complete){
-    posterReady=new Promise(function(resolve){
-      poster.addEventListener("load",resolve,{once:true});
-      poster.addEventListener("error",resolve,{once:true});
-    });
-  }
-  var timeout=new Promise(function(resolve){ window.setTimeout(resolve,2600); });
-  Promise.race([Promise.all([fontsReady,posterReady]),timeout]).then(function(){
-    var remaining=Math.max(0,650-(performance.now()-started));
-    window.setTimeout(reveal,remaining);
-  }).catch(reveal);
-  window.setTimeout(reveal,3400);
 })();
 </script>
 <script src="assets/audio-atmosphere.js"></script>

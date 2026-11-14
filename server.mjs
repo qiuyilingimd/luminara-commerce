@@ -3,11 +3,14 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import os from "node:os";
+import zlib from "node:zlib";
 import { fileURLToPath } from "node:url";
 import { DatabaseSync } from "node:sqlite";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(ROOT, "data"));
+const COMPRESSIBLE_EXTENSIONS = new Set([".html", ".css", ".js", ".mjs", ".json", ".svg", ".txt", ".md"]);
+const compressedCache = new Map();
 
 function loadDotEnv() {
   const file = path.join(ROOT, ".env");
@@ -499,11 +502,70 @@ async function serveStatic(req, res, url) {
   catch { return sendJson(res, 404, { error: "Not found." }); }
   if (!stat.isFile()) return sendJson(res, 404, { error: "Not found." });
   const contentType = staticTypes.get(path.extname(target).toLowerCase()) || "application/octet-stream";
+  const extension = path.extname(target).toLowerCase();
+  const etag = `W/"${stat.size.toString(16)}-${Math.floor(stat.mtimeMs).toString(16)}"`;
   securityHeaders(res);
   res.setHeader("Content-Type", contentType);
+  res.setHeader("ETag", etag);
+  res.setHeader("Last-Modified", stat.mtime.toUTCString());
+  res.setHeader("Accept-Ranges", "bytes");
+  res.setHeader(
+    "Cache-Control",
+    /\.(mp4|jpg|jpeg|png|webp|woff2)$/i.test(target)
+      ? "public, max-age=604800, stale-while-revalidate=86400"
+      : /\.(css|js|mjs|svg)$/i.test(target)
+        ? "public, max-age=3600, stale-while-revalidate=86400"
+        : "no-cache"
+  );
+  if (req.headers["if-none-match"] === etag) {
+    res.statusCode = 304;
+    return res.end();
+  }
+  if (req.method === "HEAD") {
+    res.setHeader("Content-Length", stat.size);
+    return res.end();
+  }
+  if (req.headers.range && /\.(mp4|m4a)$/i.test(target)) {
+    const match = /^bytes=(\d*)-(\d*)$/.exec(String(req.headers.range));
+    if (match) {
+      const start = match[1] ? Number(match[1]) : 0;
+      const end = match[2] ? Number(match[2]) : stat.size - 1;
+      if (start >= 0 && start <= end && end < stat.size) {
+        res.statusCode = 206;
+        res.setHeader("Content-Range", `bytes ${start}-${end}/${stat.size}`);
+        res.setHeader("Content-Length", end - start + 1);
+        return fs.createReadStream(target, { start, end }).pipe(res);
+      }
+      res.statusCode = 416;
+      res.setHeader("Content-Range", `bytes */${stat.size}`);
+      return res.end();
+    }
+  }
+  if (COMPRESSIBLE_EXTENSIONS.has(extension)) {
+    const accepted = String(req.headers["accept-encoding"] || "").toLowerCase();
+    const encoding = accepted.includes("br") ? "br" : accepted.includes("gzip") ? "gzip" : "";
+    if (encoding) {
+      const cacheKey = `${target}:${stat.mtimeMs}:${stat.size}:${encoding}`;
+      let body = compressedCache.get(cacheKey);
+      if (!body) {
+        const source = await fs.promises.readFile(target);
+        body = encoding === "br"
+          ? zlib.brotliCompressSync(source, {
+              params: {
+                [zlib.constants.BROTLI_PARAM_QUALITY]: 5,
+                [zlib.constants.BROTLI_PARAM_SIZE_HINT]: source.length
+              }
+            })
+          : zlib.gzipSync(source, { level: 7 });
+        compressedCache.set(cacheKey, body);
+      }
+      res.setHeader("Content-Encoding", encoding);
+      res.setHeader("Content-Length", body.length);
+      res.setHeader("Vary", "Accept-Encoding");
+      return res.end(body);
+    }
+  }
   res.setHeader("Content-Length", stat.size);
-  res.setHeader("Cache-Control", /\.(mp4|jpg|jpeg|png|webp|woff2)$/i.test(target) ? "public, max-age=604800" : "no-cache");
-  if (req.method === "HEAD") return res.end();
   fs.createReadStream(target).pipe(res);
 }
 

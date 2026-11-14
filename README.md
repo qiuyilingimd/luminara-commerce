@@ -46,6 +46,19 @@ if you want to restrict access to the computer only.
 
 The site reads products from `data/catalog.json`. The server revalidates product IDs, sizes, quantities, prices and shipping before saving an order to `data/luminara.db`.
 
+## Fast start
+
+The storefront has no blocking brand-intro overlay, so the header and poster can
+paint as soon as the document is available. HTML, CSS, JavaScript and JSON are
+served with Brotli or gzip compression, conditional ETag requests and short-lived
+revalidation caches. Video and audio support byte-range requests.
+
+Render's free web-service plan may still spin down after inactivity. The GitHub
+Actions workflow in `.github/workflows/keepalive.yml` requests the public health
+endpoint every ten minutes to reduce cold starts. A paid always-on Render
+instance is required if the page must be guaranteed warm without relying on the
+scheduled ping.
+
 ## Render
 
 `render.yaml` describes the currently deployed free Render web service with
