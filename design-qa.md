@@ -33,6 +33,8 @@ Implementation: product threshold entry, restaged Pearl Hour hero, Act 04 jewell
 - Choosing silence leaves the sound control off; choosing sound enables the ambient score.
 - Session storage prevents the entrance from blocking repeat navigation during the same browsing session.
 - The entrance exit now uses a radial contraction around the watch face, matching the product's own focal point rather than a generic page wipe.
+- The optional Godot 4.7.2 Web room loads in an iframe only after an explicit 3D action.
+- Desktop and mobile Godot canvases reach a ready state with no browser errors, handle camera input, and unload on close.
 - Throttled 4G measurement: LCP 0.76 s, DOMContentLoaded 0.99 s, 460 KB total transfer.
 
 ## Open Issues

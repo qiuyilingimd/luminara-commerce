@@ -60,7 +60,8 @@ removed so the photography and merchandise remain the visual event.
 5. One black-and-white portrait.
 6. The Assembly: shape, surface and repetition explained through type.
 7. Complete, filterable Cabinet of eight pieces.
-8. Final purchase action and service information.
+8. On-demand Godot 3D room for spatial exploration, followed by the final
+   purchase action and service information.
 
 ## Motion
 
@@ -74,6 +75,10 @@ recombines four extracted pieces on a stone stage and links their movement to
 scroll while preserving the product silhouettes. Lenis provides smooth
 scrolling. Reduced-motion users see complete still compositions without camera
 movement.
+
+The optional Godot room is a separate single-threaded WebAssembly export. It is
+never loaded with the first page. A dedicated loader reports real engine
+progress, then hands over to a draggable 3D camera with wheel and pinch zoom.
 
 ## Sound
 

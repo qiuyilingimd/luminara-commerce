@@ -9,7 +9,7 @@ import { DatabaseSync } from "node:sqlite";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(ROOT, "data"));
-const COMPRESSIBLE_EXTENSIONS = new Set([".html", ".css", ".js", ".mjs", ".json", ".svg", ".txt", ".md"]);
+const COMPRESSIBLE_EXTENSIONS = new Set([".html", ".css", ".js", ".mjs", ".json", ".svg", ".txt", ".md", ".wasm", ".pck"]);
 const compressedCache = new Map();
 
 function loadDotEnv() {
@@ -107,6 +107,7 @@ const staticTypes = new Map([
   [".mp4", "video/mp4"],
   [".m4a", "audio/mp4"],
   [".mp3", "audio/mpeg"],
+  [".wasm", "application/wasm"],
   [".woff2", "font/woff2"]
 ]);
 
@@ -128,7 +129,7 @@ function securityHeaders(res) {
   res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.stripe.com https://api.resend.com; font-src 'self' data:; frame-src https://js.stripe.com https://checkout.stripe.com; base-uri 'self'; form-action 'self'"
+    "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' https://api.stripe.com https://api.resend.com; font-src 'self' data:; frame-src 'self' https://js.stripe.com https://checkout.stripe.com; base-uri 'self'; form-action 'self'"
   );
 }
 
@@ -529,7 +530,7 @@ async function serveStatic(req, res, url) {
   res.setHeader("Accept-Ranges", "bytes");
   res.setHeader(
     "Cache-Control",
-    /\.(mp4|jpg|jpeg|png|webp|woff2)$/i.test(target)
+    /\.(mp4|jpg|jpeg|png|webp|woff2|wasm|pck)$/i.test(target)
       ? "public, max-age=604800, stale-while-revalidate=86400"
       : /\.(css|js|mjs|svg)$/i.test(target)
         ? "public, max-age=3600, stale-while-revalidate=86400"

@@ -26,6 +26,17 @@ them on a new stone-lit stage. Their positions respond to scroll, and the
 background light follows the pointer on precision-pointer devices. Product
 silhouettes and visible materials are preserved.
 
+## Godot 3D room
+
+`godot-source/` contains the Godot 4.7.2 single-threaded Web project. Its export
+lives in `assets/godot/` and is loaded only when the visitor selects **3D Room**
+or **Enter the 3D room**. The scene supports drag-to-orbit, wheel zoom and
+two-finger pinch, posts real loading progress to the page, and unloads its iframe
+when the room closes.
+
+The Godot toolkit is not part of the initial page payload. This preserves the
+fast opening time established for the static editorial storefront.
+
 ## Creative and local tooling
 
 Main image sequencing follows the documented photography system, while motion
