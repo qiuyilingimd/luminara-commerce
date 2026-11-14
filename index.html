@@ -593,6 +593,38 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
   .vitem.v3,.vitem.v4,.vitem.v5,.vitem.v6{grid-column:auto}
   .v-plate.r1610{aspect-ratio:4/5}
 }
+.closing{
+  background:
+    radial-gradient(ellipse at 16% 28%,rgba(103,25,35,.15),rgba(13,13,12,0) 38%),
+    #0D0D0C;
+  padding:clamp(102px,13vw,176px) var(--gut);
+}
+.closing .inner{
+  max-width:1400px;margin:0 auto;display:grid;
+  grid-template-columns:1.12fr .72fr;gap:26px clamp(48px,9vw,132px);align-items:end;
+}
+.closing h2{
+  grid-column:1;grid-row:1/3;max-width:11ch;
+  font-size:clamp(3.7rem,8vw,7.5rem);font-style:normal;font-weight:400;
+  line-height:.9;letter-spacing:-.045em;
+}
+.closing h2 em{font-weight:400;color:#AD626A}
+.closing p{grid-column:2;grid-row:1;margin-top:0;font-size:13.5px;line-height:1.78;color:rgba(248,247,243,.62)}
+.closing .cta{
+  grid-column:2;grid-row:2;justify-self:start;margin-top:22px;padding:0 0 8px;
+  border:0;border-bottom:1px solid rgba(248,247,243,.56);min-height:44px;
+  font-size:8.5px;letter-spacing:.19em;
+}
+.closing .cta:hover{background:none;color:var(--ivory);border-bottom-color:var(--ivory)}
+.closing .by{grid-column:1/-1;grid-row:3;margin-top:36px;font-size:8px;letter-spacing:.22em;color:rgba(248,247,243,.58)}
+@media (max-width:719px){
+  .closing{padding:82px var(--gut) 92px}
+  .closing .inner{grid-template-columns:1fr;gap:24px}
+  .closing h2{grid-column:1;grid-row:auto;font-size:clamp(3.35rem,14.6vw,5rem);line-height:.94}
+  .closing p{grid-column:1;grid-row:auto;max-width:34ch;margin-top:28px}
+  .closing .cta{grid-column:1;grid-row:auto}
+  .closing .by{grid-column:1;grid-row:auto;margin-top:18px}
+}
 @media (min-width:1100px){
   :root{--gut:52px}
   .cover h1{font-size:clamp(3.4rem,7.4vw,7.4rem)}
@@ -1056,7 +1088,7 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <!-- ===== 收束 ===== -->
 <section class="closing">
   <div class="inner">
-    <h2>Wear the piece.<br><em>Make it yours.</em></h2>
+    <h2>What you return to<br><em>becomes your signature.</em></h2>
     <p>Seven vintage-inspired pieces from US$35 to US$58. Orders ship internationally with tracking, and duties are confirmed before payment.</p>
     <a class="cta" href="#vitrine">Shop the Cabinet</a>
     <p class="by">Taste is assembled · 琉弥诺</p>
