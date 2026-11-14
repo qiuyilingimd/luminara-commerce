@@ -4,31 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Luminara｜琉弥诺 — Vintage-Inspired Statement Jewellery</title>
-<meta name="description" content="Luminara is an eight-piece edit of vintage-inspired earrings, necklaces, bracelets and brooches. Prices from US$35, shipped internationally.">
+<meta name="description" content="Luminara is a curated seven-piece edit of vintage-inspired earrings, necklaces, bracelets and brooches. Prices from US$35, shipped internationally.">
 <meta name="page-type" content="product">
 <meta name="site-kind" content="other">
-<meta name="theme-color" content="#171513">
-<meta property="og:title" content="Luminara — Enter the First Edit">
-<meta property="og:description" content="Enter a product-first edit of vintage-inspired jewellery. Old-soul silhouettes, tactile surfaces and eight pieces from US$35.">
+<meta name="theme-color" content="#F5F1E8">
+<meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
+<meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. A seven-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://qiuyilingimd.github.io/luminara-commerce/assets/editorial/pearl-hour-social-v4.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-v4-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://qiuyilingimd.github.io/luminara-commerce/assets/editorial/pearl-hour-social-v4.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
-<link rel="preload" as="image" href="assets/stages/velvet-night.webp" fetchpriority="high">
-<link rel="preload" as="image" href="assets/cutouts/pearl-hour-complete-v2.webp" fetchpriority="high">
-<script>
-try{
-  var forceIntro=/[?&]intro=1(?:&|$)/.test(location.search);
-  if(!forceIntro&&(/[?&]intro=0(?:&|$)/.test(location.search)||sessionStorage.getItem("luminara-entered")==="1")){
-    document.documentElement.classList.add("intro-seen");
-  }
-}catch(error){}
-</script>
+<link rel="preload" as="image" href="assets/hero-editorial-v4-poster.jpg" media="(min-width:720px)">
+<link rel="preload" as="image" href="assets/hero-editorial-v4-portrait-poster.jpg" media="(max-width:719px)">
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -84,6 +73,31 @@ p{margin:0}
   position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+/* Brand-first boot veil: prevents raw type and poster swapping from flashing. */
+.site-intro{
+  position:fixed;inset:0;z-index:210;display:grid;place-items:center;
+  background:
+    radial-gradient(circle at 50% 44%,rgba(91,32,37,.32),rgba(22,17,15,0) 36%),
+    var(--ink);
+  color:var(--ivory);pointer-events:none;
+  opacity:1;visibility:visible;
+  transition:opacity .7s var(--ease),visibility .7s step-end;
+}
+.site-intro.is-ready{opacity:0;visibility:hidden}
+.site-intro-inner{display:grid;justify-items:center;gap:14px;text-align:center}
+.site-intro-mark{
+  font-family:var(--f-display);font-size:clamp(3.2rem,9vw,6rem);font-style:italic;
+  line-height:.8;letter-spacing:-.04em;color:var(--ivory);
+}
+.site-intro-word{font-family:var(--f-label);font-size:9px;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,249,238,.65)}
+.site-intro-line{position:relative;width:92px;height:1px;overflow:hidden;background:rgba(255,249,238,.16)}
+.site-intro-line::after{content:"";position:absolute;inset:0;background:var(--gold-2);transform-origin:0 50%;animation:intro-line 1.45s var(--ease) both}
+@keyframes intro-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes intro-fallback{0%,78%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+.site-intro{animation:intro-fallback 3.4s var(--ease) forwards}
+.site-intro.is-ready{animation:none}
+@media (prefers-reduced-motion:reduce){.site-intro{animation-duration:.5s}.site-intro-line::after{animation:none;transform:scaleX(1)}}
 
 /* ---------- masthead ---------- */
 .mast{
@@ -810,930 +824,17 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 .f-status.err{color:#D98A86}
 .f-submit:disabled,.d-add:disabled{opacity:.55;cursor:default}
 @media(min-width:720px){.f-fields{grid-template-columns:1fr 1fr}}
-
-/* ---------- editorial refinement: neutral field, one accent, fewer devices ---------- */
-:root{
-  --ink:#11110F;
-  --ink-2:#1B1A18;
-  --ink-3:#2B2926;
-  --paper:#F3F3EF;
-  --paper-2:#E7E6E1;
-  --ivory:#F8F7F3;
-  --muted:#68645F;
-  --line:rgba(17,17,15,.14);
-  --line-soft:rgba(17,17,15,.075);
-  --line-ivory:rgba(248,247,243,.18);
-  --gold:#7E7467;
-  --gold-2:#AFA596;
-  --oxblood:#621821;
-  --oxblood-2:#7C3037;
-  --f-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  --ease:cubic-bezier(.16,1,.3,1);
-  --mast-h:78px;
-}
-html{background:var(--paper)}
-body{font-size:15.75px;line-height:1.74;letter-spacing:.006em}
-h1,h2,h3,h4{font-style:normal;font-weight:400;line-height:.98;letter-spacing:-.018em}
-.kicker{font-size:8.8px;font-weight:400;letter-spacing:.205em;color:var(--muted)}
-::selection{background:var(--oxblood);color:var(--ivory)}
-.grain{opacity:.025}
-.mast{background:var(--paper);padding-top:17px;padding-bottom:15px;border-bottom-color:var(--line)}
-.mast .brand{font-size:17px;font-weight:500;letter-spacing:.24em;color:var(--ink)}
-.mast .brand small{font-size:8.5px;letter-spacing:.3em;color:var(--muted)}
-.nav-links{gap:34px}
-.nav-links a,.sound-btn,.casket-btn{font-size:9px;letter-spacing:.19em;color:#45423E;background:none}
-.nav-links a::after,.sound-btn::after{background:var(--ink)}
-.billboard{background:#0B0B0A}
-.bb-overlay{left:clamp(24px,5.5vw,80px);right:clamp(24px,5.5vw,80px);bottom:clamp(28px,5vh,54px)}
-.bb-overlay h1{font-size:clamp(4.2rem,8.5vw,7.1rem);font-weight:400;letter-spacing:-.035em}
-.bb-lead{max-width:31ch;font-size:13.5px;line-height:1.62;color:rgba(248,247,243,.8)}
-.bb-shop{font-size:8.8px;letter-spacing:.22em}
-.bb-overlay .side{font-size:8px;letter-spacing:.24em;color:rgba(248,247,243,.68)}
-.bb-bar{padding-top:13px;padding-bottom:14px}
-.bb-cap,.bb-count,.bb-audio-note{font-size:8.4px;letter-spacing:.18em}
-
-.cover{
-  background:var(--paper);
-  color:var(--ink);
-  padding:clamp(86px,11vw,156px) var(--gut) clamp(78px,9vw,126px);
-  border-top:1px solid var(--line);
-}
-.cover-inner{
-  max-width:1400px;
-  grid-template-columns:minmax(0,1.15fr) minmax(280px,.52fr);
-  align-items:end;
-  gap:24px clamp(48px,8vw,128px);
-}
-.cover .kicker{grid-column:1/-1;grid-row:1;color:var(--muted)}
-.cover h2{
-  grid-column:1;
-  grid-row:2/4;
-  max-width:10ch;
-  color:var(--ink);
-  font-size:clamp(4.2rem,9vw,8.7rem);
-  font-weight:300;
-  line-height:.82;
-  letter-spacing:-.045em;
-}
-.cover .dek{
-  grid-column:2;
-  grid-row:2;
-  max-width:34ch;
-  font-size:14.5px;
-  line-height:1.8;
-  color:var(--muted);
-}
-.cover .cn{grid-column:2;grid-row:3;color:var(--muted);font-size:8.5px;letter-spacing:.18em}
-
-.coverstrip{padding:clamp(78px,9vw,128px) var(--gut) clamp(92px,10vw,146px)}
-.coverstrip .head{
-  max-width:1400px;
-  align-items:flex-end;
-  margin-bottom:34px;
-  padding-bottom:17px;
-  border-bottom-color:var(--line);
-}
-.coverstrip .head h2{
-  margin-top:10px;
-  font-size:clamp(2.2rem,4.7vw,4.4rem);
-  font-style:normal;
-  font-weight:400;
-  line-height:.92;
-  letter-spacing:-.028em;
-}
-.coverstrip .head-copy p{max-width:49ch;font-size:13.8px;line-height:1.72;color:var(--muted)}
-.edit-all{font-size:8.7px;letter-spacing:.18em;color:var(--ink);border-bottom-color:var(--ink)}
-.cs-grid{max-width:1400px;gap:38px 20px}
-.cs figure{background:#DCDCD7}
-.cs img,.plate img,.v-plate img,.story-media img,.railitem img{filter:saturate(.92) contrast(1.035)}
-.cs-cap{margin-top:14px;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;letter-spacing:.15em}
-.cs-cap .cs-cat{color:var(--muted);font-size:8px;letter-spacing:.185em}
-.cs-cap b{margin-top:6px;font-size:21px;font-weight:400;line-height:1.08;letter-spacing:-.015em}
-.cs-cap .cs-price{align-self:baseline;font-size:9px;letter-spacing:.06em;color:var(--muted);padding-bottom:0}
-.cs-cap .cs-material{margin-top:5px;font-size:12.5px;line-height:1.5;color:var(--muted);letter-spacing:.012em}
-.cs-cap .cs-action{margin-top:8px;padding-top:6px;border-bottom:0;font-size:8px;letter-spacing:.18em;color:var(--muted)}
-.cs:hover .cs-action{color:var(--ink)}
-
-.films{background:#0B0B0A}
-.films-head{max-width:1400px;margin:0 auto;padding:clamp(80px,9vw,126px) var(--gut) 34px;border-bottom:0;color:var(--ivory)}
-.films-head .kicker{color:rgba(248,247,243,.58)}
-.films-head h2{margin-top:10px;font-size:clamp(2.25rem,4.8vw,4.4rem);font-style:normal;line-height:.92;letter-spacing:-.028em}
-.film-tc,.film-ov .stamp{display:none!important}
-.film-band::after{background:linear-gradient(to top,rgba(11,11,10,.68),rgba(11,11,10,.02) 48%,rgba(11,11,10,.12))}
-.film-ov{left:clamp(24px,5vw,68px);right:clamp(24px,5vw,68px);bottom:clamp(24px,5vh,48px)}
-.film-ov h3{font-size:clamp(2.5rem,5.6vw,5.1rem);font-style:normal;font-weight:400;line-height:.9;letter-spacing:-.03em}
-.film-duo{gap:2px}
-.film-duo figcaption{padding:18px clamp(20px,4vw,48px) 20px;font-size:8.2px;letter-spacing:.17em;background:linear-gradient(to top,rgba(11,11,10,.72),rgba(11,11,10,0))}
-
-.muse{background:var(--paper);padding:clamp(86px,10vw,138px) var(--gut) clamp(98px,11vw,152px);border-top-color:var(--line)}
-.muse-head{max-width:1400px;margin-bottom:34px;gap:20px 56px}
-.muse-head .kicker{color:var(--muted)}
-.muse-head h2{max-width:1080px;font-size:clamp(3.2rem,7.8vw,7.3rem);font-style:normal;line-height:.83;letter-spacing:-.045em}
-.muse-head h2 em{color:var(--oxblood);font-weight:400}
-.muse-head .muse-side{max-width:188px;font-size:8.2px;letter-spacing:.18em;color:var(--muted)}
-.muse-feature img{height:min(80svh,790px)}
-.muse-feature figcaption{font-size:8px;letter-spacing:.18em}
-
-.typemarquee{display:none!important}
-.statement{padding:clamp(90px,11vw,148px) var(--gut)}
-.statement .inner{padding-top:0;border-top:0;gap:48px}
-.statement .chap{padding-top:18px;border-top:1px solid var(--line)}
-.statement .chap .kicker{color:var(--muted)}
-.statement .chap em{font-size:12px;color:var(--muted)}
-.statement .assembly-lead{grid-template-columns:minmax(0,1.08fr) minmax(280px,.72fr);gap:clamp(36px,8vw,112px);align-items:start}
-.statement .assembly-lead h2{grid-column:1;grid-row:1;max-width:15ch;font-size:clamp(2.9rem,6vw,5.75rem);font-style:normal;line-height:.92;letter-spacing:-.038em}
-.statement .assembly-lead .lede{grid-column:2;grid-row:1}
-.statement h2 em{font-style:italic;font-weight:400;color:var(--oxblood)}
-.statement .lede{font-size:14.5px;line-height:1.82;color:var(--muted)}
-.assembly-notes{gap:24px;margin-top:24px}
-.assembly-note{background:none;border:0;display:block}
-.assembly-note img{aspect-ratio:4/5}
-.assembly-note div{padding:14px 0 0;gap:8px}
-.assembly-note b{font-size:8.2px;letter-spacing:.19em;color:var(--muted)}
-.assembly-note p{font-size:13.2px;line-height:1.65;color:var(--muted);max-width:30ch}
-.statement .cta-row{margin-top:20px}
-.statement .cta{min-height:0;padding:0 0 7px;background:none;color:var(--ink);border-bottom:1px solid var(--ink);font-size:8.5px;letter-spacing:.19em}
-.statement .cta:hover{background:none;color:var(--oxblood);border-bottom-color:var(--oxblood)}
-
-.vitrine{background:var(--ink);padding:clamp(88px,10vw,138px) var(--gut) clamp(104px,12vw,168px)}
-.vitrine .head{padding-top:20px;margin-bottom:50px;border-top-color:rgba(248,247,243,.16)}
-.v-head h2{font-size:clamp(2.9rem,5.7vw,5.5rem);font-style:normal;line-height:.92;letter-spacing:-.038em}
-.v-head .kicker{color:rgba(248,247,243,.58)}
-.vitrine .head p{max-width:48ch;font-size:13.8px;line-height:1.74;color:rgba(248,247,243,.58)}
-.shop-facts{
-  margin-top:28px;
-  background:none;
-  border:0;
-  border-top:1px solid rgba(248,247,243,.14);
-  border-bottom:1px solid rgba(248,247,243,.14);
-  gap:0;
-}
-.shop-facts li{padding:14px 0;background:none;border-right:1px solid rgba(248,247,243,.13);font-size:8.2px;letter-spacing:.15em;color:rgba(248,247,243,.5)}
-.shop-facts li:last-child{border-right:0}
-.shop-facts li+li{padding-left:18px}
-.shop-filter{gap:24px;margin:30px 0 38px;padding-bottom:2px;border-bottom:1px solid rgba(248,247,243,.12)}
-.filter-chip{min-height:38px;padding:0 0 10px;border:0;border-bottom:1px solid transparent;color:rgba(248,247,243,.45);font-size:8.2px;letter-spacing:.18em}
-.filter-chip:hover{color:var(--ivory);border-bottom-color:rgba(248,247,243,.34)}
-.filter-chip[aria-pressed="true"]{background:none;color:var(--ivory);border-color:var(--ivory)}
-.vgrid,.vgrid.is-filtered{gap:52px 22px}
-.v-plate.r1610{aspect-ratio:4/5}
-.v-plate::before,.v-plate::after{display:none}
-.v-no{display:none}
-.v-meta{padding-top:14px}
-.v-meta .kicker{color:rgba(248,247,243,.56);font-size:8px;letter-spacing:.18em}
-.v-meta h3{margin-top:7px;font-size:20px;font-weight:400;line-height:1.08;letter-spacing:-.012em}
-.v-meta .price{margin-top:5px;font-size:9px;letter-spacing:.05em;color:rgba(248,247,243,.58)}
-.v-material{margin-top:7px;font-size:12.2px;line-height:1.5;font-style:normal;color:rgba(248,247,243,.52)}
-
-.atelier{background:var(--paper);padding:clamp(92px,11vw,148px) var(--gut)}
-.atelier .inner{max-width:1400px;grid-template-columns:.88fr 1.12fr;gap:clamp(48px,8vw,112px)}
-.atelier .media{background:#DCDCD7}
-.atelier .copy .kicker{color:var(--muted)}
-.atelier .copy h2{margin-top:13px;font-size:clamp(2.95rem,5.4vw,5.2rem);line-height:.9;letter-spacing:-.038em}
-.atelier .copy p{margin-top:20px;font-size:14.5px;line-height:1.82;color:var(--muted)}
-.process{margin-top:38px}
-.process li{padding:16px 0;border-top-color:var(--line-soft)}
-.process li::before{font-size:11px;color:var(--muted);letter-spacing:.12em}
-.process li b{font-size:8.5px;letter-spacing:.18em}
-.process li span{font-size:13px;line-height:1.62;color:var(--muted)}
-
-.closing{background:var(--ink);padding:clamp(102px,13vw,176px) var(--gut)}
-.closing .inner{max-width:1400px;grid-template-columns:1.12fr .72fr;gap:26px clamp(48px,9vw,132px)}
-.closing h2{max-width:11ch;font-size:clamp(3.7rem,8vw,7.5rem);font-style:normal;font-weight:400;line-height:.9;letter-spacing:-.045em}
-.closing h2 em{font-weight:400;color:#B36A72}
-.closing p{margin-top:0;font-size:13.5px;line-height:1.78;color:rgba(248,247,243,.62)}
-.closing .cta{margin-top:22px;padding:0 0 8px;border:0;border-bottom:1px solid rgba(248,247,243,.56);min-height:0;font-size:8.5px;letter-spacing:.19em}
-.closing .cta:hover{background:none;color:var(--ivory);border-bottom-color:var(--ivory)}
-.closing .by{margin-top:36px;font-size:8px;letter-spacing:.22em;color:rgba(248,247,243,.58)}
-
-.footer{padding:clamp(72px,9vw,112px) var(--gut) 34px}
-.footer .inner{max-width:1400px}
-.footer-brand .logo{font-size:22px;font-weight:500;letter-spacing:.21em}
-.footer-brand .cn{font-size:8px;letter-spacing:.22em}
-.footer-brand p{font-size:12.5px;line-height:1.72;color:rgba(248,247,243,.5)}
-.fcol h4{font-size:8.2px;letter-spacing:.2em;color:rgba(248,247,243,.5)}
-.fcol a{font-size:12.5px;color:rgba(248,247,243,.7)}
-.pay i{font-size:8px;letter-spacing:.12em;border-color:rgba(248,247,243,.15);color:rgba(248,247,243,.5)}
-.foot-bottom{font-size:8px;letter-spacing:.12em;color:rgba(248,247,243,.58)}
-
-#progress{height:1px;background:var(--oxblood-2)}
-.cursor-dot,.cursor-ring,.loupe,#progress{display:none!important}
-@media(pointer:fine){body.has-cursor,body.has-cursor a,body.has-cursor button,body.has-cursor [data-open]{cursor:auto!important}}
-.card:hover,.vgrid a:hover{transform:none}
-
-@media (min-width:720px){
-  :root{--gut:40px}
-  .mast{padding-left:var(--gut);padding-right:var(--gut)}
-}
-@media (min-width:1100px){
-  :root{--gut:72px;--mast-h:82px}
-  .mast{padding-top:19px;padding-bottom:17px}
-  .cover h2{font-size:clamp(5.4rem,9.3vw,9.4rem)}
-  .closing h2{font-size:clamp(5rem,8.2vw,8rem)}
-}
-@media (max-width:719px){
-  :root{--gut:20px;--mast-h:68px}
-  body{font-size:15px}
-  .mast{padding-top:14px;padding-bottom:12px}
-  .mast .brand{font-size:15.5px;letter-spacing:.22em}
-  .mast .brand small{font-size:8px}
-  .billboard{min-height:540px}
-  .bb-overlay h1{font-size:clamp(3rem,12vw,3.6rem)}
-  .bb-overlay .side{font-size:7px}
-  .cover{padding-top:66px;padding-bottom:76px}
-  .cover-inner{grid-template-columns:1fr;gap:30px}
-  .cover .kicker,.cover h2,.cover .dek,.cover .cn{grid-column:1;grid-row:auto}
-  .cover h2{max-width:8ch;font-size:clamp(3.5rem,16vw,5rem);line-height:.86}
-  .cover .dek{max-width:36ch;font-size:14px}
-  .coverstrip{padding-top:68px;padding-bottom:88px}
-  .coverstrip .head{margin-bottom:24px;padding-bottom:14px}
-  .coverstrip .head h2{font-size:clamp(2.2rem,10vw,3.1rem)}
-  .coverstrip .head-copy p{font-size:13.2px}
-  .cs-grid{gap:30px 12px}
-  .cs-cap b{font-size:18px}
-  .cs-cap .cs-material{font-size:11.5px}
-  .films-head{padding-top:68px;padding-bottom:27px}
-  .films-head h2{font-size:clamp(2.4rem,10vw,3.4rem)}
-  .muse{padding-top:70px;padding-bottom:92px}
-  .muse-head h2{font-size:clamp(3.1rem,15vw,4.8rem)}
-  .muse-head .muse-side{font-size:7.8px}
-  .statement{padding-top:72px;padding-bottom:88px}
-  .statement .inner{gap:36px}
-  .statement .chap{padding-top:14px}
-  .statement h2{font-size:clamp(2.8rem,13vw,4.2rem)}
-  .statement .assembly-lead{grid-template-columns:1fr;gap:22px}
-  .statement .assembly-lead h2,.statement .assembly-lead .lede{grid-column:1;grid-row:auto}
-  .assembly-notes{grid-template-columns:1fr;gap:28px;margin-top:10px}
-  .assembly-note{display:block}
-  .assembly-note img{aspect-ratio:4/5}
-  .assembly-note div{padding-top:12px}
-  .vitrine{padding-top:72px;padding-bottom:96px}
-  .v-head h2{font-size:clamp(2.8rem,13vw,4.2rem)}
-  .shop-facts li{padding:11px 0;border-right:0;border-bottom:1px solid rgba(248,247,243,.1)}
-  .shop-facts li+li{padding-left:0}
-  .shop-facts li:last-child{border-bottom:0}
-  .shop-filter{gap:8px 18px;overflow:visible;flex-wrap:wrap;margin-top:24px;margin-bottom:30px}
-  .filter-chip{flex:0 0 auto}
-  .vgrid,.vgrid.is-filtered{gap:36px 12px}
-  .v-meta h3{font-size:18px}
-  .v-meta .kicker{font-size:7.5px}
-  .v-material{font-size:11px}
-  .atelier{padding-top:76px;padding-bottom:88px}
-  .atelier .inner{grid-template-columns:1fr;gap:38px}
-  .atelier .copy h2{font-size:clamp(3rem,14vw,4.4rem)}
-  .closing{padding-top:82px;padding-bottom:92px}
-  .closing .inner{grid-template-columns:1fr;gap:24px}
-  .closing h2{font-size:clamp(3.5rem,15.5vw,5.2rem);line-height:.94}
-  .closing p{max-width:34ch;margin-top:38px}
-  .footer{padding-top:64px}
-}
-
-/* ---------- typography readability pass ---------- */
-body{font-size:16px;line-height:1.76}
-.kicker{font-size:9.8px;line-height:1.55}
-.mast .brand small{font-size:9px}
-.nav-links a,.sound-btn,.casket-btn{font-size:10px}
-.bb-lead{font-size:14.25px;line-height:1.62}
-.bb-shop{font-size:10px}
-.bb-overlay .side{font-size:9.5px;line-height:1.72}
-.bb-cap,.bb-count,.bb-audio-note{font-size:9.4px}
-.cover .dek{font-size:15px}
-.cover .cn{font-size:9.5px}
-.coverstrip .head-copy p{font-size:14.5px}
-.edit-all{font-size:9.5px}
-.cs-cap .cs-cat{font-size:9.5px}
-.cs-cap .cs-price{font-size:10.5px}
-.cs-cap .cs-material{font-size:13px}
-.cs-cap .cs-action{font-size:9.5px}
-.film-duo figcaption{font-size:9.4px;line-height:1.55}
-.muse-head .muse-side{font-size:9.4px;line-height:1.72}
-.muse-feature figcaption{font-size:9px;line-height:1.55}
-.statement .chap em{font-size:13px}
-.statement .lede{font-size:15.25px}
-.assembly-note b{font-size:9.6px}
-.assembly-note p{font-size:14px;line-height:1.68}
-.statement .cta{font-size:10px}
-.vitrine .head p{font-size:14.5px}
-.shop-facts li{font-size:9.6px;line-height:1.55}
-.filter-chip{font-size:10px;min-height:40px}
-.v-meta .kicker{font-size:9.5px;line-height:1.5}
-.v-meta .price{font-size:10.5px}
-.v-material{font-size:13px;line-height:1.56}
-.atelier .copy p{font-size:15.25px}
-.process li b{font-size:9.6px}
-.process li span{font-size:14px;line-height:1.68}
-.closing p{font-size:14.5px}
-.closing .cta{font-size:10px}
-.closing .by{font-size:9.6px}
-.footer-brand p{font-size:13.5px}
-.fcol h4{font-size:9.8px;line-height:1.45}
-.fcol a{font-size:13.5px}
-.pay i{font-size:9.3px}
-.foot-bottom{font-size:9.5px;line-height:1.55}
-.drawer-bar .t,.d-no,.d-cn,.d-sizes .lbl{font-size:10.5px}
-.d-spec li,.drawer-back{font-size:11px}
-.size-btn{font-size:11.5px}
-.d-add,.checkout-breakdown li,.checkout-result .ref{font-size:11px}
-.d-note{font-size:14px}
-.f-form h4{font-size:10.5px}
-.f-field label,.f-submit{font-size:11px}
-.f-status{font-size:10.5px}
-.toast{font-size:11px}
-
-@media (max-width:719px){
-  body{font-size:15.5px}
-  .kicker{font-size:9.7px}
-  .mast .brand small{font-size:9px}
-  .bb-shop{font-size:9.5px}
-  .bb-overlay .side{font-size:9.2px;line-height:1.62}
-  .bb-cap,.bb-count{font-size:9.4px}
-  .cover .dek{font-size:15px}
-  .cover .cn{font-size:9.2px}
-  .coverstrip .head-copy p{font-size:14.2px}
-  .cs-cap .cs-cat{font-size:9.3px}
-  .cs-cap .cs-price{font-size:10.2px}
-  .cs-cap .cs-material{font-size:12.5px;line-height:1.55}
-  .cs-cap .cs-action{font-size:9.3px}
-  .film-duo figcaption{font-size:9.2px}
-  .muse-head .muse-side{font-size:9.3px}
-  .muse-feature figcaption{font-size:8.8px}
-  .statement .lede{font-size:15px}
-  .assembly-note b{font-size:9.5px}
-  .assembly-note p{font-size:14px}
-  .vitrine .head p{font-size:14.2px}
-  .shop-facts li{font-size:9.5px}
-  .filter-chip{font-size:9.8px}
-  .v-meta .kicker{font-size:9.3px}
-  .v-meta .price{font-size:10.2px}
-  .v-material{font-size:12.2px}
-  .atelier .copy p{font-size:15px}
-  .process li b{font-size:9.5px}
-  .process li span{font-size:13.8px}
-  .closing p{font-size:14.2px}
-  .footer-brand p,.fcol a{font-size:13px}
-  .fcol h4{font-size:9.6px}
-  .pay i{font-size:9.1px}
-  .foot-bottom{font-size:9.3px}
-}
-
-/* ---------- general-audience legibility pass ---------- */
-body{font-size:16.5px;line-height:1.76}
-.kicker{font-size:10.5px;font-weight:500;letter-spacing:.14em;line-height:1.55}
-.mast .brand small{font-size:10px;letter-spacing:.18em;color:#5C5852}
-.nav-links a,.sound-btn,.casket-btn{font-size:11.5px;font-weight:500;letter-spacing:.12em;color:#2F2D2A}
-.bb-lead{max-width:33ch;font-size:15.5px;line-height:1.62;color:rgba(248,247,243,.9)}
-.bb-shop{font-size:11px;font-weight:500;letter-spacing:.16em}
-.bb-overlay .side{font-size:10.5px;font-weight:500;letter-spacing:.12em;line-height:1.55}
-.bb-cap,.bb-count,.bb-audio-note{font-size:10.2px;letter-spacing:.13em}
-.cover .dek{font-size:16px;line-height:1.78}
-.cover .cn{font-size:10.5px;letter-spacing:.14em}
-.coverstrip .head-copy p{font-size:15.5px;line-height:1.7}
-.edit-all{font-size:11px;font-weight:500;letter-spacing:.14em}
-.cs-cap .cs-cat{font-size:10.2px;font-weight:500;letter-spacing:.14em}
-.cs-cap b{font-size:23px}
-.cs-cap .cs-price{font-size:11.5px;font-weight:500}
-.cs-cap .cs-material{font-size:14px;line-height:1.55}
-.cs-cap .cs-action{font-size:10.5px;font-weight:500;letter-spacing:.14em}
-.film-duo figcaption{font-size:10px;letter-spacing:.13em}
-.muse-head .muse-side{font-size:10.2px;font-weight:500;letter-spacing:.13em}
-.muse-feature figcaption{font-size:9.8px;letter-spacing:.13em}
-.statement .chap em{font-size:14px}
-.statement .lede{font-size:16px;line-height:1.78}
-.assembly-note b{font-size:10.2px;font-weight:500;letter-spacing:.14em}
-.assembly-note p{font-size:14.75px;line-height:1.7}
-.statement .cta{font-size:11px;font-weight:500;letter-spacing:.14em}
-.vitrine .head p{font-size:15.5px;line-height:1.72}
-.shop-facts li{font-size:10.2px;font-weight:500;letter-spacing:.12em}
-.filter-chip{font-size:11px;font-weight:500;letter-spacing:.14em;min-height:42px}
-.v-meta .kicker{font-size:10.2px;font-weight:500;letter-spacing:.14em}
-.v-meta h3{font-size:22px}
-.v-meta .price{font-size:11.2px;font-weight:500}
-.v-material{font-size:13.8px;line-height:1.55}
-.atelier .copy p{font-size:16px}
-.process li b{font-size:10.2px;font-weight:500;letter-spacing:.14em}
-.process li span{font-size:14.5px}
-.closing p{font-size:15.25px;line-height:1.78}
-.closing .cta{font-size:11px;font-weight:500;letter-spacing:.14em}
-.closing .by{font-size:10px;letter-spacing:.16em}
-.footer-brand p{font-size:14px}
-.fcol h4{font-size:10.2px;font-weight:500;letter-spacing:.14em}
-.fcol a{font-size:14px}
-.pay i{font-size:10px;font-weight:500}
-.foot-bottom{font-size:10px;letter-spacing:.1em}
-.drawer-bar .t,.d-no,.d-cn,.d-sizes .lbl{font-size:11.5px}
-.d-spec li,.drawer-back{font-size:11.5px}
-.size-btn{font-size:12px}
-.d-desc,.d-note{font-size:15.5px}
-.d-add,.checkout-breakdown li,.checkout-result .ref{font-size:11.5px}
-.f-form h4{font-size:11.5px}
-.f-field label,.f-submit{font-size:11.5px}
-.f-status{font-size:11px}
-.toast{font-size:11.5px}
-
-@media (max-width:719px){
-  body{font-size:16px}
-  .kicker{font-size:10.2px}
-  .mast .brand small{font-size:9.5px}
-  .bb-lead{display:block;max-width:28ch;margin-top:2px;font-size:14px;line-height:1.52;color:rgba(248,247,243,.88)}
-  .bb-shop{font-size:10.5px}
-  .bb-overlay .side{display:none}
-  .bb-cap,.bb-count{font-size:10px}
-  .cover .dek{font-size:16px}
-  .cover .cn{font-size:10px}
-  .coverstrip .head-copy p{font-size:15.25px}
-  .cs-cap .cs-cat{font-size:10px}
-  .cs-cap b{font-size:19px}
-  .cs-cap .cs-price{font-size:11px}
-  .cs-cap .cs-material{font-size:13px;line-height:1.55}
-  .cs-cap .cs-action{font-size:10.2px}
-  .film-duo figcaption{font-size:9.8px}
-  .muse-head .muse-side{font-size:10px}
-  .statement .lede{font-size:15.5px}
-  .assembly-note b{font-size:10.2px}
-  .assembly-note p{font-size:14.5px}
-  .vitrine .head p{font-size:15.25px}
-  .shop-facts li{font-size:10px}
-  .filter-chip{font-size:10.5px;min-height:42px}
-  .v-meta .kicker{font-size:10px}
-  .v-meta h3{font-size:19px}
-  .v-meta .price{font-size:11px}
-  .v-material{font-size:13px}
-  .atelier .copy p{font-size:15.5px}
-  .process li b{font-size:10px}
-  .process li span{font-size:14.25px}
-  .closing p{font-size:15px}
-  .footer-brand p,.fcol a{font-size:14px}
-  .fcol h4{font-size:10px}
-  .pay i{font-size:9.8px}
-  .foot-bottom{font-size:9.8px}
-}
-
-/* ---------- final colour system: gallery white, ink, graphite, one oxblood ---------- */
-:root{
-  --ink:#10100F;
-  --ink-2:#181716;
-  --ink-3:#262421;
-  --paper:#F6F5F2;
-  --paper-2:#E9E7E2;
-  --ivory:#FBFAF7;
-  --muted:#66625D;
-  --line:rgba(16,16,15,.12);
-  --line-soft:rgba(16,16,15,.065);
-  --line-ivory:rgba(251,250,247,.17);
-  --gold:#877F74;
-  --gold-2:#AAA297;
-  --oxblood:#671923;
-  --oxblood-2:#8B3A44;
-}
-html,body{background:var(--paper)}
-.mast{background:#F9F8F5;border-bottom-color:var(--line)}
-.billboard{background:#0C0C0B}
-.films,.vitrine,.footer{background:#0D0D0C}
-.closing{
-  background:
-    radial-gradient(ellipse at 16% 28%,rgba(103,25,35,.15),rgba(13,13,12,0) 38%),
-    #0D0D0C;
-}
-.closing h2 em{color:#AD626A}
-.grain{opacity:.018}
-.cs figure,.atelier .media,.d-media,.plate,.v-plate,.d-media{background:#E4E2DD}
-.v-plate{background:#0C0C0B}
-.cs img,.plate img,.v-plate img,.story-media img,.railitem img,.atelier .media img,.d-media img{
-  filter:saturate(.82) contrast(1.055) brightness(.96);
-}
-.muse-feature img{filter:grayscale(1) contrast(1.09) brightness(.97)}
-.shop-facts{background:transparent}
-.filter-chip[aria-pressed="true"]{background:transparent;color:var(--ivory);border-color:var(--ivory)}
-.d-add,.statement .cta{background:var(--ink)}
-.d-add:hover,.statement .cta:hover{background:#242220}
-
-/* ---------- v6: static product portrait, quieter colour, one editorial gesture ---------- */
-:root{
-  --ink:#171513;
-  --ink-2:#201D1A;
-  --ink-3:#2C2824;
-  --paper:#F4F2ED;
-  --paper-2:#E8E5DE;
-  --ivory:#FAF8F3;
-  --muted:#6F6962;
-  --line:rgba(23,21,19,.14);
-  --line-soft:rgba(23,21,19,.075);
-  --line-ivory:rgba(250,248,243,.2);
-  --gold:#82796F;
-  --gold-2:#ACA296;
-  --oxblood:#665E56;
-  --oxblood-2:#81786E;
-}
-html,body{background:var(--paper)}
-.nav-links{gap:clamp(20px,2.5vw,38px)}
-.nav-links a,.nav-3d,.sound-btn,.casket-btn{font-size:10.8px;line-height:1.25;letter-spacing:.15em}
-.nav-links a,.sound-btn,.casket-btn{min-height:44px;display:inline-flex;align-items:center}
-.kicker{font-size:9.6px;line-height:1.4;letter-spacing:.19em}
-
-.lead-story{
-  height:calc(100svh - var(--mast-h));min-height:660px;
-  display:grid;grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);
-  background:var(--paper);border-bottom:1px solid var(--line);
-}
-.ls-copy{
-  min-width:0;height:100%;display:flex;flex-direction:column;justify-content:space-between;gap:34px;
-  padding:clamp(36px,5.5vw,88px) clamp(28px,5.8vw,92px) clamp(32px,4vw,62px);
-}
-.ls-index{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.ls-index .kicker{margin:0;color:var(--ink)}
-.ls-edition{font-family:var(--f-label);font-size:9.2px;line-height:1.5;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right}
-.ls-title{max-width:520px}
-.ls-cn{font-family:var(--f-label);font-size:11px;letter-spacing:.34em;color:var(--muted);margin-bottom:18px}
-.ls-title h1{
-  margin:0;font-family:var(--f-display);font-size:clamp(5.3rem,9.6vw,9.6rem);
-  font-weight:300;line-height:.74;letter-spacing:-.055em;color:var(--ink);
-}
-.ls-title h1 em{font-weight:400;color:#8E8378}
-.ls-dek{max-width:35ch;margin-top:clamp(28px,4vw,46px);font-size:15px;line-height:1.72;color:#514D48}
-.ls-actions{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;padding-top:22px;border-top:1px solid var(--line)}
-.ls-shop{
-  display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:48px;
-  border-bottom:1px solid var(--ink);font-family:var(--f-label);font-size:10px;letter-spacing:.18em;
-  text-transform:uppercase;white-space:nowrap;color:var(--ink);transition:padding .35s var(--ease),opacity .35s;
-}
-.ls-shop svg{width:20px;height:20px}
-.ls-shop:hover{padding-right:8px;opacity:.66}
-.ls-facts{font-family:var(--f-label);font-size:9.4px;line-height:1.75;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-align:right;white-space:nowrap}
-.ls-media{margin:0;position:relative;height:100%;min-height:0;overflow:hidden;background:#171412}
-.ls-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(20,17,15,.08),rgba(20,17,15,0) 24%),linear-gradient(to top,rgba(20,17,15,.18),rgba(20,17,15,0) 30%)}
-.ls-media img{width:100%;height:100%;object-fit:cover;object-position:50% 17%;filter:saturate(.72) contrast(1.035) brightness(.97)}
-
-.object-study{
-  min-height:92svh;display:grid;grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);
-  background:#11100F;color:var(--ivory);
-}
-.object-copy{
-  display:flex;flex-direction:column;justify-content:space-between;gap:48px;
-  padding:clamp(58px,7vw,108px) clamp(28px,5.4vw,86px);
-}
-.object-copy .kicker{color:rgba(250,248,243,.54)}
-.object-copy h2{max-width:7ch;margin:18px 0 0;font-size:clamp(3.6rem,6vw,6.8rem);line-height:.84;letter-spacing:-.045em}
-.object-copy h2 em{font-weight:300;color:#B9AC9C}
-.object-copy .lede{max-width:31ch;margin-top:30px;font-size:15px;line-height:1.72;color:rgba(250,248,243,.7)}
-.object-index{display:grid;border-top:1px solid var(--line-ivory)}
-.object-index span{display:grid;grid-template-columns:36px 1fr;gap:15px;padding:13px 0;border-bottom:1px solid var(--line-ivory);font-size:13.5px;line-height:1.45;color:rgba(250,248,243,.72)}
-.object-index b{font-family:var(--f-label);font-size:9px;line-height:1.6;letter-spacing:.16em;font-weight:400;color:rgba(250,248,243,.42)}
-.object-media{margin:0;position:relative;min-height:100%;overflow:hidden;background:#27211E}
-.object-media img{width:100%;height:100%;object-fit:cover;object-position:50% 44%;filter:saturate(.72) contrast(1.06) brightness(.9)}
-.object-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,16,15,.25),rgba(17,16,15,0) 28%),linear-gradient(to top,rgba(17,16,15,.2),rgba(17,16,15,0) 34%);pointer-events:none}
-
-.closing{background:#11100F!important}
-.closing h2 em{color:#B8ACA0}
-.assembly-notes{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:30px;border-top:1px solid var(--line)}
-.assembly-note{display:block;padding:20px 24px 8px 0;border:0;background:transparent}
-.assembly-note + .assembly-note{padding-left:24px;border-left:1px solid var(--line)}
-.assembly-note b{color:var(--muted)}
-.assembly-note p{margin-top:10px;max-width:27ch;font-size:14px;line-height:1.62;color:#514D48}
-.cs figure,.v-plate,.atelier .media,.d-media,.plate{background:#12110F}
-.cs img,.plate img,.v-plate img,.story-media img,.railitem img,.atelier .media img,.d-media img{
-  filter:saturate(.86) contrast(1.045) brightness(.98);
-}
-.vitem .v-plate img{transform:scale(1.002)}
-.vitem:hover .v-plate img{transform:scale(1.025)}
-.cs:hover figure img{transform:scale(1.025)}
-.d-add,.statement .cta{background:#1A1816;color:var(--ivory)}
-.statement .cta{display:inline-flex;align-items:center;min-height:48px;padding:0 18px}
-.d-add:hover,.statement .cta:hover{background:#302C28}
-.toast{opacity:0;visibility:hidden;transition:transform .5s var(--ease),opacity .25s,visibility .25s}
-.toast.is-on{opacity:1;visibility:visible}
-
-@media(max-width:880px){
-  .nav-links{display:none}
-  .lead-story{display:block;position:relative;height:calc(100svh - var(--mast-h));min-height:690px;background:#151210;color:var(--ivory)}
-  .ls-media{position:absolute;inset:0;min-height:100%}
-  .ls-media img{object-position:50% 14%;filter:saturate(.7) contrast(1.04) brightness(.86)}
-  .ls-media::after{background:linear-gradient(to top,rgba(15,13,12,.84),rgba(15,13,12,.07) 66%),linear-gradient(to bottom,rgba(15,13,12,.42),rgba(15,13,12,0) 28%)}
-  .ls-copy{
-    position:relative;z-index:2;min-height:calc(100svh - var(--mast-h));
-    padding:28px 20px 26px;gap:24px;
-  }
-  .ls-index{padding-bottom:12px;border-bottom-color:rgba(250,248,243,.25)}
-  .ls-index .kicker{color:rgba(250,248,243,.84)}
-  .ls-edition{font-size:8.4px;color:rgba(250,248,243,.68)}
-  .ls-title{margin-top:auto;max-width:100%}
-  .ls-cn{margin-bottom:12px;color:rgba(250,248,243,.62)}
-  .ls-title h1{font-size:clamp(4.5rem,22vw,6.2rem);line-height:.78;color:var(--ivory)}
-  .ls-title h1 em{color:#D3C4B4}
-  .ls-dek{max-width:32ch;margin-top:24px;font-size:14px;line-height:1.62;color:rgba(250,248,243,.8)}
-  .ls-actions{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:end;padding-top:18px;border-top-color:rgba(250,248,243,.25)}
-  .ls-shop{color:var(--ivory);border-bottom-color:rgba(250,248,243,.7);font-size:9.4px;gap:14px}
-  .ls-facts{font-size:8.6px;color:rgba(250,248,243,.65)}
-  .object-study{grid-template-columns:1fr;min-height:0}
-  .object-copy{padding:68px 20px 48px;gap:42px}
-  .object-copy h2{font-size:clamp(3.4rem,15vw,4.8rem);max-width:8ch}
-  .object-copy .lede{font-size:14.5px}
-  .object-media{min-height:72svh}
-  .assembly-notes{grid-template-columns:1fr;border-top:0}
-  .assembly-note,.assembly-note + .assembly-note{padding:17px 0;border-left:0;border-top:1px solid var(--line)}
-  .assembly-note p{font-size:14px}
-}
-@media(max-width:420px){
-  .mast .brand small{display:none}
-  .ls-actions{grid-template-columns:1fr}
-  .ls-facts{text-align:left}
-}
-@media(prefers-reduced-motion:reduce){
-  .ls-media img,.object-media img{filter:saturate(.74) contrast(1.04)}
-}
-
-/* ---------- v7: threshold scene and restaged product theatre ---------- */
-.intro-open{overflow:hidden}
-.intro-seen .threshold{display:none!important}
-.intro-seen body{overflow:auto}
-.threshold{
-  position:fixed;inset:0;z-index:300;isolation:isolate;overflow:hidden;
-  background:#080807;color:var(--ivory);
-}
-.threshold-scene{position:absolute;inset:0;z-index:-2;overflow:hidden}
-.threshold-scene>img{
-  width:100%;height:100%;object-fit:cover;object-position:50% 58%;
-  transform:scale(1.045);filter:saturate(.48) contrast(1.06) brightness(.76);
-}
-.threshold-scene::before{
-  content:"";position:absolute;inset:-12%;z-index:1;pointer-events:none;
-  background:
-    radial-gradient(ellipse at 66% 39%,rgba(235,221,201,.22),rgba(104,91,78,.05) 26%,rgba(8,8,7,0) 57%),
-    linear-gradient(90deg,rgba(6,6,5,.82),rgba(6,6,5,.08) 48%,rgba(6,6,5,.4));
-}
-.threshold-scene::after{
-  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(to top,rgba(5,5,4,.9),rgba(5,5,4,0) 48%);
-}
-.threshold-brand{
-  position:absolute;z-index:4;top:clamp(22px,3.5vw,48px);left:50%;transform:translateX(-50%);
-  display:flex;align-items:baseline;gap:13px;white-space:nowrap;
-}
-.threshold-brand b{font-family:var(--f-display);font-size:clamp(20px,1.8vw,28px);font-weight:500;letter-spacing:.25em;text-transform:uppercase}
-.threshold-brand span{font-family:var(--f-label);font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(250,248,243,.56)}
-.threshold-piece-wrap{
-  position:absolute;z-index:2;top:7svh;right:clamp(30px,8vw,130px);
-  width:min(42vw,620px);height:80svh;display:grid;place-items:center;pointer-events:none;
-}
-.threshold-piece{
-  width:auto;max-width:100%;max-height:100%;object-fit:contain;
-  filter:brightness(.92) contrast(1.08) saturate(.78) drop-shadow(18px 30px 28px rgba(0,0,0,.74));
-}
-.threshold-halo{
-  position:absolute;z-index:1;right:5%;top:17%;width:65%;height:56%;
-  border-radius:50%;background:radial-gradient(ellipse,rgba(225,207,184,.17),rgba(187,165,142,.05) 44%,rgba(0,0,0,0) 73%);
-  filter:blur(20px);pointer-events:none;
-}
-.threshold-copy{
-  position:absolute;z-index:4;left:clamp(24px,7vw,112px);bottom:clamp(92px,13svh,138px);
-  width:min(42vw,570px);
-}
-.threshold-copy .kicker{color:rgba(250,248,243,.56)}
-.threshold-title{
-  margin:16px 0 0;color:var(--ivory);font-family:var(--f-display);
-  font-size:clamp(4.2rem,8.2vw,8.5rem);font-weight:300;line-height:.79;letter-spacing:-.052em;
-}
-.threshold-title em{font-weight:300;color:#c7b9a9}
-.threshold-copy p:last-child{max-width:34ch;margin-top:28px;font-size:14.5px;line-height:1.68;color:rgba(250,248,243,.7)}
-.threshold-actions{
-  position:absolute;z-index:5;right:clamp(24px,7vw,112px);bottom:clamp(32px,5svh,56px);
-  display:flex;align-items:center;gap:22px;
-}
-.threshold-enter,.threshold-quiet{
-  min-height:48px;font-family:var(--f-label);font-size:9.6px;letter-spacing:.18em;text-transform:uppercase;
-}
-.threshold-enter{
-  display:inline-flex;align-items:center;justify-content:center;padding:0 20px;
-  border:1px solid rgba(250,248,243,.62);color:var(--ivory);
-  background:rgba(10,9,8,.24);backdrop-filter:blur(8px);
-  transition:background .35s var(--ease),color .35s var(--ease),border-color .35s;
-}
-.threshold-enter:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
-.threshold-quiet{color:rgba(250,248,243,.64);border-bottom:1px solid rgba(250,248,243,.27);padding:0 0 4px}
-.threshold-quiet:hover{color:var(--ivory);border-color:var(--ivory)}
-.threshold-foot{
-  position:absolute;z-index:4;left:clamp(24px,7vw,112px);bottom:32px;
-  font-family:var(--f-label);font-size:8.5px;line-height:1.6;letter-spacing:.18em;
-  text-transform:uppercase;color:rgba(250,248,243,.42);
-}
-
-.lead-story .ls-media{background:#0b0a09}
-.ls-media .ls-stage{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%;
-  transform:scale(1.025);filter:saturate(.4) contrast(1.08) brightness(.72);
-}
-.ls-media .ls-object{
-  position:absolute;z-index:2;top:8%;right:5%;width:min(64%,620px);height:83%;
-  object-fit:contain;filter:brightness(.94) contrast(1.08) saturate(.82) drop-shadow(18px 28px 24px rgba(0,0,0,.76));
-}
-.ls-media .ls-light{
-  position:absolute;z-index:1;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse at var(--lx,66%) var(--ly,38%),rgba(236,221,202,.17),rgba(160,143,125,.04) 37%,rgba(0,0,0,0) 66%),
-    linear-gradient(90deg,rgba(6,6,5,.25),rgba(6,6,5,0) 23%);
-}
-.lead-story .ls-media::after{background:linear-gradient(to top,rgba(8,7,6,.44),rgba(8,7,6,0) 26%)}
-
-.restage{
-  position:relative;height:190svh;background:#090908;color:var(--ivory);
-}
-.restage-sticky{
-  position:sticky;top:var(--mast-h);height:calc(100svh - var(--mast-h));
-  overflow:hidden;isolation:isolate;
-}
-.restage-bg{
-  position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:50% 45%;
-  filter:saturate(.34) contrast(1.1) brightness(.74);
-}
-.restage-sticky::before{
-  content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
-  background:
-    radial-gradient(ellipse at var(--lx,57%) var(--ly,42%),rgba(231,217,198,.2),rgba(107,96,84,.055) 30%,rgba(7,7,6,0) 66%),
-    linear-gradient(90deg,rgba(7,7,6,.8),rgba(7,7,6,.04) 48%,rgba(7,7,6,.46));
-}
-.restage-sticky::after{
-  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(to top,rgba(5,5,4,.82),rgba(5,5,4,0) 42%);
-}
-.restage-copy{
-  position:absolute;z-index:4;left:clamp(24px,6.4vw,104px);top:clamp(56px,10svh,104px);
-  width:min(33vw,430px);
-}
-.restage-copy .kicker{color:rgba(250,248,243,.54)}
-.restage-copy h2{
-  margin:16px 0 0;color:var(--ivory);font-family:var(--f-display);font-weight:300;
-  font-size:clamp(3.9rem,7vw,7.4rem);line-height:.82;letter-spacing:-.048em;
-}
-.restage-copy h2 em{font-weight:300;color:#c7b9aa}
-.restage-copy p{max-width:31ch;margin-top:28px;font-size:14.5px;line-height:1.68;color:rgba(250,248,243,.68)}
-.restage-index{
-  position:absolute;z-index:4;left:clamp(24px,6.4vw,104px);bottom:clamp(28px,5svh,52px);
-  display:flex;gap:18px;font-family:var(--f-label);font-size:8.5px;letter-spacing:.17em;
-  text-transform:uppercase;color:rgba(250,248,243,.47);
-}
-.restage-index span{display:flex;align-items:center;gap:8px}
-.restage-index span::before{content:"";width:20px;height:1px;background:rgba(250,248,243,.32)}
-.restage-field{position:absolute;inset:0;z-index:2;pointer-events:none}
-.restage-piece{position:absolute;margin:0;transform-origin:50% 50%}
-.restage-piece img{
-  width:100%;height:auto;filter:brightness(.92) contrast(1.075) saturate(.82) drop-shadow(16px 28px 26px rgba(0,0,0,.78));
-}
-.restage-piece.is-serpentine{width:clamp(130px,16vw,250px);left:38%;top:44%;transform:rotate(-8deg)}
-.restage-piece.is-pearl{width:clamp(220px,27vw,420px);left:52%;top:8%}
-.restage-piece.is-doves{width:clamp(210px,24vw,370px);right:4%;top:29%;transform:rotate(3deg)}
-.restage-piece.is-coral{width:clamp(94px,10vw,150px);left:35%;bottom:5%;transform:rotate(9deg)}
-
-@media(max-width:880px){
-  .threshold-brand{top:22px}
-  .threshold-brand span{display:none}
-  .threshold-piece-wrap{top:9svh;right:-2vw;width:86vw;height:58svh}
-  .threshold-copy{left:20px;right:20px;bottom:122px;width:auto}
-  .threshold-title{font-size:clamp(4.2rem,18.5vw,6.2rem);max-width:7ch}
-  .threshold-copy p:last-child{max-width:32ch;margin-top:20px;font-size:14px;color:rgba(250,248,243,.76)}
-  .threshold-actions{left:20px;right:20px;bottom:26px;display:grid;grid-template-columns:1fr auto;gap:16px}
-  .threshold-enter{padding:0 14px;font-size:9px}
-  .threshold-quiet{font-size:9px}
-  .threshold-foot{display:none}
-
-  .ls-media .ls-stage{object-position:50% 40%}
-  .ls-media .ls-object{top:11%;left:13%;right:auto;width:76%;height:58%}
-
-  .restage{height:205svh}
-  .restage-sticky{top:var(--mast-h)}
-  .restage-copy{left:20px;right:20px;top:42px;width:auto}
-  .restage-copy::before{
-    content:"";position:absolute;z-index:-1;inset:-20px -18px -34px;
-    background:linear-gradient(to bottom,rgba(6,6,5,.96),rgba(6,6,5,.78) 74%,rgba(6,6,5,0));
-  }
-  .restage-copy h2{max-width:9ch;font-size:clamp(3rem,12.5vw,4.2rem)}
-  .restage-copy p{max-width:30ch;margin-top:18px;font-size:13.8px}
-  .restage-piece.is-serpentine{width:34vw;left:2%;top:56%}
-  .restage-piece.is-pearl{width:47vw;left:46%;top:38%}
-  .restage-piece.is-doves{width:38vw;right:-3%;top:69%}
-  .restage-piece.is-coral{width:18vw;left:7%;bottom:7%}
-  .restage-index{left:20px;right:20px;bottom:24px;flex-wrap:wrap;gap:8px 16px}
-}
-@media(prefers-reduced-motion:reduce){
-  .threshold-piece,.ls-media .ls-object,.restage-piece,.restage-bg{filter:saturate(.68) contrast(1.06)}
-}
-
-/* ---------- on-demand Godot room ---------- */
-.nav-3d,.mobile-3d{
-  font-family:var(--f-label);font-size:10.8px;line-height:1.25;letter-spacing:.15em;
-  text-transform:uppercase;color:#45423e;border-bottom:1px solid transparent;
-  transition:color .2s,border-color .2s;
-}
-.nav-3d:hover,.mobile-3d:hover{color:var(--ink);border-color:var(--ink)}
-.nav-3d{min-height:44px;display:inline-flex;align-items:center}
-.mobile-3d{width:100%;padding:15px 0;text-align:left}
-.restage-3d{
-  display:inline-flex;align-items:center;justify-content:center;margin-top:26px;min-height:46px;
-  padding:0 18px;border:1px solid rgba(250,248,243,.48);color:var(--ivory);
-  font-family:var(--f-label);font-size:9.4px;letter-spacing:.18em;text-transform:uppercase;
-  transition:background .3s,color .3s,border-color .3s;
-}
-.restage-3d:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
-.godot-open{overflow:hidden}
-.godot-room{
-  position:fixed;inset:0;z-index:320;background:#070706;color:var(--ivory);
-  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s var(--ease),visibility .45s;
-}
-.godot-room.is-open{opacity:1;visibility:visible;pointer-events:auto}
-.godot-room-head{
-  position:absolute;z-index:5;top:0;left:0;right:0;height:72px;padding:0 clamp(18px,4vw,56px);
-  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;
-  border-bottom:1px solid rgba(250,248,243,.16);background:rgba(7,7,6,.86);
-}
-.godot-room-brand{font-family:var(--f-display);font-size:17px;letter-spacing:.24em;text-transform:uppercase}
-.godot-room-title{font-family:var(--f-label);font-size:9.2px;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,243,.62);text-align:center}
-.godot-close{
-  justify-self:end;min-height:44px;padding:0 15px;border:1px solid rgba(250,248,243,.34);
-  font-family:var(--f-label);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
-  transition:background .3s,color .3s,border-color .3s;
-}
-.godot-close:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
-.godot-stage{
-  position:absolute;top:72px;left:0;right:0;bottom:42px;background:#070706;overflow:hidden;
-}
-.godot-stage iframe{
-  width:100%;height:100%;display:block;border:0;background:#070706;
-  opacity:0;filter:brightness(.78) contrast(1.1) saturate(.9);
-  transition:opacity .7s var(--ease);
-}
-.godot-room.is-ready .godot-stage iframe{opacity:1}
-.godot-loader{
-  position:absolute;inset:0;z-index:3;display:grid;place-items:center;overflow:hidden;
-  background:#080706;transition:opacity .7s var(--ease),visibility .7s;
-}
-.godot-loader img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.24;filter:brightness(.6) saturate(.56)}
-.godot-loader::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,6,.94),rgba(7,7,6,.22))}
-.godot-loader-copy{position:relative;z-index:1;text-align:center;max-width:380px;padding:24px}
-.godot-loader-copy .kicker{color:rgba(250,248,243,.5)}
-.godot-loader-copy h3{margin-top:14px;font-family:var(--f-display);font-size:clamp(2.4rem,4.5vw,4.4rem);line-height:.9;font-weight:300}
-.godot-loader-copy p{margin:18px auto 0;max-width:30ch;font-size:13px;line-height:1.65;color:rgba(250,248,243,.64)}
-.godot-progress{width:min(220px,52vw);height:1px;margin:24px auto 0;background:rgba(250,248,243,.16);overflow:hidden}
-.godot-progress i{display:block;width:var(--godot-progress,8%);height:100%;background:var(--ivory);transition:width .25s linear}
-.godot-room.is-ready .godot-loader{opacity:0;visibility:hidden;pointer-events:none}
-.godot-room.has-error .godot-loader{opacity:1;visibility:visible}
-.godot-room.has-error .godot-progress{display:none}
-.godot-hint{
-  position:absolute;z-index:5;left:0;right:0;bottom:0;height:42px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 clamp(18px,4vw,56px);border-top:1px solid rgba(250,248,243,.12);
-  font-family:var(--f-label);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,248,243,.48);
-}
-.godot-hint button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(250,248,243,.72)}
-@media(max-width:719px){
-  .godot-room-head{height:60px;grid-template-columns:1fr auto}
-  .godot-room-title{display:none}
-  .godot-stage{top:60px;bottom:38px}
-  .godot-hint{height:38px}
-  .godot-hint span{max-width:24ch;line-height:1.4}
-}
 </style>
 </head>
-<body class="intro-open">
-<section class="threshold" id="threshold" aria-labelledby="threshold-title">
-  <div class="threshold-scene" aria-hidden="true">
-    <img src="assets/stages/velvet-night.webp" alt="" fetchpriority="high" decoding="async">
-  </div>
-  <div class="threshold-halo" aria-hidden="true"></div>
-  <div class="threshold-brand"><b>Luminara</b><span>琉弥诺 · Issue 01</span></div>
-  <div class="threshold-piece-wrap">
-    <img class="threshold-piece" src="assets/cutouts/pearl-hour-complete-v2.webp" alt="Pearl Hour necklace with a clock face and pearl-tone drops" fetchpriority="high" decoding="async">
-  </div>
-  <div class="threshold-copy">
-    <p class="kicker">Eight collected forms</p>
-    <p class="threshold-title" id="threshold-title">Enter the <em>first edit.</em></p>
-    <p>Eight pieces, collected for the way they change a silhouette. First, Pearl Hour: a gold band closes behind the neck, pearl-tone drops descend, and a watch face keeps its own time.</p>
-  </div>
-  <div class="threshold-actions">
-    <button class="threshold-enter" type="button" data-enter-site="sound">Enter with sound</button>
-    <button class="threshold-quiet" type="button" data-enter-site="silent">Enter in silence</button>
-  </div>
-  <p class="threshold-foot">Taste is assembled · Worldwide delivery</p>
-</section>
-<div class="godot-room" id="godotRoom" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="godotRoomTitle">
-  <header class="godot-room-head">
-    <span class="godot-room-brand">Luminara</span>
-    <span class="godot-room-title" id="godotRoomTitle">The 3D cabinet · Issue 01</span>
-    <button class="godot-close" id="godotClose" type="button">Exit 3D room</button>
-  </header>
-  <div class="godot-stage">
-    <div class="godot-loader" id="godotLoader">
-      <img src="assets/editorial/pearl-hour-social-v4.jpg" alt="" aria-hidden="true">
-      <div class="godot-loader-copy">
-        <span class="kicker">Three-dimensional cabinet</span>
-        <h3>Entering the room.</h3>
-        <p id="godotStatus">Preparing the jewellery objects and studio light.</p>
-        <div class="godot-progress" aria-hidden="true"><i id="godotProgressBar"></i></div>
-      </div>
-    </div>
-    <iframe id="godotFrame" title="Luminara interactive three-dimensional jewellery cabinet" allow="fullscreen" loading="lazy"></iframe>
-  </div>
-  <div class="godot-hint">
-    <span>Drag to orbit · Scroll or pinch to move closer</span>
-    <button type="button" data-close-godot>Return to the edit</button>
+<body>
+<div class="site-intro" id="siteIntro" aria-hidden="true">
+  <div class="site-intro-inner">
+    <span class="site-intro-mark">L</span>
+    <span class="site-intro-word">Luminara · 琉弥诺</span>
+    <span class="site-intro-line"></span>
   </div>
 </div>
+<noscript><style>#siteIntro{display:none!important}</style></noscript>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ===== 报头 ===== -->
@@ -1743,10 +844,9 @@ html,body{background:var(--paper)}
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="#collections">Shop</a></li>
-        <li><a href="#objects">Objects</a></li>
+      <li><a href="#film">Film</a></li>
       <li><a href="#muse">Portrait</a></li>
       <li><a href="#vitrine">All Pieces</a></li>
-      <li><button class="nav-3d" type="button" data-open-godot>3D Room</button></li>
       <li><a href="#atelier">Point of view</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1762,42 +862,45 @@ html,body{background:var(--paper)}
   <button class="close" id="menuClose">Close</button>
   <ul>
         <li><a href="#collections">Shop</a></li>
-    <li><a href="#objects">Objects</a></li>
+    <li><a href="#film">Film</a></li>
     <li><a href="#muse">Portrait</a></li>
     <li><a href="#vitrine">All Pieces</a></li>
-    <li><button class="mobile-3d" type="button" data-open-godot>3D Room</button></li>
     <li><a href="#atelier">Point of view</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <p class="foot">Vintage-inspired jewellery · Worldwide delivery</p>
 </div>
 
-<!-- ===== 静态产品主视觉 ===== -->
+<!-- ===== 全宽头条 ===== -->
 <main id="top">
-<section class="lead-story" aria-labelledby="hero-title" data-enter>
-  <div class="ls-copy">
-    <div class="ls-index">
-      <p class="kicker">Luminara · The first edit</p>
-      <p class="ls-edition">Edition 01<br>Eight pieces</p>
-    </div>
-    <div class="ls-title">
-      <p class="ls-cn">琉弥诺 · 珍珠时刻</p>
-      <h1 id="hero-title">Pearl<br><em>Hour</em></h1>
-      <p class="ls-dek">A clock face, a line of pearl-tone beads and one continuous gold curve. An object chosen to change the tempo of a plain dress, a dark collar or an old favourite jacket.</p>
-    </div>
-    <div class="ls-actions">
-      <button class="ls-shop" type="button" data-open="pearl">
-        Shop Pearl Hour
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
-      </button>
-      <p class="ls-facts">US$58 · Necklaces<br>Worldwide delivery</p>
+<section class="billboard">
+  <div class="bb-track" id="bbTrack">
+    <figure class="bb-slide is-on" data-cap="Surface, scale, assembly · A Luminara film">
+      <picture class="bb-fallback" aria-hidden="true">
+        <source media="(max-width:719px)" srcset="assets/hero-editorial-v4-portrait-poster.jpg">
+        <img src="assets/hero-editorial-v4-poster.jpg" alt="" fetchpriority="high" decoding="async">
+      </picture>
+      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-v4-poster.jpg" aria-label="Editorial jewellery film moving from surface detail to wearing scale and the line Taste is assembled">
+        <source src="assets/hero-editorial-14s-v4-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
+        <source src="assets/hero-editorial-14s-v4-lite.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <div class="bb-overlay">
+      <div class="bb-title">
+        <h1><span class="sr-only">Luminara, vintage-inspired statement jewellery</span><span aria-hidden="true">Luminara</span></h1>
+        <p class="bb-lead">Seven vintage-inspired statement pieces, chosen for silhouette and surface. Wear one, then build the combination until it feels like yours.</p>
+    <a class="bb-shop" href="#collections">Shop the first edit
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </a>
+      </div>
+      <p class="side">The first edit<br>7 pieces · US$35–58<br>Worldwide delivery</p>
     </div>
   </div>
-  <figure class="ls-media">
-    <img class="ls-stage" src="assets/stages/velvet-night.webp" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
-    <img class="ls-object" src="assets/cutouts/pearl-hour-complete-v2.webp" alt="Pearl Hour gold-tone necklace with a clock face, pearl-tone beads and sculpted drops" fetchpriority="high" decoding="async">
-    <span class="ls-light" aria-hidden="true"></span>
-  </figure>
+  <div class="bb-bar">
+    <p class="bb-cap" id="bbCap">The first edit · Film 01</p>
+    <span class="bb-count" id="bbCount">00:14 · LOOP</span>
+    <span class="bb-audio-note">Original ambient score</span>
+  </div>
 </section>
 
 
@@ -1816,60 +919,67 @@ html,body{background:var(--paper)}
   <div class="head">
     <div class="head-copy">
       <span class="kicker">The first find</span>
-      <h2 id="firstEditTitle">Four pieces for the first gesture</h2>
-      <p>A necklace with the logic of a watch, enamel wrapped into serpentine curves, an open cuff and two silver doves. Open a piece for materials, scale and delivery.</p>
+      <h2 id="firstEditTitle">Four pieces to assemble with</h2>
+      <p>Decorative earrings, a cuff and a necklace selected for the way they catch light and change an outfit. Open a piece for materials, scale and delivery.</p>
     </div>
-    <a class="edit-all" href="#vitrine">Shop all eight</a>
+    <a class="edit-all" href="#vitrine">Shop all seven</a>
   </div>
   <div class="cs-grid">
-    <article class="cs" role="button" tabindex="0" data-open="pearl">
-      <figure><img src="assets/editorial/pearl-hour-v3.webp" alt="Pearl Hour necklace with a clock face and pearl-tone drops" loading="eager"></figure>
-      <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 08</span><b>Pearl Hour</b><span class="cs-price">$58</span><span class="cs-material">Gold-tone line · clock face · pearl-tone drops</span><span class="cs-action">View piece</span></p>
-    </article>
     <article class="cs" role="button" tabindex="0" data-open="snake">
-      <figure><img src="assets/editorial/serpentine.webp" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
+      <figure><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 02</span><b>Serpentine Psalm</b><span class="cs-price">$49</span><span class="cs-material">Turquoise and oxblood enamel · glass drops</span><span class="cs-action">View piece</span></p>
     </article>
+    <article class="cs" role="button" tabindex="0" data-open="morpho">
+      <figure><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on a plaster bust" loading="lazy" style="object-position:50% 32%"></figure>
+      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 01</span><b>Morpho Nocturne</b><span class="cs-price">$39</span><span class="cs-material">Iridescent resin · blue glass · zircon</span><span class="cs-action">View piece</span></p>
+    </article>
     <article class="cs" role="button" tabindex="0" data-open="cuff">
-      <figure><img src="assets/editorial/cuff.webp" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy"></figure>
+      <figure><img src="assets/opaline-cuff.jpg" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy" style="object-position:50% 52%"></figure>
       <p class="cs-cap"><span class="cs-cat">Mineral Glow · Pl. 04</span><b>Opaline Arch Cuff</b><span class="cs-price">$52</span><span class="cs-material">Gold-tone cuff · opal-tone resin · zircon</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="doves">
-      <figure><img src="assets/editorial/doves.webp" alt="Two Doves necklace with silver-tone birds and a yellow glass drop" loading="lazy"></figure>
+      <figure><img src="assets/hero-close-neck.jpg" alt="Two Doves necklace worn at the throat" loading="lazy" style="object-position:42% 38%"></figure>
       <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 07</span><b>Two Doves</b><span class="cs-price">$58</span><span class="cs-material">Silver-tone metal · zircon · yellow glass</span><span class="cs-action">View piece</span></p>
     </article>
   </div>
 </section>
 
-<!-- ===== 第四幕：重新布光的产品舞台 ===== -->
-<section class="restage" id="objects" aria-labelledby="objectTitle">
-  <div class="restage-sticky">
-    <img class="restage-bg" src="assets/stages/stone-night.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-    <div class="restage-copy">
-      <span class="kicker">Act 04 · Objects in a new light</span>
-      <h2 id="objectTitle">The object changes <em>with the light.</em></h2>
-      <p>Black lacquer sharpens the gold. Enamel holds its colour. A pearl-tone drop catches the edge of the beam. Four pieces leave their old rooms and meet in one new composition.</p>
-      <button class="restage-3d" type="button" data-open-godot>Enter the 3D room</button>
+<!-- ===== 三块会动的图版 ===== -->
+<section class="films" id="film">
+  <div class="films-head">
+    <div>
+      <span class="kicker">The Assembly · three studies</span>
+      <h2>The pieces, in motion</h2>
     </div>
-    <div class="restage-field" aria-label="Restaged jewellery composition">
-      <figure class="restage-piece is-serpentine">
-        <img src="assets/cutouts/serpentine.webp" alt="Serpentine Psalm earrings re-lit against a stone stage" loading="lazy">
-      </figure>
-      <figure class="restage-piece is-pearl">
-        <img src="assets/cutouts/pearl-hour-complete-v2.webp" alt="Pearl Hour necklace suspended in a new studio light" loading="lazy">
-      </figure>
-      <figure class="restage-piece is-doves">
-        <img src="assets/cutouts/doves.webp" alt="Two Doves necklace re-lit as a sculptural form" loading="lazy">
-      </figure>
-      <figure class="restage-piece is-coral">
-        <img src="assets/cutouts/coral.webp" alt="Coral Reliquary earrings re-lit on the lower plane" loading="lazy">
-      </figure>
+    <div class="film-ctrl">
+      <span class="film-tc">Loop · 00:05 · silent plate</span>
     </div>
-    <div class="restage-index" aria-label="Materials in this study">
-      <span>Gold-tone line</span>
-      <span>Enamel on metal</span>
-      <span>Zircon and glass</span>
+  </div>
+  <figure class="film-band" style="--poster:url('assets/cover-hand-necklace.jpg')">
+    <video id="filmHero" autoplay muted loop playsinline preload="auto" poster="assets/cover-hand-necklace.jpg">
+      <source src="assets/hero-cover.mp4" type="video/mp4">
+    </video>
+    <div class="film-ov">
+      <div>
+        <span class="kicker">01 / The first find</span>
+        <h3>Held at the eye</h3>
+      </div>
+      <span class="stamp">The first edit · find / hold / assemble</span>
     </div>
+  </figure>
+  <div class="film-duo">
+    <figure style="--poster:url('assets/plate-hand-earring.jpg')">
+      <video id="filmWing" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-earring.jpg">
+        <source src="assets/film-wing.mp4" type="video/mp4">
+      </video>
+      <figcaption><span>02 / Surface · Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
+    </figure>
+    <figure style="--poster:url('assets/plate-hand-cuff.jpg')">
+      <video id="filmCuff" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-cuff.jpg">
+        <source src="assets/film-cuff.mp4" type="video/mp4">
+      </video>
+      <figcaption><span>03 / Weight · Opaline Arch · gold-tone metal, resin, zircon</span><span>00:05</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -1886,6 +996,14 @@ html,body{background:var(--paper)}
   </figure>
 </section>
 
+<!-- ===== 字体横带 ===== -->
+<section class="typemarquee" aria-label="Luminara house line">
+  <div class="tm-track" id="tmTrack">
+    <span>Taste is assembled <i>old-soul forms</i> Modern wardrobe <i>The Cabinet</i></span>
+    <span>Seven available pieces <i>one considered edit</i> Worldwide delivery <i>Issue 01</i></span>
+  </div>
+</section>
+
 <!-- ===== 宣言 ===== -->
 <section class="statement">
   <div class="inner">
@@ -1896,12 +1014,15 @@ html,body{background:var(--paper)}
     </div>
     <div class="assembly-notes">
       <article class="assembly-note">
+        <img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings" loading="lazy">
         <div><b>01 / Shape</b><p>Choose a silhouette that changes the line of a familiar outfit.</p></div>
       </article>
       <article class="assembly-note">
+        <img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff" loading="lazy">
         <div><b>02 / Surface</b><p>Let enamel, glass or resin bring colour and movement.</p></div>
       </article>
       <article class="assembly-note">
+        <img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy">
         <div><b>03 / Repeat</b><p>Return to the pieces that make the outfit feel like yours.</p></div>
       </article>
     </div>
@@ -1917,53 +1038,49 @@ html,body{background:var(--paper)}
     <div class="head">
       <div class="v-head">
         <h2>The full vitrine</h2>
-        <span class="kicker">Eight pieces · four categories</span>
+        <span class="kicker">Seven pieces · four categories</span>
       </div>
       <p>Vintage-inspired pieces for wardrobes built over time. Browse by category, then open a piece for materials, scale, care and cross-border delivery details.</p>
       <ul class="shop-facts" aria-label="Purchase information">
-        <li>Eight-piece first edit</li>
+        <li>Seven-piece first edit</li>
         <li>Tracked international delivery</li>
         <li>Duties confirmed before payment</li>
       </ul>
     </div>
     <div class="shop-filter" role="group" aria-label="Filter pieces by category">
-      <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All 08</button>
+      <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All 07</button>
       <button type="button" class="filter-chip" data-filter="earrings" aria-pressed="false">Earrings 04</button>
-      <button type="button" class="filter-chip" data-filter="necklaces" aria-pressed="false">Necklaces 02</button>
+      <button type="button" class="filter-chip" data-filter="necklaces" aria-pressed="false">Necklaces 01</button>
       <button type="button" class="filter-chip" data-filter="bracelets" aria-pressed="false">Bracelets 01</button>
       <button type="button" class="filter-chip" data-filter="brooches" aria-pressed="false">Brooches 01</button>
     </div>
     <div class="vgrid">
-      <article class="vitem v3" role="button" tabindex="0" data-open="pearl" data-category="necklaces">
-        <figure class="v-plate r45"><img src="assets/editorial/pearl-hour-v3.webp" alt="Pearl Hour necklace with a clock face and pearl-tone drops" loading="lazy"><span class="v-no">01</span></figure>
-        <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Pearl Hour</h3><p class="price">$58</p><p class="v-material">Gold-tone line · clock face · pearl-tone drops</p></div>
-      </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="snake" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/editorial/serpentine.webp" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">02</span></figure>
+        <figure class="v-plate r45"><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">01</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Serpentine Psalm</h3><p class="price">$49</p><p class="v-material">Turquoise and oxblood enamel · glass drops</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="morpho" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/editorial/morpho.webp" alt="Morpho Nocturne earring held between the fingers" loading="lazy"><span class="v-no">03</span></figure>
+        <figure class="v-plate r45"><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on plaster bust" loading="lazy" style="object-position:50% 28%"><span class="v-no">02</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Morpho Nocturne</h3><p class="price">$39</p><p class="v-material">Iridescent resin · black glass</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="deep" data-category="brooches">
-        <figure class="v-plate r45"><img src="assets/editorial/deep.webp" alt="Silver-finish jellyfish brooches on velvet" loading="lazy"><span class="v-no">04</span></figure>
+        <figure class="v-plate r45"><img src="assets/jellyfish.jpg" alt="Silver-finish jellyfish brooches on velvet" loading="lazy" style="object-position:50% 36%"><span class="v-no">03</span></figure>
         <div class="v-meta"><span class="kicker">Brooches · Ocean Whisper</span><h3>Nocturne of the Deep</h3><p class="price">$55</p><p class="v-material">Silver-tone metal · glass pearl</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="coral" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/editorial/coral.webp" alt="Coral Reliquary earrings" loading="lazy"><span class="v-no">05</span></figure>
+        <figure class="v-plate r45"><img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy" style="object-position:56% 50%"><span class="v-no">04</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Ocean Whisper</span><h3>Coral Reliquary</h3><p class="price">$35</p><p class="v-material">Coral-tone glass · zircon drops</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="cuff" data-category="bracelets">
-        <figure class="v-plate r1610"><img src="assets/editorial/cuff.webp" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy"><span class="v-no">06</span></figure>
+        <figure class="v-plate r1610"><img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy" style="object-position:50% 48%"><span class="v-no">05</span></figure>
         <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings">
-        <figure class="v-plate r1610"><img src="assets/editorial/lilac.webp" alt="Lilac Reverie earrings" loading="lazy"><span class="v-no">07</span></figure>
+        <figure class="v-plate r1610"><img src="assets/lilac-earrings.jpg" alt="Lilac Reverie earrings" loading="lazy" style="object-position:50% 68%"><span class="v-no">06</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="doves" data-category="necklaces">
-        <figure class="v-plate r1610"><img src="assets/editorial/doves.webp" alt="Two Doves necklace" loading="lazy"><span class="v-no">08</span></figure>
+        <figure class="v-plate r1610"><img src="assets/doves-necklace.jpg" alt="Two Doves necklace" loading="lazy" style="object-position:50% 46%"><span class="v-no">07</span></figure>
         <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Two Doves</h3><p class="price">$58</p><p class="v-material">Silver-tone metal · zircon · yellow glass</p></div>
       </article>
     </div>
@@ -1992,8 +1109,8 @@ html,body{background:var(--paper)}
 <!-- ===== 收束 ===== -->
 <section class="closing">
   <div class="inner">
-    <h2>Wear what you love into <em>a signature.</em></h2>
-    <p>Eight vintage-inspired pieces from US$35 to US$58. Orders ship internationally with tracking, and duties are confirmed before payment.</p>
+    <h2>Assemble the look that feels like yours.</h2>
+    <p>Seven vintage-inspired pieces from US$35 to US$58. Orders ship internationally with tracking, and duties are confirmed before payment.</p>
     <a class="cta" href="#vitrine">Shop the Cabinet</a>
     <p class="by">Taste is assembled · 琉弥诺</p>
   </div>
@@ -2044,7 +1161,7 @@ html,body{background:var(--paper)}
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:atelier@luminara.studio">atelier@luminara.studio</a></li>
-    <li><a href="#objects">Objects</a></li>
+            <li><a href="#film">Film</a></li>
             <li><a href="#atelier">How to assemble</a></li>
           </ul>
         </div>
@@ -2088,14 +1205,13 @@ html,body{background:var(--paper)}
 <div class="toast" id="toast">Added to bag</div>
 
 <div style="display:none" aria-hidden="true">
-  <img src="assets/editorial/pearl-hour-v3.webp" alt="" loading="lazy">
-  <img src="assets/editorial/lilac.webp" alt="" loading="lazy">
-  <img src="assets/editorial/serpentine.webp" alt="" loading="lazy">
-  <img src="assets/editorial/morpho.webp" alt="" loading="lazy">
-  <img src="assets/editorial/deep.webp" alt="" loading="lazy">
-  <img src="assets/editorial/coral.webp" alt="" loading="lazy">
-  <img src="assets/editorial/cuff.webp" alt="" loading="lazy">
-  <img src="assets/editorial/doves.webp" alt="" loading="lazy">
+  <img src="assets/lilac-earrings.jpg" alt="" loading="lazy">
+  <img src="assets/snake-earrings.jpg" alt="" loading="lazy">
+  <img src="assets/butterfly-bust.jpg" alt="" loading="lazy">
+  <img src="assets/jellyfish.jpg" alt="" loading="lazy">
+  <img src="assets/coral-earrings.jpg" alt="" loading="lazy">
+  <img src="assets/opaline-cuff.jpg" alt="" loading="lazy">
+  <img src="assets/doves-necklace.jpg" alt="" loading="lazy">
 </div>
 
 <script>
@@ -2110,9 +1226,7 @@ function openMail(subject, lines){
   window.location.href = href;
 }
 function apiJSON(path, data){
-  var host=location.hostname;
-  var apiBase=(host==="luminara-commerce.onrender.com"||host==="localhost"||host==="127.0.0.1") ? "" : "https://luminara-commerce.onrender.com";
-  return fetch(apiBase+path, {
+  return fetch(path, {
     method:data ? "POST" : "GET",
     headers:data ? {"Content-Type":"application/json"} : {},
     body:data ? JSON.stringify(data) : undefined
@@ -2125,36 +1239,32 @@ function apiJSON(path, data){
 }
 
 var P = {
-pearl:{id:"pearl",no:"Pl. 08",category:"Necklaces",series:"Nocturne Sculpture",name:"Pearl Hour",cn:"珍珠时刻",price:58,img:"assets/editorial/pearl-hour-v3.webp",pos:"50% 42%",
-    desc:"A gold-tone curve carries a printed clock face, a line of pearl-tone beads and sculpted teardrop forms. The asymmetry keeps the eye moving; one open neckline is enough to give the piece its frame.",
-    spec:[["Body","Gold-tone open curve"],["Detail","Printed clock face"],["Drops","Pearl-tone beads and drops"]],
-    sizes:["One size"]},
-  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/editorial/lilac.webp",pos:"50% 62%",
-    desc:"Clouded glass petals gather around dark crystal centres, with small zircon points catching the light. The clustered silhouette reads as a soft flower from a distance and reveals a harder, jewelled centre up close.",
+  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/lilac-earrings.jpg",pos:"50% 62%",
+    desc:"Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
     spec:[["Material","Clouded glass, cubic zirconia"],["Setting","Gold-tone metal"],["Drop","38 mm"]],
     sizes:["One size"]},
-  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/editorial/serpentine.webp",pos:"50% 40%",
-    desc:"Turquoise enamel is traced with oxblood and a fine gold-tone line, then finished with red glass. The long serpent curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
+  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/snake-earrings.jpg",pos:"50% 40%",
+    desc:"A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
     spec:[["Body","Gold-tone metal"],["Finish","Turquoise and oxblood enamel"],["Drop","72 mm"]],
     sizes:["One size"]},
-  morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/editorial/morpho.webp",pos:"50% 30%",
-    desc:"A layered blue-green resin wing sits inside gold-tone filigree, with dark centre stones and a faceted drop. Cobalt and green shift across the surface as the light moves.",
+  morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/butterfly-bust.jpg",pos:"50% 30%",
+    desc:"A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
     spec:[["Material","Iridescent resin, gold-tone filigree"],["Stones","Black glass, zircon"],["Drop","54 mm"]],
     sizes:["One size"]},
-  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/editorial/deep.webp",pos:"50% 34%",
-    desc:"A set of silver-tone forms drawn from a shell, a coral branch, a pearl-tone bead and a long filament. Wear the group across a lapel as one composition, or separate one form as a quieter mark.",
+  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/jellyfish.jpg",pos:"50% 34%",
+    desc:"Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
     spec:[["Body","Silver-tone metal"],["Stones","Glass pearl, zircon"],["Sizes","38–62 mm"]],
     sizes:["Set of four"]},
-  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/editorial/coral.webp",pos:"60% 50%",
-    desc:"Coral-tone glass drops are held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon points above. The warm red-orange reads strongly against black and ecru.",
+  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/coral-earrings.jpg",pos:"60% 50%",
+    desc:"Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
     spec:[["Material","Coral-tone glass, gold-tone metal"],["Stone","Resin cabochon, zircon"],["Drop","42 mm"]],
     sizes:["One size"]},
-  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/editorial/cuff.webp",pos:"50% 46%",
-    desc:"An open gold-tone cuff is inlaid with four blue-green resin panels and edged with zircon. The wide horizontal arc gives the wrist presence; keep rings restrained and let the cuff hold the line.",
+  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/opaline-cuff.jpg",pos:"50% 46%",
+    desc:"An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
     spec:[["Body","Gold-tone metal"],["Inlay","Opal-tone resin, cubic zirconia"],["Fit","48 / 52 / 56 mm"]],
     sizes:["48 mm","52 mm","56 mm"]},
-  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/editorial/doves.webp",pos:"50% 46%",
-    desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The rigid curve sits around the collarbone and keeps its shape against bare skin or a dark neckline.",
+  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/doves-necklace.jpg",pos:"50% 46%",
+    desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
     spec:[["Body","Silver-tone metal"],["Stones","Cubic zirconia, yellow glass"],["Length","41 cm adjustable"]],
     sizes:["One size"]}
 };
@@ -2197,6 +1307,40 @@ qa("#mobileMenu a").forEach(function(a){
     if(window.LuminaraScroll){window.LuminaraScroll.start();}
   });
 });
+
+/* ---------- billboard film ---------- */
+var bbVideo=q("#bbVideo");
+if(bbVideo){
+  if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-v4-portrait-poster.jpg"; }
+  var heroReduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var heroVisible=true;
+  var heroFrame=bbVideo.closest(".bb-slide");
+  function playHero(){
+    if(heroVisible && !heroReduce && document.visibilityState!=="hidden"){
+      bbVideo.play().catch(function(){});
+    }
+  }
+  bbVideo.addEventListener("playing",function(){ if(heroFrame){heroFrame.classList.add("video-live");} });
+  var heroOverlay=bbVideo.closest(".billboard") ? bbVideo.closest(".billboard").querySelector(".bb-overlay") : null;
+  bbVideo.addEventListener("timeupdate",function(){
+    if(heroOverlay){ heroOverlay.classList.toggle("is-assembly",bbVideo.currentTime>10.58&&bbVideo.currentTime<13.18); }
+  });
+  ["pause","waiting","stalled","emptied","error"].forEach(function(type){
+    bbVideo.addEventListener(type,function(){ if(heroFrame){heroFrame.classList.remove("video-live");} });
+  });
+  bbVideo.addEventListener("canplay",playHero);
+  document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState==="hidden"){ bbVideo.pause(); }
+    else { playHero(); }
+  });
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(entries){
+      heroVisible=entries[0].isIntersecting;
+      if(heroVisible){ playHero(); }
+      else if(!bbVideo.paused){ bbVideo.pause(); }
+    },{threshold:.08}).observe(bbVideo);
+  }
+}
 
 /* ---------- collection tabs ---------- */
 var tabs=qa(".cat");
@@ -2318,7 +1462,7 @@ var houseInfo={
   },
   archive:{
     title:"The first edit",
-    intro:"The Cabinet opens with eight vintage-inspired pieces across earrings, necklaces, bracelets and brooches.",
+    intro:"The Cabinet opens with seven vintage-inspired pieces across earrings, necklaces, bracelets and brooches.",
     rows:[["Availability","When an option sells out, it is removed from the bag."],["Edits","New pieces are added as the Cabinet develops."],["Questions","Contact Luminara if you are looking for a piece you saw previously."]]
   }
 };
@@ -2551,7 +1695,7 @@ function toast(msg){
 /* ---------- footer placeholders ---------- */
 qa(".fcol a").forEach(function(a){
   var h=a.getAttribute("href");
-    if(h==="#collections"||h==="#vitrine"||h==="#atelier"||h==="#contact"||h==="#objects"||a.hasAttribute("data-info")||h==="mailto:atelier@luminara.studio"){return;}
+  if(h==="#collections"||h==="#vitrine"||h==="#atelier"||h==="#contact"||h==="#film"||a.hasAttribute("data-info")||h==="mailto:atelier@luminara.studio"){return;}
   a.addEventListener("click",function(e){
     e.preventDefault();
     toast("That page opens with the full site");
@@ -3035,8 +2179,92 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
 })();
 </script>
 
+<script>
+(function(){
+  if (!window.gsap || !window.ScrollTrigger){ return; }
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches){ return; }
+  var track = document.querySelector("#tmTrack");
+  if (!track){ return; }
+  var overflow = function(){ return Math.max(0, track.scrollWidth - window.innerWidth + 40); };
+  gsap.to(track, {
+    x: function(){ return -overflow(); },
+    ease: "none",
+    scrollTrigger: {trigger: ".typemarquee", start: "top bottom", end: "bottom top", scrub: .6, invalidateOnRefresh: true}
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var heroVid = document.querySelector("#bbVideo");
+  var films = [].slice.call(document.querySelectorAll("#filmHero,#filmWing,#filmCuff"));
+
+  /* reduced motion: every frame rests on its poster */
+  if (reduce){
+    if (heroVid){ try { heroVid.pause(); heroVid.removeAttribute("autoplay"); } catch(e){} }
+    films.forEach(function(v){ try { v.pause(); v.removeAttribute("autoplay"); } catch(e){} });
+  }
+
+  /* a clip that cannot play leaves its poster standing */
+  [heroVid].concat(films).forEach(function(v){
+    if (!v){ return; }
+    v.addEventListener("error", function(){
+      v.style.opacity = "0";
+      var f = v.parentNode;
+      if (f && v.getAttribute("poster")){
+        f.style.background = "url('" + v.getAttribute("poster") + "') center/cover no-repeat";
+      }
+    }, true);
+  });
+
+  /* moving plates start themselves whenever they enter the viewport */
+  if (!reduce && "IntersectionObserver" in window){
+    films.forEach(function(video){
+      var frame = video.closest("figure");
+      new IntersectionObserver(function(entries){
+        if (entries[0].isIntersecting && document.visibilityState !== "hidden"){
+          video.play().catch(function(){});
+        } else if (!video.paused){
+          video.pause();
+        }
+      }, {threshold:.12}).observe(video);
+      video.addEventListener("canplay", function(){ video.play().catch(function(){}); });
+      video.addEventListener("playing", function(){ if(frame){frame.classList.add("video-live");} });
+      ["pause","waiting","stalled","emptied","error"].forEach(function(type){
+        video.addEventListener(type, function(){ if(frame){frame.classList.remove("video-live");} });
+      });
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+  var intro=document.getElementById("siteIntro");
+  if(!intro){ return; }
+  var started=performance.now();
+  function reveal(){
+    intro.classList.add("is-ready");
+    window.setTimeout(function(){ if(intro.parentNode){intro.parentNode.removeChild(intro);} }, 900);
+  }
+  var fontsReady=(document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  var poster=document.querySelector(".bb-fallback img");
+  var posterReady=Promise.resolve();
+  if(poster && !poster.complete){
+    posterReady=new Promise(function(resolve){
+      poster.addEventListener("load",resolve,{once:true});
+      poster.addEventListener("error",resolve,{once:true});
+    });
+  }
+  var timeout=new Promise(function(resolve){ window.setTimeout(resolve,2600); });
+  Promise.race([Promise.all([fontsReady,posterReady]),timeout]).then(function(){
+    var remaining=Math.max(0,650-(performance.now()-started));
+    window.setTimeout(reveal,remaining);
+  }).catch(reveal);
+  window.setTimeout(reveal,3400);
+})();
+</script>
 <script src="assets/audio-atmosphere.js"></script>
 <script src="assets/editorial-motion.js"></script>
-<script src="assets/godot-room.js"></script>
 </body>
 </html>

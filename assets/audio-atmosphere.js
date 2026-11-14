@@ -2,7 +2,7 @@
   "use strict";
 
   var PREF_KEY = "luminara-sound-v1";
-  var AMBIENT_LEVEL = .34;
+  var AMBIENT_LEVEL = .42;
   var audioButton = document.getElementById("soundToggle");
   var enabled = true;
   try {
@@ -37,7 +37,7 @@
     if (!AudioContextClass){ return null; }
     context = new AudioContextClass();
     master = context.createGain();
-    master.gain.value = .78;
+    master.gain.value = .86;
     master.connect(context.destination);
     ambientGain = context.createGain();
     ambientGain.gain.value = 0;
@@ -47,7 +47,7 @@
 
   function loadAmbient(){
     if (ambientPromise || !context){ return ambientPromise; }
-    ambientPromise = fetch("assets/luminara-ambient-v5.m4a")
+    ambientPromise = fetch("assets/luminara-ambient-v4.m4a")
       .then(function(response){
         if (!response.ok){ throw new Error("Ambient audio unavailable"); }
         return response.arrayBuffer();
@@ -145,19 +145,19 @@
       if (!ready || !context || context.state !== "running"){ return; }
       var start = context.currentTime + .008;
       if (kind === "chime"){
-        tone(880, start, .75, .034, "sine");
-        tone(1320, start + .045, .6, .018, "sine");
-        tone(1760, start + .095, .48, .01, "sine");
+        tone(880, start, .75, .055, "sine");
+        tone(1320, start + .045, .6, .032, "sine");
+        tone(1760, start + .095, .48, .018, "sine");
       } else if (kind === "paper"){
-        noiseSweep(start, .32, .015);
-        tone(196, start + .02, .24, .01, "triangle");
+        noiseSweep(start, .32, .028);
+        tone(196, start + .02, .24, .018, "triangle");
       } else if (kind === "confirm"){
-        tone(523.25, start, .42, .018, "sine");
-        tone(783.99, start + .08, .5, .014, "sine");
+        tone(523.25, start, .42, .032, "sine");
+        tone(783.99, start + .08, .5, .025, "sine");
       } else if (kind === "close"){
-        noiseSweep(start, .2, .01);
+        noiseSweep(start, .2, .018);
       } else {
-        tone(1280, start, .12, .009, "sine");
+        tone(1280, start, .12, .016, "sine");
       }
     });
   }
@@ -191,7 +191,6 @@
 
   function firstGesture(event){
     if (event.target.closest && event.target.closest("#soundToggle")){ return; }
-    if (event.target.closest && event.target.closest("[data-enter-site]")){ return; }
     if (enabled && !unlocked){ unlockAudio(); }
   }
 

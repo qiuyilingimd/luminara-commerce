@@ -1,12 +1,13 @@
 # Luminara ambient score prompt
 
-Instrumental, 48-second looping chamber ambient, approximately 80 BPM. Intimate
-art-jewellery browsing music with a warm, light and quietly joyful character.
-Soft plucked strings, a restrained harmonic bed and sparse glass tones. Use
-major ninths and a repeating F–D minor–B-flat–C progression. Keep the lower
-register soft and round, with no sub-bass rumble, drums, vocals, trailer rise or
-large dynamic jump. The result should invite unhurried browsing and make the
-jewellery feel tactile, personal and collectible. Keep enough space for quiet
+Instrumental, 72-second seamless loop, approximately 68 BPM. Intimate
+neo-classical chamber ambient for an independent art-jewellery house. Felt piano,
+muted low strings, glass harmonica and sparse struck-glass notes, recorded close
+enough to hear the room. D minor with suspended ninths; slow six-chord progression;
+restrained rubato and a gentle high-register shimmer. Dark warm analogue texture,
+small imperfections, no drums, no beat, no vocals, no trailer rise, no sudden
+dynamics. The jewellery should feel tactile and human rather than corporate or
+synthwave. Keep the mix quiet enough for website browsing, with space for subtle
 interface chimes.
 
 This prompt is prepared for YuE2 instrumental generation. YuE2 requires a

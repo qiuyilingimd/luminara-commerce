@@ -10,38 +10,27 @@ are adapted natively in `assets/editorial-motion.js`; no React runtime is
 required. Reduced-motion preferences disable smooth scrolling, autoplay and
 pointer-led effects. See `THIRD_PARTY_NOTICES.md` for sources and licences.
 
-The first visit opens on a product threshold: Pearl Hour is separated from its
-source photograph and suspended on a new velvet stage. The visitor chooses
-sound or silence, then a full-screen clipped reveal enters the storefront. The
-choice is remembered for the browser session. On desktop the following hero
-uses a split editorial layout; on mobile the extracted jewellery fills the
-screen and the headline sits in a protected lower zone. An original ambient
-score in `assets/luminara-ambient-v5.m4a` fades in when the visitor chooses
-sound. The small Sound control in the masthead provides a persistent mute
-preference; key storefront actions also use quiet, procedurally generated
-interface sounds.
+The hero and moving plates loop without playback controls. An original ambient
+score in `assets/luminara-ambient-v4.m4a` fades in after the visitor's first
+interaction, as required by browser autoplay policies. The small Sound control
+in the masthead provides a persistent mute preference; key storefront actions
+also use quiet, procedurally generated interface sounds.
 
-Act 04 separates four products from their original backgrounds and recombines
-them on a new stone-lit stage. Their positions respond to scroll, and the
-background light follows the pointer on precision-pointer devices. Product
-silhouettes and visible materials are preserved.
-
-## Godot 3D room
-
-`godot-source/` contains the Godot 4.7.2 single-threaded Web project. Its export
-lives in `assets/godot/` and is loaded only when the visitor selects **3D Room**
-or **Enter the 3D room**. The scene supports drag-to-orbit, wheel zoom and
-two-finger pinch, posts real loading progress to the page, and unloads its iframe
-when the room closes.
-
-The Godot toolkit is not part of the initial page payload. This preserves the
-fast opening time established for the static editorial storefront.
+The hero film moves through surface, wearing scale and assembly, then returns to
+the opening ear close-up for a continuous loop. The landscape and portrait
+edits are composed separately. Website copies are encoded at a smaller
+resolution in `assets/hero-editorial-14s-v4-lite.mp4` and
+`assets/hero-editorial-14s-v4-portrait-lite.mp4` so the mobile hero starts
+quickly.
 
 ## Creative and local tooling
 
-Main image sequencing follows the documented photography system, while motion
-follows the official GSAP guidance. The public storefront loads only its
-vendored browser assets.
+The film treatment follows the huashu-motion directing and rhythm workflow,
+including its hook / burst / stop / resolve structure and post-render contact
+sheet review. Animation follows the official GSAP skill guidance, and the local
+model recommendation was checked with llmfit against the available RTX 4070 /
+32 GB workstation. These tools inform production only; the public storefront
+loads only its vendored browser assets.
 
 ## Run
 
@@ -56,27 +45,6 @@ For a phone on the same Wi-Fi, open `http://<computer-LAN-IP>:4173`, not
 if you want to restrict access to the computer only.
 
 The site reads products from `data/catalog.json`. The server revalidates product IDs, sizes, quantities, prices and shipping before saving an order to `data/luminara.db`.
-
-## Public frontend
-
-`.github/workflows/pages.yml` publishes the HTML, images, fonts and browser assets
-to GitHub Pages. The published storefront uses the static catalogue embedded in
-the page immediately, then sends quotation, order and contact requests to the
-Render service. `PUBLIC_ORIGINS` controls the CORS allow-list; the default
-includes `https://qiuyilingimd.github.io`.
-
-## Fast start
-
-The storefront has no blocking brand-intro overlay or hero video, so the header
-and photograph can paint as soon as the document is available. HTML, CSS,
-JavaScript and JSON are served with Brotli or gzip compression, conditional ETag
-requests and short-lived revalidation caches. Audio supports byte-range requests.
-
-Render's free web-service plan may still spin down after inactivity. The GitHub
-Actions workflow in `.github/workflows/keepalive.yml` requests the public health
-endpoint every ten minutes to reduce cold starts. A paid always-on Render
-instance is required if the page must be guaranteed warm without relying on the
-scheduled ping.
 
 ## Render
 

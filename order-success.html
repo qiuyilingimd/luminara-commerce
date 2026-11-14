@@ -40,7 +40,7 @@
       <div class="row"><span>Total</span><b id="total">—</b></div>
     </div>
     <p class="status" id="statusNote">You can close this page safely.</p>
-    <a class="cta" href="./">Continue shopping</a>
+    <a class="cta" href="/">Continue shopping</a>
   </main>
   <script>
     (async function(){
@@ -48,9 +48,7 @@
       var id=params.get("order_id");
       if(!id)return;
       try{
-        var host=location.hostname;
-        var apiBase=(host==="luminara-commerce.onrender.com"||host==="localhost"||host==="127.0.0.1") ? "" : "https://luminara-commerce.onrender.com";
-        var response=await fetch(apiBase+"/api/orders/"+encodeURIComponent(id));
+        var response=await fetch("/api/orders/"+encodeURIComponent(id));
         if(!response.ok)throw new Error("Order lookup failed");
         var order=await response.json();
         document.querySelector("#summary").hidden=false;
