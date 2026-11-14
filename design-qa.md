@@ -8,6 +8,7 @@ Implementation: product threshold entry, restaged Pearl Hour hero, Act 04 jewell
 
 - The entrance borrows the reference's full-screen brand threshold and sound/silence decision, while replacing its empty colour field with an actual Pearl Hour product scene.
 - Pearl Hour is separated from its source photograph and placed on a new velvet stage. Product shape, asymmetrical line, clock face and drop count remain unchanged.
+- The hidden rear of the Pearl Hour band is now digitally completed and joins both sides into a continuous necklace before the cut-out is used on any page.
 - Desktop keeps the necklace as the largest visual field while headline and purchase information sit in a separate gallery-paper column.
 - Mobile places the extracted product above the type so the clock face and pearl-tone drops remain visible.
 - Product imagery now uses one 4:5 output ratio and a common saturation, contrast and crop treatment.
