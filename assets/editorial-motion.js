@@ -183,6 +183,13 @@
       return;
     }
 
+    var compact = window.matchMedia("(max-width:880px)").matches;
+    var exitX = compact ? 54 : 70;
+    var exitY = compact ? 55 : 65;
+    gsap.set(intro, {
+      clipPath: "circle(160vmax at " + exitX + "% " + exitY + "%)",
+      webkitClipPath: "circle(160vmax at " + exitX + "% " + exitY + "%)"
+    });
     var leaving = gsap.timeline({onComplete: finish});
     leaving
       .to(".threshold-copy, .threshold-actions, .threshold-foot, .threshold-brand", {
@@ -205,10 +212,11 @@
         ease: "power3.inOut"
       }, 0)
       .to(intro, {
-        clipPath: "inset(0% 0% 100% 0%)",
-        duration: 1.05,
+        clipPath: "circle(0vmax at " + exitX + "% " + exitY + "%)",
+        webkitClipPath: "circle(0vmax at " + exitX + "% " + exitY + "%)",
+        duration: 1.28,
         ease: "power3.inOut"
-      }, .32);
+      }, .26);
   }
 
   if (intro && !introSeen){
