@@ -1859,14 +1859,6 @@ if(!reduce && "IntersectionObserver" in window){
     });
   }
 
-  /* hero handoff is driven by ScrollTrigger below */
-  var hero = document.querySelector(".billboard");
-  if (hero && !reduce){
-    /* scroll hint */
-    var hint = document.createElement("div");
-    hint.className = "scrollhint"; hint.innerHTML = "<span>Scroll</span><i></i>";
-    hero.appendChild(hint);
-  }
 })();
 </script>
 
