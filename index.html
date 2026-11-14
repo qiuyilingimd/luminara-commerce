@@ -1793,7 +1793,9 @@ function openMail(subject, lines){
   window.location.href = href;
 }
 function apiJSON(path, data){
-  return fetch(path, {
+  var host=location.hostname;
+  var apiBase=(host==="luminara-commerce.onrender.com"||host==="localhost"||host==="127.0.0.1") ? "" : "https://luminara-commerce.onrender.com";
+  return fetch(apiBase+path, {
     method:data ? "POST" : "GET",
     headers:data ? {"Content-Type":"application/json"} : {},
     body:data ? JSON.stringify(data) : undefined

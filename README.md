@@ -39,6 +39,14 @@ if you want to restrict access to the computer only.
 
 The site reads products from `data/catalog.json`. The server revalidates product IDs, sizes, quantities, prices and shipping before saving an order to `data/luminara.db`.
 
+## Public frontend
+
+`.github/workflows/pages.yml` publishes the HTML, images, fonts and browser assets
+to GitHub Pages. The published storefront uses the static catalogue embedded in
+the page immediately, then sends quotation, order and contact requests to the
+Render service. `PUBLIC_ORIGINS` controls the CORS allow-list; the default
+includes `https://qiuyilingimd.github.io`.
+
 ## Fast start
 
 The storefront has no blocking brand-intro overlay or hero video, so the header

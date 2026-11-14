@@ -42,6 +42,14 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
 const ORDER_NOTIFY_EMAIL = process.env.ORDER_NOTIFY_EMAIL || "";
 const ORDER_FROM_EMAIL = process.env.ORDER_FROM_EMAIL || "Luminara <orders@example.com>";
+const PUBLIC_ORIGINS = new Set(
+  [
+    "https://qiuyilingimd.github.io",
+    ...String(process.env.PUBLIC_ORIGINS || "").split(",")
+  ]
+    .map((origin) => origin.trim().replace(/\/+$/, ""))
+    .filter(Boolean)
+);
 
 const catalog = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "catalog.json"), "utf8"));
 const PRODUCTS = new Map(catalog.products.map((product) => [product.id, product]));
@@ -122,6 +130,16 @@ function securityHeaders(res) {
     "Content-Security-Policy",
     "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.stripe.com https://api.resend.com; font-src 'self' data:; frame-src https://js.stripe.com https://checkout.stripe.com; base-uri 'self'; form-action 'self'"
   );
+}
+
+function apiCors(req, res) {
+  const origin = String(req.headers.origin || "").replace(/\/+$/, "");
+  if (!PUBLIC_ORIGINS.has(origin)) return;
+  res.setHeader("Access-Control-Allow-Origin", origin);
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Max-Age", "86400");
 }
 
 async function readBody(req, limit = 65536) {
@@ -572,7 +590,14 @@ async function serveStatic(req, res, url) {
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url || "/", BASE_URL);
-    if (url.pathname.startsWith("/api/")) return await handleApi(req, res, url);
+    if (url.pathname.startsWith("/api/")) {
+      apiCors(req, res);
+      if (req.method === "OPTIONS") {
+        res.statusCode = 204;
+        return res.end();
+      }
+      return await handleApi(req, res, url);
+    }
     if (req.method !== "GET" && req.method !== "HEAD") return sendJson(res, 405, { error: "Method not allowed." });
     return await serveStatic(req, res, url);
   } catch (error) {
