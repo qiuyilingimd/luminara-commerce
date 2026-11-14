@@ -4,20 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Luminara｜琉弥诺 — Vintage-Inspired Statement Jewellery</title>
-<meta name="description" content="Luminara is a curated seven-piece edit of vintage-inspired earrings, necklaces, bracelets and brooches. Prices from US$35, shipped internationally.">
+<meta name="description" content="Luminara is an eight-piece edit of vintage-inspired earrings, necklaces, bracelets and brooches. Prices from US$35, shipped internationally.">
 <meta name="page-type" content="product">
 <meta name="site-kind" content="other">
 <meta name="theme-color" content="#F3F3EF">
 <meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
-<meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. A seven-piece edit from US$35.">
+<meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. An eight-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-v5-poster.jpg">
+<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/editorial/pearl-hour-social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://luminara-commerce.onrender.com/assets/editorial/pearl-hour-social.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
-<link rel="preload" as="image" href="assets/hero-editorial-v5-poster.jpg" media="(min-width:720px)">
-<link rel="preload" as="image" href="assets/hero-editorial-v5-portrait-poster.jpg" media="(max-width:719px)">
+<link rel="preload" as="image" href="assets/editorial/pearl-hour-hero.webp" fetchpriority="high">
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -1295,6 +1297,140 @@ html,body{background:var(--paper)}
 .filter-chip[aria-pressed="true"]{background:transparent;color:var(--ivory);border-color:var(--ivory)}
 .d-add,.statement .cta{background:var(--ink)}
 .d-add:hover,.statement .cta:hover{background:#242220}
+
+/* ---------- v6: static product portrait, quieter colour, one editorial gesture ---------- */
+:root{
+  --ink:#171513;
+  --ink-2:#201D1A;
+  --ink-3:#2C2824;
+  --paper:#F4F2ED;
+  --paper-2:#E8E5DE;
+  --ivory:#FAF8F3;
+  --muted:#6F6962;
+  --line:rgba(23,21,19,.14);
+  --line-soft:rgba(23,21,19,.075);
+  --line-ivory:rgba(250,248,243,.2);
+  --gold:#82796F;
+  --gold-2:#ACA296;
+  --oxblood:#665E56;
+  --oxblood-2:#81786E;
+}
+html,body{background:var(--paper)}
+.nav-links{gap:clamp(20px,2.5vw,38px)}
+.nav-links a,.sound-btn,.casket-btn{font-size:10.2px;line-height:1.25;letter-spacing:.16em}
+.nav-links a,.sound-btn,.casket-btn{min-height:44px;display:inline-flex;align-items:center}
+.kicker{font-size:9.6px;line-height:1.4;letter-spacing:.19em}
+
+.lead-story{
+  height:calc(100svh - var(--mast-h));min-height:660px;
+  display:grid;grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);
+  background:var(--paper);border-bottom:1px solid var(--line);
+}
+.ls-copy{
+  min-width:0;height:100%;display:flex;flex-direction:column;justify-content:space-between;gap:34px;
+  padding:clamp(36px,5.5vw,88px) clamp(28px,5.8vw,92px) clamp(32px,4vw,62px);
+}
+.ls-index{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.ls-index .kicker{margin:0;color:var(--ink)}
+.ls-edition{font-family:var(--f-label);font-size:9.2px;line-height:1.5;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right}
+.ls-title{max-width:520px}
+.ls-cn{font-family:var(--f-label);font-size:11px;letter-spacing:.34em;color:var(--muted);margin-bottom:18px}
+.ls-title h1{
+  margin:0;font-family:var(--f-display);font-size:clamp(5.3rem,9.6vw,9.6rem);
+  font-weight:300;line-height:.74;letter-spacing:-.055em;color:var(--ink);
+}
+.ls-title h1 em{font-weight:400;color:#8E8378}
+.ls-dek{max-width:35ch;margin-top:clamp(28px,4vw,46px);font-size:15px;line-height:1.72;color:#514D48}
+.ls-actions{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;padding-top:22px;border-top:1px solid var(--line)}
+.ls-shop{
+  display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:48px;
+  border-bottom:1px solid var(--ink);font-family:var(--f-label);font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;white-space:nowrap;color:var(--ink);transition:padding .35s var(--ease),opacity .35s;
+}
+.ls-shop svg{width:20px;height:20px}
+.ls-shop:hover{padding-right:8px;opacity:.66}
+.ls-facts{font-family:var(--f-label);font-size:9.4px;line-height:1.75;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-align:right;white-space:nowrap}
+.ls-media{margin:0;position:relative;height:100%;min-height:0;overflow:hidden;background:#171412}
+.ls-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(20,17,15,.08),rgba(20,17,15,0) 24%),linear-gradient(to top,rgba(20,17,15,.18),rgba(20,17,15,0) 30%)}
+.ls-media img{width:100%;height:100%;object-fit:cover;object-position:50% 17%;filter:saturate(.72) contrast(1.035) brightness(.97)}
+
+.object-study{
+  min-height:92svh;display:grid;grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);
+  background:#11100F;color:var(--ivory);
+}
+.object-copy{
+  display:flex;flex-direction:column;justify-content:space-between;gap:48px;
+  padding:clamp(58px,7vw,108px) clamp(28px,5.4vw,86px);
+}
+.object-copy .kicker{color:rgba(250,248,243,.54)}
+.object-copy h2{max-width:7ch;margin:18px 0 0;font-size:clamp(3.6rem,6vw,6.8rem);line-height:.84;letter-spacing:-.045em}
+.object-copy h2 em{font-weight:300;color:#B9AC9C}
+.object-copy .lede{max-width:31ch;margin-top:30px;font-size:15px;line-height:1.72;color:rgba(250,248,243,.7)}
+.object-index{display:grid;border-top:1px solid var(--line-ivory)}
+.object-index span{display:grid;grid-template-columns:36px 1fr;gap:15px;padding:13px 0;border-bottom:1px solid var(--line-ivory);font-size:13.5px;line-height:1.45;color:rgba(250,248,243,.72)}
+.object-index b{font-family:var(--f-label);font-size:9px;line-height:1.6;letter-spacing:.16em;font-weight:400;color:rgba(250,248,243,.42)}
+.object-media{margin:0;position:relative;min-height:100%;overflow:hidden;background:#27211E}
+.object-media img{width:100%;height:100%;object-fit:cover;object-position:50% 44%;filter:saturate(.72) contrast(1.06) brightness(.9)}
+.object-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,16,15,.25),rgba(17,16,15,0) 28%),linear-gradient(to top,rgba(17,16,15,.2),rgba(17,16,15,0) 34%);pointer-events:none}
+
+.closing{background:#11100F!important}
+.closing h2 em{color:#B8ACA0}
+.assembly-notes{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:30px;border-top:1px solid var(--line)}
+.assembly-note{display:block;padding:20px 24px 8px 0;border:0;background:transparent}
+.assembly-note + .assembly-note{padding-left:24px;border-left:1px solid var(--line)}
+.assembly-note b{color:var(--muted)}
+.assembly-note p{margin-top:10px;max-width:27ch;font-size:14px;line-height:1.62;color:#514D48}
+.cs figure,.v-plate,.atelier .media,.d-media,.plate{background:#12110F}
+.cs img,.plate img,.v-plate img,.story-media img,.railitem img,.atelier .media img,.d-media img{
+  filter:saturate(.86) contrast(1.045) brightness(.98);
+}
+.vitem .v-plate img{transform:scale(1.002)}
+.vitem:hover .v-plate img{transform:scale(1.025)}
+.cs:hover figure img{transform:scale(1.025)}
+.d-add,.statement .cta{background:#1A1816;color:var(--ivory)}
+.statement .cta{display:inline-flex;align-items:center;min-height:48px;padding:0 18px}
+.d-add:hover,.statement .cta:hover{background:#302C28}
+.toast{opacity:0;visibility:hidden;transition:transform .5s var(--ease),opacity .25s,visibility .25s}
+.toast.is-on{opacity:1;visibility:visible}
+
+@media(max-width:880px){
+  .nav-links{display:none}
+  .lead-story{display:block;position:relative;height:calc(100svh - var(--mast-h));min-height:690px;background:#151210;color:var(--ivory)}
+  .ls-media{position:absolute;inset:0;min-height:100%}
+  .ls-media img{object-position:50% 14%;filter:saturate(.7) contrast(1.04) brightness(.86)}
+  .ls-media::after{background:linear-gradient(to top,rgba(15,13,12,.84),rgba(15,13,12,.07) 66%),linear-gradient(to bottom,rgba(15,13,12,.42),rgba(15,13,12,0) 28%)}
+  .ls-copy{
+    position:relative;z-index:2;min-height:calc(100svh - var(--mast-h));
+    padding:28px 20px 26px;gap:24px;
+  }
+  .ls-index{padding-bottom:12px;border-bottom-color:rgba(250,248,243,.25)}
+  .ls-index .kicker{color:rgba(250,248,243,.84)}
+  .ls-edition{font-size:8.4px;color:rgba(250,248,243,.68)}
+  .ls-title{margin-top:auto;max-width:100%}
+  .ls-cn{margin-bottom:12px;color:rgba(250,248,243,.62)}
+  .ls-title h1{font-size:clamp(4.5rem,22vw,6.2rem);line-height:.78;color:var(--ivory)}
+  .ls-title h1 em{color:#D3C4B4}
+  .ls-dek{max-width:32ch;margin-top:24px;font-size:14px;line-height:1.62;color:rgba(250,248,243,.8)}
+  .ls-actions{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:end;padding-top:18px;border-top-color:rgba(250,248,243,.25)}
+  .ls-shop{color:var(--ivory);border-bottom-color:rgba(250,248,243,.7);font-size:9.4px;gap:14px}
+  .ls-facts{font-size:8.6px;color:rgba(250,248,243,.65)}
+  .object-study{grid-template-columns:1fr;min-height:0}
+  .object-copy{padding:68px 20px 48px;gap:42px}
+  .object-copy h2{font-size:clamp(3.4rem,15vw,4.8rem);max-width:8ch}
+  .object-copy .lede{font-size:14.5px}
+  .object-media{min-height:72svh}
+  .assembly-notes{grid-template-columns:1fr;border-top:0}
+  .assembly-note,.assembly-note + .assembly-note{padding:17px 0;border-left:0;border-top:1px solid var(--line)}
+  .assembly-note p{font-size:14px}
+}
+@media(max-width:420px){
+  .mast .brand small{display:none}
+  .ls-actions{grid-template-columns:1fr}
+  .ls-facts{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){
+  .ls-media img,.object-media img{filter:saturate(.74) contrast(1.04)}
+}
 </style>
 </head>
 <body>
@@ -1307,7 +1443,7 @@ html,body{background:var(--paper)}
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="#collections">Shop</a></li>
-      <li><a href="#film">Film</a></li>
+        <li><a href="#objects">Objects</a></li>
       <li><a href="#muse">Portrait</a></li>
       <li><a href="#vitrine">All Pieces</a></li>
       <li><a href="#atelier">Point of view</a></li>
@@ -1325,7 +1461,7 @@ html,body{background:var(--paper)}
   <button class="close" id="menuClose">Close</button>
   <ul>
         <li><a href="#collections">Shop</a></li>
-    <li><a href="#film">Film</a></li>
+    <li><a href="#objects">Objects</a></li>
     <li><a href="#muse">Portrait</a></li>
     <li><a href="#vitrine">All Pieces</a></li>
     <li><a href="#atelier">Point of view</a></li>
@@ -1334,36 +1470,30 @@ html,body{background:var(--paper)}
   <p class="foot">Vintage-inspired jewellery · Worldwide delivery</p>
 </div>
 
-<!-- ===== 全宽头条 ===== -->
+<!-- ===== 静态产品主视觉 ===== -->
 <main id="top">
-<section class="billboard">
-  <div class="bb-track" id="bbTrack">
-    <figure class="bb-slide is-on" data-cap="Surface, scale, assembly · A Luminara film">
-      <picture class="bb-fallback" aria-hidden="true">
-        <source media="(max-width:719px)" srcset="assets/hero-editorial-v5-portrait-poster.jpg">
-        <img src="assets/hero-editorial-v5-poster.jpg" alt="" fetchpriority="high" decoding="async">
-      </picture>
-      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-v5-poster.jpg" aria-label="Editorial jewellery film moving from surface detail to wearing scale and the line Taste is assembled">
-        <source src="assets/hero-editorial-14s-v5-portrait-lite.mp4" type="video/mp4" media="(max-width: 719px)">
-        <source src="assets/hero-editorial-14s-v5-lite.mp4" type="video/mp4">
-      </video>
-    </figure>
-    <div class="bb-overlay">
-      <div class="bb-title">
-        <h1><span class="sr-only">Luminara, vintage-inspired statement jewellery</span><span aria-hidden="true">Luminara</span></h1>
-        <p class="bb-lead">Seven vintage-inspired statement pieces, chosen for silhouette and surface. Wear one, then build the combination until it feels like yours.</p>
-    <a class="bb-shop" href="#collections">Shop the first edit
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
-        </a>
-      </div>
-      <p class="side">The first edit<br>7 pieces · US$35–58<br>Worldwide delivery</p>
+<section class="lead-story" aria-labelledby="hero-title" data-enter>
+  <div class="ls-copy">
+    <div class="ls-index">
+      <p class="kicker">Luminara · The first edit</p>
+      <p class="ls-edition">Edition 01<br>Eight pieces</p>
+    </div>
+    <div class="ls-title">
+      <p class="ls-cn">琉弥诺 · 珍珠时刻</p>
+      <h1 id="hero-title">Pearl<br><em>Hour</em></h1>
+      <p class="ls-dek">A clock face, a line of pearl-tone beads and one continuous gold curve. An object chosen to change the tempo of a plain dress, a dark collar or an old favourite jacket.</p>
+    </div>
+    <div class="ls-actions">
+      <button class="ls-shop" type="button" data-open="pearl">
+        Shop Pearl Hour
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+      </button>
+      <p class="ls-facts">US$58 · Necklaces<br>Worldwide delivery</p>
     </div>
   </div>
-  <div class="bb-bar">
-    <p class="bb-cap" id="bbCap">The first edit · Film 01</p>
-    <span class="bb-count" id="bbCount">00:14 · LOOP</span>
-    <span class="bb-audio-note">Original ambient score</span>
-  </div>
+  <figure class="ls-media">
+    <img src="assets/editorial/pearl-hour-hero.webp" alt="Pearl Hour gold-tone necklace with a clock face, pearl-tone beads and sculpted drops worn at the throat" fetchpriority="high" decoding="async">
+  </figure>
 </section>
 
 
@@ -1382,68 +1512,48 @@ html,body{background:var(--paper)}
   <div class="head">
     <div class="head-copy">
       <span class="kicker">The first find</span>
-      <h2 id="firstEditTitle">Four pieces to assemble with</h2>
-      <p>Decorative earrings, a cuff and a necklace selected for the way they catch light and change an outfit. Open a piece for materials, scale and delivery.</p>
+      <h2 id="firstEditTitle">Four pieces for the first gesture</h2>
+      <p>A necklace with the logic of a watch, enamel wrapped into serpentine curves, an open cuff and two silver doves. Open a piece for materials, scale and delivery.</p>
     </div>
-    <a class="edit-all" href="#vitrine">Shop all seven</a>
+    <a class="edit-all" href="#vitrine">Shop all eight</a>
   </div>
   <div class="cs-grid">
+    <article class="cs" role="button" tabindex="0" data-open="pearl">
+      <figure><img src="assets/editorial/pearl-hour.webp" alt="Pearl Hour necklace with a clock face and pearl-tone drops" loading="eager"></figure>
+      <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 08</span><b>Pearl Hour</b><span class="cs-price">$58</span><span class="cs-material">Gold-tone line · clock face · pearl-tone drops</span><span class="cs-action">View piece</span></p>
+    </article>
     <article class="cs" role="button" tabindex="0" data-open="snake">
-      <figure><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
+      <figure><img src="assets/editorial/serpentine.webp" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 02</span><b>Serpentine Psalm</b><span class="cs-price">$49</span><span class="cs-material">Turquoise and oxblood enamel · glass drops</span><span class="cs-action">View piece</span></p>
     </article>
-    <article class="cs" role="button" tabindex="0" data-open="morpho">
-      <figure><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on a plaster bust" loading="lazy" style="object-position:50% 32%"></figure>
-      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 01</span><b>Morpho Nocturne</b><span class="cs-price">$39</span><span class="cs-material">Iridescent resin · blue glass · zircon</span><span class="cs-action">View piece</span></p>
-    </article>
     <article class="cs" role="button" tabindex="0" data-open="cuff">
-      <figure><img src="assets/opaline-cuff.jpg" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy" style="object-position:50% 52%"></figure>
+      <figure><img src="assets/editorial/cuff.webp" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Mineral Glow · Pl. 04</span><b>Opaline Arch Cuff</b><span class="cs-price">$52</span><span class="cs-material">Gold-tone cuff · opal-tone resin · zircon</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="doves">
-      <figure><img src="assets/hero-close-neck.jpg" alt="Two Doves necklace worn at the throat" loading="lazy" style="object-position:42% 38%"></figure>
+      <figure><img src="assets/editorial/doves.webp" alt="Two Doves necklace with silver-tone birds and a yellow glass drop" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 07</span><b>Two Doves</b><span class="cs-price">$58</span><span class="cs-material">Silver-tone metal · zircon · yellow glass</span><span class="cs-action">View piece</span></p>
     </article>
   </div>
 </section>
 
-<!-- ===== 三块会动的图版 ===== -->
-<section class="films" id="film">
-  <div class="films-head">
+<!-- ===== 静态物件研究 ===== -->
+<section class="object-study" id="objects" aria-labelledby="objectTitle">
+  <div class="object-copy">
     <div>
-      <span class="kicker">The Assembly · three studies</span>
-      <h2>The pieces, in motion</h2>
+      <span class="kicker">Object study · Pearl Hour</span>
+      <h2 id="objectTitle">The detail <em>carries</em> the piece.</h2>
+      <p class="lede">The eye moves from the gold line to the beadwork, then settles on the clock face. Pearl-tone drops bring lightness below the heavier sculpted forms.</p>
     </div>
-    <div class="film-ctrl">
-      <span class="film-tc">Loop · 00:05 · silent plate</span>
+    <div class="object-index" aria-label="Pearl Hour details">
+      <span><b>01</b>Clock face with printed numerals</span>
+      <span><b>02</b>Pearl-tone beads and teardrop forms</span>
+      <span><b>03</b>Gold-tone open curve and spiral ends</span>
     </div>
   </div>
-  <figure class="film-band" style="--poster:url('assets/cover-hand-necklace.jpg')">
-    <video id="filmHero" autoplay muted loop playsinline preload="auto" poster="assets/cover-hand-necklace.jpg">
-      <source src="assets/hero-cover.mp4" type="video/mp4">
-    </video>
-    <div class="film-ov">
-      <div>
-        <span class="kicker">01 / The first find</span>
-        <h3>Held at the eye</h3>
-      </div>
-      <span class="stamp">The first edit · find / hold / assemble</span>
-    </div>
+  <figure class="object-media">
+    <img src="assets/editorial/pearl-hour-detail.webp" alt="Close view of the Pearl Hour clock face, pearl-tone drops and gold-tone spiral details" loading="lazy" decoding="async">
   </figure>
-  <div class="film-duo">
-    <figure style="--poster:url('assets/plate-hand-earring.jpg')">
-      <video id="filmWing" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-earring.jpg">
-        <source src="assets/film-wing.mp4" type="video/mp4">
-      </video>
-      <figcaption><span>02 / Surface · Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
-    </figure>
-    <figure style="--poster:url('assets/plate-hand-cuff.jpg')">
-      <video id="filmCuff" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-cuff.jpg">
-        <source src="assets/film-cuff.mp4" type="video/mp4">
-      </video>
-      <figcaption><span>03 / Weight · Opaline Arch · gold-tone metal, resin, zircon</span><span>00:05</span></figcaption>
-    </figure>
-  </div>
 </section>
 
 <!-- ===== 另一张脸 ===== -->
@@ -1459,14 +1569,6 @@ html,body{background:var(--paper)}
   </figure>
 </section>
 
-<!-- ===== 字体横带 ===== -->
-<section class="typemarquee" aria-label="Luminara house line">
-  <div class="tm-track" id="tmTrack">
-    <span>Taste is assembled <i>old-soul forms</i> Modern wardrobe <i>The Cabinet</i></span>
-    <span>Seven available pieces <i>one considered edit</i> Worldwide delivery <i>Issue 01</i></span>
-  </div>
-</section>
-
 <!-- ===== 宣言 ===== -->
 <section class="statement">
   <div class="inner">
@@ -1477,15 +1579,12 @@ html,body{background:var(--paper)}
     </div>
     <div class="assembly-notes">
       <article class="assembly-note">
-        <img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings" loading="lazy">
         <div><b>01 / Shape</b><p>Choose a silhouette that changes the line of a familiar outfit.</p></div>
       </article>
       <article class="assembly-note">
-        <img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff" loading="lazy">
         <div><b>02 / Surface</b><p>Let enamel, glass or resin bring colour and movement.</p></div>
       </article>
       <article class="assembly-note">
-        <img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy">
         <div><b>03 / Repeat</b><p>Return to the pieces that make the outfit feel like yours.</p></div>
       </article>
     </div>
@@ -1501,49 +1600,53 @@ html,body{background:var(--paper)}
     <div class="head">
       <div class="v-head">
         <h2>The full vitrine</h2>
-        <span class="kicker">Seven pieces · four categories</span>
+        <span class="kicker">Eight pieces · four categories</span>
       </div>
       <p>Vintage-inspired pieces for wardrobes built over time. Browse by category, then open a piece for materials, scale, care and cross-border delivery details.</p>
       <ul class="shop-facts" aria-label="Purchase information">
-        <li>Seven-piece first edit</li>
+        <li>Eight-piece first edit</li>
         <li>Tracked international delivery</li>
         <li>Duties confirmed before payment</li>
       </ul>
     </div>
     <div class="shop-filter" role="group" aria-label="Filter pieces by category">
-      <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All 07</button>
+      <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All 08</button>
       <button type="button" class="filter-chip" data-filter="earrings" aria-pressed="false">Earrings 04</button>
-      <button type="button" class="filter-chip" data-filter="necklaces" aria-pressed="false">Necklaces 01</button>
+      <button type="button" class="filter-chip" data-filter="necklaces" aria-pressed="false">Necklaces 02</button>
       <button type="button" class="filter-chip" data-filter="bracelets" aria-pressed="false">Bracelets 01</button>
       <button type="button" class="filter-chip" data-filter="brooches" aria-pressed="false">Brooches 01</button>
     </div>
     <div class="vgrid">
+      <article class="vitem v3" role="button" tabindex="0" data-open="pearl" data-category="necklaces">
+        <figure class="v-plate r45"><img src="assets/editorial/pearl-hour.webp" alt="Pearl Hour necklace with a clock face and pearl-tone drops" loading="lazy"><span class="v-no">01</span></figure>
+        <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Pearl Hour</h3><p class="price">$58</p><p class="v-material">Gold-tone line · clock face · pearl-tone drops</p></div>
+      </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="snake" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">01</span></figure>
+        <figure class="v-plate r45"><img src="assets/editorial/serpentine.webp" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">02</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Serpentine Psalm</h3><p class="price">$49</p><p class="v-material">Turquoise and oxblood enamel · glass drops</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="morpho" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on plaster bust" loading="lazy" style="object-position:50% 28%"><span class="v-no">02</span></figure>
+        <figure class="v-plate r45"><img src="assets/editorial/morpho.webp" alt="Morpho Nocturne earring held between the fingers" loading="lazy"><span class="v-no">03</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Morpho Nocturne</h3><p class="price">$39</p><p class="v-material">Iridescent resin · black glass</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="deep" data-category="brooches">
-        <figure class="v-plate r45"><img src="assets/jellyfish.jpg" alt="Silver-finish jellyfish brooches on velvet" loading="lazy" style="object-position:50% 36%"><span class="v-no">03</span></figure>
+        <figure class="v-plate r45"><img src="assets/editorial/deep.webp" alt="Silver-finish jellyfish brooches on velvet" loading="lazy"><span class="v-no">04</span></figure>
         <div class="v-meta"><span class="kicker">Brooches · Ocean Whisper</span><h3>Nocturne of the Deep</h3><p class="price">$55</p><p class="v-material">Silver-tone metal · glass pearl</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="coral" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy" style="object-position:56% 50%"><span class="v-no">04</span></figure>
+        <figure class="v-plate r45"><img src="assets/editorial/coral.webp" alt="Coral Reliquary earrings" loading="lazy"><span class="v-no">05</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Ocean Whisper</span><h3>Coral Reliquary</h3><p class="price">$35</p><p class="v-material">Coral-tone glass · zircon drops</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="cuff" data-category="bracelets">
-        <figure class="v-plate r1610"><img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy" style="object-position:50% 48%"><span class="v-no">05</span></figure>
+        <figure class="v-plate r1610"><img src="assets/editorial/cuff.webp" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy"><span class="v-no">06</span></figure>
         <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings">
-        <figure class="v-plate r1610"><img src="assets/lilac-earrings.jpg" alt="Lilac Reverie earrings" loading="lazy" style="object-position:50% 68%"><span class="v-no">06</span></figure>
+        <figure class="v-plate r1610"><img src="assets/editorial/lilac.webp" alt="Lilac Reverie earrings" loading="lazy"><span class="v-no">07</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="doves" data-category="necklaces">
-        <figure class="v-plate r1610"><img src="assets/doves-necklace.jpg" alt="Two Doves necklace" loading="lazy" style="object-position:50% 46%"><span class="v-no">07</span></figure>
+        <figure class="v-plate r1610"><img src="assets/editorial/doves.webp" alt="Two Doves necklace" loading="lazy"><span class="v-no">08</span></figure>
         <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Two Doves</h3><p class="price">$58</p><p class="v-material">Silver-tone metal · zircon · yellow glass</p></div>
       </article>
     </div>
@@ -1573,7 +1676,7 @@ html,body{background:var(--paper)}
 <section class="closing">
   <div class="inner">
     <h2>Wear what you love into <em>a signature.</em></h2>
-    <p>Seven vintage-inspired pieces from US$35 to US$58. Orders ship internationally with tracking, and duties are confirmed before payment.</p>
+    <p>Eight vintage-inspired pieces from US$35 to US$58. Orders ship internationally with tracking, and duties are confirmed before payment.</p>
     <a class="cta" href="#vitrine">Shop the Cabinet</a>
     <p class="by">Taste is assembled · 琉弥诺</p>
   </div>
@@ -1624,7 +1727,7 @@ html,body{background:var(--paper)}
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:atelier@luminara.studio">atelier@luminara.studio</a></li>
-            <li><a href="#film">Film</a></li>
+    <li><a href="#objects">Objects</a></li>
             <li><a href="#atelier">How to assemble</a></li>
           </ul>
         </div>
@@ -1668,13 +1771,14 @@ html,body{background:var(--paper)}
 <div class="toast" id="toast">Added to bag</div>
 
 <div style="display:none" aria-hidden="true">
-  <img src="assets/lilac-earrings.jpg" alt="" loading="lazy">
-  <img src="assets/snake-earrings.jpg" alt="" loading="lazy">
-  <img src="assets/butterfly-bust.jpg" alt="" loading="lazy">
-  <img src="assets/jellyfish.jpg" alt="" loading="lazy">
-  <img src="assets/coral-earrings.jpg" alt="" loading="lazy">
-  <img src="assets/opaline-cuff.jpg" alt="" loading="lazy">
-  <img src="assets/doves-necklace.jpg" alt="" loading="lazy">
+  <img src="assets/editorial/pearl-hour.webp" alt="" loading="lazy">
+  <img src="assets/editorial/lilac.webp" alt="" loading="lazy">
+  <img src="assets/editorial/serpentine.webp" alt="" loading="lazy">
+  <img src="assets/editorial/morpho.webp" alt="" loading="lazy">
+  <img src="assets/editorial/deep.webp" alt="" loading="lazy">
+  <img src="assets/editorial/coral.webp" alt="" loading="lazy">
+  <img src="assets/editorial/cuff.webp" alt="" loading="lazy">
+  <img src="assets/editorial/doves.webp" alt="" loading="lazy">
 </div>
 
 <script>
@@ -1702,32 +1806,36 @@ function apiJSON(path, data){
 }
 
 var P = {
-  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/lilac-earrings.jpg",pos:"50% 62%",
-    desc:"Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
+  pearl:{id:"pearl",no:"Pl. 08",category:"Necklaces",series:"Nocturne Sculpture",name:"Pearl Hour",cn:"珍珠时刻",price:58,img:"assets/editorial/pearl-hour.webp",pos:"50% 42%",
+    desc:"A gold-tone curve carries a printed clock face, a line of pearl-tone beads and sculpted teardrop forms. The asymmetry keeps the eye moving; one open neckline is enough to give the piece its frame.",
+    spec:[["Body","Gold-tone open curve"],["Detail","Printed clock face"],["Drops","Pearl-tone beads and drops"]],
+    sizes:["One size"]},
+  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/editorial/lilac.webp",pos:"50% 62%",
+    desc:"Clouded glass petals gather around dark crystal centres, with small zircon points catching the light. The clustered silhouette reads as a soft flower from a distance and reveals a harder, jewelled centre up close.",
     spec:[["Material","Clouded glass, cubic zirconia"],["Setting","Gold-tone metal"],["Drop","38 mm"]],
     sizes:["One size"]},
-  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/snake-earrings.jpg",pos:"50% 40%",
-    desc:"A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
+  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/editorial/serpentine.webp",pos:"50% 40%",
+    desc:"Turquoise enamel is traced with oxblood and a fine gold-tone line, then finished with red glass. The long serpent curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
     spec:[["Body","Gold-tone metal"],["Finish","Turquoise and oxblood enamel"],["Drop","72 mm"]],
     sizes:["One size"]},
-  morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/butterfly-bust.jpg",pos:"50% 30%",
-    desc:"A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
+  morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/editorial/morpho.webp",pos:"50% 30%",
+    desc:"A layered blue-green resin wing sits inside gold-tone filigree, with dark centre stones and a faceted drop. Cobalt and green shift across the surface as the light moves.",
     spec:[["Material","Iridescent resin, gold-tone filigree"],["Stones","Black glass, zircon"],["Drop","54 mm"]],
     sizes:["One size"]},
-  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/jellyfish.jpg",pos:"50% 34%",
-    desc:"Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
+  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/editorial/deep.webp",pos:"50% 34%",
+    desc:"A set of silver-tone forms drawn from a shell, a coral branch, a pearl-tone bead and a long filament. Wear the group across a lapel as one composition, or separate one form as a quieter mark.",
     spec:[["Body","Silver-tone metal"],["Stones","Glass pearl, zircon"],["Sizes","38–62 mm"]],
     sizes:["Set of four"]},
-  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/coral-earrings.jpg",pos:"60% 50%",
-    desc:"Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
+  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/editorial/coral.webp",pos:"60% 50%",
+    desc:"Coral-tone glass drops are held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon points above. The warm red-orange reads strongly against black and ecru.",
     spec:[["Material","Coral-tone glass, gold-tone metal"],["Stone","Resin cabochon, zircon"],["Drop","42 mm"]],
     sizes:["One size"]},
-  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/opaline-cuff.jpg",pos:"50% 46%",
-    desc:"An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
+  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/editorial/cuff.webp",pos:"50% 46%",
+    desc:"An open gold-tone cuff is inlaid with four blue-green resin panels and edged with zircon. The wide horizontal arc gives the wrist presence; keep rings restrained and let the cuff hold the line.",
     spec:[["Body","Gold-tone metal"],["Inlay","Opal-tone resin, cubic zirconia"],["Fit","48 / 52 / 56 mm"]],
     sizes:["48 mm","52 mm","56 mm"]},
-  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/doves-necklace.jpg",pos:"50% 46%",
-    desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
+  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/editorial/doves.webp",pos:"50% 46%",
+    desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The rigid curve sits around the collarbone and keeps its shape against bare skin or a dark neckline.",
     spec:[["Body","Silver-tone metal"],["Stones","Cubic zirconia, yellow glass"],["Length","41 cm adjustable"]],
     sizes:["One size"]}
 };
@@ -1770,40 +1878,6 @@ qa("#mobileMenu a").forEach(function(a){
     if(window.LuminaraScroll){window.LuminaraScroll.start();}
   });
 });
-
-/* ---------- billboard film ---------- */
-var bbVideo=q("#bbVideo");
-if(bbVideo){
-  if(window.matchMedia("(max-width:719px)").matches){ bbVideo.poster="assets/hero-editorial-v5-portrait-poster.jpg"; }
-  var heroReduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var heroVisible=true;
-  var heroFrame=bbVideo.closest(".bb-slide");
-  function playHero(){
-    if(heroVisible && !heroReduce && document.visibilityState!=="hidden"){
-      bbVideo.play().catch(function(){});
-    }
-  }
-  bbVideo.addEventListener("playing",function(){ if(heroFrame){heroFrame.classList.add("video-live");} });
-  var heroOverlay=bbVideo.closest(".billboard") ? bbVideo.closest(".billboard").querySelector(".bb-overlay") : null;
-  bbVideo.addEventListener("timeupdate",function(){
-    if(heroOverlay){ heroOverlay.classList.toggle("is-assembly",bbVideo.currentTime>10.58&&bbVideo.currentTime<13.18); }
-  });
-  ["pause","waiting","stalled","emptied","error"].forEach(function(type){
-    bbVideo.addEventListener(type,function(){ if(heroFrame){heroFrame.classList.remove("video-live");} });
-  });
-  bbVideo.addEventListener("canplay",playHero);
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="hidden"){ bbVideo.pause(); }
-    else { playHero(); }
-  });
-  if("IntersectionObserver" in window){
-    new IntersectionObserver(function(entries){
-      heroVisible=entries[0].isIntersecting;
-      if(heroVisible){ playHero(); }
-      else if(!bbVideo.paused){ bbVideo.pause(); }
-    },{threshold:.08}).observe(bbVideo);
-  }
-}
 
 /* ---------- collection tabs ---------- */
 var tabs=qa(".cat");
@@ -1925,7 +1999,7 @@ var houseInfo={
   },
   archive:{
     title:"The first edit",
-    intro:"The Cabinet opens with seven vintage-inspired pieces across earrings, necklaces, bracelets and brooches.",
+    intro:"The Cabinet opens with eight vintage-inspired pieces across earrings, necklaces, bracelets and brooches.",
     rows:[["Availability","When an option sells out, it is removed from the bag."],["Edits","New pieces are added as the Cabinet develops."],["Questions","Contact Luminara if you are looking for a piece you saw previously."]]
   }
 };
@@ -2158,7 +2232,7 @@ function toast(msg){
 /* ---------- footer placeholders ---------- */
 qa(".fcol a").forEach(function(a){
   var h=a.getAttribute("href");
-  if(h==="#collections"||h==="#vitrine"||h==="#atelier"||h==="#contact"||h==="#film"||a.hasAttribute("data-info")||h==="mailto:atelier@luminara.studio"){return;}
+    if(h==="#collections"||h==="#vitrine"||h==="#atelier"||h==="#contact"||h==="#objects"||a.hasAttribute("data-info")||h==="mailto:atelier@luminara.studio"){return;}
   a.addEventListener("click",function(e){
     e.preventDefault();
     toast("That page opens with the full site");
@@ -2642,65 +2716,6 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
 })();
 </script>
 
-<script>
-(function(){
-  if (!window.gsap || !window.ScrollTrigger){ return; }
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches){ return; }
-  var track = document.querySelector("#tmTrack");
-  if (!track){ return; }
-  var overflow = function(){ return Math.max(0, track.scrollWidth - window.innerWidth + 40); };
-  gsap.to(track, {
-    x: function(){ return -overflow(); },
-    ease: "none",
-    scrollTrigger: {trigger: ".typemarquee", start: "top bottom", end: "bottom top", scrub: .6, invalidateOnRefresh: true}
-  });
-})();
-</script>
-
-<script>
-(function(){
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var heroVid = document.querySelector("#bbVideo");
-  var films = [].slice.call(document.querySelectorAll("#filmHero,#filmWing,#filmCuff"));
-
-  /* reduced motion: every frame rests on its poster */
-  if (reduce){
-    if (heroVid){ try { heroVid.pause(); heroVid.removeAttribute("autoplay"); } catch(e){} }
-    films.forEach(function(v){ try { v.pause(); v.removeAttribute("autoplay"); } catch(e){} });
-  }
-
-  /* a clip that cannot play leaves its poster standing */
-  [heroVid].concat(films).forEach(function(v){
-    if (!v){ return; }
-    v.addEventListener("error", function(){
-      v.style.opacity = "0";
-      var f = v.parentNode;
-      if (f && v.getAttribute("poster")){
-        f.style.background = "url('" + v.getAttribute("poster") + "') center/cover no-repeat";
-      }
-    }, true);
-  });
-
-  /* moving plates start themselves whenever they enter the viewport */
-  if (!reduce && "IntersectionObserver" in window){
-    films.forEach(function(video){
-      var frame = video.closest("figure");
-      new IntersectionObserver(function(entries){
-        if (entries[0].isIntersecting && document.visibilityState !== "hidden"){
-          video.play().catch(function(){});
-        } else if (!video.paused){
-          video.pause();
-        }
-      }, {threshold:.12}).observe(video);
-      video.addEventListener("canplay", function(){ video.play().catch(function(){}); });
-      video.addEventListener("playing", function(){ if(frame){frame.classList.add("video-live");} });
-      ["pause","waiting","stalled","emptied","error"].forEach(function(type){
-        video.addEventListener(type, function(){ if(frame){frame.classList.remove("video-live");} });
-      });
-    });
-  }
-})();
-</script>
 <script src="assets/audio-atmosphere.js"></script>
 <script src="assets/editorial-motion.js"></script>
 </body>

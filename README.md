@@ -10,27 +10,20 @@ are adapted natively in `assets/editorial-motion.js`; no React runtime is
 required. Reduced-motion preferences disable smooth scrolling, autoplay and
 pointer-led effects. See `THIRD_PARTY_NOTICES.md` for sources and licences.
 
-The hero and moving plates loop without playback controls. An original ambient
-score in `assets/luminara-ambient-v5.m4a` fades in after the visitor's first
-interaction, as required by browser autoplay policies. The small Sound control
-in the masthead provides a persistent mute preference; key storefront actions
-also use quiet, procedurally generated interface sounds.
-
-The hero film moves through surface, wearing scale and assembly, then returns to
-the opening ear close-up for a continuous loop. The landscape and portrait
-edits are composed separately. Website copies are encoded at a smaller
-resolution in `assets/hero-editorial-14s-v5-lite.mp4` and
-`assets/hero-editorial-14s-v5-portrait-lite.mp4` so the mobile hero starts
-quickly.
+The hero is a static Pearl Hour portrait, so the first screen appears without
+waiting for video data or autoplay permission. On desktop it uses a split
+editorial layout; on mobile the product image fills the screen and the headline
+sits over a protected lower gradient. An original ambient score in
+`assets/luminara-ambient-v5.m4a` fades in after the visitor's first interaction,
+as required by browser autoplay policies. The small Sound control in the
+masthead provides a persistent mute preference; key storefront actions also use
+quiet, procedurally generated interface sounds.
 
 ## Creative and local tooling
 
-The film treatment follows the huashu-motion directing and rhythm workflow,
-including its hook / burst / stop / resolve structure and post-render contact
-sheet review. Animation follows the official GSAP skill guidance, and the local
-model recommendation was checked with llmfit against the available RTX 4070 /
-32 GB workstation. These tools inform production only; the public storefront
-loads only its vendored browser assets.
+Main image sequencing follows the documented photography system, while motion
+follows the official GSAP guidance. The public storefront loads only its
+vendored browser assets.
 
 ## Run
 
@@ -48,10 +41,10 @@ The site reads products from `data/catalog.json`. The server revalidates product
 
 ## Fast start
 
-The storefront has no blocking brand-intro overlay, so the header and poster can
-paint as soon as the document is available. HTML, CSS, JavaScript and JSON are
-served with Brotli or gzip compression, conditional ETag requests and short-lived
-revalidation caches. Video and audio support byte-range requests.
+The storefront has no blocking brand-intro overlay or hero video, so the header
+and photograph can paint as soon as the document is available. HTML, CSS,
+JavaScript and JSON are served with Brotli or gzip compression, conditional ETag
+requests and short-lived revalidation caches. Audio supports byte-range requests.
 
 Render's free web-service plan may still spin down after inactivity. The GitHub
 Actions workflow in `.github/workflows/keepalive.yml` requests the public health

@@ -97,23 +97,64 @@
       );
     }
 
-    /* A small camera move keeps the film connected to the following page. */
-    var billboard = document.querySelector(".billboard");
-    var billboardMedia = document.querySelector("#bbVideo");
-    var billboardOverlay = document.querySelector(".bb-overlay");
-    if (billboard && billboardMedia && billboardOverlay){
-      var filmHandoff = gsap.timeline({
+    /*
+     * The first screen is now a still portrait. Type enters once, then the
+     * photograph takes a restrained camera move while the reader scrolls.
+     */
+    var leadStory = document.querySelector(".lead-story");
+    var leadImage = leadStory && leadStory.querySelector(".ls-media img");
+    var leadType = leadStory
+      ? leadStory.querySelectorAll(".ls-index, .ls-cn, .ls-title h1, .ls-dek, .ls-actions")
+      : [];
+    if (leadStory && leadImage && leadType.length){
+      gsap.from(leadImage, {
+        scale: 1.045,
+        duration: 1.55,
+        ease: "power3.out",
+        clearProps: "transform"
+      });
+      gsap.from(leadType, {
+        y: 22,
+        autoAlpha: 0,
+        duration: .92,
+        stagger: .085,
+        ease: "power3.out",
+        delay: .12,
+        clearProps: "transform,opacity,visibility"
+      });
+      gsap.to(leadImage, {
+        scale: 1.035,
+        yPercent: 1.7,
+        ease: "none",
         scrollTrigger: {
-          trigger: billboard,
+          trigger: leadStory,
           start: "top top",
           end: "bottom top",
-          scrub: .9,
+          scrub: .8,
           invalidateOnRefresh: true
         }
       });
-      filmHandoff
-        .to(billboardMedia, {scale:1.075, ease:"none"}, 0)
-        .to(billboardOverlay, {yPercent:-14, autoAlpha:.15, ease:"none"}, 0);
+    }
+
+    var objectStudy = document.querySelector(".object-study");
+    var objectMedia = objectStudy && objectStudy.querySelector(".object-media");
+    if (objectStudy && objectMedia){
+      objectStudy.dataset.motion = "developing-frame";
+      gsap.fromTo(
+        objectMedia,
+        {clipPath: "inset(0% 0% 14% 0%)"},
+        {
+          clipPath: "inset(0% 0% 0% 0%)",
+          ease: "none",
+          scrollTrigger: {
+            trigger: objectStudy,
+            start: "top 88%",
+            end: "center 58%",
+            scrub: .7,
+            invalidateOnRefresh: true
+          }
+        }
+      );
     }
   }
 

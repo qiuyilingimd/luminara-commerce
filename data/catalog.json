@@ -10,6 +10,24 @@
   },
   "products": [
     {
+      "id": "pearl",
+      "no": "Pl. 08",
+      "category": "Necklaces",
+      "series": "Nocturne Sculpture",
+      "name": "Pearl Hour",
+      "cn": "珍珠时刻",
+      "price": 58,
+      "img": "assets/editorial/pearl-hour.webp",
+      "pos": "50% 42%",
+      "desc": "A gold-tone curve carries a printed clock face, a line of pearl-tone beads and sculpted teardrop forms. The asymmetry keeps the eye moving; one open neckline is enough to give the piece its frame.",
+      "spec": [
+        ["Body", "Gold-tone open curve"],
+        ["Detail", "Printed clock face"],
+        ["Drops", "Pearl-tone beads and drops"]
+      ],
+      "sizes": ["One size"]
+    },
+    {
       "id": "lilac",
       "no": "Pl. 03",
       "category": "Earrings",
@@ -17,9 +35,9 @@
       "name": "Lilac Reverie",
       "cn": "紫丁香之梦",
       "price": 45,
-      "img": "assets/lilac-earrings.jpg",
+      "img": "assets/editorial/lilac.webp",
       "pos": "50% 62%",
-      "desc": "Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
+      "desc": "Clouded glass petals gather around dark crystal centres, with small zircon points catching the light. The clustered silhouette reads as a soft flower from a distance and reveals a harder, jewelled centre up close.",
       "spec": [
         ["Material", "Glass petals, cubic zirconia"],
         ["Setting", "Gold-tone metal"],
@@ -35,9 +53,9 @@
       "name": "Serpentine Psalm",
       "cn": "灵蛇之诗",
       "price": 49,
-      "img": "assets/snake-earrings.jpg",
+      "img": "assets/editorial/serpentine.webp",
       "pos": "50% 40%",
-      "desc": "A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
+      "desc": "Turquoise enamel is traced with oxblood and a fine gold-tone line, then finished with red glass. The long serpent curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
       "spec": [
         ["Body", "Gold-tone metal"],
         ["Finish", "Turquoise and oxblood enamel"],
@@ -53,9 +71,9 @@
       "name": "Morpho Nocturne",
       "cn": "夜蝶",
       "price": 39,
-      "img": "assets/butterfly-bust.jpg",
+      "img": "assets/editorial/morpho.webp",
       "pos": "50% 30%",
-      "desc": "A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
+      "desc": "A layered blue-green resin wing sits inside gold-tone filigree, with dark centre stones and a faceted drop. Cobalt and green shift across the surface as the light moves.",
       "spec": [
         ["Material", "Iridescent resin, gold-tone filigree"],
         ["Stones", "Black glass, zircon"],
@@ -71,9 +89,9 @@
       "name": "Nocturne of the Deep",
       "cn": "深海夜曲",
       "price": 55,
-      "img": "assets/jellyfish.jpg",
+      "img": "assets/editorial/deep.webp",
       "pos": "50% 34%",
-      "desc": "Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
+      "desc": "A set of silver-tone forms drawn from a shell, a coral branch, a pearl-tone bead and a long filament. Wear the group across a lapel as one composition, or separate one form as a quieter mark.",
       "spec": [
         ["Body", "Silver-tone metal"],
         ["Stones", "Glass pearl, zircon"],
@@ -89,9 +107,9 @@
       "name": "Coral Reliquary",
       "cn": "珊瑚圣龛",
       "price": 35,
-      "img": "assets/coral-earrings.jpg",
+      "img": "assets/editorial/coral.webp",
       "pos": "60% 50%",
-      "desc": "Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
+      "desc": "Coral-tone glass drops are held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon points above. The warm red-orange reads strongly against black and ecru.",
       "spec": [
         ["Material", "Coral-tone glass, gold-tone metal"],
         ["Stone", "Resin cabochon, zircon"],
@@ -107,9 +125,9 @@
       "name": "Opaline Arch Cuff",
       "cn": "欧泊拱廊",
       "price": 52,
-      "img": "assets/opaline-cuff.jpg",
+      "img": "assets/editorial/cuff.webp",
       "pos": "50% 46%",
-      "desc": "An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
+      "desc": "An open gold-tone cuff is inlaid with four blue-green resin panels and edged with zircon. The wide horizontal arc gives the wrist presence; keep rings restrained and let the cuff hold the line.",
       "spec": [
         ["Body", "Gold-tone metal"],
         ["Inlay", "Opal-tone resin, cubic zirconia"],
@@ -125,9 +143,9 @@
       "name": "Two Doves",
       "cn": "双鸽",
       "price": 58,
-      "img": "assets/doves-necklace.jpg",
+      "img": "assets/editorial/doves.webp",
       "pos": "50% 46%",
-      "desc": "Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
+      "desc": "Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The rigid curve sits around the collarbone and keeps its shape against bare skin or a dark neckline.",
       "spec": [
         ["Body", "Silver-tone metal"],
         ["Stones", "Cubic zirconia, yellow glass"],
