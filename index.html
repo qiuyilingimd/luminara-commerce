@@ -402,7 +402,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .v-meta .price{font-family:var(--f-label);font-size:10.5px;letter-spacing:.08em;color:rgba(248,243,232,.66);margin-top:4px}
 .v-material{margin-top:7px;font-size:13.5px;line-height:1.45;color:rgba(248,243,232,.57);font-style:italic}
 .shop-filter{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
-.filter-chip{min-height:38px;padding:0 13px;border:1px solid rgba(248,243,232,.22);color:rgba(248,243,232,.62);font-family:var(--f-label);font-size:9px;letter-spacing:.17em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
+.filter-chip{min-height:44px;padding:0 14px;border:1px solid rgba(248,243,232,.22);color:rgba(248,243,232,.62);font-family:var(--f-label);font-size:10px;letter-spacing:.16em;text-transform:uppercase;transition:background .3s,color .3s,border-color .3s}
 .filter-chip:hover{border-color:rgba(248,243,232,.58);color:var(--ivory)}
 .filter-chip[aria-pressed="true"]{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
 
@@ -583,6 +583,16 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
   .mast .brand small{display:none}
   .nav-right{gap:3px}
 }
+@media (max-width:899px){
+  .vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vitem.v3,.vitem.v4,.vitem.v5,.vitem.v6{grid-column:auto}
+  .v-plate.r1610{aspect-ratio:4/5}
+}
+@media (min-width:900px){
+  .vgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 22px}
+  .vitem.v3,.vitem.v4,.vitem.v5,.vitem.v6{grid-column:auto}
+  .v-plate.r1610{aspect-ratio:4/5}
+}
 @media (min-width:1100px){
   :root{--gut:52px}
   .cover h1{font-size:clamp(3.4rem,7.4vw,7.4rem)}
@@ -669,8 +679,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .films{background:var(--paper);padding:58px 0 0}
 .films-head{max-width:1400px;margin:0 auto 22px;padding:0 var(--gut) 14px;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(18,16,14,.14)}
 .films-head h2{margin-top:6px;font-size:clamp(1.5rem,4.2vw,2.6rem);font-style:italic}
-.film-ctrl{display:flex;align-items:center;gap:12px;padding-bottom:2px}
-.film-tc{font-family:var(--f-label);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.film-note{margin:0 0 3px;font-family:var(--f-label);font-size:9.5px;line-height:1.6;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:right}
 .films-head button{font-family:var(--f-label);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;background:none;border:1px solid rgba(18,16,14,.22);color:var(--ink);padding:7px 12px;cursor:pointer;transition:background .35s,color .35s,border-color .35s}
 .films-head button:hover{border-color:var(--ink);background:var(--ink);color:var(--ivory)}
 .film-band{position:relative;margin:0;background:#3B0E17;overflow:hidden}
@@ -679,16 +688,11 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .film-band video{position:relative;z-index:1;display:block;width:100%;aspect-ratio:16/9;max-height:88svh;object-fit:cover;opacity:0;transition:opacity .5s ease}
 .film-band.video-live video,.film-duo figure.video-live video{opacity:1}
 .film-band::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(18,16,14,.64),rgba(18,16,14,.04) 44%,rgba(18,16,14,.2));pointer-events:none}
-.film-ov{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(24px,6vh,56px);z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;color:var(--ivory);pointer-events:none}
-.film-ov .kicker{color:rgba(248,243,232,.66)}
-.film-ov h3{margin-top:8px;font-family:var(--f-display);font-style:italic;font-weight:400;font-size:clamp(2.2rem,8vw,5.4rem);line-height:.9;letter-spacing:-.02em}
-.film-ov .stamp{font-family:var(--f-label);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(248,243,232,.7);writing-mode:vertical-rl;white-space:nowrap}
 .film-duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(18,16,14,.18);margin-top:1px}
 .film-duo figure{position:relative;margin:0;background:#12100E;overflow:hidden}
 .film-duo video{position:relative;z-index:1;display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--ease),opacity .5s ease;opacity:0}
 .film-duo figure:hover video{transform:scale(1.02)}
-.film-duo figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:12px var(--gut) 14px;display:flex;justify-content:space-between;gap:12px;font-family:var(--f-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,243,232,.84);background:linear-gradient(to top,rgba(18,16,14,.74),rgba(18,16,14,0));pointer-events:none}
-@media (max-width:719px){.films{padding-top:38px}.film-duo{grid-template-columns:1fr}.film-band video{aspect-ratio:4/5}.film-ov .stamp{display:none}}
+@media (max-width:719px){.films{padding-top:38px}.film-duo{grid-template-columns:1fr}.film-band video{aspect-ratio:4/5}.film-note{display:none}}
 
 /* ---------- second face / heads ---------- */
 .muse{background:var(--paper);padding:46px var(--gut) 68px;border-top:1px solid rgba(18,16,14,.14)}
@@ -745,21 +749,6 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .statement h2 .w.pre{opacity:.24}
-
-/* ---------- type band: a line of headline that the scroll drags ---------- */
-.typemarquee{
-  overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  padding:clamp(14px,2.4vw,26px) 0;background:var(--paper);
-}
-.tm-track{
-  display:flex;align-items:baseline;gap:clamp(24px,4vw,64px);
-  width:max-content;padding-left:var(--gut);
-  font-family:var(--f-display);font-style:italic;
-  font-size:clamp(2.4rem,8vw,6.4rem);line-height:.96;white-space:nowrap;
-  color:var(--ink);letter-spacing:-.02em;
-}
-.tm-track span{display:inline-flex;align-items:center;gap:clamp(24px,4vw,64px)}
-.tm-track i{font-style:normal;font-size:.34em;letter-spacing:.3em;text-transform:uppercase;font-family:var(--f-label);color:var(--gold);vertical-align:middle}
 
 /* ---------- hero as a moving cover ---------- */
 .bb-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:3}
@@ -928,34 +917,23 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
       <span class="kicker">The Assembly · three studies</span>
       <h2>The pieces, in motion</h2>
     </div>
-    <div class="film-ctrl">
-      <span class="film-tc">Loop · 00:05 · silent plate</span>
-    </div>
+    <p class="film-note">Worn scale · surface · weight</p>
   </div>
   <figure class="film-band" style="--poster:url('assets/cover-hand-necklace.jpg')">
-    <video id="filmHero" autoplay muted loop playsinline preload="auto" poster="assets/cover-hand-necklace.jpg">
+    <video id="filmHero" autoplay muted loop playsinline preload="auto" poster="assets/cover-hand-necklace.jpg" aria-label="Two Doves necklace held in the hand and worn at the throat">
       <source src="assets/hero-cover.mp4" type="video/mp4">
     </video>
-    <div class="film-ov">
-      <div>
-        <span class="kicker">01 / The first find</span>
-        <h3>Held at the eye</h3>
-      </div>
-      <span class="stamp">The first edit · find / hold / assemble</span>
-    </div>
   </figure>
   <div class="film-duo">
     <figure style="--poster:url('assets/plate-hand-earring.jpg')">
-      <video id="filmWing" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-earring.jpg">
+      <video id="filmWing" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-earring.jpg" aria-label="Morpho Nocturne earring turning in the hand, revealing its iridescent surface">
         <source src="assets/film-wing.mp4" type="video/mp4">
       </video>
-      <figcaption><span>02 / Surface · Morpho Nocturne · iridescent resin, blue glass</span><span>00:05</span></figcaption>
     </figure>
     <figure style="--poster:url('assets/plate-hand-cuff.jpg')">
-      <video id="filmCuff" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-cuff.jpg">
+      <video id="filmCuff" autoplay muted loop playsinline preload="metadata" poster="assets/plate-hand-cuff.jpg" aria-label="Opaline Arch cuff in the palm, showing its width and blue-green inlay">
         <source src="assets/film-cuff.mp4" type="video/mp4">
       </video>
-      <figcaption><span>03 / Weight · Opaline Arch · gold-tone metal, resin, zircon</span><span>00:05</span></figcaption>
     </figure>
   </div>
 </section>
@@ -973,14 +951,6 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
   </figure>
 </section>
 
-<!-- ===== 字体横带 ===== -->
-<section class="typemarquee" aria-label="Luminara house line">
-  <div class="tm-track" id="tmTrack">
-    <span>Taste is assembled <i>old-soul forms</i> Modern wardrobe <i>The Cabinet</i></span>
-    <span>Seven available pieces <i>one considered edit</i> Worldwide delivery <i>Issue 01</i></span>
-  </div>
-</section>
-
 <!-- ===== 宣言 ===== -->
 <section class="statement">
   <div class="inner">
@@ -992,15 +962,15 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     <div class="assembly-notes">
       <article class="assembly-note">
         <img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings" loading="lazy">
-        <div><b>01 / Shape</b><p>Choose a silhouette that changes the line of a familiar outfit.</p></div>
+        <div><b>01 / Whole form</b><p>See the complete silhouette before styling changes how it reads.</p></div>
       </article>
       <article class="assembly-note">
-        <img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff" loading="lazy">
-        <div><b>02 / Surface</b><p>Let enamel, glass or resin bring colour and movement.</p></div>
+        <img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne iridescent earring" loading="lazy" style="object-position:50% 34%">
+        <div><b>02 / Surface</b><p>Enamel, glass and resin are shown close enough to read.</p></div>
       </article>
       <article class="assembly-note">
-        <img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy">
-        <div><b>03 / Repeat</b><p>Return to the pieces that make the outfit feel like yours.</p></div>
+        <img src="assets/hero-close-cuff.jpg" alt="Opaline Arch cuff worn on the wrist" loading="lazy" style="object-position:54% 54%">
+        <div><b>03 / Worn scale</b><p>Ear, neck and wrist views reveal how each piece sits and moves.</p></div>
       </article>
     </div>
     <div class="cta-row">
@@ -2148,21 +2118,6 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
       });
     }
   }
-})();
-</script>
-
-<script>
-(function(){
-  if (!window.gsap || !window.ScrollTrigger){ return; }
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches){ return; }
-  var track = document.querySelector("#tmTrack");
-  if (!track){ return; }
-  var overflow = function(){ return Math.max(0, track.scrollWidth - window.innerWidth + 40); };
-  gsap.to(track, {
-    x: function(){ return -overflow(); },
-    ease: "none",
-    scrollTrigger: {trigger: ".typemarquee", start: "top bottom", end: "bottom top", scrub: .6, invalidateOnRefresh: true}
-  });
 })();
 </script>
 

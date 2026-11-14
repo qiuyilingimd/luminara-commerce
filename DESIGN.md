@@ -31,15 +31,21 @@ Photography leads. The page alternates gallery-black fields with warm paper and
 one oxblood close. Images remain uncropped where the jewellery silhouette
 matters and move to macro crops where material is the subject.
 
+The product system follows three evidence types: whole form, material surface
+and worn scale. These are explained in the Assembly section and apply to the
+Cabinet: every product plate uses the same 4:5 ratio and equal grid width so
+silhouette, crop and finish can be compared directly.
+
 ## Page Rhythm
 
 1. Autoplaying editorial film with direct shop action: find, hold, detail,
    pairing, assembly.
 2. Plain product proposition built around “Taste is assembled.”
 3. First product edit with four clear names and prices.
-4. Product film and macro detail.
+4. Three silent product studies: worn scale, surface and weight.
 5. One black-and-white portrait.
-6. The Assembly: shape, surface and repetition explained with product imagery.
+6. The Assembly: whole form, surface and worn scale explained with product
+   imagery.
 7. Complete, filterable Cabinet.
 8. Final purchase action and service information.
 
