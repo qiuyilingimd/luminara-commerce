@@ -10,14 +10,21 @@ are adapted natively in `assets/editorial-motion.js`; no React runtime is
 required. Reduced-motion preferences disable smooth scrolling, autoplay and
 pointer-led effects. See `THIRD_PARTY_NOTICES.md` for sources and licences.
 
-The hero is a static Pearl Hour portrait, so the first screen appears without
-waiting for video data or autoplay permission. On desktop it uses a split
-editorial layout; on mobile the product image fills the screen and the headline
-sits over a protected lower gradient. An original ambient score in
-`assets/luminara-ambient-v5.m4a` fades in after the visitor's first interaction,
-as required by browser autoplay policies. The small Sound control in the
-masthead provides a persistent mute preference; key storefront actions also use
-quiet, procedurally generated interface sounds.
+The first visit opens on a product threshold: Pearl Hour is separated from its
+source photograph and suspended on a new velvet stage. The visitor chooses
+sound or silence, then a full-screen clipped reveal enters the storefront. The
+choice is remembered for the browser session. On desktop the following hero
+uses a split editorial layout; on mobile the extracted jewellery fills the
+screen and the headline sits in a protected lower zone. An original ambient
+score in `assets/luminara-ambient-v5.m4a` fades in when the visitor chooses
+sound. The small Sound control in the masthead provides a persistent mute
+preference; key storefront actions also use quiet, procedurally generated
+interface sounds.
+
+Act 04 separates four products from their original backgrounds and recombines
+them on a new stone-lit stage. Their positions respond to scroll, and the
+background light follows the pointer on precision-pointer devices. Product
+silhouettes and visible materials are preserved.
 
 ## Creative and local tooling
 

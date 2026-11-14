@@ -11,15 +11,24 @@
 <meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
 <meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. An eight-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/editorial/pearl-hour-social.jpg">
+<meta property="og:image" content="https://qiuyilingimd.github.io/luminara-commerce/assets/editorial/pearl-hour-social-v2.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://luminara-commerce.onrender.com/assets/editorial/pearl-hour-social.jpg">
+<meta name="twitter:image" content="https://qiuyilingimd.github.io/luminara-commerce/assets/editorial/pearl-hour-social-v2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
-<link rel="preload" as="image" href="assets/editorial/pearl-hour-hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/stages/velvet-night.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/cutouts/pearl-hour.webp" fetchpriority="high">
+<script>
+try{
+  var forceIntro=/[?&]intro=1(?:&|$)/.test(location.search);
+  if(!forceIntro&&(/[?&]intro=0(?:&|$)/.test(location.search)||sessionStorage.getItem("luminara-entered")==="1")){
+    document.documentElement.classList.add("intro-seen");
+  }
+}catch(error){}
+</script>
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -1431,9 +1440,204 @@ html,body{background:var(--paper)}
 @media(prefers-reduced-motion:reduce){
   .ls-media img,.object-media img{filter:saturate(.74) contrast(1.04)}
 }
+
+/* ---------- v7: threshold scene and restaged product theatre ---------- */
+.intro-open{overflow:hidden}
+.intro-seen .threshold{display:none!important}
+.intro-seen body{overflow:auto}
+.threshold{
+  position:fixed;inset:0;z-index:300;isolation:isolate;overflow:hidden;
+  background:#080807;color:var(--ivory);
+}
+.threshold-scene{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.threshold-scene>img{
+  width:100%;height:100%;object-fit:cover;object-position:50% 58%;
+  transform:scale(1.045);filter:saturate(.48) contrast(1.06) brightness(.76);
+}
+.threshold-scene::before{
+  content:"";position:absolute;inset:-12%;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 66% 39%,rgba(235,221,201,.22),rgba(104,91,78,.05) 26%,rgba(8,8,7,0) 57%),
+    linear-gradient(90deg,rgba(6,6,5,.82),rgba(6,6,5,.08) 48%,rgba(6,6,5,.4));
+}
+.threshold-scene::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(5,5,4,.9),rgba(5,5,4,0) 48%);
+}
+.threshold-brand{
+  position:absolute;z-index:4;top:clamp(22px,3.5vw,48px);left:50%;transform:translateX(-50%);
+  display:flex;align-items:baseline;gap:13px;white-space:nowrap;
+}
+.threshold-brand b{font-family:var(--f-display);font-size:clamp(20px,1.8vw,28px);font-weight:500;letter-spacing:.25em;text-transform:uppercase}
+.threshold-brand span{font-family:var(--f-label);font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(250,248,243,.56)}
+.threshold-piece-wrap{
+  position:absolute;z-index:2;top:7svh;right:clamp(30px,8vw,130px);
+  width:min(42vw,620px);height:80svh;display:grid;place-items:center;pointer-events:none;
+}
+.threshold-piece{
+  width:auto;max-width:100%;max-height:100%;object-fit:contain;
+  filter:brightness(.92) contrast(1.08) saturate(.78) drop-shadow(18px 30px 28px rgba(0,0,0,.74));
+}
+.threshold-halo{
+  position:absolute;z-index:1;right:5%;top:17%;width:65%;height:56%;
+  border-radius:50%;background:radial-gradient(ellipse,rgba(225,207,184,.17),rgba(187,165,142,.05) 44%,rgba(0,0,0,0) 73%);
+  filter:blur(20px);pointer-events:none;
+}
+.threshold-copy{
+  position:absolute;z-index:4;left:clamp(24px,7vw,112px);bottom:clamp(92px,13svh,138px);
+  width:min(42vw,570px);
+}
+.threshold-copy .kicker{color:rgba(250,248,243,.56)}
+.threshold-title{
+  margin:16px 0 0;color:var(--ivory);font-family:var(--f-display);
+  font-size:clamp(4.2rem,8.2vw,8.5rem);font-weight:300;line-height:.79;letter-spacing:-.052em;
+}
+.threshold-title em{font-weight:300;color:#c7b9a9}
+.threshold-copy p:last-child{max-width:34ch;margin-top:28px;font-size:14.5px;line-height:1.68;color:rgba(250,248,243,.7)}
+.threshold-actions{
+  position:absolute;z-index:5;right:clamp(24px,7vw,112px);bottom:clamp(32px,5svh,56px);
+  display:flex;align-items:center;gap:22px;
+}
+.threshold-enter,.threshold-quiet{
+  min-height:48px;font-family:var(--f-label);font-size:9.6px;letter-spacing:.18em;text-transform:uppercase;
+}
+.threshold-enter{
+  display:inline-flex;align-items:center;justify-content:center;padding:0 20px;
+  border:1px solid rgba(250,248,243,.62);color:var(--ivory);
+  background:rgba(10,9,8,.24);backdrop-filter:blur(8px);
+  transition:background .35s var(--ease),color .35s var(--ease),border-color .35s;
+}
+.threshold-enter:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.threshold-quiet{color:rgba(250,248,243,.64);border-bottom:1px solid rgba(250,248,243,.27);padding:0 0 4px}
+.threshold-quiet:hover{color:var(--ivory);border-color:var(--ivory)}
+.threshold-foot{
+  position:absolute;z-index:4;left:clamp(24px,7vw,112px);bottom:32px;
+  font-family:var(--f-label);font-size:8.5px;line-height:1.6;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(250,248,243,.42);
+}
+
+.lead-story .ls-media{background:#0b0a09}
+.ls-media .ls-stage{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%;
+  transform:scale(1.025);filter:saturate(.4) contrast(1.08) brightness(.72);
+}
+.ls-media .ls-object{
+  position:absolute;z-index:2;top:8%;right:5%;width:min(64%,620px);height:83%;
+  object-fit:contain;filter:brightness(.94) contrast(1.08) saturate(.82) drop-shadow(18px 28px 24px rgba(0,0,0,.76));
+}
+.ls-media .ls-light{
+  position:absolute;z-index:1;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at var(--lx,66%) var(--ly,38%),rgba(236,221,202,.17),rgba(160,143,125,.04) 37%,rgba(0,0,0,0) 66%),
+    linear-gradient(90deg,rgba(6,6,5,.25),rgba(6,6,5,0) 23%);
+}
+.lead-story .ls-media::after{background:linear-gradient(to top,rgba(8,7,6,.44),rgba(8,7,6,0) 26%)}
+
+.restage{
+  position:relative;height:190svh;background:#090908;color:var(--ivory);
+}
+.restage-sticky{
+  position:sticky;top:var(--mast-h);height:calc(100svh - var(--mast-h));
+  overflow:hidden;isolation:isolate;
+}
+.restage-bg{
+  position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:50% 45%;
+  filter:saturate(.34) contrast(1.1) brightness(.74);
+}
+.restage-sticky::before{
+  content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(ellipse at var(--lx,57%) var(--ly,42%),rgba(231,217,198,.2),rgba(107,96,84,.055) 30%,rgba(7,7,6,0) 66%),
+    linear-gradient(90deg,rgba(7,7,6,.8),rgba(7,7,6,.04) 48%,rgba(7,7,6,.46));
+}
+.restage-sticky::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(to top,rgba(5,5,4,.82),rgba(5,5,4,0) 42%);
+}
+.restage-copy{
+  position:absolute;z-index:4;left:clamp(24px,6.4vw,104px);top:clamp(56px,10svh,104px);
+  width:min(33vw,430px);
+}
+.restage-copy .kicker{color:rgba(250,248,243,.54)}
+.restage-copy h2{
+  margin:16px 0 0;color:var(--ivory);font-family:var(--f-display);font-weight:300;
+  font-size:clamp(3.9rem,7vw,7.4rem);line-height:.82;letter-spacing:-.048em;
+}
+.restage-copy h2 em{font-weight:300;color:#c7b9aa}
+.restage-copy p{max-width:31ch;margin-top:28px;font-size:14.5px;line-height:1.68;color:rgba(250,248,243,.68)}
+.restage-index{
+  position:absolute;z-index:4;left:clamp(24px,6.4vw,104px);bottom:clamp(28px,5svh,52px);
+  display:flex;gap:18px;font-family:var(--f-label);font-size:8.5px;letter-spacing:.17em;
+  text-transform:uppercase;color:rgba(250,248,243,.47);
+}
+.restage-index span{display:flex;align-items:center;gap:8px}
+.restage-index span::before{content:"";width:20px;height:1px;background:rgba(250,248,243,.32)}
+.restage-field{position:absolute;inset:0;z-index:2;pointer-events:none}
+.restage-piece{position:absolute;margin:0;transform-origin:50% 50%}
+.restage-piece img{
+  width:100%;height:auto;filter:brightness(.92) contrast(1.075) saturate(.82) drop-shadow(16px 28px 26px rgba(0,0,0,.78));
+}
+.restage-piece.is-serpentine{width:clamp(130px,16vw,250px);left:38%;top:44%;transform:rotate(-8deg)}
+.restage-piece.is-pearl{width:clamp(220px,27vw,420px);left:52%;top:8%}
+.restage-piece.is-doves{width:clamp(210px,24vw,370px);right:4%;top:29%;transform:rotate(3deg)}
+.restage-piece.is-coral{width:clamp(94px,10vw,150px);left:35%;bottom:5%;transform:rotate(9deg)}
+
+@media(max-width:880px){
+  .threshold-brand{top:22px}
+  .threshold-brand span{display:none}
+  .threshold-piece-wrap{top:9svh;right:-2vw;width:86vw;height:58svh}
+  .threshold-copy{left:20px;right:20px;bottom:122px;width:auto}
+  .threshold-title{font-size:clamp(4.2rem,18.5vw,6.2rem);max-width:7ch}
+  .threshold-copy p:last-child{max-width:32ch;margin-top:20px;font-size:14px;color:rgba(250,248,243,.76)}
+  .threshold-actions{left:20px;right:20px;bottom:26px;display:grid;grid-template-columns:1fr auto;gap:16px}
+  .threshold-enter{padding:0 14px;font-size:9px}
+  .threshold-quiet{font-size:9px}
+  .threshold-foot{display:none}
+
+  .ls-media .ls-stage{object-position:50% 40%}
+  .ls-media .ls-object{top:11%;left:13%;right:auto;width:76%;height:58%}
+
+  .restage{height:205svh}
+  .restage-sticky{top:var(--mast-h)}
+  .restage-copy{left:20px;right:20px;top:42px;width:auto}
+  .restage-copy::before{
+    content:"";position:absolute;z-index:-1;inset:-20px -18px -34px;
+    background:linear-gradient(to bottom,rgba(6,6,5,.96),rgba(6,6,5,.78) 74%,rgba(6,6,5,0));
+  }
+  .restage-copy h2{max-width:9ch;font-size:clamp(3rem,12.5vw,4.2rem)}
+  .restage-copy p{max-width:30ch;margin-top:18px;font-size:13.8px}
+  .restage-piece.is-serpentine{width:34vw;left:2%;top:56%}
+  .restage-piece.is-pearl{width:47vw;left:46%;top:38%}
+  .restage-piece.is-doves{width:38vw;right:-3%;top:69%}
+  .restage-piece.is-coral{width:18vw;left:7%;bottom:7%}
+  .restage-index{left:20px;right:20px;bottom:24px;flex-wrap:wrap;gap:8px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+  .threshold-piece,.ls-media .ls-object,.restage-piece,.restage-bg{filter:saturate(.68) contrast(1.06)}
+}
 </style>
 </head>
-<body>
+<body class="intro-open">
+<section class="threshold" id="threshold" aria-labelledby="threshold-title">
+  <div class="threshold-scene" aria-hidden="true">
+    <img src="assets/stages/velvet-night.webp" alt="" fetchpriority="high" decoding="async">
+  </div>
+  <div class="threshold-halo" aria-hidden="true"></div>
+  <div class="threshold-brand"><b>Luminara</b><span>琉弥诺 · Issue 01</span></div>
+  <div class="threshold-piece-wrap">
+    <img class="threshold-piece" src="assets/cutouts/pearl-hour.webp" alt="Pearl Hour necklace with a clock face and pearl-tone drops" fetchpriority="high" decoding="async">
+  </div>
+  <div class="threshold-copy">
+    <p class="kicker">Eight collected forms</p>
+    <p class="threshold-title" id="threshold-title">Enter the <em>first edit.</em></p>
+    <p>Old-soul jewellery, staged as objects in their own light. The first piece is Pearl Hour: a watch face, pearl-tone drops and one continuous gold line.</p>
+  </div>
+  <div class="threshold-actions">
+    <button class="threshold-enter" type="button" data-enter-site="sound">Enter with sound</button>
+    <button class="threshold-quiet" type="button" data-enter-site="silent">Enter in silence</button>
+  </div>
+  <p class="threshold-foot">Taste is assembled · Worldwide delivery</p>
+</section>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ===== 报头 ===== -->
@@ -1492,7 +1696,9 @@ html,body{background:var(--paper)}
     </div>
   </div>
   <figure class="ls-media">
-    <img src="assets/editorial/pearl-hour-hero.webp" alt="Pearl Hour gold-tone necklace with a clock face, pearl-tone beads and sculpted drops worn at the throat" fetchpriority="high" decoding="async">
+    <img class="ls-stage" src="assets/stages/velvet-night.webp" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+    <img class="ls-object" src="assets/cutouts/pearl-hour.webp" alt="Pearl Hour gold-tone necklace with a clock face, pearl-tone beads and sculpted drops" fetchpriority="high" decoding="async">
+    <span class="ls-light" aria-hidden="true"></span>
   </figure>
 </section>
 
@@ -1537,23 +1743,35 @@ html,body{background:var(--paper)}
   </div>
 </section>
 
-<!-- ===== 静态物件研究 ===== -->
-<section class="object-study" id="objects" aria-labelledby="objectTitle">
-  <div class="object-copy">
-    <div>
-      <span class="kicker">Object study · Pearl Hour</span>
-      <h2 id="objectTitle">The detail <em>carries</em> the piece.</h2>
-      <p class="lede">The eye moves from the gold line to the beadwork, then settles on the clock face. Pearl-tone drops bring lightness below the heavier sculpted forms.</p>
+<!-- ===== 第四幕：重新布光的产品舞台 ===== -->
+<section class="restage" id="objects" aria-labelledby="objectTitle">
+  <div class="restage-sticky">
+    <img class="restage-bg" src="assets/stages/stone-night.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    <div class="restage-copy">
+      <span class="kicker">Act 04 · Objects in a new light</span>
+      <h2 id="objectTitle">The object changes <em>with the light.</em></h2>
+      <p>Metal draws a hard line, enamel holds colour, and a pearl-tone drop catches the edge of the beam. Four pieces, separated from their old settings and photographed as one new composition.</p>
     </div>
-    <div class="object-index" aria-label="Pearl Hour details">
-      <span><b>01</b>Clock face with printed numerals</span>
-      <span><b>02</b>Pearl-tone beads and teardrop forms</span>
-      <span><b>03</b>Gold-tone open curve and spiral ends</span>
+    <div class="restage-field" aria-label="Restaged jewellery composition">
+      <figure class="restage-piece is-serpentine">
+        <img src="assets/cutouts/serpentine.webp" alt="Serpentine Psalm earrings re-lit against a stone stage" loading="lazy">
+      </figure>
+      <figure class="restage-piece is-pearl">
+        <img src="assets/cutouts/pearl-hour.webp" alt="Pearl Hour necklace suspended in a new studio light" loading="lazy">
+      </figure>
+      <figure class="restage-piece is-doves">
+        <img src="assets/cutouts/doves.webp" alt="Two Doves necklace re-lit as a sculptural form" loading="lazy">
+      </figure>
+      <figure class="restage-piece is-coral">
+        <img src="assets/cutouts/coral.webp" alt="Coral Reliquary earrings re-lit on the lower plane" loading="lazy">
+      </figure>
+    </div>
+    <div class="restage-index" aria-label="Materials in this study">
+      <span>Gold-tone line</span>
+      <span>Enamel on metal</span>
+      <span>Zircon and glass</span>
     </div>
   </div>
-  <figure class="object-media">
-    <img src="assets/editorial/pearl-hour-detail.webp" alt="Close view of the Pearl Hour clock face, pearl-tone drops and gold-tone spiral details" loading="lazy" decoding="async">
-  </figure>
 </section>
 
 <!-- ===== 另一张脸 ===== -->

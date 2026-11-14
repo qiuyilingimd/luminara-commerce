@@ -191,6 +191,7 @@
 
   function firstGesture(event){
     if (event.target.closest && event.target.closest("#soundToggle")){ return; }
+    if (event.target.closest && event.target.closest("[data-enter-site]")){ return; }
     if (enabled && !unlocked){ unlockAudio(); }
   }
 

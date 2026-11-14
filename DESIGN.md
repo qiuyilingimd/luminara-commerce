@@ -51,10 +51,12 @@ removed so the photography and merchandise remain the visual event.
 
 ## Page Rhythm
 
-1. Static Pearl Hour portrait with direct product action.
+1. Interactive threshold: extracted Pearl Hour on a dark velvet stage, with
+   sound and silent entry choices.
 2. Plain product proposition built around “Taste is assembled.”
 3. First product edit with four clear names and prices.
-4. Static object study of the clock face, beadwork and sculpted gold line.
+4. Act 04: cut-out jewellery recombined on a stone stage with independently
+   moving pieces and a light that follows the pointer.
 5. One black-and-white portrait.
 6. The Assembly: shape, surface and repetition explained through type.
 7. Complete, filterable Cabinet of eight pieces.
@@ -62,12 +64,16 @@ removed so the photography and merchandise remain the visual event.
 
 ## Motion
 
-The hero is a still photograph, not a video. On desktop it uses an asymmetric
-text-and-image split; on mobile the product image fills the screen and the type
-sits in a protected lower zone. GSAP provides one title entrance, a restrained
-camera move and a single developing-frame reveal in the object study. Lenis
-provides smooth scrolling. Reduced-motion users see the complete still image and
-all copy without motion.
+The entry is a real interaction rather than a loading screen: Pearl Hour is
+isolated from its original image and suspended on a reconstructed velvet stage.
+The visitor chooses sound or silence, then a clipped reveal opens the storefront.
+On desktop the hero uses an asymmetric text-and-product split; on mobile the
+extracted jewellery fills the screen and the type sits in a protected lower
+zone. GSAP coordinates the entrance, exit and pointer-led lighting. Act 04
+recombines four extracted pieces on a stone stage and links their movement to
+scroll while preserving the product silhouettes. Lenis provides smooth
+scrolling. Reduced-motion users see complete still compositions without camera
+movement.
 
 ## Sound
 
