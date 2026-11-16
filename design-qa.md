@@ -1,46 +1,92 @@
 # Luminara Visual QA
 
-Date: 2026-11-14
-Reference: emotion-agency entrance interaction, supplied Pearl Hour necklace photograph, Pinterest jewellery staging references and the Luminara photography brief
-Implementation: product threshold entry, restaged Pearl Hour hero, Act 04 jewellery theatre, eight-product Cabinet
+Date: 2026-11-16
 
-## Comparison
+## Comparison target
 
-- The entrance borrows the reference's full-screen brand threshold and sound/silence decision, while replacing its empty colour field with an actual Pearl Hour product scene.
-- Pearl Hour is separated from its source photograph and placed on a new velvet stage. Product shape, asymmetrical line, clock face and drop count remain unchanged.
-- The hidden rear of the Pearl Hour band is now digitally completed and joins both sides into a continuous necklace before the cut-out is used on any page.
-- The rear band uses a tapered profile: fuller and brighter near the two photographed sides, thinner and darker across the unseen back, with a soft rear shadow to make it read behind the pendant rather than across it.
-- Desktop keeps the necklace as the largest visual field while headline and purchase information sit in a separate gallery-paper column.
-- Mobile places the extracted product above the type so the clock face and pearl-tone drops remain visible.
-- Product imagery now uses one 4:5 output ratio and a common saturation, contrast and crop treatment.
-- The homepage has no video element, timer, playback control or corner caption.
-- Colour is limited to gallery paper, near-black, graphite and the colours already present in the jewellery.
-- Act 04 uses four extracted product layers on a newly built dark stone stage; each object moves at a different speed on scroll and the light follows the pointer.
+- Source visual truth: `C:/Users/14488/Desktop/20261116-125029.png`
+- Published source asset: `assets/editorial-two-doves-white.webp`
+- Implementation: `http://127.0.0.1:4180/`
+- Desktop implementation capture: `../outputs/white-editorial/final-desktop-still.png`
+- Mobile implementation capture: `../outputs/white-editorial/final-mobile-still.png`
+- Full-view comparison: `../outputs/white-editorial/design-qa-comparison-desktop.png`
+- Focused product comparison: `../outputs/white-editorial/design-qa-comparison-still-focus.png`
+
+The visual direction is an original white-gallery editorial system. David Webb was used only to study the broad principles of generous space, restrained navigation, isolated product presentation and editorial pacing. No layout, photography, type files or brand assets were copied.
+
+## Normalization
+
+- Source photograph: `1329 x 1668` px, portrait.
+- Desktop implementation: `1440 x 900` CSS px at device scale factor `1`; screenshot `1440 x 900` px.
+- Mobile implementation: `390 x 844` CSS px at device scale factor `2`; screenshot `780 x 1688` px.
+- Focused still image: `933 x 761` CSS px at device scale factor `1`.
+- The full-view comparison was normalized to one white canvas. The focused comparison uses a source crop matching the implementation's central editorial crop, with both sides rendered at `933 x 761`.
+- Compared in the page's settled state at the `#film` anchor with lazy images loaded.
+
+## Required fidelity surfaces
+
+### Fonts and typography
+
+- The high-contrast display serif is reserved for statements and product names; uppercase sans labels carry navigation, specifications and controls.
+- Desktop navigation measures `11.5px` and tablet/mobile navigation `11px`, both at a stronger weight and darker ink than the previous version.
+- Heading, body, label and caption levels remain distinct on white without relying on boxes or heavy rules.
+
+### Spacing and layout
+
+- All primary sections now resolve to `rgb(255, 255, 255)`.
+- The former three-video strip is replaced by one still-life composition with a large image field and a restrained product-information column.
+- The product catalogue uses consistent `4:5` plates, quiet white space and borderless cut-outs.
+- Desktop navigation, section headings and product content share a stable left/right editorial grid; mobile collapses to a natural single column without horizontal overflow.
+
+### Colors and tokens
+
+- Palette is limited to white, near-black ink, warm graphite and the colours already present in the jewellery.
+- Dividers use low-opacity ink rather than grey filled panels.
+- The light interface does not flatten the supplied dark botanical photograph; its greens, warm whites and silver highlights remain intact.
+
+### Image quality and assets
+
+- The supplied photograph is preserved at native portrait composition and encoded as a `1329 x 1668` WebP asset.
+- The page uses a deliberate central editorial crop. The product, flower, stone drop and reflective metal detail remain sharp with no halos, stretching or synthetic replacement.
+- Seven catalogue products are real cut-outs on matching white backgrounds.
+
+### Copy and content
+
+- The still-life copy describes materials, form and styling rather than narrating the photograph.
+- `Two Doves` is positioned as a balanced open-collar form with mirrored bird motifs, zircon detailing and a yellow-glass drop.
+- Pricing remains in US dollars and within the established `US$35–58` range.
+
+### Responsiveness and interaction
+
+- Checked at `1440 x 900`, `1024 x 768`, `820 x 1180`, `768 x 1024`, `390 x 844` and `320 x 760`: no horizontal overflow.
+- All seven product plates measure the same aspect ratio at every checked width.
+- Product filtering, hover response, product drawer and bag action work with no browser console errors.
+
+## Comparison history
+
+### Pass 1
+
+- Finding: `[P2]` The off-screen toast retained a few visible black pixels at the bottom edge of mobile and desktop captures.
+- Fix: changed the hidden state to explicit `visibility:hidden` with a transform that clears the viewport; restored visibility only while the toast is active.
+- Post-fix evidence: `final-desktop-top.png`, `final-mobile-top.png`, `final-desktop-still.png` and `final-mobile-still.png`.
+- Post-fix behavior: toast is hidden on load, visible after adding a piece to the bag, and hidden again after its timed dismissal.
+
+### Pass 2
+
+- No actionable P0, P1 or P2 visual differences remain.
+- Full-view composition, focused product crop, white-section audit, typography, spacing, imagery, content and responsive states were checked again after the fix.
 
 ## Checks
 
-- 1440×900, 1024×768, 820×1180, 768×1024, 390×844 and 320×760: no horizontal overflow.
-- First-screen purchase action remains visible at every checked width.
-- At 320×760 the threshold buttons remain fully inside the viewport.
-- Pearl Hour drawer opens with materials and styling copy.
-- Pearl Hour can be added to the bag.
-- Necklace filter returns two products.
-- Catalogue contains eight products.
-- Render quote API returns USD 80 delivered for one Pearl Hour to the United States.
-- No browser console errors or broken images.
-- GitHub Pages cross-origin quote request returns HTTP 200.
-- Intro focus is contained on its first action; the rest of the site is inert until entry.
-- Choosing silence leaves the sound control off; choosing sound enables the ambient score.
-- Session storage prevents the entrance from blocking repeat navigation during the same browsing session.
-- The entrance exit now uses a radial contraction around the watch face, matching the product's own focal point rather than a generic page wipe.
-- The optional Godot 4.7.2 Web room loads in an iframe only after an explicit 3D action.
-- Desktop and mobile Godot canvases reach a ready state with no browser errors, handle camera input, and unload on close.
-- Throttled 4G measurement: LCP 0.76 s, DOMContentLoaded 0.99 s, 460 KB total transfer.
+- `node ../check-white-editorial.mjs`: passed at four viewports; every primary section is white, video count is `0`, navigation is legible and the Two Doves drawer opens correctly.
+- `node ../layout-photo-system.mjs`: passed at six viewports; no overflow and all product plates use one `0.8` ratio.
+- `node ../audit-photo-system.mjs`: passed; all seven product images load and no console errors occur.
+- `node ../check-motion-ui.mjs`: passed; filtering, hover, drawer and Motion interactions settle correctly.
+- Direct toast-state check: hidden on load, visible while active, hidden after dismissal.
+- No JavaScript or console errors were recorded.
 
-## Open Issues
+## Follow-up polish
 
-- Render's free web-service plan can still sleep when idle. The public frontend is now static on GitHub Pages and warms the API in the background, so browsing does not wait for Render.
-- Product cut-outs were produced from the client's supplied product photographs. No replacement product design or synthetic model was represented as an actual Luminara photograph.
-- The stone set is an abstract generated texture; no product or scene from a reference brand is published as site content.
+- None required for handoff. Future content additions should preserve the same white-gallery spacing, restrained palette and product-first image treatment.
 
 final result: passed
