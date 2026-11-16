@@ -11,9 +11,9 @@ required. Reduced-motion preferences disable smooth scrolling, autoplay and
 pointer-led effects. See `THIRD_PARTY_NOTICES.md` for sources and licences.
 
 Motion 14 is vendored as a local ESM module for spring-based product hover,
-filter arrivals, press feedback and drawer entrances. GSAP remains responsible
-for scroll-linked sequencing so the two engines do not animate the same
-properties on the same elements.
+filter arrivals, press feedback, drawer entrances and the still-life detail
+camera. GSAP remains responsible for page-level sequencing so the two engines
+do not animate the same properties on the same elements.
 
 All seven catalogue products use transparent cut-out masters under
 `assets/cutouts/`. Product cards and drawers present them on a warm-white field;
@@ -22,10 +22,10 @@ sections.
 
 The homepage hero is a single still image led by pink flower earrings with
 purple glass drops; the landscape and portrait compositions are separate
-assets. The three smaller
-product studies below the first edit continue to loop without playback
-controls. An original ambient score in `assets/luminara-ambient-v4.m4a` fades in
-after the visitor's first interaction, as required by browser autoplay
+assets. The `Two Doves` editorial still includes three interactive detail
+points, and the vitrine includes a random selection path that respects the
+active category. An original ambient score in `assets/luminara-ambient-v4.m4a`
+fades in after the visitor's first interaction, as required by browser autoplay
 policies. The small Sound control in the masthead provides a persistent mute
 preference; key storefront actions also use quiet, procedurally generated
 interface sounds.

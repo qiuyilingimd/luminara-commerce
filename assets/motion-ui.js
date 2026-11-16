@@ -49,6 +49,58 @@ function animateDrawer(drawer) {
   });
 }
 
+function animateDetail(image, panel) {
+  if (reduceMotion || !image) return;
+
+  animate(
+    image,
+    { scale: 1.16 },
+    {
+      duration: 0.92,
+      ease: [0.22, 1, 0.36, 1]
+    }
+  );
+
+  if (panel) {
+    animate(
+      panel,
+      {
+        opacity: [0.35, 1],
+        y: [12, 0]
+      },
+      {
+        duration: 0.46,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    );
+  }
+}
+
+function resetDetail(image, panel) {
+  if (!image) return;
+  if (reduceMotion) {
+    image.style.transform = "scale(1.001)";
+    return;
+  }
+
+  animate(
+    image,
+    { scale: 1.001 },
+    {
+      duration: 0.72,
+      ease: [0.22, 1, 0.36, 1]
+    }
+  );
+
+  if (panel) {
+    animate(
+      panel,
+      { opacity: [0.72, 1] },
+      { duration: 0.34, ease: "easeOut" }
+    );
+  }
+}
+
 if (!reduceMotion && finePointer) {
   document.querySelectorAll(".vitem").forEach((card) => {
     const image = card.querySelector(".v-plate img");
@@ -125,5 +177,7 @@ if (!reduceMotion) {
 window.LuminaraMotion = {
   animateFiltered,
   animateDrawer,
-  version: "14.14.0"
+  animateDetail,
+  resetDetail,
+  version: "14.15.0"
 };

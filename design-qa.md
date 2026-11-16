@@ -11,6 +11,8 @@ Date: 2026-11-16
 - Desktop catalogue capture: `../../outputs/photo-system-round/desktop-vitrine.png`
 - Mobile implementation capture: `../../outputs/photo-system-round/mobile-top.png`
 - Mobile catalogue capture: `../../outputs/photo-system-round/mobile-vitrine.png`
+- Desktop detail interaction: `../../outputs/interactive-storefront-1440-detail.png`
+- Mobile detail interaction: `../../outputs/interactive-storefront-390-detail.png`
 
 The current direction is an original warm-gallery editorial system. The reference was used only to establish a quieter warm-grey field, product-on-surface contrast and editorial pacing. No reference photography, layout, copy or brand assets were copied.
 
@@ -51,13 +53,14 @@ The current direction is an original warm-gallery editorial system. The referenc
 - The supplied photograph is preserved at native portrait composition and encoded as a `1329 x 1668` WebP asset.
 - The page uses a deliberate central editorial crop. The product, flower, stone drop and reflective metal detail remain sharp with no halos, stretching or synthetic replacement.
 - Seven catalogue products are real cut-outs on matching white backgrounds.
+- The still-life image now has three accessible detail points for the wing structure, yellow-glass drop and open collar.
 
 ### Copy and content
 
 - The still-life copy describes materials, form and styling rather than narrating the photograph.
 - `Two Doves` is positioned as a balanced open-collar form with mirrored bird motifs, zircon detailing and a yellow-glass drop.
 - The black-and-white model section and the repeated three-card curation explanation were removed.
-- The remaining brand statement now has one editorial purpose: old-soul character, clear silhouette and tactile material.
+- The former `THE CURATION NOTE` statement has been removed in full.
 - Unsupported appointments, commissions, stockists, archive and payment-method claims were removed from the footer.
 - Pricing is explicitly shown in US dollars and remains within the established `US$35–58` range.
 
@@ -66,6 +69,8 @@ The current direction is an original warm-gallery editorial system. The referenc
 - Checked at `1440 x 900`, `1024 x 768`, `820 x 1180`, `768 x 1024`, `390 x 844` and `320 x 760`: no horizontal overflow.
 - All seven product plates measure the same aspect ratio at every checked width.
 - Product filtering, hover response, product drawer and bag action work with no browser console errors.
+- The still-life detail markers move the camera toward the selected material or construction detail, update an `aria-live` note and can return to the full view.
+- `Let the edit choose` scans the currently visible pieces and opens one product, including while a category filter is active.
 - On GitHub Pages, API requests resolve to the Render backend; local and Render-hosted copies continue using same-origin routes.
 
 ## Comparison history
@@ -86,11 +91,20 @@ The current direction is an original warm-gallery editorial system. The referenc
 - Rebalanced the statement, closing CTA and footer into the lighter editorial system.
 - Corrected currency presentation to explicit `US$`.
 
+### Pass 3 — interactive discovery
+
+- Deleted the complete `THE CURATION NOTE` section and its statement-specific CSS/JavaScript.
+- Added three product-specific detail points to the `Two Doves` still life. Desktop hover and mobile tap both reveal the same copy, with an explicit full-view reset.
+- Added a playful random-selection control to the vitrine. It respects the active category and reduced-motion preference.
+- Kept the page palette, borderless product plates, transparent hero navigation and US-dollar pricing unchanged.
+
 ## Checks
 
 - `node ../layout-photo-system.mjs`: passed at six viewports; no overflow and all product plates use one `0.8` ratio.
 - `node ../audit-photo-system.mjs`: passed; all seven product images load and no console errors occur.
 - `node ../check-motion-ui.mjs`: passed; filtering, hover, drawer and Motion interactions settle correctly.
+- `node scripts/check-interactive-storefront.mjs`: passed on desktop and mobile; the removed statement is absent, all three detail points work, camera scale settles at `1.16`, reset returns to `1.001`, and random selection opens a product with no console errors.
+- Reduced-motion mode keeps the detail copy and random selection functional while holding the image at `1.001` with no camera movement.
 - Public GitHub Pages check: no 404 requests; catalogue, quote, order and contact requests reach the Render API.
 - No JavaScript or console errors were recorded.
 
