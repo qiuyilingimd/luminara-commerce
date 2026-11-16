@@ -15,18 +15,14 @@ filter arrivals, press feedback and drawer entrances. GSAP remains responsible
 for scroll-linked sequencing so the two engines do not animate the same
 properties on the same elements.
 
-The hero and moving plates loop without playback controls. An original ambient
-score in `assets/luminara-ambient-v4.m4a` fades in after the visitor's first
-interaction, as required by browser autoplay policies. The small Sound control
-in the masthead provides a persistent mute preference; key storefront actions
-also use quiet, procedurally generated interface sounds.
-
-The hero film moves through surface, wearing scale and assembly, then returns to
-the opening ear close-up for a continuous loop. The landscape and portrait
-edits are composed separately. Website copies are encoded at a smaller
-resolution in `assets/hero-editorial-14s-v4-lite.mp4` and
-`assets/hero-editorial-14s-v4-portrait-lite.mp4` so the mobile hero starts
-quickly.
+The homepage hero is a single still image led by the Serpentine Psalm earrings;
+the landscape and portrait compositions are separate assets. The three smaller
+product studies below the first edit continue to loop without playback
+controls. An original ambient score in `assets/luminara-ambient-v4.m4a` fades in
+after the visitor's first interaction, as required by browser autoplay
+policies. The small Sound control in the masthead provides a persistent mute
+preference; key storefront actions also use quiet, procedurally generated
+interface sounds.
 
 ## Creative and local tooling
 

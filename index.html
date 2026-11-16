@@ -11,13 +11,13 @@
 <meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
 <meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. A seven-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-editorial-v5-poster.jpg">
+<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-serpentine-wide.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
 <link rel="stylesheet" href="vendor/lenis.css">
-<link rel="preload" as="image" href="assets/hero-editorial-v5-poster.jpg" media="(min-width:720px)">
-<link rel="preload" as="image" href="assets/hero-editorial-v5-portrait-poster.jpg" media="(max-width:719px)">
+<link rel="preload" as="image" href="assets/hero-serpentine-wide.webp" media="(min-width:720px)" type="image/webp">
+<link rel="preload" as="image" href="assets/hero-serpentine-mobile.webp" media="(max-width:719px)" type="image/webp">
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -828,30 +828,119 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 .f-status.err{color:#D98A86}
 .f-submit:disabled,.d-add:disabled{opacity:.55;cursor:default}
 @media(min-width:720px){.f-fields{grid-template-columns:1fr 1fr}}
+
+/* ---------- David Webb direction: single-image jewellery house ---------- */
+:root{
+  --f-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --gold:#8E8174;
+  --gold-2:#BFB3A4;
+}
+.mast{
+  position:fixed;inset:0 0 auto;z-index:70;min-height:var(--mast-h);
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;
+  padding:14px var(--gut) 12px;background:rgba(245,241,232,.94);color:var(--ink);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(14px);
+  transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease);
+}
+.mast.is-overlay{
+  background:linear-gradient(to bottom,rgba(9,9,8,.44),rgba(9,9,8,0));
+  color:var(--ivory);border-bottom-color:rgba(255,249,238,.2);backdrop-filter:none;
+}
+.mast .brand{
+  grid-column:2;grid-row:1;justify-self:center;display:grid;justify-items:center;gap:2px;
+  color:inherit;font-size:20px;line-height:1;letter-spacing:.25em;
+}
+.mast .brand small{
+  display:block;color:currentColor;opacity:.62;font-size:8px;letter-spacing:.3em;
+}
+.mast nav{grid-column:1;grid-row:1;justify-self:start}
+.mast .nav-right{grid-column:3;grid-row:1;justify-self:end;color:inherit}
+.mast .nav-links a,.mast .sound-btn,.mast .casket-btn,.mast .nav-3d,.mast .menu-btn{
+  color:inherit;
+}
+.mast .sound-btn,.mast .casket-btn{opacity:.84;transition:opacity .3s,color .3s}
+.mast .sound-btn:hover,.mast .casket-btn:hover{opacity:1}
+.mast .nav-links a:hover{border-bottom-color:currentColor}
+.mast .sound-btn.is-on{color:inherit}
+.billboard{height:100svh;min-height:620px}
+.billboard .bb-track{height:100%}
+.billboard .bb-fallback{inset:0}
+.billboard .bb-fallback img{
+  object-position:50% 50%;filter:saturate(.9) contrast(1.05) brightness(.92);
+  animation:none;transform:none;
+}
+.billboard::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(8,8,7,.2),transparent 20%,transparent 76%,rgba(8,8,7,.14));
+}
+.cover{
+  padding:clamp(72px,9vw,122px) var(--gut) clamp(64px,8vw,108px);
+}
+.cover-inner{
+  max-width:980px;margin:0 auto;display:grid;justify-items:center;text-align:center;gap:17px;
+}
+.cover .kicker,.cover h2,.cover .dek,.cover .cn,.cover .cover-cta{
+  grid-column:1!important;grid-row:auto!important;
+}
+.cover h2{
+  max-width:none;font-size:clamp(3.2rem,7vw,5.7rem);line-height:.92;letter-spacing:-.035em;
+}
+.cover .dek{max-width:52ch;font-size:15px;line-height:1.75;color:var(--muted)}
+.cover .cn{font-size:8.5px;letter-spacing:.28em;opacity:.72}
+.cover-cta{
+  display:inline-flex;align-items:center;gap:12px;min-height:44px;margin-top:4px;
+  font-family:var(--f-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:5px;
+}
+.cover-cta svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.cover-cta:hover svg{transform:translateX(5px)}
+.coverstrip .head{
+  display:grid;justify-items:center;text-align:center;gap:12px;
+  border-top:0;border-bottom:0;padding-bottom:0;margin-bottom:34px;
+}
+.coverstrip .head-copy{display:grid;justify-items:center;gap:9px}
+.coverstrip .head-copy p{max-width:50ch}
+.coverstrip .edit-all{justify-self:center}
+.films-head{
+  display:grid;justify-items:center;text-align:center;gap:8px;border-bottom:0;padding-bottom:0;
+}
+.film-note{text-align:center;margin-bottom:0}
+.muse{padding-left:0;padding-right:0}
+.muse-head{padding-left:var(--gut);padding-right:var(--gut)}
+.muse-feature{max-width:none;width:100%}
+.muse-feature picture{display:block;width:100%}
+.muse-feature img{
+  width:100%;height:min(74svh,820px);object-fit:cover;object-position:50% 50%;
+  filter:grayscale(1) contrast(1.075) brightness(.94);
+}
+@media(min-width:1024px){
+  .mast .nav-links{display:flex;gap:25px}
+}
+@media(max-width:719px){
+  .mast{padding:12px 20px 10px}
+  .mast .brand{font-size:17px;letter-spacing:.2em}
+  .mast .brand small{font-size:7.5px;letter-spacing:.26em}
+  .cover{padding-top:58px}
+  .cover h2{font-size:clamp(3rem,13.5vw,4.4rem)}
+  .cover .dek{font-size:14px}
+  .billboard{min-height:540px}
+  .muse-feature img{height:auto;aspect-ratio:4/5;object-position:50% 38%}
+}
 </style>
 </head>
 <body>
-<div class="site-intro" id="siteIntro" aria-hidden="true">
-  <div class="site-intro-inner">
-    <span class="site-intro-mark">L</span>
-    <span class="site-intro-word">Luminara · 琉弥诺</span>
-    <span class="site-intro-line"></span>
-  </div>
-</div>
-<noscript><style>#siteIntro{display:none!important}</style></noscript>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ===== 报头 ===== -->
-<header class="mast" id="nav">
+<header class="mast is-overlay" id="nav">
   <a class="skip-link" href="#top">Skip to content</a>
   <a class="brand" href="#top">Luminara<small>琉弥诺</small></a>
   <nav aria-label="Primary">
     <ul class="nav-links">
-      <li><a href="#collections">Shop</a></li>
-      <li><a href="#film">Film</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#vitrine">Shop</a></li>
       <li><a href="#muse">Portrait</a></li>
-      <li><a href="#vitrine">All Pieces</a></li>
-      <li><a href="#atelier">Point of view</a></li>
+      <li><a href="#atelier">The House</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -865,39 +954,26 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <button class="close" id="menuClose">Close</button>
   <ul>
-        <li><a href="#collections">Shop</a></li>
-    <li><a href="#film">Film</a></li>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#vitrine">Shop</a></li>
     <li><a href="#muse">Portrait</a></li>
-    <li><a href="#vitrine">All Pieces</a></li>
-    <li><a href="#atelier">Point of view</a></li>
+    <li><a href="#atelier">The House</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <p class="foot">Vintage-inspired jewellery · Worldwide delivery</p>
 </div>
 
-<!-- ===== 全宽头条 ===== -->
+<!-- ===== 单张黑白主视觉 ===== -->
 <main id="top">
 <section class="billboard">
   <div class="bb-track" id="bbTrack">
-    <figure class="bb-slide is-on" data-cap="Surface, scale, assembly · A Luminara film">
-      <picture class="bb-fallback" aria-hidden="true">
-        <source media="(max-width:719px)" srcset="assets/hero-editorial-v5-portrait-poster.jpg">
-        <img src="assets/hero-editorial-v5-poster.jpg" alt="" fetchpriority="high" decoding="async">
+    <h1 class="sr-only" id="hero-title">Luminara, vintage-inspired statement jewellery</h1>
+    <figure class="bb-slide is-on">
+      <picture class="bb-fallback">
+        <source media="(max-width:719px)" srcset="assets/hero-serpentine-mobile.webp">
+        <img src="assets/hero-serpentine-wide.webp" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel on a dark velvet display" fetchpriority="high" decoding="async">
       </picture>
-      <video id="bbVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-editorial-v5-poster.jpg" aria-label="Editorial jewellery film moving from surface detail to wearing scale and the line Taste is assembled">
-        <source src="assets/hero-editorial-14s-v6-portrait-clean.mp4" type="video/mp4" media="(max-width: 719px)">
-        <source src="assets/hero-editorial-14s-v6-clean.mp4" type="video/mp4">
-      </video>
     </figure>
-    <div class="bb-overlay">
-      <div class="bb-title">
-        <h1><span class="sr-only">Luminara, vintage-inspired statement jewellery</span><span aria-hidden="true">Luminara</span></h1>
-        <p class="bb-lead">Seven vintage-inspired statement pieces, chosen for silhouette and surface. Wear one, then build the combination until it feels like yours.</p>
-    <a class="bb-shop" href="#collections">Shop the first edit
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -909,6 +985,9 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     <h2>Taste is assembled.</h2>
     <p class="dek">A signature develops through choices: a shape with history, a saturated surface, a piece you reach for again. Luminara brings those pieces into one considered edit.</p>
     <p class="cn">琉弥诺 · 复古风格首饰 · US$35–US$58</p>
+    <a class="cover-cta" href="#collections">Explore the edit
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+    </a>
   </div>
 </section>
 
@@ -978,7 +1057,10 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     <p class="muse-side">Two Doves, restyled<br>one hard flash · black &amp; white</p>
   </div>
   <figure class="muse-feature">
-    <img src="assets/muse-brow-bw.jpg" alt="Black-and-white close portrait with the Two Doves necklace worn across the brow" loading="lazy" data-zoom="2.4">
+    <picture>
+      <source media="(max-width:719px)" srcset="assets/muse-brow-close.webp">
+      <img src="assets/muse-brow-band.webp" alt="Black-and-white close portrait of the Two Doves necklace across the brow, framed above the mouth" loading="lazy" data-zoom="2.4">
+    </picture>
     <figcaption><span>Pl. 10 · Two Doves, an unexpected placement</span><span>Silver-tone metal · zircon · yellow glass</span></figcaption>
   </figure>
 </section>
@@ -1251,6 +1333,22 @@ var P = {
 var q=function(s,r){return (r||document).querySelector(s)};
 var qa=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- transparent masthead over the hero image ---------- */
+var siteMast=q("#nav"), heroSection=q(".billboard"), mastFrame=0;
+function updateMast(){
+  mastFrame=0;
+  if(!siteMast || !heroSection){return;}
+  var heroBottom=heroSection.getBoundingClientRect().bottom;
+  siteMast.classList.toggle("is-overlay", heroBottom>siteMast.offsetHeight+1);
+}
+function queueMastUpdate(){
+  if(!mastFrame){mastFrame=requestAnimationFrame(updateMast);}
+}
+window.addEventListener("scroll",queueMastUpdate,{passive:true});
+window.addEventListener("resize",queueMastUpdate,{passive:true});
+window.addEventListener("load",queueMastUpdate,{once:true});
+updateMast();
 
 function syncCatalog(catalog){
   if(!catalog || !Array.isArray(catalog.products)){return;}
@@ -2101,7 +2199,8 @@ var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-medi
 
   /* ---- the hero picture answers the pointer, slowly ---- */
   var hero = document.querySelector(".billboard");
-  if (hero && heroImg && !reduce && window.matchMedia("(pointer:fine)").matches){
+  var heroVideo = document.querySelector("#bbVideo");
+  if (hero && heroVideo && heroImg && !reduce && window.matchMedia("(pointer:fine)").matches){
     var qx = gsap.quickTo(heroImg, "x", {duration: .9, ease: "power2.out"});
     var qy = gsap.quickTo(heroImg, "y", {duration: .9, ease: "power2.out"});
     hero.addEventListener("pointermove", function(e){

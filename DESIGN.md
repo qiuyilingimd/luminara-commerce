@@ -24,7 +24,7 @@ must not be published without evidence.
 - Oxblood: `#5B2025`
 - Antique gold: `#A98243`
 - Mineral turquoise: `#5F948B`
-- Display: Playfair Display italic and roman
+- Display: Cormorant Garamond roman and italic
 - Text and labels: Jost
 
 Photography leads. The page alternates gallery-black fields with warm paper and
@@ -38,8 +38,8 @@ silhouette, crop and finish can be compared directly.
 
 ## Page Rhythm
 
-1. Autoplaying editorial film with direct shop action: find, hold, detail,
-   pairing, assembly.
+1. A single still-life hero led by the Serpentine Psalm earrings on a wide,
+   near-black velvet field. No model, video or competing interface copy.
 2. Plain product proposition built around “Taste is assembled.”
 3. First product edit with four clear names and prices.
 4. Three silent product studies: worn scale, surface and weight.
@@ -51,15 +51,14 @@ silhouette, crop and finish can be compared directly.
 
 ## Motion
 
-The hero film loops without playback controls. It moves through material close
-range, wearing scale and the assembled wardrobe, with a short material montage
-between the slower wearable shots. Landscape and portrait are composed
-separately and return to the opening ear close-up for the loop. A still-image
-fallback keeps movement when browser or device policy refuses autoplay. GSAP is
-limited to the title entrance, image reveals and scroll handoff. Motion supplies
-spring-based product hover, filter arrivals, press feedback and drawer content
-entrances. Lenis provides smooth scrolling. Reduced-motion users see still
-posters and no decorative drift.
+The homepage opens on one static jewellery image. Landscape and portrait are
+composed separately so the earrings remain complete at both sizes. The
+black-and-white wearing portrait appears later and is cropped above the mouth;
+its desktop frame widens with a restrained monochrome background extension.
+Three short silent product studies appear below the first edit. GSAP is limited
+to image reveals and scroll handoff. Motion supplies spring-based product hover,
+filter arrivals, press feedback and drawer content entrances. Lenis provides
+smooth scrolling. Reduced-motion users see still images and no decorative drift.
 
 ## Sound
 
