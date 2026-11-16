@@ -34,7 +34,7 @@ The current direction is an original warm-gallery editorial system. The referenc
 ### Spacing and layout
 
 - The current editorial pass uses the warm paper field `#F5F1E8`, offset by
-  near-black product photography and a small oxblood accent.
+  near-black product photography and a deep petrol-blue accent.
 - The former three-video strip is replaced by one still-life composition with a large image field and a restrained product-information column.
 - The product catalogue keeps each original photograph intact on its black
   velvet or hand-held background. Plates alternate between 4:5 and 16:10 crops,
@@ -46,7 +46,8 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 - Current page background: `#F5F1E8`.
 - Current highlight: `#FFF9EE`.
-- Current accent: `#5B2025`.
+- Current accent: `#21454C`.
+- Pale blue emphasis: `#B9D2CE`.
 - Text: near-black ink and warm graphite.
 - The palette otherwise comes from the supplied jewellery photography.
 - Dividers use low-opacity ink rather than grey filled panels.
@@ -134,5 +135,17 @@ The current direction is an original warm-gallery editorial system. The referenc
   offset editorial rhythm.
 - Added the supplied blue-thorn worn-scale study in The House section.
 - Updated closing and footer surfaces to oxblood and dark warm brown.
+
+### Pass 5 — petrol-blue editorial transition
+
+- Replaced the former oxblood interface colour with petrol blue `#21454C`.
+- Rebuilt the belief and closing chapters as layered petrol fields rather than
+  flat fills, retaining the warm ivory type and antique-gold details.
+- Changed catalogue filters, links, focus states and product-detail markers to
+  the same blue system.
+- Moved the footer from warm brown-black to blue-black `#111F23` so the final
+  page rhythm joins the supplied blue-hour photography.
+- Kept the red, coral and turquoise colour inside the product photography
+  unchanged so those jewellery details remain the focal points.
 
 final result: passed

@@ -26,11 +26,15 @@
   --ink-3:#342A24;
   --paper:#F5F1E8;
   --paper-2:#E8E1D5;
-  --oxblood-2:#8E4A46;
+  --petrol:#21454C;
+  --petrol-2:#6D858A;
+  --petrol-deep:#10262D;
+  --petrol-pale:#B9D2CE;
+  --oxblood-2:var(--petrol-2);
   --ivory:#FFF9EE;
   --gold:#A98243;
   --gold-2:#C9A96A;
-  --oxblood:#5B2025;
+  --oxblood:var(--petrol);
   --turq:#5F948B;
   --muted:#655D52;
   --line:rgba(22,17,15,.17);
@@ -260,7 +264,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .spread-cap .kicker{color:var(--gold)}
 .spread-cap h2{font-size:clamp(1.9rem,7.4vw,4rem);line-height:1.0;letter-spacing:-.01em}
 .spread-cap p{font-size:15px;line-height:1.72;color:var(--muted);max-width:52ch}
-.spread-cap .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-label);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--oxblood);border-bottom:1px solid rgba(90,39,37,.4);padding-bottom:4px;width:max-content;min-height:44px}
+.spread-cap .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-label);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--oxblood);border-bottom:1px solid rgba(33,69,76,.4);padding-bottom:4px;width:max-content;min-height:44px}
 .spread-cap .link svg{width:14px;height:14px}
 
 /* ---------- collections ---------- */
@@ -1565,8 +1569,12 @@ body{font-size:16px}
   --muted:#6B5B4E;
   --gold:#9A713B;
   --gold-2:#C2A06D;
-  --oxblood:#68232F;
-  --oxblood-2:#8A3B47;
+  --petrol:#21454C;
+  --petrol-2:#6D858A;
+  --petrol-deep:#10262D;
+  --petrol-pale:#B9D2CE;
+  --oxblood:var(--petrol);
+  --oxblood-2:var(--petrol-2);
   --line:rgba(43,29,20,.18);
   --line-soft:rgba(43,29,20,.09);
 }
@@ -1597,7 +1605,7 @@ body{font-size:16px;line-height:1.68}
 .billboard::after{
   background:
     linear-gradient(to bottom,rgba(19,14,11,.12),transparent 20%,transparent 63%,rgba(19,14,11,.34)),
-    radial-gradient(ellipse at 50% 100%,rgba(86,27,36,.16),transparent 56%);
+    radial-gradient(ellipse at 50% 100%,rgba(7,34,43,.2),transparent 56%);
 }
 .billboard .bb-fallback img{
   filter:saturate(.97) contrast(1.04) brightness(.97);
@@ -1627,8 +1635,8 @@ body{font-size:16px;line-height:1.68}
 .cover-cta{margin-top:32px}
 .cover-art{
   position:relative;isolation:isolate;margin:0;min-height:clamp(570px,48vw,720px);
-  display:grid;place-items:center;overflow:hidden;background:var(--oxblood);
-  box-shadow:0 36px 70px rgba(66,30,27,.16);
+  display:grid;place-items:center;overflow:hidden;background:var(--petrol);
+  box-shadow:0 36px 70px rgba(10,34,43,.18);
 }
 .cover-art::before{
   content:"";position:absolute;inset:18px;border:1px solid rgba(255,249,239,.24);z-index:2;pointer-events:none;
@@ -1636,13 +1644,13 @@ body{font-size:16px;line-height:1.68}
 .cover-art::after{
   content:"";position:absolute;inset:0;z-index:0;
   background:
-    radial-gradient(circle at 48% 38%,rgba(255,217,204,.16),transparent 38%),
-    linear-gradient(145deg,rgba(0,0,0,.02),rgba(28,9,12,.18));
+    radial-gradient(circle at 48% 38%,rgba(197,224,224,.16),transparent 38%),
+    linear-gradient(145deg,rgba(0,0,0,.02),rgba(7,25,31,.22));
   pointer-events:none;
 }
 .cover-art img{
   position:relative;z-index:1;width:78%;max-height:88%;object-fit:contain;
-  filter:drop-shadow(0 24px 30px rgba(20,8,10,.28));
+  filter:drop-shadow(0 24px 30px rgba(6,23,28,.3));
   transform:rotate(-2deg);
 }
 .cover-art figcaption{
@@ -1688,7 +1696,7 @@ body{font-size:16px;line-height:1.68}
 .still-grid{grid-template-columns:minmax(0,1.7fr) minmax(275px,.43fr);gap:clamp(44px,5vw,78px)}
 .still-photo{background:var(--surface)}
 .still-photo img{height:clamp(620px,59vw,790px)}
-.detail-point i{background:rgba(104,35,47,.62)}
+.detail-point i{background:rgba(33,69,76,.68)}
 .detail-next{color:var(--oxblood);border-bottom-color:var(--oxblood)}
 .still-link{color:var(--oxblood);border-bottom-color:var(--oxblood)}
 
@@ -1749,17 +1757,21 @@ body{font-size:16px;line-height:1.68}
 .atelier .copy .kicker,.process li::before{color:var(--oxblood)}
 
 .closing{
-  background:var(--oxblood);color:var(--surface-soft);border-top:0;
+  background:
+    radial-gradient(circle at 76% 18%,rgba(185,210,206,.12),transparent 31%),
+    radial-gradient(circle at 16% 84%,rgba(4,21,27,.28),transparent 46%),
+    linear-gradient(138deg,#19373E 0%,var(--petrol) 54%,#112A30 100%);
+  color:var(--surface-soft);border-top:0;
 }
 .closing h2{color:var(--surface-soft)}
-.closing h2 em{color:#E8C6B5}
+.closing h2 em{color:var(--petrol-pale)}
 .closing p,.closing .by{color:rgba(255,249,239,.7)}
 .closing .cta{
   background:var(--surface-soft);color:var(--oxblood);border-color:var(--surface-soft);
 }
 .closing .cta:hover{background:transparent;color:var(--surface-soft);border-color:var(--surface-soft)}
 
-.footer{background:#211815;color:var(--surface-soft);border-top:0}
+.footer{background:#111F23;color:var(--surface-soft);border-top:0}
 .footer-brand .cn,.footer-brand p,.fcol a,.foot-bottom,.fcol h4,.f-field > span,.f-form h4{
   color:rgba(255,249,239,.64);
 }
@@ -1821,17 +1833,17 @@ body{font-size:16px;line-height:1.68}
 
 /* ---------- belief chapter: statement, image and a change of light ---------- */
 .belief{
-  --belief-deep:#211210;
+  --belief-deep:#10262D;
   --belief-paper:#F4E9DA;
   position:relative;
   overflow:hidden;
   padding:clamp(86px,9vw,148px) var(--gut) clamp(96px,10vw,164px);
   color:var(--belief-paper);
   background:
-    radial-gradient(circle at 78% 24%,rgba(200,129,91,.2),transparent 31%),
-    radial-gradient(ellipse at 16% 82%,rgba(107,31,43,.2),transparent 42%),
+    radial-gradient(circle at 78% 24%,rgba(185,210,206,.16),transparent 31%),
+    radial-gradient(ellipse at 16% 82%,rgba(4,24,31,.3),transparent 42%),
     repeating-linear-gradient(112deg,rgba(255,247,235,.018) 0 1px,transparent 1px 4px),
-    linear-gradient(142deg,#341715 0%,#4A1C23 54%,#1E100E 100%);
+    linear-gradient(142deg,#17343B 0%,#214850 54%,#0F2329 100%);
 }
 .belief::before{
   content:"LUMINARA";
@@ -1851,7 +1863,7 @@ body{font-size:16px;line-height:1.68}
 .belief .kicker{color:rgba(244,233,218,.62)}
 .belief-note{
   align-self:center;padding:14px 0 14px 19px;
-  border-left:1px solid #C57F5A;
+  border-left:1px solid #C2A06D;
 }
 .belief-note p{
   max-width:29ch;margin-top:15px;font-size:14px;line-height:1.78;
@@ -1868,10 +1880,10 @@ body{font-size:16px;line-height:1.68}
 .belief-statement{text-align:center}
 .belief-monogram{
   display:block;font-family:var(--f-display);font-size:clamp(3.3rem,5.8vw,5.9rem);
-  line-height:.66;color:#D99879;
+  line-height:.66;color:#B9D2CE;
 }
 .belief-rule{
-  display:block;width:78px;height:1px;margin:20px auto 25px;background:#C57F5A;
+  display:block;width:78px;height:1px;margin:20px auto 25px;background:#C2A06D;
 }
 .belief-index{
   font-family:var(--f-label);font-size:9.5px;line-height:1.5;letter-spacing:.2em;
@@ -1882,7 +1894,7 @@ body{font-size:16px;line-height:1.68}
   font-family:var(--f-display);font-size:clamp(4.25rem,7.4vw,8.5rem);
   font-weight:400;line-height:.83;letter-spacing:-.045em;color:var(--belief-paper);
 }
-.belief h2 em{display:block;font-weight:400;color:#E1A384}
+.belief h2 em{display:block;font-weight:400;color:var(--petrol-pale)}
 .belief-dek{
   max-width:49ch;margin:29px auto 0;font-size:15px;line-height:1.7;
   color:rgba(244,233,218,.74);
@@ -1898,7 +1910,7 @@ body{font-size:16px;line-height:1.68}
 .belief-art{
   position:relative;justify-self:end;align-self:center;width:min(100%,430px);margin:0;
   padding:10px;overflow:hidden;background:rgba(244,233,218,.065);
-  box-shadow:0 50px 100px rgba(25,10,8,.38);
+  box-shadow:0 50px 100px rgba(4,20,26,.4);
 }
 .belief-art::before{
   content:"";position:absolute;inset:0;border:1px solid rgba(244,233,218,.27);pointer-events:none;z-index:2;
@@ -1910,7 +1922,7 @@ body{font-size:16px;line-height:1.68}
 .belief-art figcaption{
   position:absolute;z-index:3;left:10px;right:10px;bottom:10px;
   display:flex;justify-content:space-between;gap:16px;padding:38px 18px 15px;
-  background:linear-gradient(transparent,rgba(23,10,8,.86));
+  background:linear-gradient(transparent,rgba(6,22,27,.88));
   font-family:var(--f-label);font-size:8px;line-height:1.5;letter-spacing:.14em;
   text-transform:uppercase;color:rgba(244,233,218,.8);
 }
@@ -1955,7 +1967,7 @@ body{font-size:16px;line-height:1.68}
   .belief-grid{grid-template-columns:1fr;gap:0;text-align:center}
   .belief-note{
     grid-column:1;grid-row:2;justify-self:center;max-width:340px;margin:48px 0 0;
-    padding:14px 0 0;border-left:0;border-top:1px solid #C57F5A;text-align:left;
+    padding:14px 0 0;border-left:0;border-top:1px solid #C2A06D;text-align:left;
   }
   .belief-note p{max-width:none;font-size:13px}
   .belief-note a{margin-top:17px}

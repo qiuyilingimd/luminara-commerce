@@ -24,16 +24,20 @@ must not be published without evidence.
 - Softer surface: `#FAF6EE`
 - Highlight ivory: `#FFF9EF`
 - Ink: `#16110F`
-- Oxblood: `#68232F`
+- Petrol blue: `#21454C`
+- Muted glass blue: `#6D858A`
+- Pale sea-glass: `#B9D2CE`
 - Antique gold: `#9A713B`
 - Muted warm brown: `#6B5B4E`
 - Display: Cormorant Garamond roman and italic
 - Text and labels: Jost
 
 Photography leads the editorial chapters. The page alternates warm ivory fields,
-a deep walnut-and-oxblood belief chapter, material-led product studies and an
-oxblood closing field. Images remain uncropped where the jewellery silhouette
-matters and move to macro crops where material is the subject.
+a deep petrol-blue belief chapter, material-led product studies and a petrol
+closing field. Images remain uncropped where the jewellery silhouette matters
+and move to macro crops where material is the subject. The cool blue fields tie
+the supplied sky and blue-hour photography together without competing with the
+red, coral and turquoise colour already present in the jewellery.
 
 The product system follows three evidence types: whole form, material surface
 and worn scale. Cabinet plates use each product's original gallery photograph,
@@ -48,14 +52,15 @@ photographs. The butterfly product has been removed from the visual system.
 1. A single still-life hero led by pink flower earrings with purple drops
    on black thorn branches against a blue sky. The image carries the opening
    without an editorial text overlay.
-2. A walnut-and-oxblood “Taste is assembled.” belief chapter: quiet note, large
+2. A petrol-blue “Taste is assembled.” belief chapter: quiet note, large
    centred statement and a single glass-shelf earring study.
 3. A single Two Doves still life with three inspectable material details.
 4. A complete, filterable six-piece collection using the original product
    photography and varied editorial scale.
 5. A worn-scale image from the supplied blue-thorn campaign, used as context
    rather than repeated as a cover.
-6. An oxblood closing statement and a dark warm footer with service information.
+6. A petrol closing statement and a dark blue-black footer with service
+   information.
 
 ## Motion
 
