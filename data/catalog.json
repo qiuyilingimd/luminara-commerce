@@ -17,7 +17,7 @@
       "name": "Lilac Reverie",
       "cn": "紫丁香之梦",
       "price": 45,
-      "img": "assets/lilac-earrings.jpg",
+      "img": "assets/cutouts/product-lilac.webp",
       "pos": "50% 62%",
       "desc": "Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
       "spec": [
@@ -35,7 +35,7 @@
       "name": "Serpentine Psalm",
       "cn": "灵蛇之诗",
       "price": 49,
-      "img": "assets/snake-earrings.jpg",
+      "img": "assets/cutouts/product-serpentine.webp",
       "pos": "50% 40%",
       "desc": "A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
       "spec": [
@@ -53,7 +53,7 @@
       "name": "Morpho Nocturne",
       "cn": "夜蝶",
       "price": 39,
-      "img": "assets/butterfly-bust.jpg",
+      "img": "assets/cutouts/product-morpho.webp",
       "pos": "50% 30%",
       "desc": "A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
       "spec": [
@@ -71,7 +71,7 @@
       "name": "Nocturne of the Deep",
       "cn": "深海夜曲",
       "price": 55,
-      "img": "assets/jellyfish.jpg",
+      "img": "assets/cutouts/product-deep.webp",
       "pos": "50% 34%",
       "desc": "Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
       "spec": [
@@ -89,7 +89,7 @@
       "name": "Coral Reliquary",
       "cn": "珊瑚圣龛",
       "price": 35,
-      "img": "assets/coral-earrings.jpg",
+      "img": "assets/cutouts/product-coral.webp",
       "pos": "60% 50%",
       "desc": "Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
       "spec": [
@@ -107,7 +107,7 @@
       "name": "Opaline Arch Cuff",
       "cn": "欧泊拱廊",
       "price": 52,
-      "img": "assets/opaline-cuff.jpg",
+      "img": "assets/cutouts/product-cuff.webp",
       "pos": "50% 46%",
       "desc": "An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
       "spec": [
@@ -125,7 +125,7 @@
       "name": "Two Doves",
       "cn": "双鸽",
       "price": 58,
-      "img": "assets/doves-necklace.jpg",
+      "img": "assets/cutouts/product-doves.webp",
       "pos": "50% 46%",
       "desc": "Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
       "spec": [

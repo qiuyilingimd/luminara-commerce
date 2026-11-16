@@ -34,7 +34,9 @@ matters and move to macro crops where material is the subject.
 The product system follows three evidence types: whole form, material surface
 and worn scale. These are explained in the Assembly section and apply to the
 Cabinet: every product plate uses the same 4:5 ratio and equal grid width so
-silhouette, crop and finish can be compared directly.
+silhouette, crop and finish can be compared directly. Catalogue and drawer
+imagery use isolated transparent product masters on a warm-white field; body
+and hand photography remains in the editorial sections.
 
 ## Page Rhythm
 

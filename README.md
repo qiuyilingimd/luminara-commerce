@@ -15,6 +15,11 @@ filter arrivals, press feedback and drawer entrances. GSAP remains responsible
 for scroll-linked sequencing so the two engines do not animate the same
 properties on the same elements.
 
+All seven catalogue products use transparent cut-out masters under
+`assets/cutouts/`. Product cards and drawers present them on a warm-white field;
+contextual hand and portrait photography is retained only in editorial
+sections.
+
 The homepage hero is a single still image led by pink flower earrings with
 purple glass drops; the landscape and portrait compositions are separate
 assets. The three smaller

@@ -256,7 +256,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .assembly-lead .lede{max-width:52ch}
 .assembly-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:12px}
 .assembly-note{margin:0;background:var(--paper-2);border:1px solid var(--line-soft);display:grid;grid-template-rows:auto 1fr}
-.assembly-note img{width:100%;aspect-ratio:5/4;object-fit:cover;display:block}
+.assembly-note img{width:100%;aspect-ratio:5/4;object-fit:contain;padding:8%;background:#FCFBF8;display:block}
 .assembly-note div{padding:16px 16px 18px;display:grid;gap:7px}
 .assembly-note b{font-family:var(--f-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--oxblood)}
 .assembly-note p{font-size:14px;line-height:1.58;color:var(--muted)}
@@ -464,8 +464,8 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .drawer-close{width:44px;height:44px;display:grid;place-items:center}
 .drawer-close svg{width:18px;height:18px}
 .drawer-body{overflow-y:auto;overscroll-behavior:contain;padding:18px 16px 26px}
-.d-media{overflow:hidden;aspect-ratio:4/5;background:var(--paper-2);max-height:38svh;margin:0}
-.d-media img{width:100%;height:100%;object-fit:cover}
+.d-media{overflow:hidden;aspect-ratio:4/5;background:#FCFBF8;border:1px solid var(--line-soft);max-height:38svh;margin:0}
+.d-media img{width:100%;height:100%;object-fit:contain;padding:8%}
 .d-no{display:flex;justify-content:space-between;margin:16px 0 8px;font-family:var(--f-label);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .d-name{font-family:var(--f-display);font-size:clamp(1.5rem,5vw,2rem);line-height:1.14}
 .d-cn{margin-top:6px;font-family:var(--f-label);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
@@ -486,7 +486,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 
 .casket-empty{padding:34px 0;text-align:center;color:var(--muted);font-style:italic}
 .casket-row{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
-.casket-row img{width:64px;height:80px;object-fit:cover}
+.casket-row img{width:64px;height:80px;object-fit:contain;padding:5%;background:#FCFBF8;border:1px solid var(--line-soft)}
 .casket-row h4{font-family:var(--f-display);font-size:15px;font-weight:400}
 .casket-row .p{font-family:var(--f-label);font-size:11px;color:var(--muted);margin-top:4px}
 .casket-row .qty{display:inline-flex;align-items:center;gap:8px;margin-top:8px}
@@ -915,6 +915,62 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
   width:100%;height:auto;aspect-ratio:2200/1120;object-fit:cover;object-position:50% 50%;
   filter:grayscale(1) contrast(1.075) brightness(.94);
 }
+
+/* ---------- white product gallery: isolated jewellery only ---------- */
+.cs figure{
+  background:#FCFBF8;border:1px solid var(--line-soft);
+}
+.cs img{
+  object-fit:contain;padding:8% 7%;
+}
+.vitrine{
+  background:var(--paper);color:var(--ink);border-top:1px solid var(--line);
+}
+.vitrine .head{
+  border-top-color:var(--ink);
+}
+.v-head .kicker,.vitrine .head p{
+  color:var(--muted);
+}
+.shop-facts{
+  background:var(--line-soft);border-color:var(--line);
+}
+.shop-facts li{
+  background:var(--paper);color:var(--muted);
+}
+.filter-chip{
+  border-color:var(--line);color:var(--muted);
+}
+.filter-chip:hover{
+  border-color:var(--ink);color:var(--ink);
+}
+.filter-chip[aria-pressed="true"]{
+  background:var(--ink);color:var(--ivory);border-color:var(--ink);
+}
+.vitem{
+  color:var(--ink);
+}
+.v-plate{
+  background:#FCFBF8;border:1px solid var(--line-soft);
+}
+.v-plate::before,.v-plate::after{
+  display:none;
+}
+.v-plate img{
+  object-fit:contain;padding:7.5% 6%;
+}
+.v-no{
+  color:var(--muted);
+}
+.v-meta .kicker{
+  color:var(--gold);
+}
+.v-meta h3{
+  color:var(--ink);
+}
+.v-meta .price,.v-material{
+  color:var(--muted);
+}
 @media(min-width:1024px){
   .mast .nav-links{display:flex;gap:25px}
 }
@@ -1010,19 +1066,19 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
   </div>
   <div class="cs-grid">
     <article class="cs" role="button" tabindex="0" data-open="snake">
-      <figure><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
+      <figure><img src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 02</span><b>Serpentine Psalm</b><span class="cs-price">$49</span><span class="cs-material">Turquoise and oxblood enamel · glass drops</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="morpho">
-      <figure><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on a plaster bust" loading="lazy" style="object-position:50% 32%"></figure>
+      <figure><img src="assets/cutouts/product-morpho.webp" alt="Morpho Nocturne iridescent butterfly earring" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 01</span><b>Morpho Nocturne</b><span class="cs-price">$39</span><span class="cs-material">Iridescent resin · blue glass · zircon</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="cuff">
-      <figure><img src="assets/opaline-cuff.jpg" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy" style="object-position:50% 52%"></figure>
+      <figure><img src="assets/cutouts/product-cuff.webp" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Mineral Glow · Pl. 04</span><b>Opaline Arch Cuff</b><span class="cs-price">$52</span><span class="cs-material">Gold-tone cuff · opal-tone resin · zircon</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="doves">
-      <figure><img src="assets/hero-close-neck.jpg" alt="Two Doves necklace worn at the throat" loading="lazy" style="object-position:42% 38%"></figure>
+      <figure><img src="assets/cutouts/product-doves.webp" alt="Two Doves silver-tone necklace with a yellow glass drop" loading="lazy"></figure>
       <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 07</span><b>Two Doves</b><span class="cs-price">$58</span><span class="cs-material">Silver-tone metal · zircon · yellow glass</span><span class="cs-action">View piece</span></p>
     </article>
   </div>
@@ -1082,15 +1138,15 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     </div>
     <div class="assembly-notes">
       <article class="assembly-note">
-        <img src="assets/snake-earrings.jpg" alt="Serpentine Psalm earrings" loading="lazy">
+        <img src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm earrings" loading="lazy">
         <div><b>01 / Whole form</b><p>See the complete silhouette before styling changes how it reads.</p></div>
       </article>
       <article class="assembly-note">
-        <img src="assets/plate-hand-earring.jpg" alt="Morpho Nocturne iridescent earring held close to the hand" loading="lazy" style="object-position:50% 44%">
+        <img src="assets/cutouts/product-morpho.webp" alt="Morpho Nocturne iridescent earring" loading="lazy">
         <div><b>02 / Surface</b><p>Enamel, glass and resin are shown close enough to read.</p></div>
       </article>
       <article class="assembly-note">
-        <img src="assets/hero-close-cuff.jpg" alt="Opaline Arch cuff worn on the wrist" loading="lazy" style="object-position:54% 54%">
+        <img src="assets/cutouts/product-cuff.webp" alt="Opaline Arch cuff with blue-green resin" loading="lazy">
         <div><b>03 / Worn scale</b><p>Ear, neck and wrist views reveal how each piece sits and moves.</p></div>
       </article>
     </div>
@@ -1124,31 +1180,31 @@ a:active,.btn:active,.casket-btn:active,.bb-arrow:active{transform:scale(.985)}
     </div>
     <div class="vgrid">
       <article class="vitem v3" role="button" tabindex="0" data-open="snake" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/snake-earrings.jpg" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">01</span></figure>
+        <figure class="v-plate r45"><img src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">01</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Serpentine Psalm</h3><p class="price">$49</p><p class="v-material">Turquoise and oxblood enamel · glass drops</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="morpho" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/butterfly-bust.jpg" alt="Morpho Nocturne earring on plaster bust" loading="lazy" style="object-position:50% 28%"><span class="v-no">02</span></figure>
+        <figure class="v-plate r45"><img src="assets/cutouts/product-morpho.webp" alt="Morpho Nocturne iridescent butterfly earring" loading="lazy"><span class="v-no">02</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Morpho Nocturne</h3><p class="price">$39</p><p class="v-material">Iridescent resin · black glass</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="deep" data-category="brooches">
-        <figure class="v-plate r45"><img src="assets/jellyfish.jpg" alt="Silver-finish jellyfish brooches on velvet" loading="lazy" style="object-position:50% 36%"><span class="v-no">03</span></figure>
+        <figure class="v-plate r45"><img src="assets/cutouts/product-deep.webp" alt="Nocturne of the Deep silver-tone brooches" loading="lazy"><span class="v-no">03</span></figure>
         <div class="v-meta"><span class="kicker">Brooches · Ocean Whisper</span><h3>Nocturne of the Deep</h3><p class="price">$55</p><p class="v-material">Silver-tone metal · glass pearl</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="coral" data-category="earrings">
-        <figure class="v-plate r45"><img src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings" loading="lazy" style="object-position:56% 50%"><span class="v-no">04</span></figure>
+        <figure class="v-plate r45"><img src="assets/cutouts/product-coral.webp" alt="Coral Reliquary earrings" loading="lazy"><span class="v-no">04</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Ocean Whisper</span><h3>Coral Reliquary</h3><p class="price">$35</p><p class="v-material">Coral-tone glass · zircon drops</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="cuff" data-category="bracelets">
-        <figure class="v-plate r1610"><img src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy" style="object-position:50% 48%"><span class="v-no">05</span></figure>
+        <figure class="v-plate r1610"><img src="assets/cutouts/product-cuff.webp" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy"><span class="v-no">05</span></figure>
         <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings">
-        <figure class="v-plate r1610"><img src="assets/lilac-earrings.jpg" alt="Lilac Reverie earrings" loading="lazy" style="object-position:50% 68%"><span class="v-no">06</span></figure>
+        <figure class="v-plate r1610"><img src="assets/cutouts/product-lilac.webp" alt="Lilac Reverie earrings" loading="lazy"><span class="v-no">06</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="doves" data-category="necklaces">
-        <figure class="v-plate r1610"><img src="assets/doves-necklace.jpg" alt="Two Doves necklace" loading="lazy" style="object-position:50% 46%"><span class="v-no">07</span></figure>
+        <figure class="v-plate r1610"><img src="assets/cutouts/product-doves.webp" alt="Two Doves necklace" loading="lazy"><span class="v-no">07</span></figure>
         <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Two Doves</h3><p class="price">$58</p><p class="v-material">Silver-tone metal · zircon · yellow glass</p></div>
       </article>
     </div>
@@ -1307,31 +1363,31 @@ function apiJSON(path, data){
 }
 
 var P = {
-  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/lilac-earrings.jpg",pos:"50% 62%",
+  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/cutouts/product-lilac.webp",pos:"50% 50%",
     desc:"Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
     spec:[["Material","Clouded glass, cubic zirconia"],["Setting","Gold-tone metal"],["Drop","38 mm"]],
     sizes:["One size"]},
-  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/snake-earrings.jpg",pos:"50% 40%",
+  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/cutouts/product-serpentine.webp",pos:"50% 50%",
     desc:"A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
     spec:[["Body","Gold-tone metal"],["Finish","Turquoise and oxblood enamel"],["Drop","72 mm"]],
     sizes:["One size"]},
-  morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/butterfly-bust.jpg",pos:"50% 30%",
+  morpho:{id:"morpho",no:"Pl. 01",category:"Earrings",series:"Enamel Reverie",name:"Morpho Nocturne",cn:"夜蝶",price:39,img:"assets/cutouts/product-morpho.webp",pos:"50% 50%",
     desc:"A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
     spec:[["Material","Iridescent resin, gold-tone filigree"],["Stones","Black glass, zircon"],["Drop","54 mm"]],
     sizes:["One size"]},
-  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/jellyfish.jpg",pos:"50% 34%",
+  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/cutouts/product-deep.webp",pos:"50% 50%",
     desc:"Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
     spec:[["Body","Silver-tone metal"],["Stones","Glass pearl, zircon"],["Sizes","38–62 mm"]],
     sizes:["Set of four"]},
-  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/coral-earrings.jpg",pos:"60% 50%",
+  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/cutouts/product-coral.webp",pos:"50% 50%",
     desc:"Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
     spec:[["Material","Coral-tone glass, gold-tone metal"],["Stone","Resin cabochon, zircon"],["Drop","42 mm"]],
     sizes:["One size"]},
-  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/opaline-cuff.jpg",pos:"50% 46%",
+  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/cutouts/product-cuff.webp",pos:"50% 50%",
     desc:"An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
     spec:[["Body","Gold-tone metal"],["Inlay","Opal-tone resin, cubic zirconia"],["Fit","48 / 52 / 56 mm"]],
     sizes:["48 mm","52 mm","56 mm"]},
-  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/doves-necklace.jpg",pos:"50% 46%",
+  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/cutouts/product-doves.webp",pos:"50% 50%",
     desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
     spec:[["Body","Silver-tone metal"],["Stones","Cubic zirconia, yellow glass"],["Length","41 cm adjustable"]],
     sizes:["One size"]}
