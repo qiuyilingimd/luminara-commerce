@@ -7,11 +7,11 @@
 <meta name="description" content="Luminara is a curated seven-piece edit of vintage-inspired earrings, necklaces, bracelets and brooches. Prices from US$35, shipped internationally.">
 <meta name="page-type" content="product">
 <meta name="site-kind" content="other">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#E2E2E2">
 <meta property="og:title" content="Luminara — Vintage-Inspired Statement Jewellery">
 <meta property="og:description" content="Old-soul silhouettes, tactile surfaces and decorative detail. A seven-piece edit from US$35.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://luminara-commerce.onrender.com/assets/hero-bloom-wide.webp">
+<meta property="og:image" content="https://qiuyilingimd.github.io/luminara-commerce/assets/hero-bloom-wide.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23C9A96A' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="vendor/fonts.css">
@@ -1325,12 +1325,254 @@ body{font-size:16px;line-height:1.66}
     height:clamp(520px,58vw,620px);
   }
 }
+
+/* ---------- warm gallery pass: reference-matched surfaces, quieter framing ---------- */
+:root{
+  --page:#E2E2E2;
+  --surface:#EFEFED;
+  --surface-soft:#F7F2F1;
+  --paper:#E2E2E2;
+  --paper-2:#EFEFED;
+  --ivory:#F7F2F1;
+  --muted:#5D5954;
+  --gold:#756B62;
+  --gold-2:#A99E92;
+  --line:rgba(20,18,16,.16);
+  --line-soft:rgba(20,18,16,.08);
+}
+html,body{background:var(--page)}
+html{scrollbar-color:#A9A6A1 var(--page)}
+body{font-size:16px}
+::selection{background:var(--ink);color:var(--surface-soft)}
+.grain{opacity:.012}
+
+.mast,
+.mast.is-overlay{
+  position:fixed;
+  inset:0 0 auto;
+  background:transparent;
+  border-bottom-color:transparent;
+  box-shadow:none;
+  backdrop-filter:blur(16px) saturate(.8);
+  -webkit-backdrop-filter:blur(16px) saturate(.8);
+}
+.mast.is-overlay{
+  color:var(--surface-soft);
+  border-bottom-color:rgba(247,242,241,.18);
+  text-shadow:0 1px 18px rgba(10,9,8,.34);
+}
+.mast:not(.is-overlay){
+  color:var(--ink);
+  background:rgba(226,226,226,.82);
+  border-bottom-color:var(--line-soft);
+  text-shadow:none;
+}
+.mast .nav-links a{text-underline-offset:5px}
+.mast .brand small{opacity:.68}
+
+.billboard,
+.cover,
+.coverstrip,
+.editorial-still,
+.statement,
+.vitrine,
+.atelier,
+.closing,
+.footer{
+  background:var(--page);
+  color:var(--ink);
+}
+.billboard .bb-fallback{background:var(--page)}
+.billboard{height:100svh;min-height:600px}
+.coverstrip,
+.editorial-still,
+.statement,
+.vitrine,
+.atelier,
+.closing,
+.footer{
+  border-top-color:var(--line);
+}
+
+.cs figure,
+.v-plate,
+.d-media,
+.casket-row img,
+.still-photo,
+.atelier .media,
+.assembly-note,
+.assembly-note img{
+  background:var(--surface);
+  border:0;
+  box-shadow:none;
+}
+.cs figure,
+.v-plate,
+.still-photo,
+.atelier .media{
+  outline:0;
+}
+.cs img,
+.v-plate img,
+.d-media img,
+.casket-row img{
+  padding:clamp(24px,3.1vw,44px);
+}
+.v-plate img,
+.d-media img,
+.casket-row img{padding:7.5% 6%}
+.still-photo img{object-position:50% 58%}
+
+.coverstrip .head,
+.still-head,
+.statement .inner,
+.vitrine .head{
+  border-color:var(--line);
+}
+.cover .dek,
+.coverstrip .head-copy p,
+.still-copy .still-lede,
+.still-specs,
+.still-specs li,
+.statement .lede,
+.vitrine .head p,
+.atelier .copy p,
+.process li span,
+.closing p,
+.footer-brand .cn,
+.footer-brand p,
+.fcol a{
+  color:var(--muted);
+}
+
+.statement{
+  padding-top:clamp(22px,3vw,40px);
+  padding-bottom:clamp(62px,7vw,96px);
+}
+.statement .inner{
+  border-top:1px solid var(--line);
+  padding-top:clamp(20px,2.5vw,30px);
+}
+.statement .chap em{color:var(--muted)}
+.statement .assembly-lead{
+  grid-template-columns:minmax(0,.9fr) minmax(300px,.72fr);
+  gap:clamp(28px,6vw,88px);
+  align-items:end;
+}
+.statement h2{
+  max-width:13ch;
+  font-size:clamp(2.8rem,5.7vw,5.5rem);
+  line-height:.94;
+  letter-spacing:-.035em;
+}
+.statement .lede{
+  max-width:48ch;
+  font-size:15px;
+  line-height:1.78;
+}
+.statement .cta{
+  border-radius:0;
+  min-height:48px;
+}
+.closing .cta{
+  padding:14px 20px;
+  background:var(--ink);
+  color:var(--surface-soft);
+  border:1px solid var(--ink);
+}
+.closing .cta:hover{
+  background:transparent;
+  color:var(--ink);
+  border-color:var(--ink);
+}
+
+.vgrid{gap:42px 22px}
+.v-meta{padding-top:14px}
+.v-meta h3{font-size:19px}
+.v-material{line-height:1.55}
+.shop-filter{gap:7px}
+.filter-chip{background:transparent}
+.shop-facts{
+  gap:0;
+  background:transparent;
+  border:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.shop-facts li{
+  background:transparent;
+  border-right:1px solid var(--line);
+}
+.shop-facts li:last-child{border-right:0}
+
+.footer-cols{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fcol li{margin-bottom:9px}
+.f-field > span{
+  font-family:var(--f-label);
+  font-size:10px;
+  line-height:1.4;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.f-form input,
+.f-form textarea,
+.d-field{
+  background:rgba(247,242,241,.5);
+  border-color:var(--line);
+}
+.f-form input:focus,
+.f-form textarea:focus,
+.d-field:focus{
+  background:var(--surface-soft);
+  border-color:var(--ink);
+}
+.f-submit{
+  background:transparent;
+  color:var(--ink);
+  border-color:var(--ink);
+}
+.f-submit:hover{
+  background:var(--ink);
+  color:var(--surface-soft);
+  border-color:var(--ink);
+}
+.mobile-menu{
+  background:var(--surface);
+  color:var(--ink);
+}
+.foot-bottom{
+  margin-top:clamp(32px,5vw,54px);
+  padding-top:17px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+}
+
+@media (max-width:719px){
+  .mast,
+  .mast.is-overlay{padding-left:18px;padding-right:18px}
+  .billboard{height:100svh;min-height:0;aspect-ratio:auto}
+  .cover h2{max-width:10ch}
+  .cs img{padding:20px}
+  .statement{padding-top:12px}
+  .statement .assembly-lead{grid-template-columns:1fr;gap:18px}
+  .statement h2{max-width:10ch;font-size:clamp(2.6rem,12.4vw,3.7rem)}
+  .statement .lede{font-size:14.5px}
+  .v-meta h3{font-size:17px}
+  .shop-facts li{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .shop-facts li:last-child{border-bottom:0}
+  .footer-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}
+  .footer-cols .fcol:last-child{grid-column:1/-1}
+}
 </style>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ===== 报头 ===== -->
+<!-- ===== masthead ===== -->
 <header class="mast is-overlay" id="nav">
   <a class="skip-link" href="#top">Skip to content</a>
   <a class="brand" href="#top">Luminara<small>琉弥诺</small></a>
@@ -1338,7 +1580,6 @@ body{font-size:16px;line-height:1.66}
     <ul class="nav-links">
       <li><a href="#collections">Collections</a></li>
       <li><a href="#vitrine">Shop</a></li>
-      <li><a href="#muse">Portrait</a></li>
       <li><a href="#atelier">The House</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1355,14 +1596,13 @@ body{font-size:16px;line-height:1.66}
   <ul>
     <li><a href="#collections">Collections</a></li>
     <li><a href="#vitrine">Shop</a></li>
-    <li><a href="#muse">Portrait</a></li>
     <li><a href="#atelier">The House</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <p class="foot">Vintage-inspired jewellery · Worldwide delivery</p>
 </div>
 
-<!-- ===== 单张黑白主视觉 ===== -->
+<!-- ===== single hero image ===== -->
 <main id="top">
 <section class="billboard">
   <div class="bb-track" id="bbTrack">
@@ -1403,19 +1643,19 @@ body{font-size:16px;line-height:1.66}
   <div class="cs-grid">
     <article class="cs" role="button" tabindex="0" data-open="snake">
       <figure><img src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm earrings in pale turquoise and oxblood enamel" loading="lazy"></figure>
-      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 02</span><b>Serpentine Psalm</b><span class="cs-price">$49</span><span class="cs-material">Turquoise and oxblood enamel · glass drops</span><span class="cs-action">View piece</span></p>
+      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 02</span><b>Serpentine Psalm</b><span class="cs-price">US$49</span><span class="cs-material">Turquoise and oxblood enamel · glass drops</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="morpho">
       <figure><img src="assets/cutouts/product-morpho.webp" alt="Morpho Nocturne iridescent butterfly earring" loading="lazy"></figure>
-      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 01</span><b>Morpho Nocturne</b><span class="cs-price">$39</span><span class="cs-material">Iridescent resin · blue glass · zircon</span><span class="cs-action">View piece</span></p>
+      <p class="cs-cap"><span class="cs-cat">Enamel Reverie · Pl. 01</span><b>Morpho Nocturne</b><span class="cs-price">US$39</span><span class="cs-material">Iridescent resin · blue glass · zircon</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="cuff">
       <figure><img src="assets/cutouts/product-cuff.webp" alt="Gold-tone Opaline Arch Cuff with blue resin inlays" loading="lazy"></figure>
-      <p class="cs-cap"><span class="cs-cat">Mineral Glow · Pl. 04</span><b>Opaline Arch Cuff</b><span class="cs-price">$52</span><span class="cs-material">Gold-tone cuff · opal-tone resin · zircon</span><span class="cs-action">View piece</span></p>
+      <p class="cs-cap"><span class="cs-cat">Mineral Glow · Pl. 04</span><b>Opaline Arch Cuff</b><span class="cs-price">US$52</span><span class="cs-material">Gold-tone cuff · opal-tone resin · zircon</span><span class="cs-action">View piece</span></p>
     </article>
     <article class="cs" role="button" tabindex="0" data-open="doves">
       <figure><img src="assets/cutouts/product-doves.webp" alt="Two Doves silver-tone necklace with a yellow glass drop" loading="lazy"></figure>
-      <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 07</span><b>Two Doves</b><span class="cs-price">$58</span><span class="cs-material">Silver-tone metal · zircon · yellow glass</span><span class="cs-action">View piece</span></p>
+      <p class="cs-cap"><span class="cs-cat">Nocturne Sculpture · Pl. 07</span><b>Two Doves</b><span class="cs-price">US$58</span><span class="cs-material">Silver-tone metal · zircon · yellow glass</span><span class="cs-action">View piece</span></p>
     </article>
   </div>
 </section>
@@ -1451,43 +1691,13 @@ body{font-size:16px;line-height:1.66}
   </div>
 </section>
 
-<!-- ===== 另一张脸 ===== -->
-<section class="muse" id="muse">
-  <div class="muse-head">
-    <span class="kicker">Point of view · plate 10</span>
-    <h2>One piece,<br>another <em>point of view</em>.</h2>
-    <p class="muse-side">Two Doves, restyled<br>one hard flash · black &amp; white</p>
-  </div>
-  <figure class="muse-feature">
-    <picture>
-      <source media="(max-width:719px)" srcset="assets/muse-brow-close.webp">
-      <img src="assets/muse-brow-band.webp" alt="Black-and-white close portrait of the Two Doves necklace across the brow, framed above the mouth" loading="lazy" data-zoom="2.4">
-    </picture>
-    <figcaption><span>Pl. 10 · Two Doves, an unexpected placement</span><span>Silver-tone metal · zircon · yellow glass</span></figcaption>
-  </figure>
-</section>
-
 <!-- ===== 宣言 ===== -->
 <section class="statement">
   <div class="inner">
-    <div class="chap"><span class="kicker">The point of view</span><em>Taste is assembled</em></div>
+    <div class="chap"><span class="kicker">The curation note</span><em>Selected for presence</em></div>
     <div class="assembly-lead">
-      <h2>A signature is built one choice at a time.</h2>
-      <p class="lede">Luminara brings together old-soul silhouettes, tactile surfaces and decorative detail for wardrobes built over time. Start with what you already wear, then add the piece that changes the line, colour or mood.</p>
-    </div>
-    <div class="assembly-notes">
-      <article class="assembly-note">
-        <img src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm earrings" loading="lazy">
-        <div><b>01 / Whole form</b><p>See the complete silhouette before styling changes how it reads.</p></div>
-      </article>
-      <article class="assembly-note">
-        <img src="assets/cutouts/product-morpho.webp" alt="Morpho Nocturne iridescent earring" loading="lazy">
-        <div><b>02 / Surface</b><p>Enamel, glass and resin are shown close enough to read.</p></div>
-      </article>
-      <article class="assembly-note">
-        <img src="assets/cutouts/product-cuff.webp" alt="Opaline Arch cuff with blue-green resin" loading="lazy">
-        <div><b>03 / Worn scale</b><p>Ear, neck and wrist views reveal how each piece sits and moves.</p></div>
-      </article>
+      <h2>Old-soul character, edited with restraint.</h2>
+      <p class="lede">Each piece is chosen for a clear silhouette, a tactile surface and one detail that makes the whole composition feel considered. The result is jewellery with presence, made to sit easily within a wardrobe built over time.</p>
     </div>
     <div class="cta-row">
       <a class="cta" href="#vitrine">Find your next piece</a>
@@ -1520,31 +1730,31 @@ body{font-size:16px;line-height:1.66}
     <div class="vgrid">
       <article class="vitem v3" role="button" tabindex="0" data-open="snake" data-category="earrings">
         <figure class="v-plate r45"><img src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">01</span></figure>
-        <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Serpentine Psalm</h3><p class="price">$49</p><p class="v-material">Turquoise and oxblood enamel · glass drops</p></div>
+        <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Serpentine Psalm</h3><p class="price">US$49</p><p class="v-material">Turquoise and oxblood enamel · glass drops</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="morpho" data-category="earrings">
         <figure class="v-plate r45"><img src="assets/cutouts/product-morpho.webp" alt="Morpho Nocturne iridescent butterfly earring" loading="lazy"><span class="v-no">02</span></figure>
-        <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Morpho Nocturne</h3><p class="price">$39</p><p class="v-material">Iridescent resin · black glass</p></div>
+        <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Morpho Nocturne</h3><p class="price">US$39</p><p class="v-material">Iridescent resin · black glass</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="deep" data-category="brooches">
         <figure class="v-plate r45"><img src="assets/cutouts/product-deep.webp" alt="Nocturne of the Deep silver-tone brooches" loading="lazy"><span class="v-no">03</span></figure>
-        <div class="v-meta"><span class="kicker">Brooches · Ocean Whisper</span><h3>Nocturne of the Deep</h3><p class="price">$55</p><p class="v-material">Silver-tone metal · glass pearl</p></div>
+        <div class="v-meta"><span class="kicker">Brooches · Ocean Whisper</span><h3>Nocturne of the Deep</h3><p class="price">US$55</p><p class="v-material">Silver-tone metal · glass pearl</p></div>
       </article>
       <article class="vitem v3" role="button" tabindex="0" data-open="coral" data-category="earrings">
         <figure class="v-plate r45"><img src="assets/cutouts/product-coral.webp" alt="Coral Reliquary earrings" loading="lazy"><span class="v-no">04</span></figure>
-        <div class="v-meta"><span class="kicker">Earrings · Ocean Whisper</span><h3>Coral Reliquary</h3><p class="price">$35</p><p class="v-material">Coral-tone glass · zircon drops</p></div>
+        <div class="v-meta"><span class="kicker">Earrings · Ocean Whisper</span><h3>Coral Reliquary</h3><p class="price">US$35</p><p class="v-material">Coral-tone glass · zircon drops</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="cuff" data-category="bracelets">
         <figure class="v-plate r1610"><img src="assets/cutouts/product-cuff.webp" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy"><span class="v-no">05</span></figure>
-        <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
+        <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">US$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings">
         <figure class="v-plate r1610"><img src="assets/cutouts/product-lilac.webp" alt="Lilac Reverie earrings" loading="lazy"><span class="v-no">06</span></figure>
-        <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
+        <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">US$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
       </article>
       <article class="vitem v4" role="button" tabindex="0" data-open="doves" data-category="necklaces">
         <figure class="v-plate r1610"><img src="assets/cutouts/product-doves.webp" alt="Two Doves necklace" loading="lazy"><span class="v-no">07</span></figure>
-        <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Two Doves</h3><p class="price">$58</p><p class="v-material">Silver-tone metal · zircon · yellow glass</p></div>
+        <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Two Doves</h3><p class="price">US$58</p><p class="v-material">Silver-tone metal · zircon · yellow glass</p></div>
       </article>
     </div>
   </div>
@@ -1587,11 +1797,11 @@ body{font-size:16px;line-height:1.66}
       <div class="footer-brand">
         <p class="logo">Luminara</p>
         <p class="cn">琉弥诺 · Vintage-Inspired Jewellery</p>
-        <p>Old-soul shapes and tactile surfaces for wardrobes built over time. Direct orders and private client support worldwide.</p>
+        <p>Old-soul shapes and tactile surfaces for wardrobes built over time. Direct orders and international delivery support.</p>
       </div>
       <div class="footer-cols">
         <div class="fcol">
-          <h4>Catalog</h4>
+          <h4>Shop</h4>
           <ul>
             <li><a href="#collections">Enamel Reverie</a></li>
             <li><a href="#collections">Ocean Whisper</a></li>
@@ -1612,15 +1822,6 @@ body{font-size:16px;line-height:1.66}
           </ul>
         </div>
         <div class="fcol">
-          <h4>House</h4>
-          <ul>
-            <li><a href="#contact">Appointments</a></li>
-            <li><a href="#contact" data-info="commissions">Commissions</a></li>
-            <li><a href="#contact" data-info="stockists">Stockists</a></li>
-            <li><a href="#contact" data-info="archive">Archive</a></li>
-          </ul>
-        </div>
-        <div class="fcol">
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:atelier@luminara.studio">atelier@luminara.studio</a></li>
@@ -1638,14 +1839,11 @@ body{font-size:16px;line-height:1.66}
         <label class="f-field" for="contactName"><span>Full name</span><input id="contactName" name="name" type="text" placeholder="Your name" autocomplete="name"></label>
         <label class="f-field" for="contactEmail"><span>Email address</span><input id="contactEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email"></label>
       </div>
-      <label class="f-field" for="contactMessage"><span>Message</span><textarea id="contactMessage" name="message" rows="3" placeholder="A piece, a commission, or a fitting…"></textarea></label>
+      <label class="f-field" for="contactMessage"><span>Message</span><textarea id="contactMessage" name="message" rows="3" placeholder="A product, delivery or order question…"></textarea></label>
       <button type="submit" class="f-submit">Send message</button>
       <p class="f-status" id="contactStatus" role="status" aria-live="polite"></p>
     </form>
 
-    <div class="pay" aria-label="Payment methods">
-      <i>Visa</i><i>Mastercard</i><i>Amex</i><i>PayPal</i><i>Apple Pay</i><i>Bank transfer</i>
-    </div>
     <div class="foot-bottom">
       <span>© 2026 Luminara. All rights reserved.</span>
       <span>Prices in USD · International checkout; duties confirmed before payment</span>
@@ -1666,16 +1864,6 @@ body{font-size:16px;line-height:1.66}
 </aside>
 
 <div class="toast" id="toast">Added to bag</div>
-
-<div style="display:none" aria-hidden="true">
-  <img src="assets/cutouts/product-lilac.webp" alt="" loading="lazy">
-  <img src="assets/cutouts/product-serpentine.webp" alt="" loading="lazy">
-  <img src="assets/cutouts/product-morpho.webp" alt="" loading="lazy">
-  <img src="assets/cutouts/product-deep.webp" alt="" loading="lazy">
-  <img src="assets/cutouts/product-coral.webp" alt="" loading="lazy">
-  <img src="assets/cutouts/product-cuff.webp" alt="" loading="lazy">
-  <img src="assets/cutouts/product-doves.webp" alt="" loading="lazy">
-</div>
 
 <script>
 (function(){
@@ -1851,7 +2039,7 @@ try{
   }
 }catch(e){ casket=[]; }
 
-function money(n){return "$"+Number(n).toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:0});}
+function money(n){return "US$"+Number(n).toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:0});}
 function saveBag(){
   try{ window.localStorage.setItem(CART_KEY, JSON.stringify(casket)); }catch(e){}
 }
@@ -1888,7 +2076,7 @@ var houseInfo={
   materials:{
     title:"Materials & care",
     intro:"The edit combines enamel, glass, resin, zircon and metal-tone finishes. Check the material note on each piece for its exact composition.",
-    rows:[["Wear","Put jewellery on after perfume, cosmetics and hair products."],["Store","Keep pieces separate in a dry pouch or box."],["Clean","Wipe with a soft dry cloth. Avoid polishing dips and abrasives."],["Questions","Contact Luminara with a photograph if a fitting or surface needs attention."]]
+    rows:[["Wear","Put jewellery on after perfume, cosmetics and hair products."],["Store","Keep pieces separate in a dry pouch or box."],["Clean","Wipe with a soft dry cloth. Avoid polishing dips and abrasives."],["Questions","Contact Luminara with a photograph if a surface or finish needs attention."]]
   },
   delivery:{
     title:"Delivery & returns",
@@ -1898,27 +2086,12 @@ var houseInfo={
   terms:{
     title:"Terms",
     intro:"Prices are shown in US dollars. Product availability, shipping and applicable import charges are confirmed before a secure payment link is sent.",
-    rows:[["Stock","A bag request reserves nothing until stock and delivery are confirmed."],["Images","Colour can vary with screen settings and lighting."],["Contact","Use the form in the footer for order, sourcing or fitting questions."]]
+    rows:[["Stock","A bag request reserves nothing until stock and delivery are confirmed."],["Images","Colour can vary with screen settings and lighting."],["Contact","Use the form in the footer for order, delivery or product questions."]]
   },
   privacy:{
     title:"Privacy",
     intro:"Contact and delivery details are used only to answer enquiries, confirm orders and arrange shipping.",
     rows:[["Data","We do not sell customer information."],["Payment","Card details are handled by the payment provider and are not stored by Luminara."],["Access","Write to Luminara to request, correct or remove your contact information."]]
-  },
-  commissions:{
-    title:"Sourcing requests",
-    intro:"Looking for a particular silhouette, colour or vintage-inspired piece? Send a short brief with any references, size requirements and date needed.",
-    rows:[["Request","Use the contact form and include images or measurements where possible."],["Response","Luminara will confirm whether a suitable piece is available."],["Ordering","Availability, price and delivery are confirmed before payment."]]
-  },
-  stockists:{
-    title:"Stockists",
-    intro:"Luminara currently sells directly through this website.",
-    rows:[["Wholesale","Buyer enquiries can be sent through the contact form."],["Private requests","Use the form to ask about a specific piece."]]
-  },
-  archive:{
-    title:"The first edit",
-    intro:"The Cabinet opens with seven vintage-inspired pieces across earrings, necklaces, bracelets and brooches.",
-    rows:[["Availability","When an option sells out, it is removed from the bag."],["Edits","New pieces are added as the Cabinet develops."],["Questions","Contact Luminara if you are looking for a piece you saw previously."]]
   }
 };
 
@@ -2432,7 +2605,7 @@ if(!reduce && "IntersectionObserver" in window){
   document.body.appendChild(loupe);
 
   var SIZE = 200;
-var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-media img,.muse-feature img";
+var SEL = ".railitem img,.cs figure img,.story-media img,.plate img,.spread-media img";
   var active = null, zoom = 2;
 
   function place(e){
