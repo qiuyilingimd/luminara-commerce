@@ -34,7 +34,7 @@ The current direction is an original warm-gallery editorial system. The referenc
 ### Spacing and layout
 
 - The current editorial pass uses the warm paper field `#F5F1E8`, offset by
-  near-black product photography and a deep petrol-blue accent.
+  near-black product photography and a small oxblood accent.
 - The former three-video strip is replaced by one still-life composition with a large image field and a restrained product-information column.
 - The product catalogue keeps each original photograph intact on its black
   velvet or hand-held background. Plates alternate between 4:5 and 16:10 crops,
@@ -46,8 +46,7 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 - Current page background: `#F5F1E8`.
 - Current highlight: `#FFF9EE`.
-- Current accent: `#21454C`.
-- Pale blue emphasis: `#B9D2CE`.
+- Current accent: `#5B2025`.
 - Text: near-black ink and warm graphite.
 - The palette otherwise comes from the supplied jewellery photography.
 - Dividers use low-opacity ink rather than grey filled panels.
@@ -135,33 +134,5 @@ The current direction is an original warm-gallery editorial system. The referenc
   offset editorial rhythm.
 - Added the supplied blue-thorn worn-scale study in The House section.
 - Updated closing and footer surfaces to oxblood and dark warm brown.
-
-### Pass 5 — petrol-blue editorial transition
-
-- Replaced the former oxblood interface colour with petrol blue `#21454C`.
-- Rebuilt the belief and closing chapters as layered petrol fields rather than
-  flat fills, retaining the warm ivory type and antique-gold details.
-- Changed catalogue filters, links, focus states and product-detail markers to
-  the same blue system.
-- Moved the footer from warm brown-black to blue-black `#111F23` so the final
-  page rhythm joins the supplied blue-hour photography.
-- Kept the red, coral and turquoise colour inside the product photography
-  unchanged so those jewellery details remain the focal points.
-
-### Pass 6 — organic editorial rhythm
-
-- Added a restrained shape system informed by the supplied asymmetric jewellery
-  reference while keeping Luminara's photography, copy and page structure.
-- Reshaped the belief portrait, Two Doves still life and worn-scale study into
-  arched or stone-like openings with offset surrounding rules.
-- Let the desktop Two Doves information column overlap the photographic field
-  and use a curved filter path in the collection.
-- Introduced three product-plate silhouettes across the six-piece edit instead
-  of repeating one rounded card.
-- Simplified the silhouette treatment on mobile so every product remains
-  complete and easy to compare.
-- Checked `1440 x 900`, `1024 x 768` and `390 x 844`: no horizontal overflow or
-  console errors; filtering, product detail controls, random selection, bag and
-  reduced-motion behaviour remain functional.
 
 final result: passed
