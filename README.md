@@ -15,13 +15,12 @@ filter arrivals, press feedback, drawer entrances and the still-life detail
 camera. GSAP remains responsible for page-level sequencing so the two engines
 do not animate the same properties on the same elements.
 
-All six catalogue products use transparent cut-out masters under
-`assets/cutouts/`. Product cards and drawers present them on a warm-white field;
-contextual hand and portrait photography is retained only in editorial
-sections.
+All six catalogue products use their original photography in both the collection
+and bag. The velvet, hand scale, surface and lighting stay intact; the site does
+not replace them with isolated cut-outs.
 
 The homepage hero is a single still image led by pink flower earrings with
-purple glass drops; the landscape and portrait compositions are separate
+purple drops; the landscape and portrait compositions are separate
 assets. The `Two Doves` editorial still includes three interactive detail
 points, and the vitrine includes a random selection path that respects the
 active category. An original ambient score in `assets/luminara-ambient-v4.m4a`
@@ -70,11 +69,15 @@ https://your-domain.example/api/stripe/webhook
 
 Listen for `checkout.session.completed`.
 
-Without Stripe credentials, checkout securely records a pending order and tells the customer that a payment link will follow. It never displays a false paid state.
+Without Stripe credentials, checkout records an order request and tells the
+customer that availability, delivery and payment will be reviewed separately.
+It never displays a false paid state or promises an automated payment flow.
 
 ## Order email
 
-Set `RESEND_API_KEY`, `ORDER_NOTIFY_EMAIL` and `ORDER_FROM_EMAIL` to send merchant notifications for orders and enquiries.
+Set all three of `RESEND_API_KEY`, `ORDER_NOTIFY_EMAIL` and `ORDER_FROM_EMAIL` to
+send merchant notifications for orders and enquiries. Merchant email stays
+disabled until every value is configured.
 
 ## Data
 

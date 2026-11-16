@@ -41,7 +41,7 @@ const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || "";
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
 const ORDER_NOTIFY_EMAIL = process.env.ORDER_NOTIFY_EMAIL || "";
-const ORDER_FROM_EMAIL = process.env.ORDER_FROM_EMAIL || "Luminara <orders@example.com>";
+const ORDER_FROM_EMAIL = process.env.ORDER_FROM_EMAIL || "";
 const PUBLIC_ORIGINS = new Set(
   [
     "https://qiuyilingimd.github.io",
@@ -261,7 +261,7 @@ function money(cents) {
 }
 
 async function sendMerchantEmail(subject, text) {
-  if (!RESEND_API_KEY || !ORDER_NOTIFY_EMAIL) return false;
+  if (!RESEND_API_KEY || !ORDER_NOTIFY_EMAIL || !ORDER_FROM_EMAIL) return false;
   try {
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -307,7 +307,7 @@ async function createStripeSession(order, quote) {
     params.set(`line_items[${index}][quantity]`, "1");
     params.set(`line_items[${index}][price_data][currency]`, "usd");
     params.set(`line_items[${index}][price_data][unit_amount]`, String(quote.shippingCents));
-    params.set(`line_items[${index}][price_data][product_data][name]`, "Tracked international shipping");
+    params.set(`line_items[${index}][price_data][product_data][name]`, "Shipping");
   }
   const response = await fetch("https://api.stripe.com/v1/checkout/sessions", {
     method: "POST",
@@ -372,7 +372,7 @@ async function handleApi(req, res, url) {
       ok: true,
       currency: "USD",
       paymentsConfigured: Boolean(STRIPE_SECRET_KEY),
-      emailConfigured: Boolean(RESEND_API_KEY && ORDER_NOTIFY_EMAIL)
+      emailConfigured: Boolean(RESEND_API_KEY && ORDER_NOTIFY_EMAIL && ORDER_FROM_EMAIL)
     });
   }
 
@@ -460,10 +460,10 @@ async function handleApi(req, res, url) {
       status: "pending_payment",
       paymentConfigured: Boolean(STRIPE_SECRET_KEY),
       paymentError: paymentError || null,
-      notificationConfigured: Boolean(RESEND_API_KEY && ORDER_NOTIFY_EMAIL),
-      message: RESEND_API_KEY && ORDER_NOTIFY_EMAIL
-        ? "Order received. We will send a secure payment link after confirming stock and shipping."
-        : "Order received and saved. Payment and merchant email are not configured for this deployment; no payment has been taken."
+      notificationConfigured: Boolean(RESEND_API_KEY && ORDER_NOTIFY_EMAIL && ORDER_FROM_EMAIL),
+      message: RESEND_API_KEY && ORDER_NOTIFY_EMAIL && ORDER_FROM_EMAIL
+        ? "Order request received. Luminara will confirm availability, delivery and payment details with you directly."
+        : "Order request received and saved. No payment has been taken. Luminara will review availability and delivery before payment is requested."
     });
   }
 
@@ -618,7 +618,7 @@ server.listen(PORT, HOST, () => {
   }
   console.log(`Listening on: ${HOST}:${PORT}`);
   console.log(`Stripe: ${STRIPE_SECRET_KEY ? "configured" : "not configured — orders saved as pending"}`);
-  console.log(`Order email: ${RESEND_API_KEY && ORDER_NOTIFY_EMAIL ? "configured" : "not configured"}`);
+  console.log(`Order email: ${RESEND_API_KEY && ORDER_NOTIFY_EMAIL && ORDER_FROM_EMAIL ? "configured" : "not configured"}`);
 });
 
 function shutdown(signal) {

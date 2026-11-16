@@ -57,10 +57,10 @@
         document.querySelector("#total").textContent="$"+Number(order.total).toFixed(0)+" USD";
         if(order.status==="paid"){
           document.querySelector("#title").textContent="Payment confirmed.";
-          document.querySelector("#message").textContent="Thank you. We will email tracking details once your order ships.";
-          document.querySelector("#statusNote").textContent="A receipt and dispatch notice will follow by email.";
+          document.querySelector("#message").textContent="Thank you. Luminara will review the order and confirm delivery details separately.";
+          document.querySelector("#statusNote").textContent="Keep the payment receipt provided by the checkout provider.";
         }else{
-          document.querySelector("#message").textContent="Your order has been received. We will confirm stock, shipping and import duties before sending a secure payment link.";
+          document.querySelector("#message").textContent="Your order request has been received. Luminara will confirm availability, shipping and import charges before payment is requested.";
           document.querySelector("#statusNote").textContent="No payment has been taken yet.";
         }
       }catch{

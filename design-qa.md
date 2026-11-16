@@ -6,11 +6,11 @@ Date: 2026-11-16
 
 - Colour reference: `D:/14488/Pictures/设计.library/images/MW6M8G7I1IFHD.info/搜索结果页面.webp`
 - Editorial source asset: `assets/editorial-two-doves-white.webp`
-- Implementation: `http://127.0.0.1:4180/`
-- Desktop implementation capture: `../../outputs/photo-system-round/desktop-top.png`
-- Desktop catalogue capture: `../../outputs/photo-system-round/desktop-vitrine.png`
-- Mobile implementation capture: `../../outputs/photo-system-round/mobile-top.png`
-- Mobile catalogue capture: `../../outputs/photo-system-round/mobile-vitrine.png`
+- Implementation: `http://127.0.0.1:4175/`
+- Desktop implementation capture: `../../outputs/storefront-audit-2026-11-16/desktop-01.png`
+- Desktop catalogue capture: `../../outputs/storefront-audit-2026-11-16/desktop-04.png`
+- Mobile implementation capture: `../../outputs/storefront-audit-2026-11-16/mobile-01.png`
+- Mobile catalogue capture: `../../outputs/storefront-audit-2026-11-16/mobile-04.png`
 - Desktop detail interaction: `../../outputs/interactive-storefront-1440-detail.png`
 - Mobile detail interaction: `../../outputs/interactive-storefront-390-detail.png`
 
@@ -33,18 +33,20 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 ### Spacing and layout
 
-- The current warm editorial pass resolves the page to `#F2EBDD`, while the
-  earlier comparison capture used the previous warm-grey field.
+- The current editorial pass uses the warm paper field `#F5F1E8`, offset by
+  near-black product photography and a small oxblood accent.
 - The former three-video strip is replaced by one still-life composition with a large image field and a restrained product-information column.
-- The product catalogue uses consistent `4:5` plates, warm `#EFEFED` fields and borderless cut-outs.
+- The product catalogue keeps each original photograph intact on its black
+  velvet or hand-held background. Plates alternate between 4:5 and 16:10 crops,
+  with no borders or cut-out treatment.
 - Navigation is fully transparent over the opening image. After the opening image it becomes a light translucent warm-grey blur so labels remain legible over editorial photography.
 - Desktop navigation, section headings and product content share a stable left/right editorial grid; mobile collapses to a natural single column without horizontal overflow.
 
 ### Colors and tokens
 
-- Current page background: `#F2EBDD`.
-- Current surface: `#FAF6EE`.
-- Current highlight: `#FFF9EF`.
+- Current page background: `#F5F1E8`.
+- Current highlight: `#FFF9EE`.
+- Current accent: `#5B2025`.
 - Text: near-black ink and warm graphite.
 - The palette otherwise comes from the supplied jewellery photography.
 - Dividers use low-opacity ink rather than grey filled panels.
@@ -54,13 +56,14 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 - The supplied photograph is preserved at native portrait composition and encoded as a `1329 x 1668` WebP asset.
 - The page uses a deliberate central editorial crop. The product, flower, stone drop and reflective metal detail remain sharp with no halos, stretching or synthetic replacement.
-- Six catalogue products are real cut-outs on matching warm-white backgrounds.
-- The still-life image now has three accessible detail points for the wing structure, yellow-glass drop and open collar.
+- Six catalogue products retain their original photography, including black
+  velvet, hand scale, surface texture and source lighting.
+- The still-life image now has three accessible detail points for the wing structure, yellow drop and collar.
 
 ### Copy and content
 
 - The still-life copy describes materials, form and styling rather than narrating the photograph.
-- `Two Doves` is positioned as a balanced open-collar form with mirrored bird motifs, zircon detailing and a yellow-glass drop.
+- `Two Doves` is positioned as a balanced collar form with mirrored bird motifs, clear faceted detail and a yellow drop.
 - The black-and-white model section and the repeated three-card curation explanation were removed.
 - The former `THE CURATION NOTE` statement has been removed in full.
 - Unsupported appointments, commissions, stockists, archive and payment-method claims were removed from the footer.

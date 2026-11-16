@@ -8,7 +8,7 @@ Restarted on 2026-11-14 from the narrative edition committed as
 - storefront visual system and editorial film
 - homepage and product narrative
 - browser motion and ambient-sound behavior
-- seven-product catalogue
+- six-product catalogue
 - order confirmation page
 
 ## Carried forward from the latest deployment

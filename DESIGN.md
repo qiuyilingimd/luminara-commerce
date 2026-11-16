@@ -3,8 +3,9 @@
 ## Position
 
 Luminara is a curated house for vintage-inspired statement jewellery. The first
-edit combines six decorative silhouettes with enamel, glass, resin, zircon and
-metal-tone finishes at approximately US$35 to US$58. The primary customer is a
+edit combines six decorative silhouettes with metal-tone finishes, glossy colour
+detail, sculpted floral forms and mixed reflective surfaces at approximately US$35 to
+US$58. The primary customer is a
 style-led shopper who mixes vintage or second-hand pieces with contemporary
 clothes and uses jewellery to make a familiar outfit personal. The primary
 action is to add a specific piece to the bag.
@@ -44,13 +45,13 @@ photographs. The butterfly product has been removed from the visual system.
 
 ## Page Rhythm
 
-1. A single still-life hero led by pink flower earrings with purple glass drops
-   on black thorn branches against a blue sky, followed by a restrained
-   “The bloom and the thorn.” editorial overlay.
+1. A single still-life hero led by pink flower earrings with purple drops
+   on black thorn branches against a blue sky. The image carries the opening
+   without an editorial text overlay.
 2. A walnut-and-oxblood “Taste is assembled.” belief chapter: quiet note, large
    centred statement and a single glass-shelf earring study.
 3. A single Two Doves still life with three inspectable material details.
-4. A complete, filterable six-piece Cabinet using the original product
+4. A complete, filterable six-piece collection using the original product
    photography and varied editorial scale.
 5. A worn-scale image from the supplied blue-thorn campaign, used as context
    rather than repeated as a cover.

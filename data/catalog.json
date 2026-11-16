@@ -11,7 +11,7 @@
   "products": [
     {
       "id": "lilac",
-      "no": "Pl. 03",
+      "no": "Pl. 05",
       "category": "Earrings",
       "series": "Mineral Glow",
       "name": "Lilac Reverie",
@@ -19,35 +19,35 @@
       "price": 45,
       "img": "assets/lilac-earrings.jpg",
       "pos": "50% 62%",
-      "desc": "Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
+      "desc": "Two clustered earrings combine sculpted lilac flowers, rounded purple drops and faceted lilac detail. The tonal mix gives a soft colour story with enough shine to hold its own against dark hair.",
       "spec": [
-        ["Material", "Glass petals, cubic zirconia"],
+        ["Finish", "Lilac-tone floral and faceted detail"],
         ["Setting", "Gold-tone metal"],
-        ["Drop", "38 mm"]
+        ["Form", "Clustered drop"]
       ],
       "sizes": ["One size"]
     },
     {
       "id": "snake",
-      "no": "Pl. 02",
+      "no": "Pl. 01",
       "category": "Earrings",
-      "series": "Enamel Reverie",
+      "series": "Colour Reverie",
       "name": "Serpentine Psalm",
       "cn": "灵蛇之诗",
       "price": 49,
       "img": "assets/snake-earrings.jpg",
       "pos": "50% 40%",
-      "desc": "A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
+      "desc": "A winding serpent silhouette pairs pale turquoise with deep red and is suspended from a faceted red detail. The long curve frames the jaw and gives a simple shirt or dark collar a sharper line.",
       "spec": [
         ["Body", "Gold-tone metal"],
-        ["Finish", "Turquoise and oxblood enamel"],
-        ["Drop", "72 mm"]
+        ["Finish", "Turquoise and deep red colour"],
+        ["Detail", "Red and clear faceted detail"]
       ],
       "sizes": ["One size"]
     },
     {
       "id": "deep",
-      "no": "Pl. 05",
+      "no": "Pl. 02",
       "category": "Brooches",
       "series": "Ocean Whisper",
       "name": "Nocturne of the Deep",
@@ -55,17 +55,17 @@
       "price": 55,
       "img": "assets/jellyfish.jpg",
       "pos": "50% 34%",
-      "desc": "Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
+      "desc": "Four silver-tone sculptural pins combine shell, bead-like and organic forms. Wear the set on a lapel, or separate one piece as a quieter mark.",
       "spec": [
         ["Body", "Silver-tone metal"],
-        ["Stones", "Glass pearl, zircon"],
-        ["Sizes", "38–62 mm"]
+        ["Detail", "Pearl-tone bead"],
+        ["Set", "Four mixed sculptural pins"]
       ],
       "sizes": ["Set of four"]
     },
     {
       "id": "coral",
-      "no": "Pl. 06",
+      "no": "Pl. 03",
       "category": "Earrings",
       "series": "Ocean Whisper",
       "name": "Coral Reliquary",
@@ -73,11 +73,11 @@
       "price": 35,
       "img": "assets/coral-earrings.jpg",
       "pos": "60% 50%",
-      "desc": "Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
+      "desc": "Two gold-tone drop earrings frame coral-tone ovals with turquoise-tone accents and fine sculpted settings. The warm red-orange reads strongly against black and ecru.",
       "spec": [
-        ["Material", "Coral-tone glass, gold-tone metal"],
-        ["Stone", "Resin cabochon, zircon"],
-        ["Drop", "42 mm"]
+        ["Material", "Gold-tone metal"],
+        ["Surface", "Coral-tone and turquoise-tone detail"],
+        ["Form", "Sculpted drop"]
       ],
       "sizes": ["One size"]
     },
@@ -91,17 +91,17 @@
       "price": 52,
       "img": "assets/opaline-cuff.jpg",
       "pos": "50% 46%",
-      "desc": "An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
+      "desc": "A gold-tone bracelet is built from articulated geometric links, with blue-green patterned panels framed by clear detail. Its broad horizontal line gives the wrist presence without competing with rings.",
       "spec": [
         ["Body", "Gold-tone metal"],
-        ["Inlay", "Opal-tone resin, cubic zirconia"],
-        ["Fit", "48 / 52 / 56 mm"]
+        ["Pattern", "Blue-green patterned panels"],
+        ["Border", "Clear faceted detail"]
       ],
-      "sizes": ["48 mm", "52 mm", "56 mm"]
+      "sizes": ["One size"]
     },
     {
       "id": "doves",
-      "no": "Pl. 07",
+      "no": "Pl. 06",
       "category": "Necklaces",
       "series": "Nocturne Sculpture",
       "name": "Two Doves",
@@ -109,11 +109,11 @@
       "price": 58,
       "img": "assets/doves-necklace.jpg",
       "pos": "50% 46%",
-      "desc": "Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
+      "desc": "Two silver-tone doves meet around a yellow faceted drop, their wings picked out with dense clear detailing. The open curve sits across the collarbone and gives a dark neckline a single, strong centre.",
       "spec": [
         ["Body", "Silver-tone metal"],
-        ["Stones", "Cubic zirconia, yellow glass"],
-        ["Length", "41 cm adjustable"]
+        ["Detail", "Clear faceted detail and yellow drop"],
+        ["Form", "Collar with mirrored bird motifs"]
       ],
       "sizes": ["One size"]
     }
