@@ -44,8 +44,8 @@
         card.style.setProperty("--spot-opacity", ".34");
         card.style.setProperty("--glare-shift", ((nx * 150) - 75).toFixed(1) + "%");
         card.style.setProperty("--glare-opacity", ".52");
-        card.style.setProperty("--scene-x", ((nx - .5) * -14).toFixed(1) + "px");
-        card.style.setProperty("--scene-y", (((y / Math.max(1, rect.height)) - .5) * -10).toFixed(1) + "px");
+        card.style.setProperty("--scene-x", ((nx - .5) * -4).toFixed(1) + "px");
+        card.style.setProperty("--scene-y", (((y / Math.max(1, rect.height)) - .5) * -3).toFixed(1) + "px");
         lastEvent = null;
       }
 
@@ -122,7 +122,7 @@
       );
     }
 
-    /* Product scenes enter in short visual beats, preserving a readable wall. */
+    /* Product material studies enter in short visual beats, preserving a readable wall. */
     ScrollTrigger.batch(".vitem", {
       start: "top 88%",
       once: true,

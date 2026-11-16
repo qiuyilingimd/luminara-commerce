@@ -1857,24 +1857,26 @@ body{font-size:16px;line-height:1.68}
 
 /* ---------- belief chapter: statement, image and a change of light ---------- */
 .belief{
-  --belief-deep:#1B2632;
-  --belief-paper:#F4ECDF;
+  --belief-deep:#211210;
+  --belief-paper:#F4E9DA;
   position:relative;
   overflow:hidden;
   padding:clamp(86px,9vw,148px) var(--gut) clamp(96px,10vw,164px);
   color:var(--belief-paper);
   background:
-    radial-gradient(circle at 74% 30%,rgba(128,88,67,.16),transparent 34%),
-    linear-gradient(142deg,#1B2632 0%,#24303B 58%,#17212C 100%);
+    radial-gradient(circle at 78% 24%,rgba(200,129,91,.2),transparent 31%),
+    radial-gradient(ellipse at 16% 82%,rgba(107,31,43,.2),transparent 42%),
+    repeating-linear-gradient(112deg,rgba(255,247,235,.018) 0 1px,transparent 1px 4px),
+    linear-gradient(142deg,#341715 0%,#4A1C23 54%,#1E100E 100%);
 }
 .belief::before{
   content:"LUMINARA";
   position:absolute;left:50%;bottom:-.19em;transform:translateX(-50%);
   font-family:var(--f-display);font-size:clamp(7rem,20vw,20rem);line-height:.72;
-  letter-spacing:.04em;color:rgba(244,236,223,.025);white-space:nowrap;pointer-events:none;
+  letter-spacing:.04em;color:rgba(244,233,218,.034);white-space:nowrap;pointer-events:none;
 }
 .belief::after{
-  content:"";position:absolute;inset:20px;border:1px solid rgba(244,236,223,.09);
+  content:"";position:absolute;inset:20px;border:1px solid rgba(244,233,218,.1);
   pointer-events:none;
 }
 .belief-grid{
@@ -1882,48 +1884,48 @@ body{font-size:16px;line-height:1.68}
   display:grid;grid-template-columns:minmax(150px,.38fr) minmax(390px,1.3fr) minmax(270px,.64fr);
   align-items:center;gap:clamp(35px,5vw,86px);
 }
-.belief .kicker{color:rgba(244,236,223,.58)}
+.belief .kicker{color:rgba(244,233,218,.62)}
 .belief-note{
   align-self:center;padding:14px 0 14px 19px;
-  border-left:1px solid #9C4B55;
+  border-left:1px solid #C57F5A;
 }
 .belief-note p{
   max-width:29ch;margin-top:15px;font-size:14px;line-height:1.78;
-  color:rgba(244,236,223,.72);
+  color:rgba(244,233,218,.74);
 }
 .belief-note a{
   display:inline-flex;align-items:center;gap:8px;margin-top:22px;
-  padding-bottom:4px;border-bottom:1px solid rgba(244,236,223,.28);
+  padding-bottom:4px;border-bottom:1px solid rgba(244,233,218,.3);
   font-family:var(--f-label);font-size:9px;line-height:1.4;letter-spacing:.16em;
-  text-transform:uppercase;color:rgba(244,236,223,.72);
+  text-transform:uppercase;color:rgba(244,233,218,.74);
   transition:color .3s,border-color .3s;
 }
 .belief-note a:hover{color:var(--belief-paper);border-bottom-color:var(--belief-paper)}
 .belief-statement{text-align:center}
 .belief-monogram{
   display:block;font-family:var(--f-display);font-size:clamp(3.3rem,5.8vw,5.9rem);
-  line-height:.66;color:#C9747B;
+  line-height:.66;color:#D99879;
 }
 .belief-rule{
-  display:block;width:78px;height:1px;margin:20px auto 25px;background:#9C4B55;
+  display:block;width:78px;height:1px;margin:20px auto 25px;background:#C57F5A;
 }
 .belief-index{
   font-family:var(--f-label);font-size:9.5px;line-height:1.5;letter-spacing:.2em;
-  text-transform:uppercase;color:rgba(244,236,223,.55);
+  text-transform:uppercase;color:rgba(244,233,218,.6);
 }
 .belief h2{
   max-width:9ch;margin:21px auto 0;
   font-family:var(--f-display);font-size:clamp(4.25rem,7.4vw,8.5rem);
   font-weight:400;line-height:.83;letter-spacing:-.045em;color:var(--belief-paper);
 }
-.belief h2 em{display:block;font-weight:400;color:#D88991}
+.belief h2 em{display:block;font-weight:400;color:#E1A384}
 .belief-dek{
   max-width:49ch;margin:29px auto 0;font-size:15px;line-height:1.7;
-  color:rgba(244,236,223,.72);
+  color:rgba(244,233,218,.74);
 }
 .belief-cta{
   display:inline-flex;align-items:center;gap:12px;min-height:44px;margin-top:26px;
-  padding:0 0 6px;border-bottom:1px solid rgba(244,236,223,.5);
+  padding:0 0 6px;border-bottom:1px solid rgba(244,233,218,.52);
   font-family:var(--f-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--belief-paper);
 }
@@ -1931,76 +1933,120 @@ body{font-size:16px;line-height:1.68}
 .belief-cta:hover svg{transform:translateX(5px)}
 .belief-art{
   position:relative;justify-self:end;align-self:center;width:min(100%,430px);margin:0;
-  padding:10px;overflow:hidden;background:rgba(244,236,223,.055);
-  box-shadow:0 50px 100px rgba(5,10,16,.34);
+  padding:10px;overflow:hidden;background:rgba(244,233,218,.065);
+  box-shadow:0 50px 100px rgba(25,10,8,.38);
 }
 .belief-art::before{
-  content:"";position:absolute;inset:0;border:1px solid rgba(244,236,223,.25);pointer-events:none;z-index:2;
+  content:"";position:absolute;inset:0;border:1px solid rgba(244,233,218,.27);pointer-events:none;z-index:2;
 }
 .belief-art img{
   display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 43%;
-  filter:saturate(.88) contrast(1.06) brightness(.92);
+  filter:grayscale(.62) sepia(.16) saturate(.78) contrast(1.06) brightness(.92);
 }
 .belief-art figcaption{
   position:absolute;z-index:3;left:10px;right:10px;bottom:10px;
   display:flex;justify-content:space-between;gap:16px;padding:38px 18px 15px;
-  background:linear-gradient(transparent,rgba(9,14,20,.84));
+  background:linear-gradient(transparent,rgba(23,10,8,.86));
   font-family:var(--f-label);font-size:8px;line-height:1.5;letter-spacing:.14em;
-  text-transform:uppercase;color:rgba(244,236,223,.78);
+  text-transform:uppercase;color:rgba(244,233,218,.8);
 }
 .belief-art figcaption span:last-child{text-align:right}
 
-/* ---------- photographic product scenes ---------- */
+/* ---------- product material studies: sharp surface, sharp object ---------- */
 .vitem{
   --scene-x:0px;--scene-y:0px;
 }
 .vitem[data-scene] .v-plate{
-  background-color:#201A18;
+  background-color:#2D1B16;
+  border:0;
 }
 .v-scene{
-  position:absolute;z-index:0;inset:-16px;display:block;pointer-events:none;
-  background-repeat:no-repeat;background-size:cover;background-position:50% 50%;
-  filter:saturate(.72) contrast(1.08) brightness(.72) blur(2.6px);
-  transform:translate3d(var(--scene-x),var(--scene-y),0) scale(1.055);
-  transition:transform .55s var(--ease),filter .55s var(--ease);
+  position:absolute;z-index:0;inset:-8px;display:block;pointer-events:none;
+  background-repeat:repeat;
+  filter:none;
+  transform:translate3d(var(--scene-x),var(--scene-y),0) scale(1.035);
+  transition:transform .55s var(--ease);
 }
 .vitem[data-scene="thorn"] .v-scene{
-  background-image:url("assets/editorial-worn-scale.webp");
+  background-color:#511C27;
+  background-image:
+    radial-gradient(ellipse at 28% 18%,rgba(255,204,172,.2),transparent 31%),
+    repeating-linear-gradient(115deg,rgba(255,246,232,.028) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(25deg,rgba(34,8,14,.11) 0 1px,transparent 1px 4px),
+    linear-gradient(145deg,#722E39,#421720 58%,#2A0F15);
+  background-size:auto,4px 4px,5px 5px,auto;
 }
 .vitem[data-scene="glass"] .v-scene{
-  background-image:url("assets/editorial-earrings-glass.webp");
-  background-position:50% 41%;
+  background-color:#C9B79F;
+  background-image:
+    radial-gradient(ellipse at 22% 14%,rgba(255,251,241,.48),transparent 30%),
+    repeating-linear-gradient(174deg,transparent 0 21px,rgba(83,59,42,.12) 21px 22px,transparent 22px 41px),
+    repeating-linear-gradient(168deg,transparent 0 53px,rgba(255,250,239,.21) 53px 54px,transparent 54px 79px),
+    linear-gradient(128deg,#E6DED1,#C2AC92 53%,#A98D72);
+  background-size:auto,auto,auto,auto;
 }
 .vitem[data-scene="oxblood"] .v-scene{
-  background-image:url("assets/cover-hand-necklace.jpg");
-  background-position:67% 43%;
+  background-color:#3B241B;
+  background-image:
+    radial-gradient(ellipse at 20% 10%,rgba(224,164,105,.26),transparent 33%),
+    repeating-linear-gradient(94deg,transparent 0 13px,rgba(27,13,9,.24) 13px 15px,transparent 15px 27px),
+    repeating-linear-gradient(87deg,rgba(255,222,178,.06) 0 1px,transparent 1px 7px),
+    linear-gradient(132deg,#765036,#3C251A 54%,#20120E);
+  background-size:auto,auto,auto,auto;
 }
 .vitem[data-scene="cuff"] .v-scene{
-  background-image:url("assets/hero-close-cuff.jpg");
-  background-position:69% 50%;
+  background-color:#2C2522;
+  background-image:
+    radial-gradient(ellipse at 74% 18%,rgba(241,192,138,.25),transparent 27%),
+    radial-gradient(ellipse at 28% 87%,rgba(113,55,42,.2),transparent 38%),
+    repeating-linear-gradient(176deg,rgba(255,248,237,.025) 0 1px,transparent 1px 5px),
+    linear-gradient(145deg,#4B3B34,#241B18 62%,#15100E);
+  background-size:auto,auto,5px 5px,auto;
 }
 .vitem[data-scene="garden"] .v-scene{
-  background-image:url("assets/editorial-two-doves-white.webp");
-  background-position:18% 55%;
-}
-.vitem[data-scene] .v-plate:hover .v-scene{
-  filter:saturate(.78) contrast(1.08) brightness(.76) blur(2.1px);
+  background-color:#9B7045;
+  background-image:
+    radial-gradient(ellipse at 18% 19%,rgba(255,239,198,.28),transparent 29%),
+    repeating-linear-gradient(91deg,rgba(255,232,187,.075) 0 1px,transparent 1px 4px),
+    repeating-linear-gradient(4deg,rgba(63,35,16,.09) 0 1px,transparent 1px 9px),
+    linear-gradient(138deg,#BE9561,#8A5D36 51%,#513019);
+  background-size:auto,4px 4px,9px 9px,auto;
 }
 .vitem[data-scene] .v-plate::after{
+  display:block;
   background:
-    radial-gradient(circle 180px at var(--spot-x) var(--spot-y),rgba(255,243,220,.24),rgba(179,135,85,.08) 38%,transparent 74%),
-    linear-gradient(to top,rgba(11,12,14,.82),rgba(11,12,14,.12) 62%,rgba(11,12,14,.24));
+    radial-gradient(ellipse 220px 180px at var(--spot-x) var(--spot-y),rgba(255,244,222,.3),rgba(210,162,105,.09) 42%,transparent 72%),
+    radial-gradient(ellipse at center,transparent 48%,rgba(22,10,8,.16) 100%);
   mix-blend-mode:normal;
-  opacity:1;
+  opacity:.82;
   transition:background .35s var(--ease);
 }
 .vitem[data-scene] .v-plate .v-product{
   position:relative;z-index:3;
   object-fit:contain;padding:clamp(20px,3.4vw,48px);
-  filter:drop-shadow(0 24px 30px rgba(7,8,10,.38)) drop-shadow(0 2px 4px rgba(255,245,225,.16));
+  filter:drop-shadow(0 24px 28px rgba(21,9,7,.34)) drop-shadow(0 2px 3px rgba(255,246,229,.18));
 }
-.vitem[data-scene] .v-no{z-index:5;color:rgba(255,248,235,.82)}
+.vitem[data-scene] .v-no{
+  z-index:5;color:rgba(255,248,235,.84);
+  text-shadow:0 1px 8px rgba(28,12,9,.38);
+}
+.vitem[data-scene="glass"] .v-no,
+.vitem[data-scene="lilac"] .v-no{
+  color:rgba(51,31,24,.62);text-shadow:none;
+}
 .vitem[data-scene] .v-meta .kicker{letter-spacing:.18em}
+.vitem[data-scene="lilac"] .v-plate{
+  background-color:#B9A69A;
+}
+.vitem[data-scene="lilac"] .v-scene{
+  background-color:#B9A69A;
+  background-image:
+    radial-gradient(ellipse at 25% 18%,rgba(255,250,240,.38),transparent 31%),
+    repeating-linear-gradient(112deg,rgba(255,250,240,.07) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(22deg,rgba(70,43,34,.055) 0 1px,transparent 1px 5px),
+    linear-gradient(138deg,#D5C8BA,#A99285 56%,#806D64);
+  background-size:auto,4px 4px,5px 5px,auto;
+}
 
 @media (max-width:1023px){
   .belief-grid{
@@ -2020,7 +2066,7 @@ body{font-size:16px;line-height:1.68}
   .belief-grid{grid-template-columns:1fr;gap:0;text-align:center}
   .belief-note{
     grid-column:1;grid-row:2;justify-self:center;max-width:340px;margin:48px 0 0;
-    padding:14px 0 0;border-left:0;border-top:1px solid #9C4B55;text-align:left;
+    padding:14px 0 0;border-left:0;border-top:1px solid #C57F5A;text-align:left;
   }
   .belief-note p{max-width:none;font-size:13px}
   .belief-note a{margin-top:17px}
@@ -2033,9 +2079,6 @@ body{font-size:16px;line-height:1.68}
   .belief-art{grid-column:1;grid-row:3;width:min(100%,390px);margin-top:40px;padding:8px}
   .belief-art figcaption{left:8px;right:8px;bottom:8px;padding:30px 12px 11px;font-size:7px;letter-spacing:.1em}
   .vitem[data-scene] .v-plate .v-product{padding:17% 14%}
-  .vitem[data-scene="thorn"] .v-scene,
-  .vitem[data-scene="glass"] .v-scene,
-  .vitem[data-scene="garden"] .v-scene{background-position:50% 45%}
 }
 </style>
 </head>
@@ -2216,7 +2259,7 @@ body{font-size:16px;line-height:1.68}
         <figure class="v-plate r1610"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-cuff.webp" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy"><span class="v-no">04</span></figure>
         <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">US$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
       </article>
-      <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings" data-scene="glass">
+      <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings" data-scene="lilac">
         <figure class="v-plate r1610"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-lilac.webp" alt="Lilac Reverie earrings" loading="lazy"><span class="v-no">05</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">US$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
       </article>
