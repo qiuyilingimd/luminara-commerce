@@ -29,18 +29,19 @@ must not be published without evidence.
 - Display: Cormorant Garamond roman and italic
 - Text and labels: Jost
 
-Photography leads. The page alternates warm ivory fields, isolated product
-plates, one oxblood art field and a dark atelier image. Images remain uncropped
-where the jewellery silhouette matters and move to macro crops where material
-is the subject.
+Photography leads. The page alternates warm ivory fields, a slate-blue belief
+chapter, tactile product scenes and an oxblood closing field. Images remain
+uncropped where the jewellery silhouette matters and move to macro crops where
+material is the subject.
 
 The product system follows three evidence types: whole form, material surface
-and worn scale. These are explained in the Assembly section and apply to the
-Cabinet: product plates use a deliberate mix of 4:5 and 16:10 crops so the eye
-moves between headpieces, bracelets and necklaces instead of reading a repeated
-catalogue grid. Catalogue and drawer imagery use isolated transparent product
-masters on a warm-white field; body and hand photography remains in the
-editorial sections. The butterfly product has been removed from the visual
+and worn scale. Cabinet plates pair each transparent product master with a
+softly defocused photographic scene. The scene supplies depth, hand scale,
+surface and light without competing with the piece; the jewellery remains the
+only sharp focal layer. Plates use a deliberate mix of 4:5 and 16:10 crops so
+the eye moves between earrings, bracelets and necklaces instead of reading a
+repeated catalogue grid. Drawer imagery keeps isolated product masters on a
+warm-white field. The butterfly product has been removed from the visual
 system.
 
 ## Page Rhythm
@@ -48,26 +49,28 @@ system.
 1. A single still-life hero led by pink flower earrings with purple glass drops
    on black thorn branches against a blue sky, followed by a restrained
    “The bloom and the thorn.” editorial overlay.
-2. An asymmetric “Taste is assembled.” spread with Serpentine Psalm isolated
-   against oxblood.
-3. First product edit with four clear names, materials and US-dollar prices.
-4. A single Two Doves still life with three inspectable material details.
-5. A complete, filterable six-piece Cabinet with varied editorial scale.
-6. A worn-scale image from the supplied blue-thorn campaign, used as context
+2. A slate-blue “Taste is assembled.” belief chapter: quiet note, large
+   centred statement and a single glass-shelf earring study.
+3. A single Two Doves still life with three inspectable material details.
+4. A complete, filterable six-piece Cabinet with photographic scenes behind
+   clear product masters and varied editorial scale.
+5. A worn-scale image from the supplied blue-thorn campaign, used as context
    rather than repeated as a cover.
-7. An oxblood closing statement and a dark warm footer with service information.
+6. An oxblood closing statement and a dark warm footer with service information.
 
 ## Motion
 
 The homepage opens on one static jewellery image. Landscape and portrait are
 composed separately so the earrings remain complete at both sizes. The mobile
 hero uses a 4:5 composition and the following proposition drops its long body
-copy to protect the image-led rhythm. The
-worn-scale image appears later as a single editorial study and uses the supplied
-blue-thorn composition at its natural contrast. GSAP is limited to image
-reveals and scroll handoff. Motion supplies spring-based product hover, filter
-arrivals, press feedback and drawer content entrances. Lenis provides smooth
-scrolling. Reduced-motion users see still images and no decorative drift.
+copy to protect the image-led rhythm. The belief chapter reveals note, statement
+and image as one short editorial
+sequence, with a restrained vertical camera drift in the photograph. Product
+scenes respond to the pointer through a small background shift and a moving
+pool of light while the product master stays sharp and stable. Motion supplies
+spring-based product hover, filter arrivals, press feedback and drawer content
+entrances. Lenis provides smooth scrolling. Reduced-motion users see the full
+page instantly with no decorative drift.
 
 ## Sound
 
