@@ -33,7 +33,8 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 ### Spacing and layout
 
-- All primary sections resolve to the warm page colour `#E2E2E2`.
+- The current warm editorial pass resolves the page to `#F2EBDD`, while the
+  earlier comparison capture used the previous warm-grey field.
 - The former three-video strip is replaced by one still-life composition with a large image field and a restrained product-information column.
 - The product catalogue uses consistent `4:5` plates, warm `#EFEFED` fields and borderless cut-outs.
 - Navigation is fully transparent over the opening image. After the opening image it becomes a light translucent warm-grey blur so labels remain legible over editorial photography.
@@ -41,8 +42,9 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 ### Colors and tokens
 
-- Page background: `#E2E2E2`.
-- Product and image frames: `#EFEFED`.
+- Current page background: `#F2EBDD`.
+- Current surface: `#FAF6EE`.
+- Current highlight: `#FFF9EF`.
 - Text: near-black ink and warm graphite.
 - The palette otherwise comes from the supplied jewellery photography.
 - Dividers use low-opacity ink rather than grey filled panels.
@@ -52,7 +54,7 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 - The supplied photograph is preserved at native portrait composition and encoded as a `1329 x 1668` WebP asset.
 - The page uses a deliberate central editorial crop. The product, flower, stone drop and reflective metal detail remain sharp with no halos, stretching or synthetic replacement.
-- Seven catalogue products are real cut-outs on matching white backgrounds.
+- Six catalogue products are real cut-outs on matching warm-white backgrounds.
 - The still-life image now has three accessible detail points for the wing structure, yellow-glass drop and open collar.
 
 ### Copy and content
@@ -67,7 +69,8 @@ The current direction is an original warm-gallery editorial system. The referenc
 ### Responsiveness and interaction
 
 - Checked at `1440 x 900`, `1024 x 768`, `820 x 1180`, `768 x 1024`, `390 x 844` and `320 x 760`: no horizontal overflow.
-- All seven product plates measure the same aspect ratio at every checked width.
+- Product plates now deliberately alternate between 4:5 and 16:10 crops while
+  remaining responsive at every checked width.
 - Product filtering, hover response, product drawer and bag action work with no browser console errors.
 - The still-life detail markers move the camera toward the selected material or construction detail, update an `aria-live` note and can return to the full view.
 - `Let the edit choose` scans the currently visible pieces and opens one product, including while a category filter is active.
@@ -101,7 +104,8 @@ The current direction is an original warm-gallery editorial system. The referenc
 ## Checks
 
 - `node ../layout-photo-system.mjs`: passed at six viewports; no overflow and all product plates use one `0.8` ratio.
-- `node ../audit-photo-system.mjs`: passed; all seven product images load and no console errors occur.
+- `node ../audit-photo-system.mjs`: passed before the product reduction; the
+  final six-image catalogue is checked again after the warm editorial pass.
 - `node ../check-motion-ui.mjs`: passed; filtering, hover, drawer and Motion interactions settle correctly.
 - `node scripts/check-interactive-storefront.mjs`: passed on desktop and mobile; the removed statement is absent, all three detail points work, camera scale settles at `1.16`, reset returns to `1.001`, and random selection opens a product with no console errors.
 - Reduced-motion mode keeps the detail copy and random selection functional while holding the image at `1.001` with no camera movement.
@@ -110,6 +114,22 @@ The current direction is an original warm-gallery editorial system. The referenc
 
 ## Follow-up polish
 
-- Future content additions should preserve the warm-grey field, transparent opening navigation, restrained palette and product-first image treatment.
+- Future content additions should preserve the warm-ivory field, transparent
+  opening navigation, restrained palette and product-first image treatment.
+
+### Pass 4 — warm editorial cabinet
+
+- Moved the page from cool warm-grey to warm ivory with oxblood and antique-gold
+  accents.
+- Added the “The bloom and the thorn.” hero narrative and removed all corner
+  labels from the hero image.
+- Rebuilt the point-of-view statement as an oversized asymmetric editorial
+  spread.
+- Removed `Morpho Nocturne` from the site, drawer data and backend catalogue so
+  butterfly imagery no longer appears.
+- Reduced the first product card from seven to six columns while preserving its
+  offset editorial rhythm.
+- Added the supplied blue-thorn worn-scale study in The House section.
+- Updated closing and footer surfaces to oxblood and dark warm brown.
 
 final result: passed

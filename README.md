@@ -15,7 +15,7 @@ filter arrivals, press feedback, drawer entrances and the still-life detail
 camera. GSAP remains responsible for page-level sequencing so the two engines
 do not animate the same properties on the same elements.
 
-All seven catalogue products use transparent cut-out masters under
+All six catalogue products use transparent cut-out masters under
 `assets/cutouts/`. Product cards and drawers present them on a warm-white field;
 contextual hand and portrait photography is retained only in editorial
 sections.

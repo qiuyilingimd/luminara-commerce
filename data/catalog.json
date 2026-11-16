@@ -46,24 +46,6 @@
       "sizes": ["One size"]
     },
     {
-      "id": "morpho",
-      "no": "Pl. 01",
-      "category": "Earrings",
-      "series": "Enamel Reverie",
-      "name": "Morpho Nocturne",
-      "cn": "夜蝶",
-      "price": 39,
-      "img": "assets/cutouts/product-morpho.webp",
-      "pos": "50% 30%",
-      "desc": "A layered blue-green resin wing held in gold-tone filigree, with dark centre stones and a faceted drop. The surface shifts between cobalt and green as the light moves.",
-      "spec": [
-        ["Material", "Iridescent resin, gold-tone filigree"],
-        ["Stones", "Black glass, zircon"],
-        ["Drop", "54 mm"]
-      ],
-      "sizes": ["One size"]
-    },
-    {
       "id": "deep",
       "no": "Pl. 05",
       "category": "Brooches",

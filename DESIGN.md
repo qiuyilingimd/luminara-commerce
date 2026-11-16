@@ -3,7 +3,7 @@
 ## Position
 
 Luminara is a curated house for vintage-inspired statement jewellery. The first
-edit combines decorative silhouettes with enamel, glass, resin, zircon and
+edit combines six decorative silhouettes with enamel, glass, resin, zircon and
 metal-tone finishes at approximately US$35 to US$58. The primary customer is a
 style-led shopper who mixes vintage or second-hand pieces with contemporary
 clothes and uses jewellery to make a familiar outfit personal. The primary
@@ -19,38 +19,43 @@ must not be published without evidence.
 
 ## Visual System
 
-- Warm paper: `#F5F1E8`
+- Warm ivory page: `#F2EBDD`
+- Softer surface: `#FAF6EE`
+- Highlight ivory: `#FFF9EF`
 - Ink: `#16110F`
-- Oxblood: `#5B2025`
-- Antique gold: `#A98243`
-- Mineral turquoise: `#5F948B`
+- Oxblood: `#68232F`
+- Antique gold: `#9A713B`
+- Muted warm brown: `#6B5B4E`
 - Display: Cormorant Garamond roman and italic
 - Text and labels: Jost
 
-Photography leads. The page alternates gallery-black fields with warm paper and
-one oxblood close. Images remain uncropped where the jewellery silhouette
-matters and move to macro crops where material is the subject.
+Photography leads. The page alternates warm ivory fields, isolated product
+plates, one oxblood art field and a dark atelier image. Images remain uncropped
+where the jewellery silhouette matters and move to macro crops where material
+is the subject.
 
 The product system follows three evidence types: whole form, material surface
 and worn scale. These are explained in the Assembly section and apply to the
-Cabinet: every product plate uses the same 4:5 ratio and equal grid width so
-silhouette, crop and finish can be compared directly. Catalogue and drawer
-imagery use isolated transparent product masters on a warm-white field; body
-and hand photography remains in the editorial sections.
+Cabinet: product plates use a deliberate mix of 4:5 and 16:10 crops so the eye
+moves between headpieces, bracelets and necklaces instead of reading a repeated
+catalogue grid. Catalogue and drawer imagery use isolated transparent product
+masters on a warm-white field; body and hand photography remains in the
+editorial sections. The butterfly product has been removed from the visual
+system.
 
 ## Page Rhythm
 
 1. A single still-life hero led by pink flower earrings with purple glass drops
-   on black thorn branches against a blue sky. No model, video or competing
-   interface copy.
-2. A compact two-column proposition built around “Taste is assembled.”
-3. First product edit with four clear names and prices.
-4. Three silent product studies: worn scale, surface and weight.
-5. One black-and-white portrait.
-6. The Assembly: whole form, surface and worn scale explained with product
-   imagery.
-7. Complete, filterable Cabinet.
-8. Final purchase action and service information.
+   on black thorn branches against a blue sky, followed by a restrained
+   “The bloom and the thorn.” editorial overlay.
+2. An asymmetric “Taste is assembled.” spread with Serpentine Psalm isolated
+   against oxblood.
+3. First product edit with four clear names, materials and US-dollar prices.
+4. A single Two Doves still life with three inspectable material details.
+5. A complete, filterable six-piece Cabinet with varied editorial scale.
+6. A worn-scale image from the supplied blue-thorn campaign, used as context
+   rather than repeated as a cover.
+7. An oxblood closing statement and a dark warm footer with service information.
 
 ## Motion
 
@@ -58,12 +63,11 @@ The homepage opens on one static jewellery image. Landscape and portrait are
 composed separately so the earrings remain complete at both sizes. The mobile
 hero uses a 4:5 composition and the following proposition drops its long body
 copy to protect the image-led rhythm. The
-black-and-white wearing portrait appears later and is cropped above the mouth;
-its desktop frame widens with a restrained monochrome background extension.
-Three short silent product studies appear below the first edit. GSAP is limited
-to image reveals and scroll handoff. Motion supplies spring-based product hover,
-filter arrivals, press feedback and drawer content entrances. Lenis provides
-smooth scrolling. Reduced-motion users see still images and no decorative drift.
+worn-scale image appears later as a single editorial study and uses the supplied
+blue-thorn composition at its natural contrast. GSAP is limited to image
+reveals and scroll handoff. Motion supplies spring-based product hover, filter
+arrivals, press feedback and drawer content entrances. Lenis provides smooth
+scrolling. Reduced-motion users see still images and no decorative drift.
 
 ## Sound
 
