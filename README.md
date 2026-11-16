@@ -15,8 +15,9 @@ filter arrivals, press feedback and drawer entrances. GSAP remains responsible
 for scroll-linked sequencing so the two engines do not animate the same
 properties on the same elements.
 
-The homepage hero is a single still image led by the Serpentine Psalm earrings;
-the landscape and portrait compositions are separate assets. The three smaller
+The homepage hero is a single still image led by pink flower earrings with
+purple glass drops; the landscape and portrait compositions are separate
+assets. The three smaller
 product studies below the first edit continue to loop without playback
 controls. An original ambient score in `assets/luminara-ambient-v4.m4a` fades in
 after the visitor's first interaction, as required by browser autoplay

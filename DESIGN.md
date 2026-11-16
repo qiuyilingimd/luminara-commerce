@@ -38,9 +38,10 @@ silhouette, crop and finish can be compared directly.
 
 ## Page Rhythm
 
-1. A single still-life hero led by the Serpentine Psalm earrings on a wide,
-   near-black velvet field. No model, video or competing interface copy.
-2. Plain product proposition built around “Taste is assembled.”
+1. A single still-life hero led by pink flower earrings with purple glass drops
+   on black thorn branches against a blue sky. No model, video or competing
+   interface copy.
+2. A compact two-column proposition built around “Taste is assembled.”
 3. First product edit with four clear names and prices.
 4. Three silent product studies: worn scale, surface and weight.
 5. One black-and-white portrait.
@@ -52,7 +53,9 @@ silhouette, crop and finish can be compared directly.
 ## Motion
 
 The homepage opens on one static jewellery image. Landscape and portrait are
-composed separately so the earrings remain complete at both sizes. The
+composed separately so the earrings remain complete at both sizes. The mobile
+hero uses a 4:5 composition and the following proposition drops its long body
+copy to protect the image-led rhythm. The
 black-and-white wearing portrait appears later and is cropped above the mouth;
 its desktop frame widens with a restrained monochrome background extension.
 Three short silent product studies appear below the first edit. GSAP is limited
