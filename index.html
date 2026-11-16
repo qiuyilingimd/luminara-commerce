@@ -1601,42 +1601,6 @@ body{font-size:16px;line-height:1.68}
 .billboard .bb-fallback img{
   filter:saturate(.97) contrast(1.04) brightness(.97);
 }
-.hero-editorial{
-  position:absolute;left:50%;bottom:clamp(34px,7vh,76px);z-index:5;
-  width:min(1040px,calc(100% - 40px));transform:translateX(-50%);
-  color:var(--surface-soft);text-align:center;pointer-events:none;
-}
-.hero-editorial::before{
-  content:"";position:absolute;z-index:-1;inset:-88px -11% -46px;
-  background:radial-gradient(ellipse at 50% 68%,rgba(15,12,10,.58),rgba(15,12,10,.14) 52%,transparent 74%);
-  filter:blur(14px);
-}
-.hero-kicker{
-  font-family:var(--f-label);font-size:10.5px;line-height:1.4;letter-spacing:.24em;
-  text-transform:uppercase;color:rgba(255,249,239,.78);
-}
-.hero-editorial h1{
-  margin-top:15px;font-family:var(--f-display);font-size:clamp(4.1rem,7.2vw,7.35rem);
-  font-weight:400;font-style:normal;line-height:.82;letter-spacing:-.048em;
-  color:var(--surface-soft);text-shadow:0 4px 36px rgba(15,11,9,.42);
-}
-.hero-editorial h1 em{
-  display:block;font-weight:400;font-style:italic;color:#F5DCD2;
-}
-.hero-lede{
-  max-width:49ch;margin:21px auto 0;font-size:14.5px;line-height:1.62;
-  color:rgba(255,249,239,.86);text-shadow:0 1px 16px rgba(15,11,9,.55);
-}
-.hero-cta{
-  pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;gap:12px;
-  min-height:44px;margin-top:23px;padding:0 0 6px;border-bottom:1px solid rgba(255,249,239,.62);
-  font-family:var(--f-label);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--surface-soft);transition:border-color .3s,color .3s;
-}
-.hero-cta span{font-size:15px;transition:transform .35s var(--ease)}
-.hero-cta:hover{border-bottom-color:var(--surface-soft)}
-.hero-cta:hover span{transform:translateX(5px)}
-
 .cover{
   position:relative;overflow:hidden;
   padding:clamp(78px,8vw,136px) var(--gut) clamp(82px,8vw,140px);
@@ -1828,12 +1792,6 @@ body{font-size:16px;line-height:1.68}
   .mast.is-overlay{padding-left:18px;padding-right:18px}
   .billboard{height:100svh;min-height:0;aspect-ratio:auto}
   .billboard .bb-fallback img{object-position:50% 43%}
-  .hero-editorial{bottom:24px;width:calc(100% - 32px)}
-  .hero-editorial::before{inset:-56px -12% -28px}
-  .hero-kicker{font-size:9px;letter-spacing:.19em}
-  .hero-editorial h1{margin-top:12px;font-size:clamp(3.1rem,14vw,4.35rem);line-height:.86}
-  .hero-lede{max-width:34ch;margin-top:16px;font-size:12.5px;line-height:1.55}
-  .hero-cta{margin-top:16px;font-size:9.5px}
   .cover{padding:58px 20px 72px}
   .cover-inner{grid-template-columns:1fr;gap:44px}
   .cover h2{max-width:9ch;font-size:clamp(3.5rem,16.5vw,5.2rem)}
@@ -1952,100 +1910,25 @@ body{font-size:16px;line-height:1.68}
 }
 .belief-art figcaption span:last-child{text-align:right}
 
-/* ---------- product material studies: sharp surface, sharp object ---------- */
-.vitem{
-  --scene-x:0px;--scene-y:0px;
-}
-.vitem[data-scene] .v-plate{
-  background-color:#2D1B16;
+/* ---------- product photography: original gallery crops ---------- */
+.vitem .v-plate{
+  background:var(--surface);
   border:0;
 }
-.v-scene{
-  position:absolute;z-index:0;inset:-8px;display:block;pointer-events:none;
-  background-repeat:repeat;
-  filter:none;
-  transform:translate3d(var(--scene-x),var(--scene-y),0) scale(1.035);
-  transition:transform .55s var(--ease);
+.vitem .v-plate .v-product{
+  position:relative;z-index:1;
+  width:100%;height:100%;
+  object-fit:cover;padding:0;filter:none;
 }
-.vitem[data-scene="thorn"] .v-scene{
-  background-color:#511C27;
-  background-image:
-    radial-gradient(ellipse at 28% 18%,rgba(255,204,172,.2),transparent 31%),
-    repeating-linear-gradient(115deg,rgba(255,246,232,.028) 0 1px,transparent 1px 3px),
-    repeating-linear-gradient(25deg,rgba(34,8,14,.11) 0 1px,transparent 1px 4px),
-    linear-gradient(145deg,#722E39,#421720 58%,#2A0F15);
-  background-size:auto,4px 4px,5px 5px,auto;
+.vitem .v-no{z-index:3}
+.d-media{
+  background:var(--ink);border:0;
 }
-.vitem[data-scene="glass"] .v-scene{
-  background-color:#C9B79F;
-  background-image:
-    radial-gradient(ellipse at 22% 14%,rgba(255,251,241,.48),transparent 30%),
-    repeating-linear-gradient(174deg,transparent 0 21px,rgba(83,59,42,.12) 21px 22px,transparent 22px 41px),
-    repeating-linear-gradient(168deg,transparent 0 53px,rgba(255,250,239,.21) 53px 54px,transparent 54px 79px),
-    linear-gradient(128deg,#E6DED1,#C2AC92 53%,#A98D72);
-  background-size:auto,auto,auto,auto;
+.d-media img{
+  object-fit:cover;padding:0;
 }
-.vitem[data-scene="oxblood"] .v-scene{
-  background-color:#3B241B;
-  background-image:
-    radial-gradient(ellipse at 20% 10%,rgba(224,164,105,.26),transparent 33%),
-    repeating-linear-gradient(94deg,transparent 0 13px,rgba(27,13,9,.24) 13px 15px,transparent 15px 27px),
-    repeating-linear-gradient(87deg,rgba(255,222,178,.06) 0 1px,transparent 1px 7px),
-    linear-gradient(132deg,#765036,#3C251A 54%,#20120E);
-  background-size:auto,auto,auto,auto;
-}
-.vitem[data-scene="cuff"] .v-scene{
-  background-color:#2C2522;
-  background-image:
-    radial-gradient(ellipse at 74% 18%,rgba(241,192,138,.25),transparent 27%),
-    radial-gradient(ellipse at 28% 87%,rgba(113,55,42,.2),transparent 38%),
-    repeating-linear-gradient(176deg,rgba(255,248,237,.025) 0 1px,transparent 1px 5px),
-    linear-gradient(145deg,#4B3B34,#241B18 62%,#15100E);
-  background-size:auto,auto,5px 5px,auto;
-}
-.vitem[data-scene="garden"] .v-scene{
-  background-color:#9B7045;
-  background-image:
-    radial-gradient(ellipse at 18% 19%,rgba(255,239,198,.28),transparent 29%),
-    repeating-linear-gradient(91deg,rgba(255,232,187,.075) 0 1px,transparent 1px 4px),
-    repeating-linear-gradient(4deg,rgba(63,35,16,.09) 0 1px,transparent 1px 9px),
-    linear-gradient(138deg,#BE9561,#8A5D36 51%,#513019);
-  background-size:auto,4px 4px,9px 9px,auto;
-}
-.vitem[data-scene] .v-plate::after{
-  display:block;
-  background:
-    radial-gradient(ellipse 220px 180px at var(--spot-x) var(--spot-y),rgba(255,244,222,.3),rgba(210,162,105,.09) 42%,transparent 72%),
-    radial-gradient(ellipse at center,transparent 48%,rgba(22,10,8,.16) 100%);
-  mix-blend-mode:normal;
-  opacity:.82;
-  transition:background .35s var(--ease);
-}
-.vitem[data-scene] .v-plate .v-product{
-  position:relative;z-index:3;
-  object-fit:contain;padding:clamp(20px,3.4vw,48px);
-  filter:drop-shadow(0 24px 28px rgba(21,9,7,.34)) drop-shadow(0 2px 3px rgba(255,246,229,.18));
-}
-.vitem[data-scene] .v-no{
-  z-index:5;color:rgba(255,248,235,.84);
-  text-shadow:0 1px 8px rgba(28,12,9,.38);
-}
-.vitem[data-scene="glass"] .v-no,
-.vitem[data-scene="lilac"] .v-no{
-  color:rgba(51,31,24,.62);text-shadow:none;
-}
-.vitem[data-scene] .v-meta .kicker{letter-spacing:.18em}
-.vitem[data-scene="lilac"] .v-plate{
-  background-color:#B9A69A;
-}
-.vitem[data-scene="lilac"] .v-scene{
-  background-color:#B9A69A;
-  background-image:
-    radial-gradient(ellipse at 25% 18%,rgba(255,250,240,.38),transparent 31%),
-    repeating-linear-gradient(112deg,rgba(255,250,240,.07) 0 1px,transparent 1px 3px),
-    repeating-linear-gradient(22deg,rgba(70,43,34,.055) 0 1px,transparent 1px 5px),
-    linear-gradient(138deg,#D5C8BA,#A99285 56%,#806D64);
-  background-size:auto,4px 4px,5px 5px,auto;
+.casket-row img{
+  object-fit:cover;padding:0;background:var(--surface);border:0;
 }
 
 @media (max-width:1023px){
@@ -2078,7 +1961,6 @@ body{font-size:16px;line-height:1.68}
   .belief-cta{margin-top:20px;font-size:9px}
   .belief-art{grid-column:1;grid-row:3;width:min(100%,390px);margin-top:40px;padding:8px}
   .belief-art figcaption{left:8px;right:8px;bottom:8px;padding:30px 12px 11px;font-size:7px;letter-spacing:.1em}
-  .vitem[data-scene] .v-plate .v-product{padding:17% 14%}
 }
 </style>
 </head>
@@ -2125,12 +2007,6 @@ body{font-size:16px;line-height:1.68}
         <img src="assets/hero-bloom-wide.webp" alt="Pink enamel flower earrings with purple glass drops suspended across dark thorn branches against a blue sky" fetchpriority="high" decoding="async">
       </picture>
     </figure>
-    <div class="hero-editorial">
-      <p class="hero-kicker">Nocturne Bloom · First Edit</p>
-      <h1 id="hero-title">The bloom <em>and the thorn.</em></h1>
-      <p class="hero-lede">Sculptural vintage-inspired jewellery, chosen for the way light catches its edges.</p>
-      <a class="hero-cta" href="#collections">Enter the Luminara edit <span aria-hidden="true">→</span></a>
-    </div>
   </div>
 </section>
 
@@ -2243,28 +2119,28 @@ body{font-size:16px;line-height:1.68}
       <button type="button" class="surprise-btn" id="surpriseBtn" aria-label="Open a randomly selected piece from the current view"><span class="spark" aria-hidden="true">✦</span><span id="surpriseLabel">Let the edit choose</span></button>
     </div>
     <div class="vgrid">
-      <article class="vitem v3" role="button" tabindex="0" data-open="snake" data-category="earrings" data-scene="thorn">
-        <figure class="v-plate r45"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-serpentine.webp" alt="Serpentine Psalm enamel earrings" loading="lazy"><span class="v-no">01</span></figure>
+      <article class="vitem v3" role="button" tabindex="0" data-open="snake" data-category="earrings">
+        <figure class="v-plate r45"><img class="v-product" src="assets/snake-earrings.jpg" alt="Serpentine Psalm enamel earrings on black velvet" loading="lazy"><span class="v-no">01</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Enamel Reverie</span><h3>Serpentine Psalm</h3><p class="price">US$49</p><p class="v-material">Turquoise and oxblood enamel · glass drops</p></div>
       </article>
-      <article class="vitem v3" role="button" tabindex="0" data-open="deep" data-category="brooches" data-scene="glass">
-        <figure class="v-plate r45"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-deep.webp" alt="Nocturne of the Deep silver-tone brooches" loading="lazy"><span class="v-no">02</span></figure>
+      <article class="vitem v3" role="button" tabindex="0" data-open="deep" data-category="brooches">
+        <figure class="v-plate r45"><img class="v-product" src="assets/jellyfish.jpg" alt="Nocturne of the Deep silver-tone brooches on black velvet" loading="lazy" style="object-position:50% 36%"><span class="v-no">02</span></figure>
         <div class="v-meta"><span class="kicker">Brooches · Ocean Whisper</span><h3>Nocturne of the Deep</h3><p class="price">US$55</p><p class="v-material">Silver-tone metal · glass pearl</p></div>
       </article>
-      <article class="vitem v3" role="button" tabindex="0" data-open="coral" data-category="earrings" data-scene="oxblood">
-        <figure class="v-plate r45"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-coral.webp" alt="Coral Reliquary earrings" loading="lazy"><span class="v-no">03</span></figure>
+      <article class="vitem v3" role="button" tabindex="0" data-open="coral" data-category="earrings">
+        <figure class="v-plate r45"><img class="v-product" src="assets/coral-earrings.jpg" alt="Coral Reliquary earrings on black velvet" loading="lazy" style="object-position:56% 50%"><span class="v-no">03</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Ocean Whisper</span><h3>Coral Reliquary</h3><p class="price">US$35</p><p class="v-material">Coral-tone glass · zircon drops</p></div>
       </article>
-      <article class="vitem v4" role="button" tabindex="0" data-open="cuff" data-category="bracelets" data-scene="cuff">
-        <figure class="v-plate r1610"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-cuff.webp" alt="Opaline Arch Cuff with blue opal-tone resin inlays" loading="lazy"><span class="v-no">04</span></figure>
+      <article class="vitem v4" role="button" tabindex="0" data-open="cuff" data-category="bracelets">
+        <figure class="v-plate r1610"><img class="v-product" src="assets/opaline-cuff.jpg" alt="Opaline Arch Cuff worn across the hand" loading="lazy" style="object-position:50% 48%"><span class="v-no">04</span></figure>
         <div class="v-meta"><span class="kicker">Bracelets · Mineral Glow</span><h3>Opaline Arch Cuff</h3><p class="price">US$52</p><p class="v-material">Opal-tone resin · zircon border</p></div>
       </article>
-      <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings" data-scene="lilac">
-        <figure class="v-plate r1610"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-lilac.webp" alt="Lilac Reverie earrings" loading="lazy"><span class="v-no">05</span></figure>
+      <article class="vitem v4" role="button" tabindex="0" data-open="lilac" data-category="earrings">
+        <figure class="v-plate r1610"><img class="v-product" src="assets/lilac-earrings.jpg" alt="Lilac Reverie earrings on dark velvet" loading="lazy" style="object-position:50% 68%"><span class="v-no">05</span></figure>
         <div class="v-meta"><span class="kicker">Earrings · Mineral Glow</span><h3>Lilac Reverie</h3><p class="price">US$45</p><p class="v-material">Clouded glass · cubic zirconia</p></div>
       </article>
-      <article class="vitem v4" role="button" tabindex="0" data-open="doves" data-category="necklaces" data-scene="garden">
-        <figure class="v-plate r1610"><span class="v-scene" aria-hidden="true"></span><img class="v-product" src="assets/cutouts/product-doves.webp" alt="Two Doves necklace" loading="lazy"><span class="v-no">06</span></figure>
+      <article class="vitem v4" role="button" tabindex="0" data-open="doves" data-category="necklaces">
+        <figure class="v-plate r1610"><img class="v-product" src="assets/doves-necklace.jpg" alt="Two Doves necklace on black velvet" loading="lazy" style="object-position:50% 46%"><span class="v-no">06</span></figure>
         <div class="v-meta"><span class="kicker">Necklaces · Nocturne Sculpture</span><h3>Two Doves</h3><p class="price">US$58</p><p class="v-material">Silver-tone metal · zircon · yellow glass</p></div>
       </article>
     </div>
@@ -2408,27 +2284,27 @@ function apiJSON(path, data){
 }
 
 var P = {
-  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/cutouts/product-lilac.webp",pos:"50% 50%",
+  lilac:{id:"lilac",no:"Pl. 03",category:"Earrings",series:"Mineral Glow",name:"Lilac Reverie",cn:"紫丁香之梦",price:45,img:"assets/lilac-earrings.jpg",pos:"50% 62%",
     desc:"Four clouded-glass blossoms in pale lilac, gathered around dark crystal centres with small zircon accents. The colour stays soft against dark hair and skin, while the clustered shape creates a clear profile.",
     spec:[["Material","Clouded glass, cubic zirconia"],["Setting","Gold-tone metal"],["Drop","38 mm"]],
     sizes:["One size"]},
-  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/cutouts/product-serpentine.webp",pos:"50% 50%",
+  snake:{id:"snake",no:"Pl. 02",category:"Earrings",series:"Enamel Reverie",name:"Serpentine Psalm",cn:"灵蛇之诗",price:49,img:"assets/snake-earrings.jpg",pos:"50% 40%",
     desc:"A serpent silhouette in pale turquoise and oxblood enamel, balanced by red glass drops. The long curve frames the jaw and gives a plain shirt or dark tailored collar a sharper line.",
     spec:[["Body","Gold-tone metal"],["Finish","Turquoise and oxblood enamel"],["Drop","72 mm"]],
     sizes:["One size"]},
-  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/cutouts/product-deep.webp",pos:"50% 50%",
+  deep:{id:"deep",no:"Pl. 05",category:"Brooches",series:"Ocean Whisper",name:"Nocturne of the Deep",cn:"深海夜曲",price:55,img:"assets/jellyfish.jpg",pos:"50% 34%",
     desc:"Four small silver-tone pins shaped as a shell, a pearl-tone bead, a coral branch and a long filament. Wear the group on a lapel, or separate one piece as a quieter mark.",
     spec:[["Body","Silver-tone metal"],["Stones","Glass pearl, zircon"],["Sizes","38–62 mm"]],
     sizes:["Set of four"]},
-  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/cutouts/product-coral.webp",pos:"50% 50%",
+  coral:{id:"coral",no:"Pl. 06",category:"Earrings",series:"Ocean Whisper",name:"Coral Reliquary",cn:"珊瑚圣龛",price:35,img:"assets/coral-earrings.jpg",pos:"60% 50%",
     desc:"Coral-tone glass drops held in gold-tone filigree, with blue-green resin cabochons at the crown and zircon drops. The warm red-orange reads strongly against black and ecru.",
     spec:[["Material","Coral-tone glass, gold-tone metal"],["Stone","Resin cabochon, zircon"],["Drop","42 mm"]],
     sizes:["One size"]},
-  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/cutouts/product-cuff.webp",pos:"50% 50%",
+  cuff:{id:"cuff",no:"Pl. 04",category:"Bracelets",series:"Mineral Glow",name:"Opaline Arch Cuff",cn:"欧泊拱廊",price:52,img:"assets/opaline-cuff.jpg",pos:"50% 46%",
     desc:"An open gold-tone cuff with four blue-green resin panels and a border of zircon. Its wide horizontal line gives the wrist presence without competing with rings.",
     spec:[["Body","Gold-tone metal"],["Inlay","Opal-tone resin, cubic zirconia"],["Fit","48 / 52 / 56 mm"]],
     sizes:["48 mm","52 mm","56 mm"]},
-  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/cutouts/product-doves.webp",pos:"50% 50%",
+  doves:{id:"doves",no:"Pl. 07",category:"Necklaces",series:"Nocturne Sculpture",name:"Two Doves",cn:"双鸽",price:58,img:"assets/doves-necklace.jpg",pos:"50% 46%",
     desc:"Two silver-tone doves face a faceted yellow-glass drop, with zircon detailing across the wings. The curved band frames the collarbone and works against both bare skin and a dark neckline.",
     spec:[["Body","Silver-tone metal"],["Stones","Cubic zirconia, yellow glass"],["Length","41 cm adjustable"]],
     sizes:["One size"]}
@@ -2457,7 +2333,12 @@ updateMast();
 function syncCatalog(catalog){
   if(!catalog || !Array.isArray(catalog.products)){return;}
   catalog.products.forEach(function(product){
-    if(P[product.id]){ P[product.id]=Object.assign({},P[product.id],product); }
+    if(P[product.id]){
+      var next=Object.assign({},product);
+      delete next.img;
+      delete next.pos;
+      P[product.id]=Object.assign({},P[product.id],next);
+    }
   });
   qa("[data-open]").forEach(function(node){
     var id=node.getAttribute("data-open"), product=P[id], price=node.querySelector(".price");
@@ -2629,7 +2510,7 @@ try{
     casket=savedBag.filter(function(it){
       return it && P[it.id] && it.size && Number(it.qty)>0;
     }).map(function(it){
-      return {id:it.id,name:it.name,price:Number(it.price),img:it.img,size:it.size,category:it.category||P[it.id].category,qty:Math.max(1,Number(it.qty)||1)};
+      return {id:it.id,name:it.name,price:Number(it.price),img:P[it.id].img||it.img,size:it.size,category:it.category||P[it.id].category,qty:Math.max(1,Number(it.qty)||1)};
     });
   }
 }catch(e){ casket=[]; }
@@ -2759,7 +2640,8 @@ function renderCasket(){
   }
   var total=subtotal();
   var rows=casket.map(function(it,i){
-    return '<div class="casket-row"><img src="'+it.img+'" alt="">'+
+    var image=(P[it.id]&&P[it.id].img)||it.img;
+    return '<div class="casket-row"><img src="'+image+'" alt="">'+
       '<div><h4>'+it.name+'</h4><p class="p">'+money(it.price)+" · "+it.size+'</p>'+
       '<div class="qty"><button type="button" data-dec="'+i+'" aria-label="Decrease '+it.name+' quantity">−</button><span>'+it.qty+'</span><button type="button" data-inc="'+i+'" aria-label="Increase '+it.name+' quantity">+</button></div>'+
       '<button type="button" data-rm="'+i+'">Remove</button></div>'+

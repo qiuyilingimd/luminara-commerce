@@ -35,15 +35,12 @@ oxblood closing field. Images remain uncropped where the jewellery silhouette
 matters and move to macro crops where material is the subject.
 
 The product system follows three evidence types: whole form, material surface
-and worn scale. Cabinet plates pair each transparent product master with a
-clearly defined material surface: oxblood velvet, travertine, walnut, black
-lacquer, warm plaster and brushed bronze. No photographic background is blurred
-behind the product. The surface supplies depth and reflected light while the
-jewellery remains the only sharp focal layer. Plates use a deliberate mix of
-4:5 and 16:10 crops so the eye moves between earrings, bracelets and necklaces
-instead of reading a repeated catalogue grid. Drawer imagery keeps isolated
-product masters on a warm-white field. The butterfly product has been removed
-from the visual system.
+and worn scale. Cabinet plates use each product's original gallery photograph,
+retaining its velvet, hand scale, surface and light rather than replacing it
+with an isolated cutout. Plates use a deliberate mix of 4:5 and 16:10 crops so
+the eye moves between earrings, bracelets and necklaces instead of reading a
+repeated catalogue grid. Drawer and bag imagery keep the same original
+photographs. The butterfly product has been removed from the visual system.
 
 ## Page Rhythm
 
@@ -53,8 +50,8 @@ from the visual system.
 2. A walnut-and-oxblood “Taste is assembled.” belief chapter: quiet note, large
    centred statement and a single glass-shelf earring study.
 3. A single Two Doves still life with three inspectable material details.
-4. A complete, filterable six-piece Cabinet with sharp material studies behind
-   clear product masters and varied editorial scale.
+4. A complete, filterable six-piece Cabinet using the original product
+   photography and varied editorial scale.
 5. A worn-scale image from the supplied blue-thorn campaign, used as context
    rather than repeated as a cover.
 6. An oxblood closing statement and a dark warm footer with service information.
@@ -67,8 +64,8 @@ hero uses a 4:5 composition and the following proposition drops its long body
 copy to protect the image-led rhythm. The belief chapter reveals note, statement
 and image as one short editorial
 sequence, with a restrained vertical camera drift in the photograph. Product
-material surfaces respond to the pointer through a small background shift and a
-moving pool of light while the product master stays sharp and stable. Motion supplies
+photography responds through a restrained hover scale while the jewellery stays
+sharp and stable. Motion supplies
 spring-based product hover, filter arrivals, press feedback and drawer content
 entrances. Lenis provides smooth scrolling. Reduced-motion users see the full
 page instantly with no decorative drift.
