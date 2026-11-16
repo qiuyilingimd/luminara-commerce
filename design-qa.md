@@ -61,6 +61,7 @@ The visual direction is an original white-gallery editorial system. David Webb w
 - Checked at `1440 x 900`, `1024 x 768`, `820 x 1180`, `768 x 1024`, `390 x 844` and `320 x 760`: no horizontal overflow.
 - All seven product plates measure the same aspect ratio at every checked width.
 - Product filtering, hover response, product drawer and bag action work with no browser console errors.
+- On GitHub Pages, API requests resolve to the Render backend; local and Render-hosted copies continue using same-origin routes.
 
 ## Comparison history
 
@@ -83,6 +84,7 @@ The visual direction is an original white-gallery editorial system. David Webb w
 - `node ../audit-photo-system.mjs`: passed; all seven product images load and no console errors occur.
 - `node ../check-motion-ui.mjs`: passed; filtering, hover, drawer and Motion interactions settle correctly.
 - Direct toast-state check: hidden on load, visible while active, hidden after dismissal.
+- Public GitHub Pages check: no 404 requests; catalogue, quote, order and contact requests reach the Render API.
 - No JavaScript or console errors were recorded.
 
 ## Follow-up polish

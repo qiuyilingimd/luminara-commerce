@@ -1688,8 +1688,14 @@ function openMail(subject, lines){
     "&body=" + encodeURIComponent(lines.join("\n"));
   window.location.href = href;
 }
+function apiURL(path){
+  if(/(^|\.)github\.io$/i.test(location.hostname)){
+    return "https://luminara-commerce.onrender.com" + path;
+  }
+  return path;
+}
 function apiJSON(path, data){
-  return fetch(path, {
+  return fetch(apiURL(path), {
     method:data ? "POST" : "GET",
     headers:data ? {"Content-Type":"application/json"} : {},
     body:data ? JSON.stringify(data) : undefined
