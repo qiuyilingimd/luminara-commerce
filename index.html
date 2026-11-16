@@ -1980,6 +1980,194 @@ body{font-size:16px;line-height:1.68}
   .belief-art{grid-column:1;grid-row:3;width:min(100%,390px);margin-top:40px;padding:8px}
   .belief-art figcaption{left:8px;right:8px;bottom:8px;padding:30px 12px 11px;font-size:7px;letter-spacing:.1em}
 }
+
+/* ---------- organic editorial rhythm: sculpted image openings ---------- */
+.belief-statement{
+  transform:translateX(-1.8vw);
+}
+.belief-art{
+  overflow:visible;
+  padding:0;
+  background:transparent;
+  border-radius:50% 50% 17% 19% / 22% 24% 7% 8%;
+  box-shadow:0 34px 74px rgba(4,20,26,.3);
+}
+.belief-art::before{
+  inset:8px;
+  border-radius:inherit;
+}
+.belief-art::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-5% -10%;
+  border:1px solid rgba(244,233,218,.18);
+  border-radius:50% 50% 42% 58% / 46% 38% 62% 54%;
+  transform:rotate(4deg);
+  pointer-events:none;
+}
+.belief-art img{
+  border-radius:inherit;
+}
+.belief-art figcaption{
+  border-radius:0 0 17% 19% / 0 0 7% 8%;
+}
+
+.still-grid{
+  align-items:start;
+}
+.still-photo{
+  border-radius:46% 54% 9% 13% / 18% 21% 5% 6%;
+  box-shadow:0 30px 70px rgba(45,37,29,.1);
+}
+.still-copy{
+  position:relative;
+  z-index:2;
+  margin:clamp(34px,7vw,92px) 0 0 clamp(-58px,-3.5vw,-30px);
+  padding:clamp(22px,2.8vw,38px) 0 clamp(22px,2.8vw,38px) clamp(25px,3vw,44px);
+  background:linear-gradient(90deg,var(--page) 0%,rgba(242,235,221,.96) 82%,rgba(242,235,221,0) 100%);
+}
+.still-head{
+  grid-template-columns:minmax(0,1fr) auto;
+}
+.still-head .plate-ref{
+  position:relative;
+  padding-left:26px;
+}
+.still-head .plate-ref::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:2px;
+  width:13px;
+  height:34px;
+  border-left:1px solid rgba(33,69,76,.42);
+  border-radius:50%;
+  transform:rotate(18deg);
+}
+
+.shop-filter{
+  position:relative;
+  padding:11px 0 16px;
+}
+.shop-filter::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  left:-2%;
+  right:-2%;
+  top:48%;
+  height:84px;
+  border-top:1px solid rgba(33,69,76,.16);
+  border-radius:50%;
+  transform:translateY(-50%) rotate(-.8deg);
+  pointer-events:none;
+}
+.shop-filter > *{
+  position:relative;
+  z-index:1;
+}
+.filter-chip,
+.surprise-btn{
+  border-radius:999px;
+}
+.filter-chip:nth-child(2n){
+  transform:rotate(-1.2deg);
+}
+.filter-chip:nth-child(3n){
+  transform:rotate(.8deg);
+}
+
+.vitem:nth-child(1) .v-plate{
+  border-radius:42% 58% 10% 12% / 15% 18% 5% 6%;
+}
+.vitem:nth-child(2) .v-plate{
+  border-radius:50% 50% 9% 9% / 20% 20% 4% 4%;
+}
+.vitem:nth-child(3) .v-plate{
+  border-radius:10% 34% 12% 28% / 18% 10% 24% 12%;
+}
+.vitem:nth-child(4) .v-plate{
+  border-radius:34% 10% 26% 8% / 12% 20% 10% 18%;
+}
+.vitem:nth-child(5) .v-plate{
+  border-radius:12% 12% 34% 20% / 14% 14% 14% 24%;
+}
+.vitem:nth-child(6) .v-plate{
+  border-radius:20% 34% 12% 12% / 24% 14% 14% 14%;
+}
+
+.atelier .inner{
+  align-items:center;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.56fr);
+  gap:clamp(46px,7vw,112px);
+}
+.atelier-photo{
+  border-radius:50% 50% 13% 13% / 20% 22% 6% 7%;
+  overflow:hidden;
+  box-shadow:0 34px 74px rgba(6,24,32,.18);
+}
+.atelier-photo::before{
+  border-radius:inherit;
+}
+.atelier .copy{
+  padding-block:clamp(20px,4vw,54px);
+}
+.atelier .copy h2{
+  max-width:9ch;
+}
+.process li{
+  position:relative;
+}
+
+.closing .cta{
+  border-radius:999px;
+  min-height:48px;
+  padding-inline:30px;
+}
+
+@media (max-width:899px){
+  .belief-statement{
+    transform:none;
+  }
+  .belief-art{
+    border-radius:50% 50% 12% 12% / 20% 20% 6% 6%;
+  }
+  .still-copy{
+    margin:0;
+    padding:0;
+    background:none;
+  }
+  .still-photo{
+    border-radius:34% 42% 7% 9% / 14% 18% 4% 5%;
+  }
+  .atelier .inner{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:719px){
+  .belief-art::after{
+    inset:-4% -3%;
+  }
+  .shop-filter::before{
+    left:-8%;
+    right:-8%;
+    height:110px;
+  }
+  .filter-chip:nth-child(n){
+    transform:none;
+  }
+  .vitem:nth-child(1) .v-plate{
+    border-radius:34% 42% 7% 9% / 13% 16% 4% 5%;
+  }
+  .vitem:nth-child(n+2) .v-plate{
+    border-radius:12px;
+  }
+  .atelier-photo{
+    border-radius:42% 42% 9% 9% / 16% 18% 5% 6%;
+  }
+}
 </style>
 </head>
 <body>

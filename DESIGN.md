@@ -39,6 +39,13 @@ and move to macro crops where material is the subject. The cool blue fields tie
 the supplied sky and blue-hour photography together without competing with the
 red, coral and turquoise colour already present in the jewellery.
 
+Image openings use a restrained organic system rather than one repeated rounded
+card. The belief portrait, Two Doves still life and blue-hour worn study use
+arched and stone-like openings; product plates alternate between arches,
+softened rectangles and capsule forms. Text and controls stay on stable
+horizontal baselines so the silhouettes add rhythm without making product
+information harder to scan.
+
 The product system follows three evidence types: whole form, material surface
 and worn scale. Cabinet plates use each product's original gallery photograph,
 retaining its velvet, hand scale, surface and light rather than replacing it
@@ -53,14 +60,15 @@ photographs. The butterfly product has been removed from the visual system.
    on black thorn branches against a blue sky. The image carries the opening
    without an editorial text overlay.
 2. A petrol-blue “Taste is assembled.” belief chapter: quiet note, large
-   centred statement and a single glass-shelf earring study.
-3. A single Two Doves still life with three inspectable material details.
+   centred statement and a single glass-shelf earring study in an arched opening.
+3. A stone-shaped Two Doves still life with the information column overlapping
+   the photographic field at desktop width.
 4. A complete, filterable six-piece collection using the original product
-   photography and varied editorial scale.
-5. A worn-scale image from the supplied blue-thorn campaign, used as context
+   photography, a curved filter path and three distinct plate silhouettes.
+5. A blue-hour worn-scale image held in an editorial arch, used as context
    rather than repeated as a cover.
-6. A petrol closing statement and a dark blue-black footer with service
-   information.
+6. A petrol closing statement with a capsule CTA and a dark blue-black footer
+   carrying service information.
 
 ## Motion
 

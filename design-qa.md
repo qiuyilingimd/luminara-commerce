@@ -148,4 +148,20 @@ The current direction is an original warm-gallery editorial system. The referenc
 - Kept the red, coral and turquoise colour inside the product photography
   unchanged so those jewellery details remain the focal points.
 
+### Pass 6 — organic editorial rhythm
+
+- Added a restrained shape system informed by the supplied asymmetric jewellery
+  reference while keeping Luminara's photography, copy and page structure.
+- Reshaped the belief portrait, Two Doves still life and worn-scale study into
+  arched or stone-like openings with offset surrounding rules.
+- Let the desktop Two Doves information column overlap the photographic field
+  and use a curved filter path in the collection.
+- Introduced three product-plate silhouettes across the six-piece edit instead
+  of repeating one rounded card.
+- Simplified the silhouette treatment on mobile so every product remains
+  complete and easy to compare.
+- Checked `1440 x 900`, `1024 x 768` and `390 x 844`: no horizontal overflow or
+  console errors; filtering, product detail controls, random selection, bag and
+  reduced-motion behaviour remain functional.
+
 final result: passed
