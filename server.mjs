@@ -50,6 +50,7 @@ const PUBLIC_ORIGINS = new Set(
     .map((origin) => origin.trim().replace(/\/+$/, ""))
     .filter(Boolean)
 );
+const TRUST_PROXY = /^(1|true|yes)$/i.test(String(process.env.TRUST_PROXY || ""));
 
 const catalog = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "catalog.json"), "utf8"));
 const PRODUCTS = new Map(catalog.products.map((product) => [product.id, product]));
@@ -141,6 +142,16 @@ function apiCors(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   res.setHeader("Access-Control-Max-Age", "86400");
+}
+
+function requestIp(req) {
+  if (TRUST_PROXY) {
+    const realIp = String(req.headers["x-real-ip"] || "").trim();
+    if (realIp) return realIp.slice(0, 100);
+    const forwarded = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
+    if (forwarded) return forwarded.slice(0, 100);
+  }
+  return req.socket.remoteAddress || "unknown";
 }
 
 async function readBody(req, limit = 65536) {
@@ -350,6 +361,11 @@ function stripeSignatureIsValid(raw, header) {
 const rateBuckets = new Map();
 function rateLimited(key, limit = 30) {
   const now = Date.now();
+  if (rateBuckets.size > 5000) {
+    for (const [bucketKey, bucket] of rateBuckets) {
+      if (bucket.reset < now) rateBuckets.delete(bucketKey);
+    }
+  }
   const current = rateBuckets.get(key);
   if (!current || current.reset < now) {
     rateBuckets.set(key, { count: 1, reset: now + 60_000 });
@@ -364,7 +380,7 @@ function getOrder(id) {
 }
 
 async function handleApi(req, res, url) {
-  const ip = req.socket.remoteAddress || "unknown";
+  const ip = requestIp(req);
   if (rateLimited(ip, 60)) return sendJson(res, 429, { error: "Too many requests. Please wait a minute." });
 
   if (req.method === "GET" && url.pathname === "/api/health") {

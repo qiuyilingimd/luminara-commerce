@@ -52,6 +52,17 @@ if you want to restrict access to the computer only.
 
 The site reads products from `data/catalog.json`. The server revalidates product IDs, sizes, quantities, prices and shipping before saving an order to `data/luminara.db`.
 
+## China deployment
+
+For visitors in mainland China, deploy the frontend, Node API and SQLite database
+together on an Ubuntu server. Hong Kong can be used before an ICP filing;
+mainland regions provide the most stable access once the domain is filed.
+
+The one-command installer and operations notes are in
+[`deploy/README-CN.md`](deploy/README-CN.md). It installs Node.js from a
+China-accessible mirror, configures Nginx and systemd, persists the database,
+creates daily backups and can issue an HTTPS certificate.
+
 ## Render
 
 `render.yaml` describes the currently deployed free Render web service with

@@ -1,0 +1,15 @@
+[Unit]
+Description=Back up the Luminara SQLite database
+After=luminara.service
+
+[Service]
+Type=oneshot
+User=luminara
+Group=luminara
+ExecStart=/bin/bash __APP_ROOT__/deploy/backup-database.sh
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/luminara /var/backups/luminara

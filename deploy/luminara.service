@@ -1,0 +1,26 @@
+[Unit]
+Description=Luminara commerce storefront and API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=luminara
+Group=luminara
+WorkingDirectory=__APP_ROOT__
+EnvironmentFile=__ENV_FILE__
+ExecStart=__NODE_BIN__ server.mjs
+Restart=always
+RestartSec=3
+TimeoutStopSec=20
+KillSignal=SIGTERM
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/luminara
+
+[Install]
+WantedBy=multi-user.target
