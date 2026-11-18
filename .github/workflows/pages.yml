@@ -27,7 +27,6 @@ jobs:
           mkdir -p dist
           cp index.html order-success.html dist/
           cp -R assets vendor dist/
-          find dist/assets -type f -name "*.mp4" -delete
           touch dist/.nojekyll
 
       - name: Configure Pages
