@@ -119,7 +119,15 @@ rsync -a --delete \
 chown -R luminara:luminara "${APP_ROOT}"
 
 if [[ ! -f "${ENV_FILE}" ]]; then
-  PUBLIC_IP="${SERVER_IP:-$(curl -fsS --max-time 8 https://api.ipify.org || true)}"
+  PUBLIC_IP="${SERVER_IP:-}"
+  if [[ -z "${PUBLIC_IP}" ]]; then
+    for ip_service in "https://api.ipify.org" "https://ifconfig.me/ip" "https://ipinfo.io/ip"; do
+      PUBLIC_IP="$(curl -fsS --max-time 8 "${ip_service}" 2>/dev/null | tr -d '[:space:]' || true)"
+      if [[ -n "${PUBLIC_IP}" ]]; then
+        break
+      fi
+    done
+  fi
   if [[ -n "${DOMAIN}" ]]; then
     BASE_URL="https://${DOMAIN}"
   elif [[ -n "${PUBLIC_IP}" ]]; then

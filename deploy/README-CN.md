@@ -34,6 +34,19 @@ sudo DOMAIN=www.example.com \
 sudo bash deploy/install-ubuntu.sh
 ```
 
+如果不想在电脑和服务器之间手动上传文件，可以直接在云服务器的网页终端
+运行：
+
+```bash
+sudo apt-get update
+sudo apt-get install -y git
+git clone --depth 1 \
+  https://github.com/qiuyilingimd/luminara-commerce.git \
+  "$HOME/luminara-release"
+cd "$HOME/luminara-release"
+sudo bash deploy/install-ubuntu.sh
+```
+
 安装脚本会从国内可访问的 Node.js 镜像下载经过 SHA-256 校验的
 Node.js 24，并完成 Nginx、systemd、持久化数据库目录、每日自动备份和
 健康检查配置。域名与邮箱都提供时，还会申请 Let's Encrypt HTTPS 证书。
