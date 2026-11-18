@@ -316,26 +316,13 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
 .vgrid.is-filtered{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
 .vgrid.is-filtered .vitem{grid-column:auto}
-.vitem{display:block;text-align:left;color:var(--ivory);min-width:0;cursor:pointer;position:relative;isolation:isolate;--spot-x:50%;--spot-y:50%;--spot-opacity:0;--glare-shift:-70%;--glare-opacity:0}
+.vitem{display:block;text-align:left;color:var(--ivory);min-width:0;cursor:pointer;position:relative;isolation:isolate}
 .vitem[hidden]{display:none}
 .v-plate{overflow:hidden;position:relative;background:var(--ink-2);margin:0;isolation:isolate;perspective:1000px}
 .v-plate img{width:100%;height:100%;object-fit:cover;transition:transform 1.05s var(--ease)}
 .vitem:hover .v-plate img{transform:scale(1.035)}
-.v-plate::before,.v-plate::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit}
-.v-plate::before{
-  z-index:1;width:190%;left:-45%;
-  background:linear-gradient(108deg,transparent 39%,rgba(255,250,239,.04) 45%,rgba(255,250,239,.26) 50%,rgba(201,169,106,.11) 54%,transparent 61%);
-  mix-blend-mode:screen;opacity:var(--glare-opacity);
-  transform:translate3d(var(--glare-shift),0,0);
-  transition:opacity .35s var(--ease);
-  will-change:transform,opacity;
-}
-.v-plate::after{
-  z-index:2;
-  background:radial-gradient(circle 150px at var(--spot-x) var(--spot-y),rgba(255,246,220,.32),rgba(201,169,106,.1) 34%,transparent 72%);
-  mix-blend-mode:soft-light;opacity:var(--spot-opacity);
-  transition:opacity .35s var(--ease);
-}
+.vitem .v-plate{transform:none!important}
+.vitem .v-plate::before,.vitem .v-plate::after{content:none!important;display:none!important}
 .v-no{z-index:3}
 .v-plate.r45{aspect-ratio:4/5}
 .v-plate.r1610{aspect-ratio:16/10}
@@ -359,7 +346,7 @@ position:sticky;top:0;z-index:70;min-height:var(--mast-h);
 .surprise-btn:hover .spark,.surprise-btn:focus-visible .spark{transform:rotate(135deg)}
 .surprise-btn:disabled{opacity:.55;cursor:wait}
 .vitem .v-plate img{transition:transform 1.05s var(--ease),filter .28s ease}
-.vitem.is-scouting .v-plate img{transform:scale(1.055);filter:brightness(1.1)}
+.vitem.is-scouting .v-plate{box-shadow:inset 0 0 0 1px rgba(201,169,106,.62)}
 @media(max-width:719px){
   .surprise-btn{width:100%;margin-left:0;justify-content:space-between;padding:0;margin-top:5px}
 }
