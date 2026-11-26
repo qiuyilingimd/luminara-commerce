@@ -25,7 +25,7 @@ jobs:
       - name: Assemble static frontend
         run: |
           mkdir -p dist
-          cp index.html order-success.html dist/
+          cp index.html order-success.html sw.js dist/
           cp -R assets vendor dist/
           touch dist/.nojekyll
 

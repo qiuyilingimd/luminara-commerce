@@ -520,7 +520,7 @@ async function handleApi(req, res, url) {
 }
 
 function canServe(pathname) {
-  if (pathname === "/" || pathname === "/index.html" || pathname === "/order-success.html") return true;
+  if (pathname === "/" || pathname === "/index.html" || pathname === "/order-success.html" || pathname === "/sw.js") return true;
   return pathname.startsWith("/assets/") || pathname.startsWith("/vendor/");
 }
 
